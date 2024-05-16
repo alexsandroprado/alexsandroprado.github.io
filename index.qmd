@@ -1,4 +1,5 @@
 ---
+title: Alexsandro Prado
 about:
   template: trestles
   image: alexsandro.png
@@ -14,7 +15,39 @@ about:
       href: alexsandro.prado@ufersa.edu.br
 ---
 
-**Professor Alexsandro Prado**<br>
-Universidade Federal Rural do Semi-árido<br>
-Departamento de Ciências Sociais Aplicadas (DCSA)e<br>
-Mossoró-RN, Brasil
+:::{#hero-heading}
+
+Uma mente curiosa, sempre em busca de conhecimento e aprendizado. Entusiasta apaixonado por tecnologia que gosta de explorar o vasto mundo dos dados para extrair insights valiosos
+
+
+## Formação
+
+Universidade Federal da Paraíba (UFPB)
+Doutor em Economia, área de concentração Economia Aplicada
+
+Universidade Federal da Paraíba (UFPB)
+Bacharel em Ciências Contábeis 
+
+Universidade de Brasília (UnB)
+Mestre em Ciências Contábeis 
+
+## Habilidades
+
+Experiência na área de Ciências de Dados:
+
+    - ETL (Extract, transform, load)
+    
+    - Big data
+    
+    - Modelos de sobrevivência
+    
+    - Modelos logit
+    
+    - Estimação em Diff-in-Diff (DID) 
+    
+    - Propense Score Matching
+
+:::
+---
+
+

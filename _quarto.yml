@@ -23,6 +23,23 @@ website:
         text: Software
       - href: sobre/index.qmd
         text: Sobre
+      - text: Resources
+        menu:
+          - text: DataViz Portfolio
+            href: dataviz_portfolio.html
+          - text: YARDS
+            href: https://yards.albert-rapp.de/
+          - text: R Weekly
+            href: https://rweekly.org/
+          - text: R Bloggers
+            href: https://www.r-bloggers.com/
+    right:
+      - icon: github
+        href: https://github.com/alexsandroprado
+      - icon: twitter
+        href: https://twitter.com/alexsandroprado
+      - icon: youtube
+        href: https://www.youtube.com/@profalexsandroprado
   page-footer:
     left: "Copyright 2023, Alexsandro Prado"
     right:

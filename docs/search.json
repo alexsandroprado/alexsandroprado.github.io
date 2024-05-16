@@ -9,9 +9,23 @@
   {
     "objectID": "sobre/index.html",
     "href": "sobre/index.html",
-    "title": "About me",
+    "title": "Finley Malloc",
     "section": "",
-    "text": "About me\nSome more detail about who I am and what I do."
+    "text": "Finley Malloc is the Chief Data Scientist at Wengo Analytics. When not innovating on data platforms, Finley enjoys spending time unicycling and playing with her pet iguana."
+  },
+  {
+    "objectID": "sobre/index.html#education",
+    "href": "sobre/index.html#education",
+    "title": "Finley Malloc",
+    "section": "Education",
+    "text": "Education\nUniversity of California, San Diego | San Diego, CA PhD in Mathematics | Sept 2011 - June 2015\nMacalester College | St. Paul MA B.A in Economics | Sept 2007 - June 2011"
+  },
+  {
+    "objectID": "sobre/index.html#experience",
+    "href": "sobre/index.html#experience",
+    "title": "Finley Malloc",
+    "section": "Experience",
+    "text": "Experience\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Spet 2012 - April 2018"
   },
   {
     "objectID": "palestras/french_academy_1901.html",
@@ -53,7 +67,21 @@
     "href": "index.html",
     "title": "Alexsandro Prado",
     "section": "",
-    "text": "Professor Alexsandro Prado Universidade Federal Rural do Semi-árido Departamento de Ciências Sociais Aplicadas (DCSA)e Mossoró-RN, Brasil"
+    "text": "Uma mente curiosa, sempre em busca de conhecimento e aprendizado. Entusiasta apaixonado por tecnologia que gosta de explorar o vasto mundo dos dados para extrair insights valiosos\n\n\nUniversidade Federal da Paraíba (UFPB) Doutor em Economia, área de concentração Economia Aplicada\nUniversidade Federal da Paraíba (UFPB) Bacharel em Ciências Contábeis\nUniversidade de Brasília (UnB) Mestre em Ciências Contábeis\n\n\n\nExperiência na área de Ciências de Dados:\n- ETL (Extract, transform, load)\n- Big data\n- Modelos de sobrevivência\n- Modelos logit\n- Estimação em Diff-in-Diff (DID) \n- Propense Score Matching"
+  },
+  {
+    "objectID": "index.html#formação",
+    "href": "index.html#formação",
+    "title": "Alexsandro Prado",
+    "section": "",
+    "text": "Universidade Federal da Paraíba (UFPB) Doutor em Economia, área de concentração Economia Aplicada\nUniversidade Federal da Paraíba (UFPB) Bacharel em Ciências Contábeis\nUniversidade de Brasília (UnB) Mestre em Ciências Contábeis"
+  },
+  {
+    "objectID": "index.html#habilidades",
+    "href": "index.html#habilidades",
+    "title": "Alexsandro Prado",
+    "section": "",
+    "text": "Experiência na área de Ciências de Dados:\n- ETL (Extract, transform, load)\n- Big data\n- Modelos de sobrevivência\n- Modelos logit\n- Estimação em Diff-in-Diff (DID) \n- Propense Score Matching"
   },
   {
     "objectID": "palestras/index.html",
