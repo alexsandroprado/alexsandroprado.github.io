@@ -4,7 +4,7 @@ project:
   render:
     - "*.qmd"
     - "*.md"
-
+lang: pt
 website:
   title: "Alexsandro Prado"
   site-url: "https://mariecurie.com"
