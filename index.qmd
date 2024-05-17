@@ -4,50 +4,46 @@ about:
   template: trestles
   image: alexsandro.png
   links:
+    - icon: envelope
+      text: mail
+      href: alexsandro.prado@ufersa.edu.br
+    - icon: person-fill
+      text: lattes
+      href: http://lattes.cnpq.br/4254857944224293
     - icon: twitter
       text: twitter
       href: https://twitter.com/alexsandroprado
     - icon: github
       text: github
       href: https://github.com/alexsandroprado
-    - icon: envelope
-      text: mail
-      href: alexsandro.prado@ufersa.edu.br
 ---
 
-:::{#hero-heading}
-
-Uma mente curiosa, sempre em busca de conhecimento e aprendizado. Entusiasta apaixonado por tecnologia que gosta de explorar o vasto mundo dos dados para extrair insights valiosos
-
+::: {#hero-heading}
+Uma mente curiosa, sempre em busca de conhecimento. Um entusiasta apaixonado por tecnologia que gosta de explorar o vasto mundo dos dados para extrair insights valiosos.
 
 ## Formação
 
-Universidade Federal da Paraíba (UFPB)
-Doutor em Economia, área de concentração Economia Aplicada
+Universidade Federal da Paraíba (UFPB) Doutor em Economia, área de concentração Economia Aplicada
 
-Universidade Federal da Paraíba (UFPB)
-Bacharel em Ciências Contábeis 
+Universidade Federal da Paraíba (UFPB) Bacharel em Ciências Contábeis
 
-Universidade de Brasília (UnB)
-Mestre em Ciências Contábeis 
+Universidade de Brasília (UnB) Mestre em Ciências Contábeis
 
 ## Habilidades
 
 Experiência na área de Ciências de Dados:
 
-    - ETL (Extract, transform, load)
-    
-    - Big data
-    
-    - Modelos de sobrevivência
-    
-    - Modelos logit
-    
-    - Estimação em Diff-in-Diff (DID) 
-    
-    - Propense Score Matching
+-   ETL (Extract, transform, load)
 
+-   Big data
+
+-   Modelos de sobrevivência
+
+-   Modelos logit
+
+-   Estimação em Diff-in-Diff (DID)
+
+-   Propense Score Matching
 :::
----
 
-
+------------------------------------------------------------------------
