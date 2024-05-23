@@ -1,0 +1,1116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Alexsandro Prado</title>
+<link>https://alexsandroprado.github.io/blog/</link>
+<atom:link href="https://alexsandroprado.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>Thoughts on research</description>
+<generator>quarto-1.4.553</generator>
+<lastBuildDate>Wed, 22 May 2024 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>Heterocedasticidade e Autocorrelação: como resolver na prática?</title>
+  <dc:creator>Alexsandro Prado</dc:creator>
+  <link>https://alexsandroprado.github.io/blog/heterocedasticidade.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p style="text-align: justify;">
+</p><p>A heterocedasticidade e a autocorrelação são problemas comuns na análise de regressão, especialmente em séries temporais e dados econométricos, que podem afetar a validade das inferências e a análise de causalidade.</p>
+<p>Heterocedasticidade refere-se à condição em que a variância dos erros (ou resíduos) de um modelo de regressão não é constante ao longo das observações. Em outras palavras, os erros variam em intensidade dependendo do nível da variável independente. Esse problema pode levar a estimativas ineficientes dos coeficientes da regressão, fazendo com que os testes estatísticos, como o teste t e o teste F, se tornem não confiáveis. Isso significa que as inferências sobre a significância das variáveis podem ser incorretas, resultando em um erro na identificação das relações causais.</p>
+<p>Autocorrelação, por outro lado, ocorre quando os erros do modelo de regressão não são independentes uns dos outros, mas sim correlacionados ao longo do tempo ou das observações. Esse problema é particularmente prevalente em dados de séries temporais. A presença de autocorrelação indica que há padrões não capturados pelo modelo, o que pode levar a subestimação ou superestimação da variabilidade dos coeficientes de regressão. Assim como a heterocedasticidade, a autocorrelação torna os testes estatísticos tradicionais inapropriados, resultando em inferências enganosas e dificultando a análise de causalidade correta.</p>
+Ambos os problemas prejudicam a capacidade de um modelo de fornecer estimativas confiáveis e podem levar à formulação de políticas ou decisões baseadas em conclusões erradas. Para mitigar esses problemas, podem ser utilizadas técnicas como a transformação dos dados, o uso de modelos robustos a heterocedasticidade e autocorrelação, ou a aplicação de modelos que explicitamente modelam a estrutura dos erros, como modelos GARCH para heterocedasticidade e modelos ARIMA para autocorrelação.
+<p></p>
+<section id="passo-1-identificar-a-heterocedasticidade" class="level1">
+<h1>Passo 1: Identificar a Heterocedasticidade</h1>
+<p>Primeiro, vamos carregar alguns pacotes necessários e criar um conjunto de dados fictício:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Carregar pacotes necessários</span></span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2) </span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(lmtest) </span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(sandwich)</span>
+<span id="cb1-6"></span>
+<span id="cb1-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Criar dados fictícios</span></span>
+<span id="cb1-8"></span>
+<span id="cb1-9"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span>) </span>
+<span id="cb1-10">n <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span> </span>
+<span id="cb1-11">experience <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rnorm</span>(n, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span>
+<span id="cb1-12">education <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rnorm</span>(n, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>) </span>
+<span id="cb1-13">salary <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5000</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> experience <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">300</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> education <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rnorm</span>(n, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sd =</span> experience <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span>
+<span id="cb1-14"></span>
+<span id="cb1-15">data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(salary, experience, education)</span></code></pre></div>
+</div>
+</section>
+<section id="passo-2-ajustar-o-modelo-de-regressão-linear" class="level1">
+<h1>Passo 2: Ajustar o Modelo de Regressão Linear</h1>
+<p>Vamos ajustar um modelo de regressão linear simples:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar o modelo de regressão linear</span></span>
+<span id="cb2-2">model <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(salary <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> experience <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> education, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> data)</span>
+<span id="cb2-3"></span>
+<span id="cb2-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Resumo do modelo</span></span>
+<span id="cb2-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span>(model)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = salary ~ experience + education, data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1069.88  -309.87   -33.51   254.44  1702.00 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  4749.48     465.62   10.20   &lt;2e-16 ***
+experience    995.12      28.89   34.45   &lt;2e-16 ***
+education     320.02      27.27   11.74   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 524.1 on 97 degrees of freedom
+Multiple R-squared:  0.9299,    Adjusted R-squared:  0.9285 
+F-statistic: 643.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+<section id="passo-3-diagnosticar-heterocedasticidade" class="level1">
+<h1>Passo 3: Diagnosticar Heterocedasticidade</h1>
+<p>Podemos usar o teste de Breusch-Pagan para diagnosticar a presença de heterocedasticidade</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Teste de Breusch-Pagan</span></span>
+<span id="cb4-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">bptest</span>(model)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    studentized Breusch-Pagan test
+
+data:  model
+BP = 17.285, df = 2, p-value = 0.0001764</code></pre>
+</div>
+</div>
+<p>Se o p-valor do teste for menor que 0.05, isso indica a presença de heterocedasticidade.</p>
+</section>
+<section id="passo-4-tratar-heterocedasticidade" class="level1">
+<h1>Passo 4: Tratar Heterocedasticidade</h1>
+<p>Uma maneira comum de tratar a heterocedasticidade é usar estimadores robustos de erro padrão. Vamos ajustar o modelo novamente com erros robustos:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar o modelo com erros padrão robustos</span></span>
+<span id="cb6-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coeftest</span>(model, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">vcov =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">vcovHC</span>(model, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HC1"</span>))</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+t test of coefficients:
+
+            Estimate Std. Error t value  Pr(&gt;|t|)    
+(Intercept) 4749.481    459.819  10.329 &lt; 2.2e-16 ***
+experience   995.117     37.144  26.791 &lt; 2.2e-16 ***
+education    320.022     26.539  12.059 &lt; 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+</section>
+<section id="outras-técnicas" class="level1">
+<h1>Outras técnicas</h1>
+<p>Além do uso de estimadores robustos, existem várias outras medidas para tratar a heterocedasticidade em um modelo de regressão linear. A escolha da técnica pode depender da natureza dos dados e da estrutura da heterocedasticidade. Aqui estão algumas abordagens adicionais:</p>
+<section id="transformações-de-variáveis" class="level2">
+<h2 class="anchored" data-anchor-id="transformações-de-variáveis">1. Transformações de Variáveis</h2>
+<p>Transformar a variável dependente ou independente pode ajudar a estabilizar a variância dos erros. Transformações comuns incluem:</p>
+<p>Logarítmica: Aplicar o logaritmo na variável dependente pode ser eficaz quando a variância dos erros aumenta com o valor da variável dependente.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1">model_log <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">log</span>(salary) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> experience <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> education, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> data)</span>
+<span id="cb8-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span>(model_log)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = log(salary) ~ experience + education, data = data)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.071087 -0.021134 -0.000469  0.018983  0.091538 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 8.906897   0.029442  302.52   &lt;2e-16 ***
+experience  0.067282   0.001827   36.84   &lt;2e-16 ***
+education   0.022101   0.001724   12.82   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.03314 on 97 degrees of freedom
+Multiple R-squared:  0.9384,    Adjusted R-squared:  0.9371 
+F-statistic:   739 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>Raiz Quadrada: Usar a raiz quadrada da variável dependente pode ser útil em alguns casos.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">model_sqrt <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sqrt</span>(salary) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> experience <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> education, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> data)</span>
+<span id="cb10-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span>(model_sqrt)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = sqrt(salary) ~ experience + education, data = data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.2463 -1.2381 -0.2119  1.1691  5.9950 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  79.9427     1.8098   44.17   &lt;2e-16 ***
+experience    4.0817     0.1123   36.35   &lt;2e-16 ***
+education     1.3270     0.1060   12.52   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 2.037 on 97 degrees of freedom
+Multiple R-squared:  0.9368,    Adjusted R-squared:  0.9354 
+F-statistic: 718.3 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+<section id="modelos-de-regressão-ponderada-wls" class="level2">
+<h2 class="anchored" data-anchor-id="modelos-de-regressão-ponderada-wls">2. Modelos de Regressão Ponderada (WLS)</h2>
+<p>Se a heterocedasticidade é sistemática, ponderar as observações pelo inverso da variância estimada dos erros pode melhorar a eficiência dos estimadores:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Estimar pesos inversamente proporcionais à variância dos resíduos</span></span>
+<span id="cb12-2">weights <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">abs</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">residuals</span>(model)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">fitted</span>(model))<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>fitted.values<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span>
+<span id="cb12-3"></span>
+<span id="cb12-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar o modelo ponderado</span></span>
+<span id="cb12-5">model_wls <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(salary <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> experience <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> education, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> data, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">weights =</span> weights)</span>
+<span id="cb12-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span>(model_wls)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = salary ~ experience + education, data = data, weights = weights)
+
+Weighted Residuals:
+    Min      1Q  Median      3Q     Max 
+-2.6267 -0.8224 -0.1781  0.7972  3.0487 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  5057.32     348.80   14.50   &lt;2e-16 ***
+experience    993.10      18.41   53.94   &lt;2e-16 ***
+education     301.39      22.46   13.42   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.295 on 97 degrees of freedom
+Multiple R-squared:   0.97, Adjusted R-squared:  0.9694 
+F-statistic:  1569 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+<section id="modelos-generalizados-glm" class="level2">
+<h2 class="anchored" data-anchor-id="modelos-generalizados-glm">3. Modelos Generalizados (GLM)</h2>
+<p>Usar um modelo de regressão mais flexível, como os modelos lineares generalizados (GLM), pode ser apropriado. Por exemplo, a família de distribuições Gamma pode ser adequada para dados positivos com variância crescente:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar um modelo GLM com família Gamma</span></span>
+<span id="cb14-2">model_glm <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glm</span>(salary <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> experience <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> education, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> data, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">family =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">Gamma</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">link =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"log"</span>))</span>
+<span id="cb14-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span>(model_glm)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = salary ~ experience + education, family = Gamma(link = "log"), 
+    data = data)
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 8.907700   0.029539  301.56   &lt;2e-16 ***
+experience  0.067364   0.001833   36.76   &lt;2e-16 ***
+education   0.022057   0.001730   12.75   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for Gamma family taken to be 0.001105443)
+
+    Null deviance: 1.71347  on 99  degrees of freedom
+Residual deviance: 0.10675  on 97  degrees of freedom
+AIC: 1528.4
+
+Number of Fisher Scoring iterations: 3</code></pre>
+</div>
+</div>
+</section>
+<section id="substituir-variáveis-com-novas-variáveis" class="level2">
+<h2 class="anchored" data-anchor-id="substituir-variáveis-com-novas-variáveis">4. Substituir Variáveis com Novas Variáveis</h2>
+<p>Às vezes, a heterocedasticidade pode ser causada pela omissão de variáveis relevantes. Incluir novas variáveis que capturem a fonte da heterocedasticidade pode ajudar a corrigir o problema.</p>
+<section id="passo-1-preparação-dos-dados" class="level3">
+<h3 class="anchored" data-anchor-id="passo-1-preparação-dos-dados">Passo 1: Preparação dos Dados</h3>
+<p>Primeiro, vamos criar um conjunto de dados fictício que contém algumas variáveis correlacionadas e uma variável dependente.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Carregar pacotes necessários</span></span>
+<span id="cb16-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span>
+<span id="cb16-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(lmtest)</span>
+<span id="cb16-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(sandwich)</span>
+<span id="cb16-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span></code></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Anexando pacote: 'dplyr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Os seguintes objetos são mascarados por 'package:stats':
+
+    filter, lag</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Os seguintes objetos são mascarados por 'package:base':
+
+    intersect, setdiff, setequal, union</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Criar dados fictícios</span></span>
+<span id="cb20-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span>)</span>
+<span id="cb20-3">n <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span></span>
+<span id="cb20-4">experience <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rnorm</span>(n, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span>
+<span id="cb20-5">education <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rnorm</span>(n, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span>
+<span id="cb20-6">age <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rnorm</span>(n, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)</span>
+<span id="cb20-7">salary <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5000</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> experience <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">300</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> education <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">150</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> age <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rnorm</span>(n, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>)</span>
+<span id="cb20-8"></span>
+<span id="cb20-9">data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(salary, experience, education, age)</span></code></pre></div>
+</div>
+</section>
+<section id="passo-2-ajustar-o-modelo-de-regressão-inicial" class="level3">
+<h3 class="anchored" data-anchor-id="passo-2-ajustar-o-modelo-de-regressão-inicial">Passo 2: Ajustar o Modelo de Regressão Inicial</h3>
+<p>Vamos ajustar um modelo de regressão linear inicial com as variáveis originais.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar o modelo de regressão linear</span></span>
+<span id="cb21-2">model_initial <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(salary <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> experience <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> education <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> age, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> data)</span>
+<span id="cb21-3"></span>
+<span id="cb21-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Resumo do modelo inicial</span></span>
+<span id="cb21-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span>(model_initial)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = salary ~ experience + education + age, data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2491.38  -653.92    56.64   670.33  2532.10 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  4979.10    1050.34   4.740 7.39e-06 ***
+experience    972.27      58.44  16.638  &lt; 2e-16 ***
+education     323.11      54.73   5.904 5.35e-08 ***
+age           144.26      11.22  12.854  &lt; 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1052 on 96 degrees of freedom
+Multiple R-squared:  0.8153,    Adjusted R-squared:  0.8095 
+F-statistic: 141.3 on 3 and 96 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Teste de Breusch-Pagan para heterocedasticidade</span></span>
+<span id="cb23-2">bp_test_initial <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">bptest</span>(model_initial)</span>
+<span id="cb23-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(bp_test_initial)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    studentized Breusch-Pagan test
+
+data:  model_initial
+BP = 1.9213, df = 3, p-value = 0.5889</code></pre>
+</div>
+</div>
+</section>
+<section id="passo-3-criar-novas-variáveis" class="level3">
+<h3 class="anchored" data-anchor-id="passo-3-criar-novas-variáveis">Passo 3: Criar Novas Variáveis</h3>
+<p>Suponhamos que a relação entre salary e as variáveis experience, education e age pode ser melhor capturada por variáveis transformadas ou interações entre elas. Vamos criar algumas novas variáveis:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Criar novas variáveis transformadas e de interação</span></span>
+<span id="cb25-2">data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> data <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%&gt;%</span></span>
+<span id="cb25-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">experience_sq =</span> experience<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>,</span>
+<span id="cb25-4">         <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">education_sq =</span> education<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>,</span>
+<span id="cb25-5">         <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">age_sq =</span> age<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>,</span>
+<span id="cb25-6">         <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">exp_edu_interaction =</span> experience <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> education,</span>
+<span id="cb25-7">         <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">exp_age_interaction =</span> experience <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> age,</span>
+<span id="cb25-8">         <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">edu_age_interaction =</span> education <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> age)</span></code></pre></div>
+</div>
+</section>
+<section id="passo-4-ajustar-o-modelo-de-regressão-com-novas-variáveis" class="level3">
+<h3 class="anchored" data-anchor-id="passo-4-ajustar-o-modelo-de-regressão-com-novas-variáveis">Passo 4: Ajustar o Modelo de Regressão com Novas Variáveis</h3>
+<p>Ajustamos o modelo de regressão linear novamente, agora incluindo as novas variáveis.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar o modelo de regressão linear com novas variáveis</span></span>
+<span id="cb26-2">model_new <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(salary <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> experience <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> education <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> age <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> </span>
+<span id="cb26-3">                  experience_sq <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> education_sq <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> age_sq <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> </span>
+<span id="cb26-4">                  exp_edu_interaction <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> exp_age_interaction <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> edu_age_interaction, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> data)</span>
+<span id="cb26-5"></span>
+<span id="cb26-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Resumo do modelo novo</span></span>
+<span id="cb26-7"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span>(model_new)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = salary ~ experience + education + age + experience_sq + 
+    education_sq + age_sq + exp_edu_interaction + exp_age_interaction + 
+    edu_age_interaction, data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2447.43  -575.88     6.46   637.16  2491.77 
+
+Coefficients:
+                      Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept)         13725.6033  8177.1699   1.679   0.0967 .
+experience           1188.9324   638.5934   1.862   0.0659 .
+education            -532.1790   807.9010  -0.659   0.5118  
+age                    19.3482   134.7004   0.144   0.8861  
+experience_sq         -10.1395    24.4353  -0.415   0.6792  
+education_sq           14.9166    21.6304   0.690   0.4922  
+age_sq                  0.1987     1.0295   0.193   0.8474  
+exp_edu_interaction     5.2872    37.1765   0.142   0.8872  
+exp_age_interaction    -4.6483     6.1003  -0.762   0.4481  
+edu_age_interaction     8.4608     6.0194   1.406   0.1633  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1063 on 90 degrees of freedom
+Multiple R-squared:  0.823, Adjusted R-squared:  0.8053 
+F-statistic: 46.49 on 9 and 90 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Teste de Breusch-Pagan para heterocedasticidade</span></span>
+<span id="cb28-2">bp_test_new <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">bptest</span>(model_new)</span>
+<span id="cb28-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(bp_test_new)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    studentized Breusch-Pagan test
+
+data:  model_new
+BP = 8.5597, df = 9, p-value = 0.4789</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="análise-de-componentes-principais-pca" class="level2">
+<h2 class="anchored" data-anchor-id="análise-de-componentes-principais-pca">5. Análise de Componentes Principais (PCA)</h2>
+<p>Se as variáveis independentes são altamente correlacionadas, o uso de PCA para reduzir a dimensionalidade pode ajudar a mitigar a heterocedasticidade.</p>
+<section id="passo-1-preparação-dos-dados-1" class="level3">
+<h3 class="anchored" data-anchor-id="passo-1-preparação-dos-dados-1">Passo 1: Preparação dos Dados</h3>
+<p>Vamos criar um conjunto de dados fictício com variáveis correlacionadas:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Carregar pacotes necessários</span></span>
+<span id="cb30-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span>
+<span id="cb30-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(lmtest)</span>
+<span id="cb30-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(sandwich)</span>
+<span id="cb30-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(MASS)</span>
+<span id="cb30-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb30-7"></span>
+<span id="cb30-8"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Criar dados fictícios</span></span>
+<span id="cb30-9"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span>)</span>
+<span id="cb30-10">n <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span></span>
+<span id="cb30-11">experience <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rnorm</span>(n, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span>
+<span id="cb30-12">education <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rnorm</span>(n, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span>
+<span id="cb30-13">age <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rnorm</span>(n, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sd =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)</span>
+<span id="cb30-14">salary <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5000</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> experience <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">300</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> education <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">150</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> age <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rnorm</span>(n, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mean =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sd =</span> experience <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span>
+<span id="cb30-15"></span>
+<span id="cb30-16">data <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(salary, experience, education, age)</span></code></pre></div>
+</div>
+</section>
+<section id="passo-2-análise-de-componentes-principais-pca" class="level3">
+<h3 class="anchored" data-anchor-id="passo-2-análise-de-componentes-principais-pca">Passo 2: Análise de Componentes Principais (PCA)</h3>
+<p>Vamos aplicar a PCA às variáveis independentes:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Padronizar as variáveis independentes</span></span>
+<span id="cb31-2">data_standardized <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale</span>(data[, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"experience"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"education"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"age"</span>)])</span>
+<span id="cb31-3"></span>
+<span id="cb31-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Aplicar PCA</span></span>
+<span id="cb31-5">pca <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">prcomp</span>(data_standardized, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">center =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">scale. =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>)</span>
+<span id="cb31-6"></span>
+<span id="cb31-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Visualizar a proporção da variância explicada por cada componente</span></span>
+<span id="cb31-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span>(pca)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Importance of components:
+                          PC1    PC2    PC3
+Standard deviation     1.0726 0.9900 0.9324
+Proportion of Variance 0.3835 0.3267 0.2898
+Cumulative Proportion  0.3835 0.7102 1.0000</code></pre>
+</div>
+</div>
+</section>
+<section id="passo-3-seleção-de-componentes-principais" class="level3">
+<h3 class="anchored" data-anchor-id="passo-3-seleção-de-componentes-principais">Passo 3: Seleção de Componentes Principais</h3>
+<p>Vamos escolher quantos componentes principais (PCs) utilizar com base na proporção da variância explicada:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Adicionar os componentes principais ao dataframe original</span></span>
+<span id="cb33-2">data_pca <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">salary =</span> data<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>salary, pca<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>x[, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>])  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Escolhendo os 2 primeiros PCs</span></span>
+<span id="cb33-3"></span>
+<span id="cb33-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ver os dados com os componentes principais</span></span>
+<span id="cb33-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">head</span>(data_pca)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    salary        PC1        PC2
+1 22273.57 -1.6807281  1.4217451
+2 22120.70 -1.1845614  0.1235709
+3 22609.83  1.3975878 -0.2722631
+4 21006.18 -0.2159818  0.3810757
+5 19636.21  0.7027710  0.6176000
+6 23767.93  1.5835543 -0.5682535</code></pre>
+</div>
+</div>
+</section>
+<section id="passo-4-ajuste-do-modelo-de-regressão-linear-usando-componentes-principais" class="level3">
+<h3 class="anchored" data-anchor-id="passo-4-ajuste-do-modelo-de-regressão-linear-usando-componentes-principais">Passo 4: Ajuste do Modelo de Regressão Linear Usando Componentes Principais</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar o modelo de regressão linear com os componentes principais</span></span>
+<span id="cb35-2">model_pca <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">lm</span>(salary <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> PC1 <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> PC2, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> data_pca)</span>
+<span id="cb35-3"></span>
+<span id="cb35-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Resumo do modelo</span></span>
+<span id="cb35-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">summary</span>(model_pca)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = salary ~ PC1 + PC2, data = data_pca)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-5497.9 -1321.4  -106.2  1311.4  6532.0 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 21069.94     222.54  94.677   &lt;2e-16 ***
+PC1            96.68     208.52   0.464   0.6439    
+PC2          -394.22     225.92  -1.745   0.0842 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 2225 on 97 degrees of freedom
+Multiple R-squared:  0.03251,   Adjusted R-squared:  0.01256 
+F-statistic:  1.63 on 2 and 97 DF,  p-value: 0.2013</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Teste de Breusch-Pagan</span></span>
+<span id="cb37-2">bp_test_pca <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">bptest</span>(model_pca)</span>
+<span id="cb37-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(bp_test_pca)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    studentized Breusch-Pagan test
+
+data:  model_pca
+BP = 0.050589, df = 2, p-value = 0.975</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb39" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar o modelo com erros padrão robustos</span></span>
+<span id="cb39-2">robust_se_pca <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coeftest</span>(model_pca, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">vcov =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">vcovHC</span>(model_pca, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HC1"</span>))</span>
+<span id="cb39-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(robust_se_pca)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+t test of coefficients:
+
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 21069.939    222.545 94.6773  &lt; 2e-16 ***
+PC1            96.679    180.262  0.5363  0.59296    
+PC2          -394.219    203.820 -1.9342  0.05601 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p><strong>Explicação do Código:</strong></p>
+<p>Preparação dos Dados: Criamos um conjunto de dados fictício com variáveis correlacionadas (experience, education, age) e uma variável dependente (salary).</p>
+<p>Padronização: Padronizamos as variáveis independentes para que todas tenham média 0 e desvio padrão 1.</p>
+<p>Aplicação da PCA: Aplicamos PCA às variáveis padronizadas para obter componentes principais não correlacionados.</p>
+<p>Seleção de PCs: Escolhemos os componentes principais que explicam uma proporção significativa da variância (neste exemplo, usamos os dois primeiros PCs).</p>
+<p>Ajuste do Modelo: Ajustamos o modelo de regressão linear utilizando os componentes principais selecionados.</p>
+<p>Diagnóstico e Ajuste Robusto: Realizamos o teste de Breusch-Pagan para verificar a presença de heterocedasticidade e ajustamos o modelo com erros padrão robustos, se necessário.</p>
+
+
+</section>
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
+  <category>econometria</category>
+  <guid>https://alexsandroprado.github.io/blog/heterocedasticidade.html</guid>
+  <pubDate>Wed, 22 May 2024 03:00:00 GMT</pubDate>
+  <media:content url="https://alexsandroprado.github.io/blog/heterocedasticidade.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+</channel>
+</rss>
