@@ -18,21 +18,21 @@
     "href": "index.html",
     "title": "Alexsandro Prado",
     "section": "",
-    "text": "Uma mente curiosa, sempre em busca de conhecimento. Um entusiasta apaixonado por tecnologia que gosta de explorar o vasto mundo dos dados para extrair insights valiosos.\n\n\nUniversidade Federal da Paraíba (UFPB) Doutor em Economia, área de concentração Economia Aplicada\nUniversidade Federal da Paraíba (UFPB) Bacharel em Ciências Contábeis\nUniversidade de Brasília (UnB) Mestre em Ciências Contábeis\n\n\n\nExperiência na área de Ciências de Dados:\n\nETL (Extract, transform, load)\nBig data\nModelos de sobrevivência\nModelos logit\nEstimação em Diff-in-Diff (DID)\nPropense Score Matching"
+    "text": "Uma mente curiosa, sempre em busca de conhecimento. Um entusiasta apaixonado por tecnologia que gosta de explorar o vasto mundo dos dados para extrair insights valiosos.\nProfessor do magistério superior há 12 anos, ministrando disciplinas nas áreas de Contabilidade, Administração e Tecnologia da Informação e Comunicação. Ampla experiência como orientador de trabalhos acadêmicos (trabalhos de conclusão de curso, dissertações)\n\n\nUniversidade Federal da Paraíba (UFPB)\nDoutor em Economia, área de concentração Economia Aplicada\nUniversidade de Brasília (UnB)\nMestre em Ciências Contábeis\nUniversidade Federal da Paraíba (UFPB)\nBacharel em Ciências Contábeis\n\n\n\n\nExperiência sólida em análise e visualização de dados em linguagem R\nETL microdados (RAIS, CAGED, PNADc, BGSD, CVM Cias Abertas)\nSQL (Structured Query Language) para consulta e manipulação de dados\nModelos de sobrevivência, Modelos logit, Estimação em Diff-in-Diff (DID), Propense Score Matching\nDesenvolvimento de dashboards (Flexdashboard)\nDesenvolvimento de blogs e werbsites em (Posit Quarto)\nMontagem e manutenção de computadores\nInstalação e configuração de sistemas operacionais Linux e Windows\nVirtualização (VirtualBox) e gerenciamento de máquinas virtuais\nConfiguração e administração na Amazon Elastic Compute Cloud (AWS EC2) para computação em nuvem."
   },
   {
     "objectID": "index.html#formação",
     "href": "index.html#formação",
     "title": "Alexsandro Prado",
     "section": "",
-    "text": "Universidade Federal da Paraíba (UFPB) Doutor em Economia, área de concentração Economia Aplicada\nUniversidade Federal da Paraíba (UFPB) Bacharel em Ciências Contábeis\nUniversidade de Brasília (UnB) Mestre em Ciências Contábeis"
+    "text": "Universidade Federal da Paraíba (UFPB)\nDoutor em Economia, área de concentração Economia Aplicada\nUniversidade de Brasília (UnB)\nMestre em Ciências Contábeis\nUniversidade Federal da Paraíba (UFPB)\nBacharel em Ciências Contábeis"
   },
   {
     "objectID": "index.html#habilidades",
     "href": "index.html#habilidades",
     "title": "Alexsandro Prado",
     "section": "",
-    "text": "Experiência na área de Ciências de Dados:\n\nETL (Extract, transform, load)\nBig data\nModelos de sobrevivência\nModelos logit\nEstimação em Diff-in-Diff (DID)\nPropense Score Matching"
+    "text": "Experiência sólida em análise e visualização de dados em linguagem R\nETL microdados (RAIS, CAGED, PNADc, BGSD, CVM Cias Abertas)\nSQL (Structured Query Language) para consulta e manipulação de dados\nModelos de sobrevivência, Modelos logit, Estimação em Diff-in-Diff (DID), Propense Score Matching\nDesenvolvimento de dashboards (Flexdashboard)\nDesenvolvimento de blogs e werbsites em (Posit Quarto)\nMontagem e manutenção de computadores\nInstalação e configuração de sistemas operacionais Linux e Windows\nVirtualização (VirtualBox) e gerenciamento de máquinas virtuais\nConfiguração e administração na Amazon Elastic Compute Cloud (AWS EC2) para computação em nuvem."
   },
   {
     "objectID": "blog/index.html",
@@ -110,5 +110,12 @@
     "title": "Selected R packages I’ve coauthored",
     "section": "",
     "text": "Selected R packages I’ve coauthored\n\n\n\n\n De volta ao topo"
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "Alexsandro Prado",
+    "section": "Notas de rodapé",
+    "text": "Notas de rodapé\n\n\n(Extract, transform, load)↩︎"
   }
 ]
