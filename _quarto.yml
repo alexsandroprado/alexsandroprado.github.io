@@ -8,7 +8,10 @@ lang: pt
 website:
   title: "Alexsandro Prado"
   site-url: "https://alexsandroprado.github.io/"
+  description: "Desvendando mistérios dos dados como Sherlock Holmes, mas com laptop e café, não lupa e cachimbo!"
   google-analytics: "GTM-T9KC9QL7"
+  back-to-top-navigation: true
+  reader-mode: true
   navbar:
     background: "#000000"
     left:
@@ -39,6 +42,8 @@ website:
         href: https://twitter.com/alexsandroprado
       - icon: youtube
         href: https://www.youtube.com/@profalexsandroprado
+      - icon: rss
+        href: index.xml
   page-footer:
     left: "Copyright 2023, Alexsandro Prado"
     right:

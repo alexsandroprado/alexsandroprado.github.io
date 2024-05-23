@@ -81,9 +81,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -110,8 +110,11 @@ gtag('js', new Date());
 gtag('config', 'GTM-T9KC9QL7', { 'anonymize_ip': true});
 </script>
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Merriweather" rel="stylesheet">
+
 <script src="https://kit.fontawesome.com/0fba9333d8.js" crossorigin="anonymous"></script>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -237,10 +240,20 @@ window.Quarto = {
 </i> 
 <span class="menu-text"></span></a>
   </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo escuro"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Alternar modo de leitor">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -262,7 +275,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
@@ -288,46 +301,43 @@ window.Quarto = {
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="econometria" data-listing-date-sort="1716346800000" data-listing-file-modified-sort="1716433070703" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1408">
-<div class="thumbnail">
-<p><a href="../blog/heterocedasticidade.html" class="no-external"></a></p><a href="../blog/heterocedasticidade.html" class="no-external">
-<p><img src="../blog/heterocedasticidade.png" class="thumbnail-image"></p>
-</a><p><a href="../blog/heterocedasticidade.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/heterocedasticidade.html" class="no-external">Heterocedasticidade e Autocorrelação: como resolver na prática?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../blog/heterocedasticidade.html" class="no-external"></a>
-</div>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="econometria" data-listing-date-sort="1716346800000" data-listing-file-modified-sort="1716435529948" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1408">
+<a href="../blog/heterocedasticidade.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../blog/heterocedasticidade.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Heterocedasticidade e Autocorrelação: como resolver na prática?
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('econometria'); return false;">
 econometria
 </div>
 </div>
-<div class="listing-description">
-<a href="../blog/heterocedasticidade.html" class="no-external">
-</a>
+<div class="card-text listing-description">
+
+
 </div>
-</div>
-<div class="metadata">
-<a href="../blog/heterocedasticidade.html" class="no-external">
-<div class="listing-date">
-22 maio 2024
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Alexsandro Prado
 </div>
-</a>
+<div class="listing-date">
+22 maio 2024
 </div>
+</div>
+</div>
+</div>
+</a>
 </div>
 </div>
 <div class="listing-no-matching d-none">
 Nenhum item correspondente
 </div>
-</div></main> <!-- /main -->
+</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

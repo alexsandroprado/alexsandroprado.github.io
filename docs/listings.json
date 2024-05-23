@@ -1,5 +1,11 @@
 [
   {
+    "listing": "/palestras/index.html",
+    "items": [
+      "/palestras/french_academy_1901.html"
+    ]
+  },
+  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/heterocedasticidade.html"
@@ -9,12 +15,6 @@
     "listing": "/artigos/index.html",
     "items": [
       "/artigos/uranium.html"
-    ]
-  },
-  {
-    "listing": "/palestras/index.html",
-    "items": [
-      "/palestras/french_academy_1901.html"
     ]
   }
 ]

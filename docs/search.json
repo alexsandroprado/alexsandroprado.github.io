@@ -4,63 +4,14 @@
     "href": "artigos/uranium.html",
     "title": "Sur la pénétration des rayons de Becquerel non déviables par le champ magnétique",
     "section": "",
-    "text": "Abstract goes here\nPlus any other information such as supplementary materials."
+    "text": "Abstract goes here\nPlus any other information such as supplementary materials.\n\n\n\n De volta ao topo"
   },
   {
-    "objectID": "sobre/index.html",
-    "href": "sobre/index.html",
-    "title": "Finley Malloc",
+    "objectID": "palestras/index.html",
+    "href": "palestras/index.html",
+    "title": "Talks I’ve given",
     "section": "",
-    "text": "Finley Malloc is the Chief Data Scientist at Wengo Analytics. When not innovating on data platforms, Finley enjoys spending time unicycling and playing with her pet iguana."
-  },
-  {
-    "objectID": "sobre/index.html#education",
-    "href": "sobre/index.html#education",
-    "title": "Finley Malloc",
-    "section": "Education",
-    "text": "Education\nUniversity of California, San Diego | San Diego, CA PhD in Mathematics | Sept 2011 - June 2015\nMacalester College | St. Paul MA B.A in Economics | Sept 2007 - June 2011"
-  },
-  {
-    "objectID": "sobre/index.html#experience",
-    "href": "sobre/index.html#experience",
-    "title": "Finley Malloc",
-    "section": "Experience",
-    "text": "Experience\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Spet 2012 - April 2018"
-  },
-  {
-    "objectID": "palestras/french_academy_1901.html",
-    "href": "palestras/french_academy_1901.html",
-    "title": "Adventures with Uranium Rays",
-    "section": "",
-    "text": "Abstract here\n\nSlides\nembed html or pdf slides here\n\n\nVideo"
-  },
-  {
-    "objectID": "ensino/index.html",
-    "href": "ensino/index.html",
-    "title": "Advanced Chemistry",
-    "section": "",
-    "text": "Advanced Chemistry\nBlah blah\n\n\n\nAdvanced Physics\nDon’t forget to bring your lab coats"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Alexsandro Prado",
-    "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHeterocedasticidade e Autocorrelação: como resolver na prática?\n\n\n\n\n\n\neconometria\n\n\n\n\n\n\n\n\n\n22 maio 2024\n\n\nAlexsandro Prado\n\n\n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "artigos/index.html",
-    "href": "artigos/index.html",
-    "title": "Publications",
-    "section": "",
-    "text": "Publications\n\n\n\n\n\n\n\n   \n     \n     \n       Ordenar por\n       Pré-selecionado\n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Título\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n    Marie Skłodowska-Curie (1900) Sur la pénétration des rayons de Becquerel non déviables par le champ magnétique. CR Acad Sci, 130, 76-79..\n  \n\n\n\n\nNenhum item correspondente"
-  },
-  {
-    "objectID": "blog/radioactivity.html",
-    "href": "blog/radioactivity.html",
-    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
-    "section": "",
-    "text": "A heterocedasticidade e a autocorrelação são problemas comuns na análise de regressão, especialmente em séries temporais e dados econométricos, que podem afetar a validade das inferências e a análise de causalidade.\nHeterocedasticidade refere-se à condição em que a variância dos erros (ou resíduos) de um modelo de regressão não é constante ao longo das observações. Em outras palavras, os erros variam em intensidade dependendo do nível da variável independente. Esse problema pode levar a estimativas ineficientes dos coeficientes da regressão, fazendo com que os testes estatísticos, como o teste t e o teste F, se tornem não confiáveis. Isso significa que as inferências sobre a significância das variáveis podem ser incorretas, resultando em um erro na identificação das relações causais.\nAutocorrelação, por outro lado, ocorre quando os erros do modelo de regressão não são independentes uns dos outros, mas sim correlacionados ao longo do tempo ou das observações. Esse problema é particularmente prevalente em dados de séries temporais. A presença de autocorrelação indica que há padrões não capturados pelo modelo, o que pode levar a subestimação ou superestimação da variabilidade dos coeficientes de regressão. Assim como a heterocedasticidade, a autocorrelação torna os testes estatísticos tradicionais inapropriados, resultando em inferências enganosas e dificultando a análise de causalidade correta.\nAmbos os problemas prejudicam a capacidade de um modelo de fornecer estimativas confiáveis e podem levar à formulação de políticas ou decisões baseadas em conclusões erradas. Para mitigar esses problemas, podem ser utilizadas técnicas como a transformação dos dados, o uso de modelos robustos a heterocedasticidade e autocorrelação, ou a aplicação de modelos que explicitamente modelam a estrutura dos erros, como modelos GARCH para heterocedasticidade e modelos ARIMA para autocorrelação."
+    "text": "Talks I’ve given\n\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Ordenar por\n       Pré-selecionado\n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Título\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nData\n\n\nTítulo\n\n\nVenue\n\n\n\n\n\n\n30 jun 1901\n\n\nAdventures with Uranium Rays\n\n\nFrench Academy, Paris\n\n\n\n\n\nNenhum item correspondente\n\n De volta ao topo"
   },
   {
     "objectID": "index.html",
@@ -84,53 +35,18 @@
     "text": "Experiência na área de Ciências de Dados:\n\nETL (Extract, transform, load)\nBig data\nModelos de sobrevivência\nModelos logit\nEstimação em Diff-in-Diff (DID)\nPropense Score Matching"
   },
   {
-    "objectID": "palestras/index.html",
-    "href": "palestras/index.html",
-    "title": "Talks I’ve given",
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Alexsandro Prado",
     "section": "",
-    "text": "Talks I’ve given\n\n\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nVenue\n\n\n\n\n\n\n30 Jun 1901\n\n\nAdventures with Uranium Rays\n\n\nFrench Academy, Paris\n\n\n\n\n\nNo matching items"
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nHeterocedasticidade e Autocorrelação: como resolver na prática?\n\n\n\neconometria\n\n\n\n\n\n\n\nAlexsandro Prado\n\n\n22 maio 2024\n\n\n\n\n\n\n\n\nNenhum item correspondente\n\n De volta ao topo"
   },
   {
-    "objectID": "software/index.html",
-    "href": "software/index.html",
-    "title": "Selected R packages I’ve coauthored",
+    "objectID": "artigos/index.html",
+    "href": "artigos/index.html",
+    "title": "Publications",
     "section": "",
-    "text": "Selected R packages I’ve coauthored"
-  },
-  {
-    "objectID": "blog/radioactivity.html#transformações-de-variáveis",
-    "href": "blog/radioactivity.html#transformações-de-variáveis",
-    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
-    "section": "1. Transformações de Variáveis",
-    "text": "1. Transformações de Variáveis\nTransformar a variável dependente ou independente pode ajudar a estabilizar a variância dos erros. Transformações comuns incluem:\nLogarítmica: Aplicar o logaritmo na variável dependente pode ser eficaz quando a variância dos erros aumenta com o valor da variável dependente.\n\nmodel_log &lt;- lm(log(salary) ~ experience + education, data = data)\nsummary(model_log)\n\n\nCall:\nlm(formula = log(salary) ~ experience + education, data = data)\n\nResiduals:\n      Min        1Q    Median        3Q       Max \n-0.071087 -0.021134 -0.000469  0.018983  0.091538 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 8.906897   0.029442  302.52   &lt;2e-16 ***\nexperience  0.067282   0.001827   36.84   &lt;2e-16 ***\neducation   0.022101   0.001724   12.82   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.03314 on 97 degrees of freedom\nMultiple R-squared:  0.9384,    Adjusted R-squared:  0.9371 \nF-statistic:   739 on 2 and 97 DF,  p-value: &lt; 2.2e-16\n\n\nRaiz Quadrada: Usar a raiz quadrada da variável dependente pode ser útil em alguns casos.\n\nmodel_sqrt &lt;- lm(sqrt(salary) ~ experience + education, data = data)\nsummary(model_sqrt)\n\n\nCall:\nlm(formula = sqrt(salary) ~ experience + education, data = data)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-4.2463 -1.2381 -0.2119  1.1691  5.9950 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  79.9427     1.8098   44.17   &lt;2e-16 ***\nexperience    4.0817     0.1123   36.35   &lt;2e-16 ***\neducation     1.3270     0.1060   12.52   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.037 on 97 degrees of freedom\nMultiple R-squared:  0.9368,    Adjusted R-squared:  0.9354 \nF-statistic: 718.3 on 2 and 97 DF,  p-value: &lt; 2.2e-16"
-  },
-  {
-    "objectID": "blog/radioactivity.html#modelos-de-regressão-ponderada-wls",
-    "href": "blog/radioactivity.html#modelos-de-regressão-ponderada-wls",
-    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
-    "section": "2. Modelos de Regressão Ponderada (WLS)",
-    "text": "2. Modelos de Regressão Ponderada (WLS)\nSe a heterocedasticidade é sistemática, ponderar as observações pelo inverso da variância estimada dos erros pode melhorar a eficiência dos estimadores:\n\n# Estimar pesos inversamente proporcionais à variância dos resíduos\nweights &lt;- 1 / lm(abs(residuals(model)) ~ fitted(model))$fitted.values^2\n\n# Ajustar o modelo ponderado\nmodel_wls &lt;- lm(salary ~ experience + education, data = data, weights = weights)\nsummary(model_wls)\n\n\nCall:\nlm(formula = salary ~ experience + education, data = data, weights = weights)\n\nWeighted Residuals:\n    Min      1Q  Median      3Q     Max \n-2.6267 -0.8224 -0.1781  0.7972  3.0487 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  5057.32     348.80   14.50   &lt;2e-16 ***\nexperience    993.10      18.41   53.94   &lt;2e-16 ***\neducation     301.39      22.46   13.42   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.295 on 97 degrees of freedom\nMultiple R-squared:   0.97, Adjusted R-squared:  0.9694 \nF-statistic:  1569 on 2 and 97 DF,  p-value: &lt; 2.2e-16"
-  },
-  {
-    "objectID": "blog/radioactivity.html#modelos-generalizados-glm",
-    "href": "blog/radioactivity.html#modelos-generalizados-glm",
-    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
-    "section": "3. Modelos Generalizados (GLM)",
-    "text": "3. Modelos Generalizados (GLM)\nUsar um modelo de regressão mais flexível, como os modelos lineares generalizados (GLM), pode ser apropriado. Por exemplo, a família de distribuições Gamma pode ser adequada para dados positivos com variância crescente:\n\n# Ajustar um modelo GLM com família Gamma\nmodel_glm &lt;- glm(salary ~ experience + education, data = data, family = Gamma(link = \"log\"))\nsummary(model_glm)\n\n\nCall:\nglm(formula = salary ~ experience + education, family = Gamma(link = \"log\"), \n    data = data)\n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 8.907700   0.029539  301.56   &lt;2e-16 ***\nexperience  0.067364   0.001833   36.76   &lt;2e-16 ***\neducation   0.022057   0.001730   12.75   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for Gamma family taken to be 0.001105443)\n\n    Null deviance: 1.71347  on 99  degrees of freedom\nResidual deviance: 0.10675  on 97  degrees of freedom\nAIC: 1528.4\n\nNumber of Fisher Scoring iterations: 3"
-  },
-  {
-    "objectID": "blog/radioactivity.html#substituir-variáveis-com-novas-variáveis",
-    "href": "blog/radioactivity.html#substituir-variáveis-com-novas-variáveis",
-    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
-    "section": "4. Substituir Variáveis com Novas Variáveis",
-    "text": "4. Substituir Variáveis com Novas Variáveis\nÀs vezes, a heterocedasticidade pode ser causada pela omissão de variáveis relevantes. Incluir novas variáveis que capturem a fonte da heterocedasticidade pode ajudar a corrigir o problema."
-  },
-  {
-    "objectID": "blog/radioactivity.html#análise-de-componentes-principais-pca",
-    "href": "blog/radioactivity.html#análise-de-componentes-principais-pca",
-    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
-    "section": "5. Análise de Componentes Principais (PCA)",
-    "text": "5. Análise de Componentes Principais (PCA)\nSe as variáveis independentes são altamente correlacionadas, o uso de PCA para reduzir a dimensionalidade pode ajudar a mitigar a heterocedasticidade.\n\nPasso 1: Preparação dos Dados\nVamos criar um conjunto de dados fictício com variáveis correlacionadas:\n\n# Carregar pacotes necessários\nlibrary(ggplot2)\nlibrary(lmtest)\nlibrary(sandwich)\nlibrary(MASS)\nlibrary(dplyr)\n\n\nAnexando pacote: 'dplyr'\n\n\nO seguinte objeto é mascarado por 'package:MASS':\n\n    select\n\n\nOs seguintes objetos são mascarados por 'package:stats':\n\n    filter, lag\n\n\nOs seguintes objetos são mascarados por 'package:base':\n\n    intersect, setdiff, setequal, union\n\n# Criar dados fictícios\nset.seed(123)\nn &lt;- 100\nexperience &lt;- rnorm(n, mean = 5, sd = 2)\neducation &lt;- rnorm(n, mean = 16, sd = 2)\nage &lt;- rnorm(n, mean = 40, sd = 10)\nsalary &lt;- 5000 + 1000 * experience + 300 * education + 150 * age + rnorm(n, mean = 0, sd = experience * 100)\n\ndata &lt;- data.frame(salary, experience, education, age)\n\n\n\nPasso 2: Análise de Componentes Principais (PCA)\nVamos aplicar a PCA às variáveis independentes:\n\n# Padronizar as variáveis independentes\ndata_standardized &lt;- scale(data[, c(\"experience\", \"education\", \"age\")])\n\n# Aplicar PCA\npca &lt;- prcomp(data_standardized, center = TRUE, scale. = TRUE)\n\n# Visualizar a proporção da variância explicada por cada componente\nsummary(pca)\n\nImportance of components:\n                          PC1    PC2    PC3\nStandard deviation     1.0726 0.9900 0.9324\nProportion of Variance 0.3835 0.3267 0.2898\nCumulative Proportion  0.3835 0.7102 1.0000\n\n\n\n\nPasso 3: Seleção de Componentes Principais\nVamos escolher quantos componentes principais (PCs) utilizar com base na proporção da variância explicada:\n\n# Adicionar os componentes principais ao dataframe original\ndata_pca &lt;- data.frame(salary = data$salary, pca$x[, 1:2])  # Escolhendo os 2 primeiros PCs\n\n# Ver os dados com os componentes principais\nhead(data_pca)\n\n    salary        PC1        PC2\n1 22273.57 -1.6807281  1.4217451\n2 22120.70 -1.1845614  0.1235709\n3 22609.83  1.3975878 -0.2722631\n4 21006.18 -0.2159818  0.3810757\n5 19636.21  0.7027710  0.6176000\n6 23767.93  1.5835543 -0.5682535\n\n\n\n\nPasso 4: Ajuste do Modelo de Regressão Linear Usando Componentes Principais\n\n# Ajustar o modelo de regressão linear com os componentes principais\nmodel_pca &lt;- lm(salary ~ PC1 + PC2, data = data_pca)\n\n# Resumo do modelo\nsummary(model_pca)\n\n\nCall:\nlm(formula = salary ~ PC1 + PC2, data = data_pca)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-5497.9 -1321.4  -106.2  1311.4  6532.0 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 21069.94     222.54  94.677   &lt;2e-16 ***\nPC1            96.68     208.52   0.464   0.6439    \nPC2          -394.22     225.92  -1.745   0.0842 .  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2225 on 97 degrees of freedom\nMultiple R-squared:  0.03251,   Adjusted R-squared:  0.01256 \nF-statistic:  1.63 on 2 and 97 DF,  p-value: 0.2013\n\n# Teste de Breusch-Pagan\nbp_test_pca &lt;- bptest(model_pca)\nprint(bp_test_pca)\n\n\n    studentized Breusch-Pagan test\n\ndata:  model_pca\nBP = 0.050589, df = 2, p-value = 0.975\n\n# Ajustar o modelo com erros padrão robustos\nrobust_se_pca &lt;- coeftest(model_pca, vcov = vcovHC(model_pca, type = \"HC1\"))\nprint(robust_se_pca)\n\n\nt test of coefficients:\n\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 21069.939    222.545 94.6773  &lt; 2e-16 ***\nPC1            96.679    180.262  0.5363  0.59296    \nPC2          -394.219    203.820 -1.9342  0.05601 .  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nExplicação do Código: Preparação dos Dados: Criamos um conjunto de dados fictício com variáveis correlacionadas (experience, education, age) e uma variável dependente (salary). Padronização: Padronizamos as variáveis independentes para que todas tenham média 0 e desvio padrão 1. Aplicação da PCA: Aplicamos PCA às variáveis padronizadas para obter componentes principais não correlacionados. Seleção de PCs: Escolhemos os componentes principais que explicam uma proporção significativa da variância (neste exemplo, usamos os dois primeiros PCs). Ajuste do Modelo: Ajustamos o modelo de regressão linear utilizando os componentes principais selecionados. Diagnóstico e Ajuste Robusto: Realizamos o teste de Breusch-Pagan para verificar a presença de heterocedasticidade e ajustamos o modelo com erros padrão robustos, se necessário."
+    "text": "Publications\n\n\n\n\n\n\n\n   \n     \n     \n       Ordenar por\n       Pré-selecionado\n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Título\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n    Marie Skłodowska-Curie (1900) Sur la pénétration des rayons de Becquerel non déviables par le champ magnétique. CR Acad Sci, 130, 76-79..\n  \n\n\n\n\nNenhum item correspondente\n\n De volta ao topo"
   },
   {
     "objectID": "blog/heterocedasticidade.html",
@@ -173,5 +89,26 @@
     "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
     "section": "5. Análise de Componentes Principais (PCA)",
     "text": "5. Análise de Componentes Principais (PCA)\nSe as variáveis independentes são altamente correlacionadas, o uso de PCA para reduzir a dimensionalidade pode ajudar a mitigar a heterocedasticidade.\n\nPasso 1: Preparação dos Dados\nVamos criar um conjunto de dados fictício com variáveis correlacionadas:\n\n# Carregar pacotes necessários\nlibrary(ggplot2)\nlibrary(lmtest)\nlibrary(sandwich)\nlibrary(MASS)\nlibrary(dplyr)\n\n# Criar dados fictícios\nset.seed(123)\nn &lt;- 100\nexperience &lt;- rnorm(n, mean = 5, sd = 2)\neducation &lt;- rnorm(n, mean = 16, sd = 2)\nage &lt;- rnorm(n, mean = 40, sd = 10)\nsalary &lt;- 5000 + 1000 * experience + 300 * education + 150 * age + rnorm(n, mean = 0, sd = experience * 100)\n\ndata &lt;- data.frame(salary, experience, education, age)\n\n\n\nPasso 2: Análise de Componentes Principais (PCA)\nVamos aplicar a PCA às variáveis independentes:\n\n# Padronizar as variáveis independentes\ndata_standardized &lt;- scale(data[, c(\"experience\", \"education\", \"age\")])\n\n# Aplicar PCA\npca &lt;- prcomp(data_standardized, center = TRUE, scale. = TRUE)\n\n# Visualizar a proporção da variância explicada por cada componente\nsummary(pca)\n\nImportance of components:\n                          PC1    PC2    PC3\nStandard deviation     1.0726 0.9900 0.9324\nProportion of Variance 0.3835 0.3267 0.2898\nCumulative Proportion  0.3835 0.7102 1.0000\n\n\n\n\nPasso 3: Seleção de Componentes Principais\nVamos escolher quantos componentes principais (PCs) utilizar com base na proporção da variância explicada:\n\n# Adicionar os componentes principais ao dataframe original\ndata_pca &lt;- data.frame(salary = data$salary, pca$x[, 1:2])  # Escolhendo os 2 primeiros PCs\n\n# Ver os dados com os componentes principais\nhead(data_pca)\n\n    salary        PC1        PC2\n1 22273.57 -1.6807281  1.4217451\n2 22120.70 -1.1845614  0.1235709\n3 22609.83  1.3975878 -0.2722631\n4 21006.18 -0.2159818  0.3810757\n5 19636.21  0.7027710  0.6176000\n6 23767.93  1.5835543 -0.5682535\n\n\n\n\nPasso 4: Ajuste do Modelo de Regressão Linear Usando Componentes Principais\n\n# Ajustar o modelo de regressão linear com os componentes principais\nmodel_pca &lt;- lm(salary ~ PC1 + PC2, data = data_pca)\n\n# Resumo do modelo\nsummary(model_pca)\n\n\nCall:\nlm(formula = salary ~ PC1 + PC2, data = data_pca)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-5497.9 -1321.4  -106.2  1311.4  6532.0 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 21069.94     222.54  94.677   &lt;2e-16 ***\nPC1            96.68     208.52   0.464   0.6439    \nPC2          -394.22     225.92  -1.745   0.0842 .  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2225 on 97 degrees of freedom\nMultiple R-squared:  0.03251,   Adjusted R-squared:  0.01256 \nF-statistic:  1.63 on 2 and 97 DF,  p-value: 0.2013\n\n# Teste de Breusch-Pagan\nbp_test_pca &lt;- bptest(model_pca)\nprint(bp_test_pca)\n\n\n    studentized Breusch-Pagan test\n\ndata:  model_pca\nBP = 0.050589, df = 2, p-value = 0.975\n\n# Ajustar o modelo com erros padrão robustos\nrobust_se_pca &lt;- coeftest(model_pca, vcov = vcovHC(model_pca, type = \"HC1\"))\nprint(robust_se_pca)\n\n\nt test of coefficients:\n\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 21069.939    222.545 94.6773  &lt; 2e-16 ***\nPC1            96.679    180.262  0.5363  0.59296    \nPC2          -394.219    203.820 -1.9342  0.05601 .  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nExplicação do Código:\nPreparação dos Dados: Criamos um conjunto de dados fictício com variáveis correlacionadas (experience, education, age) e uma variável dependente (salary).\nPadronização: Padronizamos as variáveis independentes para que todas tenham média 0 e desvio padrão 1.\nAplicação da PCA: Aplicamos PCA às variáveis padronizadas para obter componentes principais não correlacionados.\nSeleção de PCs: Escolhemos os componentes principais que explicam uma proporção significativa da variância (neste exemplo, usamos os dois primeiros PCs).\nAjuste do Modelo: Ajustamos o modelo de regressão linear utilizando os componentes principais selecionados.\nDiagnóstico e Ajuste Robusto: Realizamos o teste de Breusch-Pagan para verificar a presença de heterocedasticidade e ajustamos o modelo com erros padrão robustos, se necessário."
+  },
+  {
+    "objectID": "ensino/index.html",
+    "href": "ensino/index.html",
+    "title": "Advanced Chemistry",
+    "section": "",
+    "text": "Advanced Chemistry\nBlah blah\n\n\n\nAdvanced Physics\nDon’t forget to bring your lab coats\n\n\n\n\n De volta ao topo"
+  },
+  {
+    "objectID": "palestras/french_academy_1901.html",
+    "href": "palestras/french_academy_1901.html",
+    "title": "Adventures with Uranium Rays",
+    "section": "",
+    "text": "Abstract here\n\nSlides\nembed html or pdf slides here\n\n\nVideo\n\n\n\n\n\n  \n  \n\n\n\n\n De volta ao topo"
+  },
+  {
+    "objectID": "software/index.html",
+    "href": "software/index.html",
+    "title": "Selected R packages I’ve coauthored",
+    "section": "",
+    "text": "Selected R packages I’ve coauthored\n\n\n\n\n De volta ao topo"
   }
 ]
