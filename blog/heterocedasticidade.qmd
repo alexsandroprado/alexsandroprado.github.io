@@ -1,0 +1,271 @@
+---
+date: "2024-05-22"
+title: "Heterocedasticidade e Autocorrelação: como resolver na prática?"
+author: "Alexsandro Prado"
+categories:
+  - econometria
+
+image: heterocedasticidade.png
+editor: 
+  markdown: 
+    wrap: 72
+---
+<p style="text-align: justify;">
+A heterocedasticidade e a autocorrelação são problemas comuns na análise de regressão, especialmente em séries temporais e dados econométricos, que podem afetar a validade das inferências e a análise de causalidade.
+
+Heterocedasticidade refere-se à condição em que a variância dos erros (ou resíduos) de um modelo de regressão não é constante ao longo das observações. Em outras palavras, os erros variam em intensidade dependendo do nível da variável independente. Esse problema pode levar a estimativas ineficientes dos coeficientes da regressão, fazendo com que os testes estatísticos, como o teste t e o teste F, se tornem não confiáveis. Isso significa que as inferências sobre a significância das variáveis podem ser incorretas, resultando em um erro na identificação das relações causais.
+
+Autocorrelação, por outro lado, ocorre quando os erros do modelo de regressão não são independentes uns dos outros, mas sim correlacionados ao longo do tempo ou das observações. Esse problema é particularmente prevalente em dados de séries temporais. A presença de autocorrelação indica que há padrões não capturados pelo modelo, o que pode levar a subestimação ou superestimação da variabilidade dos coeficientes de regressão. Assim como a heterocedasticidade, a autocorrelação torna os testes estatísticos tradicionais inapropriados, resultando em inferências enganosas e dificultando a análise de causalidade correta.
+
+Ambos os problemas prejudicam a capacidade de um modelo de fornecer estimativas confiáveis e podem levar à formulação de políticas ou decisões baseadas em conclusões erradas. Para mitigar esses problemas, podem ser utilizadas técnicas como a transformação dos dados, o uso de modelos robustos a heterocedasticidade e autocorrelação, ou a aplicação de modelos que explicitamente modelam a estrutura dos erros, como modelos GARCH para heterocedasticidade e modelos ARIMA para autocorrelação.
+</p>
+
+# Passo 1: Identificar a Heterocedasticidade
+
+Primeiro, vamos carregar alguns pacotes necessários e criar um conjunto de dados fictício:
+```{r, message=FALSE, warning=FALSE}
+# Carregar pacotes necessários
+
+library(ggplot2) 
+library(lmtest) 
+library(sandwich)
+
+# Criar dados fictícios
+
+set.seed(123) 
+n <- 100 
+experience <- rnorm(n, mean = 5, sd = 2)
+education <- rnorm(n, mean = 16, sd = 2) 
+salary <- 5000 + 1000 * experience + 300 * education + rnorm(n, mean = 0, sd = experience *100)
+
+data <- data.frame(salary, experience, education)
+```
+
+# Passo 2: Ajustar o Modelo de Regressão Linear
+Vamos ajustar um modelo de regressão linear simples:
+
+```{r, message=FALSE, warning=FALSE}
+
+# Ajustar o modelo de regressão linear
+model <- lm(salary ~ experience + education, data = data)
+
+# Resumo do modelo
+summary(model)
+```
+
+# Passo 3: Diagnosticar Heterocedasticidade
+Podemos usar o teste de Breusch-Pagan para diagnosticar a presença de heterocedasticidade
+```{r, message=FALSE, warning=FALSE}
+# Teste de Breusch-Pagan
+bptest(model)
+```
+Se o p-valor do teste for menor que 0.05, isso indica a presença de heterocedasticidade.
+
+# Passo 4: Tratar Heterocedasticidade
+Uma maneira comum de tratar a heterocedasticidade é usar estimadores robustos de erro padrão. Vamos ajustar o modelo novamente com erros robustos:
+
+```{r, message=FALSE, warning=FALSE}
+# Ajustar o modelo com erros padrão robustos
+coeftest(model, vcov = vcovHC(model, type = "HC1"))
+```
+
+# Outras técnicas
+Além do uso de estimadores robustos, existem várias outras medidas para tratar a heterocedasticidade em um modelo de regressão linear. A escolha da técnica pode depender da natureza dos dados e da estrutura da heterocedasticidade. Aqui estão algumas abordagens adicionais:
+  
+## 1. Transformações de Variáveis
+Transformar a variável dependente ou independente pode ajudar a estabilizar a variância dos erros. Transformações comuns incluem:
+
+Logarítmica: Aplicar o logaritmo na variável dependente pode ser eficaz quando a variância dos erros aumenta com o valor da variável dependente.
+
+```{r, message=FALSE, warning=FALSE}
+model_log <- lm(log(salary) ~ experience + education, data = data)
+summary(model_log)
+```
+
+
+Raiz Quadrada: Usar a raiz quadrada da variável dependente pode ser útil em alguns casos.
+```{r, message=FALSE, warning=FALSE}
+model_sqrt <- lm(sqrt(salary) ~ experience + education, data = data)
+summary(model_sqrt)
+
+```
+
+## 2. Modelos de Regressão Ponderada (WLS)
+Se a heterocedasticidade é sistemática, ponderar as observações pelo inverso da variância estimada dos erros pode melhorar a eficiência dos estimadores:
+```{r, message=FALSE, warning=FALSE}
+# Estimar pesos inversamente proporcionais à variância dos resíduos
+weights <- 1 / lm(abs(residuals(model)) ~ fitted(model))$fitted.values^2
+
+# Ajustar o modelo ponderado
+model_wls <- lm(salary ~ experience + education, data = data, weights = weights)
+summary(model_wls)
+
+```
+
+## 3. Modelos Generalizados (GLM)
+Usar um modelo de regressão mais flexível, como os modelos lineares generalizados (GLM), pode ser apropriado. Por exemplo, a família de distribuições Gamma pode ser adequada para dados positivos com variância crescente:
+```{r, message=FALSE, warning=FALSE}
+# Ajustar um modelo GLM com família Gamma
+model_glm <- glm(salary ~ experience + education, data = data, family = Gamma(link = "log"))
+summary(model_glm)
+```
+
+
+## 4. Substituir Variáveis com Novas Variáveis
+Às vezes, a heterocedasticidade pode ser causada pela omissão de variáveis relevantes. Incluir novas variáveis que capturem a fonte da heterocedasticidade pode ajudar a corrigir o problema.
+
+### Passo 1: Preparação dos Dados
+Primeiro, vamos criar um conjunto de dados fictício que contém algumas variáveis correlacionadas e uma variável dependente.
+```{r}
+# Carregar pacotes necessários
+library(ggplot2)
+library(lmtest)
+library(sandwich)
+library(dplyr)
+
+# Criar dados fictícios
+set.seed(123)
+n <- 100
+experience <- rnorm(n, mean = 5, sd = 2)
+education <- rnorm(n, mean = 16, sd = 2)
+age <- rnorm(n, mean = 40, sd = 10)
+salary <- 5000 + 1000 * experience + 300 * education + 150 * age + rnorm(n, mean = 0, sd = 1000)
+
+data <- data.frame(salary, experience, education, age)
+
+```
+
+### Passo 2: Ajustar o Modelo de Regressão Inicial
+Vamos ajustar um modelo de regressão linear inicial com as variáveis originais.
+```{r}
+# Ajustar o modelo de regressão linear
+model_initial <- lm(salary ~ experience + education + age, data = data)
+
+# Resumo do modelo inicial
+summary(model_initial)
+
+# Teste de Breusch-Pagan para heterocedasticidade
+bp_test_initial <- bptest(model_initial)
+print(bp_test_initial)
+
+```
+
+
+### Passo 3: Criar Novas Variáveis
+Suponhamos que a relação entre salary e as variáveis experience, education e age pode ser melhor capturada por variáveis transformadas ou interações entre elas. Vamos criar algumas novas variáveis:
+```{r}
+# Criar novas variáveis transformadas e de interação
+data <- data %>%
+  mutate(experience_sq = experience^2,
+         education_sq = education^2,
+         age_sq = age^2,
+         exp_edu_interaction = experience * education,
+         exp_age_interaction = experience * age,
+         edu_age_interaction = education * age)
+
+```
+
+### Passo 4: Ajustar o Modelo de Regressão com Novas Variáveis
+Ajustamos o modelo de regressão linear novamente, agora incluindo as novas variáveis.
+
+```{r}
+# Ajustar o modelo de regressão linear com novas variáveis
+model_new <- lm(salary ~ experience + education + age + 
+                  experience_sq + education_sq + age_sq + 
+                  exp_edu_interaction + exp_age_interaction + edu_age_interaction, data = data)
+
+# Resumo do modelo novo
+summary(model_new)
+
+# Teste de Breusch-Pagan para heterocedasticidade
+bp_test_new <- bptest(model_new)
+print(bp_test_new)
+```
+
+
+## 5. Análise de Componentes Principais (PCA)
+Se as variáveis independentes são altamente correlacionadas, o uso de PCA para reduzir a dimensionalidade pode ajudar a mitigar a heterocedasticidade.
+
+### Passo 1: Preparação dos Dados
+Vamos criar um conjunto de dados fictício com variáveis correlacionadas:
+
+```{r, message=FALSE, warning=FALSE}
+# Carregar pacotes necessários
+library(ggplot2)
+library(lmtest)
+library(sandwich)
+library(MASS)
+library(dplyr)
+
+# Criar dados fictícios
+set.seed(123)
+n <- 100
+experience <- rnorm(n, mean = 5, sd = 2)
+education <- rnorm(n, mean = 16, sd = 2)
+age <- rnorm(n, mean = 40, sd = 10)
+salary <- 5000 + 1000 * experience + 300 * education + 150 * age + rnorm(n, mean = 0, sd = experience * 100)
+
+data <- data.frame(salary, experience, education, age)
+
+```
+
+### Passo 2: Análise de Componentes Principais (PCA)
+Vamos aplicar a PCA às variáveis independentes:
+
+```{r, message=FALSE, warning=FALSE}
+# Padronizar as variáveis independentes
+data_standardized <- scale(data[, c("experience", "education", "age")])
+
+# Aplicar PCA
+pca <- prcomp(data_standardized, center = TRUE, scale. = TRUE)
+
+# Visualizar a proporção da variância explicada por cada componente
+summary(pca)
+
+```
+
+### Passo 3: Seleção de Componentes Principais
+Vamos escolher quantos componentes principais (PCs) utilizar com base na proporção da variância explicada:
+
+```{r, message=FALSE, warning=FALSE}
+# Adicionar os componentes principais ao dataframe original
+data_pca <- data.frame(salary = data$salary, pca$x[, 1:2])  # Escolhendo os 2 primeiros PCs
+
+# Ver os dados com os componentes principais
+head(data_pca)
+
+```
+
+### Passo 4: Ajuste do Modelo de Regressão Linear Usando Componentes Principais
+
+```{r, message=FALSE, warning=FALSE}
+# Ajustar o modelo de regressão linear com os componentes principais
+model_pca <- lm(salary ~ PC1 + PC2, data = data_pca)
+
+# Resumo do modelo
+summary(model_pca)
+
+# Teste de Breusch-Pagan
+bp_test_pca <- bptest(model_pca)
+print(bp_test_pca)
+
+# Ajustar o modelo com erros padrão robustos
+robust_se_pca <- coeftest(model_pca, vcov = vcovHC(model_pca, type = "HC1"))
+print(robust_se_pca)
+```
+
+
+**Explicação do Código:**
+
+Preparação dos Dados: Criamos um conjunto de dados fictício com variáveis correlacionadas (experience, education, age) e uma variável dependente (salary).
+
+Padronização: Padronizamos as variáveis independentes para que todas tenham média 0 e desvio padrão 1.
+
+Aplicação da PCA: Aplicamos PCA às variáveis padronizadas para obter componentes principais não correlacionados.
+
+Seleção de PCs: Escolhemos os componentes principais que explicam uma proporção significativa da variância (neste exemplo, usamos os dois primeiros PCs).
+
+Ajuste do Modelo: Ajustamos o modelo de regressão linear utilizando os componentes principais selecionados.
+
+Diagnóstico e Ajuste Robusto: Realizamos o teste de Breusch-Pagan para verificar a presença de heterocedasticidade e ajustamos o modelo com erros padrão robustos, se necessário.
+
