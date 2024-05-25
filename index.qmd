@@ -58,7 +58,7 @@ about:
 
 -   Desenvolvimento de dashboards (Flexdashboard)
 
--   Desenvolvimento de blogs e werbsites em (Posit Quarto)
+-   Desenvolvimento de blogs e websites em (Posit Quarto)
 
 -   Montagem e manutenção de computadores
 
