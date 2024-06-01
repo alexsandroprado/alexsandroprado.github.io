@@ -2,8 +2,8 @@
 #title: "My blog"
 description: "Thoughts on research"
 listing:
-  contents: .
-  feed: true  
+  contents: "*.qmd"
+  feed: true 
   sort: "date desc"
   type: grid
   categories: true

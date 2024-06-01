@@ -15,7 +15,9 @@ website:
   back-to-top-navigation: true
   reader-mode: false
   navbar:
+    type: light
     background: "#000000"
+    logo: "images/logo.png"
     left:
       - href: blog/index.qmd
         text: Blog
@@ -45,7 +47,7 @@ website:
       - icon: youtube
         href: https://www.youtube.com/@profalexsandroprado
       - icon: rss
-        href: index.xml
+        href: blog/index.xml
   page-footer:
     left: "Copyright 2023, Alexsandro Prado"
     right:
@@ -62,9 +64,12 @@ format:
     theme:
       light: journal
       dark: darkly
-    # css: styles.css
+    css: styles.css
     toc: true
     html-math-method: katex
     include-in-header:
       file: header.html
 
+blog:
+  - folder: blog
+    feed: true

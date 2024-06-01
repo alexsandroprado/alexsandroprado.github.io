@@ -6,15 +6,15 @@
     ]
   },
   {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/heterocedasticidade.html"
-    ]
-  },
-  {
     "listing": "/artigos/index.html",
     "items": [
       "/artigos/uranium.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/posts/heterocedasticidade.html"
     ]
   }
 ]

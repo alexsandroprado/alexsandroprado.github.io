@@ -60,7 +60,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 hr {
@@ -285,3 +285,12 @@ a.badge.badge-green {
 
 .quarto-listing-category.category-cloud {
   font-family: 'Fira Sans', 'Trebuchet
+}
+
+/* Ajuste o tamanho do logo na navbar */
+.quarto-navbar .quarto-navbar-logo img {
+  height: 300 px; /* Ajuste esta altura conforme necessário */
+  width: auto; /* Mantém a proporção da imagem */
+}
+
+]
