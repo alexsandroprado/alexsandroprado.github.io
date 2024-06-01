@@ -2,7 +2,7 @@
 title: Alexsandro Prado
 about:
   template: trestles
-  image: alexsandro.png
+  image: /images/alexsandro.png
   links:
     - icon: envelope
       text: e-mail

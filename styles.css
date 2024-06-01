@@ -26,7 +26,7 @@ h3,
 h4,
 h5 {
   font-family: 'Fira Sans', 'Trebuchet MS', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333; /* Dark gray */
+  color: #fff; /* Dark gray */
   font-weight: bold;
 }
 
@@ -54,7 +54,7 @@ h6 {
 }
 
 a {
-  color: #333; /* Dark gray */
+  color: #fff; /* Dark gray */
   text-decoration: none;
   border-bottom: dotted 1px #999; /* Gray */
 }
@@ -71,7 +71,7 @@ hr {
 }
 
 blockquote {
-  color: #333; /* Dark gray */
+  color: #fff; /* Dark gray */
   background: #f0f0f0; /* Off-white */
   border-left: 10px solid #ccc; /* Gray */
   margin: 1.5em 10px;
@@ -82,7 +82,7 @@ blockquote {
 }
 
 blockquote p {
-  color: #333; /* Dark gray */
+  color: #fff; /* Dark gray */
   display: inline;
 }
 
@@ -287,10 +287,14 @@ a.badge.badge-green {
   font-family: 'Fira Sans', 'Trebuchet
 }
 
-/* Ajuste o tamanho do logo na navbar */
-.quarto-navbar .quarto-navbar-logo img {
-  height: 300 px; /* Ajuste esta altura conforme necessário */
-  width: auto; /* Mantém a proporção da imagem */
+
+.navbar-brand {
+  background: url('images/logo.png');
+  background-size: contain;
+  padding-right: 5px !important;
+  padding-left: 50px !important;
+  background-repeat: no-repeat;
+  color: #fff;
 }
 
-]
+
