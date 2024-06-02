@@ -10,21 +10,43 @@ about:
     - icon: person-fill
       text: lattes
       href: http://lattes.cnpq.br/4254857944224293
+      target: _blank
     - icon: filter-square-fill          
       text: orcid
       href: https://orcid.org/0000-0002-7072-3621
+      target: _blank
     - icon: twitter-x
       text:  
       href: https://twitter.com/alexsandroprado
+      target: _blank
     - icon: linkedin
       text: linkedin
       href: https://www.linkedin.com/in/alexsandroprado/
+      target: _blank
     - icon: youtube
       text: youtube
       href: https://www.youtube.com/@profalexsandroprado
+      target: _blank
     - icon: github
       text: github
       href: https://github.com/alexsandroprado
+      target: _blank
+    - icon: person-fill-check
+      text: sigaa
+      href: https://sigaa.ufersa.edu.br/sigaa/public/docente/portal.jsf?siape=1987186
+      target: _blank    
+    - icon: award-fill
+      text: web of science
+      href: https://www.webofscience.com/wos/author/record/2370799
+      target: _blank  
+    - icon: google
+      text: google acadêmico
+      href: https://scholar.google.com.br/citations?hl=pt-BR&authuser=1&user=vMRqbikAAAAJ
+      target: _blank  
+    - icon: steam
+      text: steam
+      href: https://steamcommunity.com/id/lecksan/
+      target: _blank   
 ---
 
 ::: {#hero-heading}
@@ -48,25 +70,23 @@ about:
 
 ## Habilidades
 
--   Experiência sólida em análise e visualização de dados em linguagem R
+-   [Experiência sólida em análise e visualização de dados em linguagem R]{.smallcaps}
 
--   ETL microdados (RAIS, CAGED, PNADc, BGSD, CVM Cias Abertas)
+-   [ETL microdados (RAIS, CAGED, PNADc, BGSD, CVM Cias Abertas)]{.smallcaps}
 
--   SQL (Structured Query Language) para consulta e manipulação de dados
+-   [SQL (Structured Query Language) para consulta e manipulação de dados]{.smallcaps}
 
--   Modelos de sobrevivência, Modelos logit, Estimação em Diff-in-Diff (DID), Propense Score Matching
+-   [Modelos de sobrevivência, Modelos logit, Estimação em Diff-in-Diff (DID), Propense Score Matching]{.smallcaps}
 
--   Desenvolvimento de dashboards (Flexdashboard)
+-   [Desenvolvimento de dashboards (Flexdashboard), blogs e websites (Posit Quarto)]{.smallcaps}
 
--   Desenvolvimento de blogs e websites em (Posit Quarto)
+-   [Montagem e manutenção de computadores]{.smallcaps}
 
--   Montagem e manutenção de computadores
+-   [Instalação e configuração de sistemas operacionais Linux e Windows]{.smallcaps}
 
--   Instalação e configuração de sistemas operacionais Linux e Windows
+-   [Virtualização (VirtualBox) e gerenciamento de máquinas virtuais]{.smallcaps}
 
--   Virtualização (VirtualBox) e gerenciamento de máquinas virtuais
-
--   Configuração e administração na Amazon Elastic Compute Cloud (AWS EC2) para computação em nuvem.
+-   [Configuração e administração na Amazon Elastic Compute Cloud (AWS EC2) para computação em nuvem.]{.smallcaps}
 :::
 
 ------------------------------------------------------------------------

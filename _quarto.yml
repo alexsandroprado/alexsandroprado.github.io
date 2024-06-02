@@ -28,16 +28,18 @@ website:
 #        text: Ensino
 #      - href: software/index.qmd
 #        text: Software
-      # - text: Resources
-      #   menu:
-      #     - text: DataViz Portfolio
-      #       href: dataviz_portfolio.html
-      #     - text: YARDS
-      #       href: https://yards.albert-rapp.de/
-      #     - text: R Weekly
-      #       href: https://rweekly.org/
-      #     - text: R Bloggers
-      #       href: https://www.r-bloggers.com/
+      - text: Projetos
+        menu:
+          - text: Contabilidados
+            href: https://contabilidados.quarto.pub/
+            target: _blank
+          - text: GECOMT
+            href: https://gecomt.shinyapps.io/dashboard/
+            target: _blank
+          - text: Regulariza
+            href: https://regulariza.shinyapps.io/dashboard/
+            target: _blank
+
     right:
       - icon: github
         href: https://github.com/alexsandroprado
@@ -61,8 +63,8 @@ date-format: "D MMMM YYYY"
 format:
   html:
     theme:
-      light: journal
-      dark: darkly
+      light: united
+      dark: cyborg
     css: styles.css
     toc: true
     html-math-method: katex

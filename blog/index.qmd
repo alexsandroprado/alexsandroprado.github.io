@@ -1,6 +1,6 @@
 ---
-#title: "My blog"
-description: "Thoughts on research"
+# title: "My blog"
+# description: "Thoughts on research"
 listing:
   contents: "*.qmd"
   feed: true 

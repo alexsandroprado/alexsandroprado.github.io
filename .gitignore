@@ -5,5 +5,5 @@ _freeze/*
 
 /.quarto/
 .Rproj.user
-
+.Rhistory
 /_*.local
