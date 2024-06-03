@@ -5,44 +5,47 @@ about:
   image: /images/alexsandro.png
   links:
     - icon: envelope
-      text: e-mail
+      text: E-mail
       href: alexsandro.prado@ufersa.edu.br
     - icon: person-fill
       text: lattes
       href: http://lattes.cnpq.br/4254857944224293
       target: _blank
     - icon: filter-square-fill          
-      text: orcid
+      text: Orcid
       href: https://orcid.org/0000-0002-7072-3621
-      target: _blank
-    - icon: twitter-x
-      text:  
-      href: https://twitter.com/alexsandroprado
-      target: _blank
-    - icon: linkedin
-      text: linkedin
-      href: https://www.linkedin.com/in/alexsandroprado/
-      target: _blank
-    - icon: youtube
-      text: youtube
-      href: https://www.youtube.com/@profalexsandroprado
-      target: _blank
-    - icon: github
-      text: github
-      href: https://github.com/alexsandroprado
-      target: _blank
     - icon: person-fill-check
-      text: sigaa
+      text: Sigaa
       href: https://sigaa.ufersa.edu.br/sigaa/public/docente/portal.jsf?siape=1987186
       target: _blank    
     - icon: award-fill
-      text: web of science
+      text: Web of science
       href: https://www.webofscience.com/wos/author/record/2370799
       target: _blank  
     - icon: google
-      text: google acadêmico
+      text: Google acadêmico
       href: https://scholar.google.com.br/citations?hl=pt-BR&authuser=1&user=vMRqbikAAAAJ
       target: _blank  
+    - icon: twitter-x
+      text: X
+      href: https://twitter.com/alexsandroprado
+      target: _blank
+    - icon: linkedin
+      text: Linkedin
+      href: https://www.linkedin.com/in/alexsandroprado/
+      target: _blank
+    - icon: youtube
+      text: Youtube
+      href: https://www.youtube.com/@profalexsandroprado
+      target: _blank
+    - icon: github
+      text: Github
+      href: https://github.com/alexsandroprado
+      target: _blank
+    - icon: threads
+      text: Threads
+      href: https://www.threads.net/@alexsandro_prado
+      target: _blank
     - icon: steam
       text: steam
       href: https://steamcommunity.com/id/lecksan/
@@ -52,7 +55,7 @@ about:
 ::: {#hero-heading}
 [Professor do magistério superior há 12 anos, ministrando disciplinas nas áreas de Contabilidade, Administração e Tecnologia da Informação e Comunicação.]{.smallcaps}
 
-[Um entusiasta apaixonado por tecnologia que gosta de explorar o vasto mundo dos dados para extrair insights valiosos.]{.smallcaps}
+[Um entusiasta apaixonado por tecnologia que gosta de explorar o vasto mundo dos dados!]{.smallcaps}
 
 
 
