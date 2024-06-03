@@ -1,0 +1,11 @@
+---
+title: Página não encontrada
+---
+
+Não encontramos essa página. Talvez tenha digitado errado ou nós a removemos.
+
+![](images/confused-john-travolta.gif){fig-align="center"}
+
+Tente outra vez.
+
+Qualquer dúvida nos contate: alexsandro.prado\@ufersa.edu.br
