@@ -47,7 +47,7 @@ about:
       href: https://www.threads.net/@alexsandro_prado
       target: _blank
     - icon: steam
-      text: steam
+      text: Steam
       href: https://steamcommunity.com/id/lecksan/
       target: _blank   
 ---
