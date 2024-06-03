@@ -27,11 +27,13 @@ Para mais informações sobre o banco de dados, consulte o `help(ovarian)`.
 
 O Kaplan-Meier é a principal ferramenta para visualizar dados de sobrevivência. Esses gráficos ajustam curvas tipo-escada da proporção de indivíduos *em risco* --- que ainda não falharam e não foram censurados --- ao longo do tempo. Para plotar um Kaplan-Meier no R, utilizamos a função `survfit()` e a função `plot()`.
 
-```{r warning=FALSE}
+```{r}
 
 fit <- survfit(Surv(futime, fustat) ~ rx, data = ovarian)
 
-plot(fit)
+a <- plot(fit)
+
+print(a)
 
 ```
 
