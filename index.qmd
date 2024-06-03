@@ -6,9 +6,9 @@ about:
   links:
     - icon: envelope
       text: E-mail
-      href: alexsandro.prado@ufersa.edu.br
+      href: mailto:alexsandro.prado@ufersa.edu.br
     - icon: person-fill
-      text: lattes
+      text: Lattes
       href: http://lattes.cnpq.br/4254857944224293
       target: _blank
     - icon: filter-square-fill          
@@ -27,7 +27,7 @@ about:
       href: https://scholar.google.com.br/citations?hl=pt-BR&authuser=1&user=vMRqbikAAAAJ
       target: _blank  
     - icon: twitter-x
-      text: X
+      text:  
       href: https://twitter.com/alexsandroprado
       target: _blank
     - icon: linkedin
@@ -53,7 +53,7 @@ about:
 ---
 
 ::: {#hero-heading}
-[Professor do magistério superior há 12 anos, ministrando disciplinas nas áreas de Contabilidade, Administração e Tecnologia da Informação e Comunicação.]{.smallcaps}
+[Professor do magistério superior há 12 anos, ministrando disciplinas nas áreas de Ciências Contábeis, Administração e Tecnologia da Informação e Comunicação.]{.smallcaps}
 
 [Um entusiasta apaixonado por tecnologia que gosta de explorar o vasto mundo dos dados!]{.smallcaps}
 
@@ -75,7 +75,7 @@ about:
 
 ## Habilidades
 
--   [Experiência sólida em análise e visualização de dados em linguagem R]{.smallcaps}
+-   [Experiência em análise e visualização de dados em linguagem R]{.smallcaps}
 
 -   [ETL microdados (RAIS, CAGED, PNADc, BGSD, CVM Cias Abertas)]{.smallcaps}
 
@@ -83,7 +83,8 @@ about:
 
 -   [Decomposição Blinder–Oaxaca, Modelos de sobrevivência, Estimação em Diff-in-Diff (DID), Propense Score Matching]{.smallcaps}
 
--   [Desenvolvimento de dashboards (Flexdashboard), blogs e websites (Posit Quarto)]{.smallcaps}
+-   [Desenvolvimento de dashboards (Flexdashboard), websites (Posit Quarto) e  mapas interativos (leaflet)]{.smallcaps}
+-   [desenvolvimento de]
 
 -   [Montagem e manutenção de computadores]{.smallcaps}
 
