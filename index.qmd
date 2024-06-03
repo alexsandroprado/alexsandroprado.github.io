@@ -81,7 +81,7 @@ about:
 
 -   [SQL (Structured Query Language) para consulta e manipulação de dados]{.smallcaps}
 
--   [Modelos de sobrevivência, Modelos logit, Estimação em Diff-in-Diff (DID), Propense Score Matching]{.smallcaps}
+-   [Decomposição Blinder–Oaxaca, Modelos de sobrevivência, Estimação em Diff-in-Diff (DID), Propense Score Matching]{.smallcaps}
 
 -   [Desenvolvimento de dashboards (Flexdashboard), blogs e websites (Posit Quarto)]{.smallcaps}
 
