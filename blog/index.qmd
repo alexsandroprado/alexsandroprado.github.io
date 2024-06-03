@@ -2,7 +2,7 @@
 # title: "My blog"
 # description: "Thoughts on research"
 listing:
-  contents: "*.qmd"
+  contents: ["**/*.qmd"] 
   feed: true 
   sort: "date desc"
   type: grid
