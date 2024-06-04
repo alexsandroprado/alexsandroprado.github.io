@@ -29,7 +29,7 @@ about:
       target: _blank  
     - icon: twitter-x
       text:  
-      href: https://twitter.com/alexsandroprado
+      href: https://x.com/alexsandroprado
       target: _blank
     - icon: linkedin
       text: Linkedin
