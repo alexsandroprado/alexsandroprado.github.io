@@ -1,5 +1,6 @@
 ---
 title: Alexsandro Prado
+comments: false
 about:
   template: trestles
   image: /images/alexsandro.png
