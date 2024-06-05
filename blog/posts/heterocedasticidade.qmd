@@ -10,6 +10,13 @@ image: heterocedasticidade.png
 editor: 
   markdown: 
     wrap: 72
+
+  execute:
+  echo: false
+  warning: false
+  error: false
+  cache: true
+  freeze: true
 ---
 <p style="text-align: justify;">
 A heterocedasticidade e a autocorrelação são problemas comuns na análise de regressão, especialmente em séries temporais e dados econométricos, que podem afetar a validade das inferências e a análise de causalidade.

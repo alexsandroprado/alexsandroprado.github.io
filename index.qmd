@@ -26,7 +26,10 @@ about:
     - icon: google
       text: Google acadêmico
       href: https://scholar.google.com.br/citations?hl=pt-BR&authuser=1&user=vMRqbikAAAAJ
-      target: _blank  
+      target: _blank
+    - icon: instagram
+      text: Instagram
+      href: https://instagram.com/alexsandro_prado  
     - icon: twitter-x
       text:  
       href: https://x.com/alexsandroprado
@@ -35,6 +38,10 @@ about:
       text: Linkedin
       href: https://www.linkedin.com/in/alexsandroprado/
       target: _blank
+    - icon: threads
+      text: Threads
+      href: https://www.threads.net/@alexsandro_prado
+      target: _blank
     - icon: youtube
       text: Youtube
       href: https://www.youtube.com/@profalexsandroprado
@@ -42,10 +49,6 @@ about:
     - icon: github
       text: Github
       href: https://github.com/alexsandroprado
-      target: _blank
-    - icon: threads
-      text: Threads
-      href: https://www.threads.net/@alexsandro_prado
       target: _blank
     - icon: steam
       text: Steam

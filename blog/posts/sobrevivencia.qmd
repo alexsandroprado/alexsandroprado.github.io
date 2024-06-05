@@ -9,6 +9,13 @@ image: sobrevivencia.png
 format:
   html:
     embed-resources: false
+    
+execute:
+  echo: false
+  warning: false
+  error: false
+  cache: true
+  freeze: true
 ---
 
 ```{r, echo = FALSE, warning=FALSE, message=FALSE}

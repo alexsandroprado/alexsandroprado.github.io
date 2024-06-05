@@ -28,21 +28,6 @@
 <h3 class="anchored" data-anchor-id="kaplan-meier-e-log-rank">Kaplan-Meier e Log-rank</h3>
 <p>O Kaplan-Meier é a principal ferramenta para visualizar dados de sobrevivência. Esses gráficos ajustam curvas tipo-escada da proporção de indivíduos <em>em risco</em> — que ainda não falharam e não foram censurados — ao longo do tempo. Para plotar um Kaplan-Meier no R, utilizamos a função <code>survfit()</code> e a função <code>plot()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">fit <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">survfit</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">Surv</span>(futime, fustat) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> rx, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">data =</span> ovarian)</span>
-<span id="cb1-2"></span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plot</span>(fit)</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -53,106 +38,6 @@ font-style: inherit;">plot</span>(fit)</span></code></pre></div>
 </div>
 <p>Também podemos construir um Kaplan-Meier com o <code>ggplot2</code>, mas observe que é necessário fazer algums modificações no objeto <code>fit</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">m <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">length</span>(fit<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>strata)</span>
-<span id="cb2-2"></span>
-<span id="cb2-3">df <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">data.frame</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">time =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">rep</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, m), fit<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>time),</span>
-<span id="cb2-4">                 <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">surv =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">rep</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, m), fit<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>surv),</span>
-<span id="cb2-5">                 <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">group =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">names</span>(fit<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>strata), </span>
-<span id="cb2-6">                          <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">rep</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">names</span>(fit<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>strata), fit<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">$</span>strata)))</span>
-<span id="cb2-7"></span>
-<span id="cb2-8"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ggplot</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">data =</span> df) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span>  </span>
-<span id="cb2-9">        <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_step</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> time, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> surv, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">colour =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">as.factor</span>(group))) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-10">        <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">ylim</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb2-11">        <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">colour =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Curvas"</span>, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Proporção de sobreviventes"</span>,</span>
-<span id="cb2-12">             <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Tempo"</span>) </span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -163,15 +48,6 @@ font-style: inherit;">"Tempo"</span>) </span></code></pre></div>
 </div>
 <p>O teste de log-rank para comparação de grupos é realizado pela função <code>survdiff()</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">survdiff</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">Surv</span>(futime, fustat) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> rx, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">data =</span> ovarian)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Call:
 survdiff(formula = Surv(futime, fustat) ~ rx, data = ovarian)
@@ -188,28 +64,6 @@ rx=2 13        5     6.77     0.461      1.06
 <h3 class="anchored" data-anchor-id="modelos-paramétricos">Modelos paramétricos</h3>
 <p>Para ajustar modelos paramétricos, podemos utilizar a função <code>survreg()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1">fit <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">survreg</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">Surv</span>(futime, fustat) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> rx <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> age, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">data =</span> ovarian, </span>
-<span id="cb5-2">               <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">dist =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"exponential"</span>)</span>
-<span id="cb5-3"></span>
-<span id="cb5-4"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">summary</span>(fit)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -242,23 +96,6 @@ n= 26 </code></pre>
 <h3 class="anchored" data-anchor-id="modelo-semi-paramétrico-de-cox">Modelo semi-paramétrico de Cox</h3>
 <p>No R, a função mais utilizada para ajustar modelos de Cox é a <code>coxph()</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1">fit <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">coxph</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">Surv</span>(futime, fustat) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> age <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> rx, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">data =</span> ovarian)</span>
-<span id="cb7-2"></span>
-<span id="cb7-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">summary</span>(fit)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Call:
 coxph(formula = Surv(futime, fustat) ~ age + rx, data = ovarian)
@@ -297,62 +134,6 @@ Score (logrank) test = 18.56  on 2 df,   p=9e-05</code></pre>
 <section id="exemplo-pnud" class="level3">
 <h3 class="anchored" data-anchor-id="exemplo-pnud">Exemplo: PNUD</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1">pnud_muni <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">=</span> abjData<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span>pnud_muni</span>
-<span id="cb9-2"></span>
-<span id="cb9-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(mgcv)</span></code></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Carregando pacotes exigidos: nlme</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Anexando pacote: 'nlme'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>O seguinte objeto é mascarado por 'package:dplyr':
-
-    collapse</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>This is mgcv 1.9-1. For overview type 'help("mgcv-package")'.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Anexando pacote: 'mgcv'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Os seguintes objetos são mascarados por 'package:LaplacesDemon':
-
-    dmvn, rmvn</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1">fit_model <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">gam</span>(espvida <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> ano <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">s</span>(rdpc) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">s</span>(i_escolaridade), <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">data =</span> pnud_muni, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">family =</span> Gamma)</span>
-<span id="cb16-2"></span>
-<span id="cb16-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">summary</span>(fit_model)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Family: Gamma 
@@ -378,24 +159,6 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 R-sq.(adj) =  0.831   Deviance explained = 81.9%
 GCV = 0.0011938  Scale est. = 0.001185  n = 16695</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">par</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">mfrow =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>))</span>
-<span id="cb18-2"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plot</span>(fit_model, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">scheme =</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -418,94 +181,6 @@ font-style: inherit;">1</span>)</span></code></pre></div>
 <section id="exemplo-pnud-1" class="level3">
 <h3 class="anchored" data-anchor-id="exemplo-pnud-1">Exemplo: PNUD</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">library</span>(gamlss)</span></code></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Carregando pacotes exigidos: splines</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Carregando pacotes exigidos: gamlss.data</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Anexando pacote: 'gamlss.data'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>O seguinte objeto é mascarado por 'package:datasets':
-
-    sleep</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Carregando pacotes exigidos: gamlss.dist</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Carregando pacotes exigidos: parallel</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code> **********   GAMLSS Version 5.4-22  ********** </code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>For more on GAMLSS look at https://www.gamlss.com/</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Type gamlssNews() to see new features/changes/bug fixes.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb29" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Cuidado! O pacote gamlss carrega MASS, que por sua vez mascara a função select do dplyr.</span></span>
-<span id="cb29-2"></span>
-<span id="cb29-3">dados <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> pnud_muni <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span> </span>
-<span id="cb29-4">  dplyr<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">select</span>(rdpc, i_escolaridade, espvida, ano) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span> </span>
-<span id="cb29-5">  na.omit <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">%&gt;%</span> </span>
-<span id="cb29-6">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">mutate</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">ano =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">factor</span>(ano))</span>
-<span id="cb29-7"></span>
-<span id="cb29-8">fit_model <span class="ot" style="color: #003B4F;
-background-color: null;
-font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">gamlss</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">formula =</span> espvida <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">cs</span>(rdpc) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">cs</span>(i_escolaridade),</span>
-<span id="cb29-9">                    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">sigma.formula =</span> <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">~</span> ano,</span>
-<span id="cb29-10">                    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">data =</span> dados, </span>
-<span id="cb29-11">                    <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">family =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">NET</span>())</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>GAMLSS-RS iteration 1: Global Deviance = 78553.62 
 GAMLSS-RS iteration 2: Global Deviance = 77935.35 
@@ -517,9 +192,6 @@ GAMLSS-RS iteration 7: Global Deviance = 77900.31
 GAMLSS-RS iteration 8: Global Deviance = 77900.31 
 GAMLSS-RS iteration 9: Global Deviance = 77900.31 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb31" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">summary</span>(fit_model)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>******************************************************************
 Family:  c("NET", "Normal Exponential t") 
@@ -570,9 +242,6 @@ Global Deviance:     77900.31
             SBC:     78175.69 
 ******************************************************************</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb33" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">plot</span>(fit_model)</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
