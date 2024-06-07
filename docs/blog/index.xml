@@ -20,7 +20,11 @@
 
 
 
-<p><img src="https://alexsandroprado.github.io/blog/posts/preditiva.jpg" class="img-fluid" width="475"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://alexsandroprado.github.io/blog/posts/preditiva.jpg" class="centered img-fluid quarto-figure quarto-figure-center figure-img" width="439"></p>
+</figure>
+</div>
 <section id="introdução" class="level1">
 <h1>Introdução</h1>
 <p>A informação contábil é uma ferramenta poderosa para previsão e tomada de decisões estratégicas nas organizações. Segundo o CPC 00 (Estrutura Conceitual para Elaboração e Divulgação de Relatório Contábil-Financeiro), a informação contábil deve possuir características qualitativas fundamentais como relevância e representação fidedigna, e características qualitativas de melhoria como comparabilidade, verificabilidade, tempestividade e compreensibilidade.</p>
@@ -35,24 +39,128 @@
 <h3 class="anchored" data-anchor-id="coleta-e-preparação-dos-dados">Coleta e Preparação dos Dados</h3>
 <p>Primeiramente, vamos criar um conjunto de dados fictícios representando as demonstrações financeiras de uma empresa ao longo dos anos.</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>pacote 'dplyr' desempacotado com sucesso e somas MD5 verificadas
-
-Os pacotes binários baixados estão em
-    C:\Users\alexs\AppData\Local\Temp\Rtmpe2H2AC\downloaded_packages</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>pacote 'ggplot2' desempacotado com sucesso e somas MD5 verificadas
-
-Os pacotes binários baixados estão em
-    C:\Users\alexs\AppData\Local\Temp\Rtmpe2H2AC\downloaded_packages</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>pacote 'forecast' desempacotado com sucesso e somas MD5 verificadas
-
-Os pacotes binários baixados estão em
-    C:\Users\alexs\AppData\Local\Temp\Rtmpe2H2AC\downloaded_packages</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Instalar e carregar pacotes necessários</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">options</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">repos =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">CRAN =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://cran.rstudio.com/"</span>))</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"dplyr"</span>)</span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ggplot2"</span>)</span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"forecast"</span>)</span>
+<span id="cb1-6"></span>
+<span id="cb1-7"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(dplyr)</span>
+<span id="cb1-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span>
+<span id="cb1-9"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(forecast)</span>
+<span id="cb1-10"></span>
+<span id="cb1-11"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Criar dados fictícios</span></span>
+<span id="cb1-12"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span>)</span>
+<span id="cb1-13">anos <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2010</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2023</span></span>
+<span id="cb1-14">receita <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">500</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">550</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">600</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">660</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">720</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">780</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">850</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">920</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1100</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1210</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1330</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1460</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1600</span>)</span>
+<span id="cb1-15">lucro_liquido <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> receita <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">runif</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">14</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.08</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.12</span>)</span>
+<span id="cb1-16"></span>
+<span id="cb1-17">dados <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ano =</span> anos, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">receita =</span> receita, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">lucro_liquido =</span> lucro_liquido)</span>
+<span id="cb1-18"></span>
+<span id="cb1-19"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Visualizar os dados</span></span>
+<span id="cb1-20"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(dados)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    ano receita lucro_liquido
 1  2010     500      45.75155
@@ -76,6 +184,86 @@ Os pacotes binários baixados estão em
 <h3 class="anchored" data-anchor-id="análise-exploratória-dos-dados">Análise Exploratória dos Dados</h3>
 <p>Vamos analisar graficamente a evolução da receita e do lucro líquido ao longo dos anos.</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Visualização dos dados</span></span>
+<span id="cb3-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggplot</span>(dados, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> ano)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_line</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> receita, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Receita"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">geom_line</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> lucro_liquido, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Lucro Líquido"</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Evolução da Receita e do Lucro Líquido"</span>,</span>
+<span id="cb3-6">       <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Ano"</span>,</span>
+<span id="cb3-7">       <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Valores (em milhares)"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb3-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_color_manual</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Legenda"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">values =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Receita"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"blue"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Lucro Líquido"</span> <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"green"</span>))</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -89,6 +277,74 @@ Os pacotes binários baixados estão em
 <h3 class="anchored" data-anchor-id="modelo-preditivo">Modelo Preditivo</h3>
 <p>Utilizaremos um modelo de série temporal para prever a receita dos próximos anos.</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Modelagem de série temporal</span></span>
+<span id="cb4-2">ts_receita <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ts</span>(dados<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>receita, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">start =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2010</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">frequency =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span>
+<span id="cb4-3"></span>
+<span id="cb4-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar um modelo ARIMA</span></span>
+<span id="cb4-5">modelo_arima <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">auto.arima</span>(ts_receita)</span>
+<span id="cb4-6"></span>
+<span id="cb4-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Previsão para os próximos 5 anos</span></span>
+<span id="cb4-8">previsao <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">forecast</span>(modelo_arima, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">h =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)</span>
+<span id="cb4-9"></span>
+<span id="cb4-10"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Visualização da previsão</span></span>
+<span id="cb4-11"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">autoplot</span>(previsao) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Previsão da Receita para os Próximos 5 Anos"</span>,</span>
+<span id="cb4-13">       <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Ano"</span>,</span>
+<span id="cb4-14">       <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Receita (em milhares)"</span>)</span></code></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -104,6 +360,12 @@ Os pacotes binários baixados estão em
 <h3 class="anchored" data-anchor-id="interpretação-dos-resultados">Interpretação dos Resultados</h3>
 <p>A partir do modelo preditivo, podemos analisar a tendência futura da receita da empresa, possibilitando uma melhor tomada de decisão.</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Exibir previsões</span></span>
+<span id="cb5-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(previsao)</span></code></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95
 2024       1746.438 1736.867 1756.009 1731.801 1761.076
