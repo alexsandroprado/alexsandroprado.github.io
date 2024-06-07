@@ -37,7 +37,7 @@ Nosso objetivo é demonstrar, por meio de um exemplo prático, como a análise d
 
 Primeiramente, vamos criar um conjunto de dados fictícios representando as demonstrações financeiras de uma empresa ao longo dos anos.
 
-```{r echo = FALSE, warning=FALSE, message=FALSE}
+```{r echo = T, warning=FALSE, message=FALSE}
 # Instalar e carregar pacotes necessários
 options(repos = c(CRAN = "https://cran.rstudio.com/"))
 install.packages("dplyr")
@@ -64,7 +64,7 @@ print(dados)
 
 Vamos analisar graficamente a evolução da receita e do lucro líquido ao longo dos anos.
 
-```{r echo = FALSE, warning=FALSE, message=FALSE}
+```{r echo = T, warning=FALSE, message=FALSE}
 # Visualização dos dados
 ggplot(dados, aes(x = ano)) +
   geom_line(aes(y = receita, color = "Receita")) +
@@ -79,7 +79,7 @@ ggplot(dados, aes(x = ano)) +
 
 Utilizaremos um modelo de série temporal para prever a receita dos próximos anos.
 
-```{r echo = FALSE, warning=FALSE, message=FALSE}
+```{r echo = T, warning=FALSE, message=FALSE}
 # Modelagem de série temporal
 ts_receita <- ts(dados$receita, start = c(2010), frequency = 1)
 
@@ -104,7 +104,7 @@ A falha na linha do gráfico ocorre na transição entre os dados históricos e 
 
 A partir do modelo preditivo, podemos analisar a tendência futura da receita da empresa, possibilitando uma melhor tomada de decisão.
 
-```{r echo = FALSE, warning=FALSE, message=FALSE}
+```{r echo = T, warning=FALSE, message=FALSE}
 # Exibir previsões
 print(previsao)
 ```
