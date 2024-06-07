@@ -113,8 +113,8 @@ A previsão de receita para os anos de 2024 a 2028 mostra um crescimento contín
 
 ## Conclusão
 
-Através desse exemplo simples com dados fictícios, observamos como a informação contábil, quando analisada e modelada adequadamente, pode fornecer previsões valiosas para o planejamento estratégico das organizações. As demonstrações financeiras, alinhadas às normas contábeis do CPC 00, são essenciais para garantir que essas previsões sejam baseadas em dados relevantes e fidedignos.
+Através desse exemplo simples com dados fictícios, observamos como a informação contábil, quando analisada e modelada adequadamente, pode fornecer previsões valiosas para o planejamento estratégico das organizações. As demonstrações financeiras, alinhadas às normas contábeis do CPC 00 R2, são essenciais para garantir que essas previsões sejam baseadas em dados relevantes e fidedignos.
 
-Utilizar a linguagem R para a análise preditiva permite explorar diversos modelos e técnicas estatísticas, facilitando a extração de insights acionáveis que podem direcionar o crescimento sustentável da empresa.
+Utilizar a linguagem R para a análise preditiva permite explorar diversos modelos e técnicas estatísticas, facilitando a extração de *insights* que podem direcionar o crescimento sustentável da empresa.
 
 Este post ilustra a importância de uma contabilidade bem estruturada e da análise de dados para antecipar e responder às dinâmicas do mercado, reforçando o poder preditivo da informação contábil conforme as diretrizes do CPC 00 R2.
