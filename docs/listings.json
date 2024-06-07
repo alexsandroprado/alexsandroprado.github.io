@@ -6,15 +6,16 @@
     ]
   },
   {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/posts/sobrevivencia.html"
-    ]
-  },
-  {
     "listing": "/artigos/index.html",
     "items": [
       "/artigos/uranium.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/posts/preditiva.html",
+      "/blog/posts/sobrevivencia.html"
     ]
   }
 ]

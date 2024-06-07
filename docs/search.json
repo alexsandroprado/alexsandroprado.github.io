@@ -18,7 +18,7 @@
     "href": "index.html",
     "title": "Alexsandro Prado",
     "section": "",
-    "text": "Professor do magistério superior há 12 anos, ministrando disciplinas nas áreas de Ciências Contábeis, Administração e Tecnologia da Informação e Comunicação.\nUm entusiasta apaixonado por tecnologia que gosta de explorar o vasto mundo dos dados!\n\n\nUniversidade Federal da Paraíba (UFPB)\nDoutor em Economia, área de concentração Economia Aplicada\nUniversidade de Brasília (UnB)\nMestre em Ciências Contábeis\nUniversidade Federal da Paraíba (UFPB)\nBacharel em Ciências Contábeis\n\n\n\n\nExperiência em análise e visualização de dados em linguagem R\nETL microdados (RAIS, CAGED, PNADc, BGSD, CVM Cias Abertas)\nSQL (Structured Query Language) para consulta e manipulação de dados\nDecomposição Blinder–Oaxaca, Modelos de sobrevivência, Estimação em Diff-in-Diff (DID), Propense Score Matching\nDesenvolvimento de dashboards (Flexdashboard), websites (Posit Quarto) e mapas interativos (leaflet)\nMontagem e manutenção de computadores\nInstalação e configuração de sistemas operacionais Linux e Windows\nVirtualização (VirtualBox) e gerenciamento de máquinas virtuais\nConfiguração e administração na Amazon Elastic Compute Cloud (AWS EC2) para computação em nuvem."
+    "text": "Professor do magistério superior há 12 anos, ministrando disciplinas nas áreas de Ciências Contábeis, Administração e Tecnologia da Informação e Comunicação.\nUm entusiasta apaixonado por tecnologia que gosta de explorar o vasto mundo dos dados!\n\n\nUniversidade Federal da Paraíba (UFPB)\nDoutor em Economia, área de concentração Economia Aplicada\nUniversidade de Brasília (UnB)\nMestre em Ciências Contábeis\nUniversidade Federal da Paraíba (UFPB)\nBacharel em Ciências Contábeis\n\n\n\n\nExperiência em análise e visualização de dados em linguagem R\nETL microdados (RAIS, CAGED, PNADc, BGSD, CVM Cias Abertas)\nSQL (Structured Query Language) para consulta e manipulação de dados\nDecomposição Oaxaca-Blinder, Modelos de sobrevivência, Estimação em Diff-in-Diff (DID), Propense Score Matching\nDesenvolvimento de dashboards (Flexdashboard), websites (Posit Quarto) e mapas interativos (leaflet)\nMontagem e manutenção de computadores\nInstalação e configuração de sistemas operacionais Linux e Windows\nVirtualização (VirtualBox) e gerenciamento de máquinas virtuais\nConfiguração e administração na Amazon Elastic Compute Cloud (AWS EC2) para computação em nuvem."
   },
   {
     "objectID": "index.html#formação",
@@ -32,7 +32,7 @@
     "href": "index.html#habilidades",
     "title": "Alexsandro Prado",
     "section": "",
-    "text": "Experiência em análise e visualização de dados em linguagem R\nETL microdados (RAIS, CAGED, PNADc, BGSD, CVM Cias Abertas)\nSQL (Structured Query Language) para consulta e manipulação de dados\nDecomposição Blinder–Oaxaca, Modelos de sobrevivência, Estimação em Diff-in-Diff (DID), Propense Score Matching\nDesenvolvimento de dashboards (Flexdashboard), websites (Posit Quarto) e mapas interativos (leaflet)\nMontagem e manutenção de computadores\nInstalação e configuração de sistemas operacionais Linux e Windows\nVirtualização (VirtualBox) e gerenciamento de máquinas virtuais\nConfiguração e administração na Amazon Elastic Compute Cloud (AWS EC2) para computação em nuvem."
+    "text": "Experiência em análise e visualização de dados em linguagem R\nETL microdados (RAIS, CAGED, PNADc, BGSD, CVM Cias Abertas)\nSQL (Structured Query Language) para consulta e manipulação de dados\nDecomposição Oaxaca-Blinder, Modelos de sobrevivência, Estimação em Diff-in-Diff (DID), Propense Score Matching\nDesenvolvimento de dashboards (Flexdashboard), websites (Posit Quarto) e mapas interativos (leaflet)\nMontagem e manutenção de computadores\nInstalação e configuração de sistemas operacionais Linux e Windows\nVirtualização (VirtualBox) e gerenciamento de máquinas virtuais\nConfiguração e administração na Amazon Elastic Compute Cloud (AWS EC2) para computação em nuvem."
   },
   {
     "objectID": "blog/posts/sobrevivencia.html",
@@ -56,18 +56,39 @@
     "text": "Referências\nCURSO-R. curso-r.github.com. Disponível em: https://github.com/curso-r/curso-r.github.com/. Acesso em: 02 jun. 2024."
   },
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Alexsandro Prado",
-    "section": "",
-    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nModelos de sobrevivência no R\n\n\n\neconometria\n\n\n\n\n\n\n\nAlexsandro Prado\n\n\n1 junho 2024\n\n\n\n\n\n\n\n\nNenhum item correspondente\n\n De volta ao topo"
-  },
-  {
     "objectID": "artigos/index.html",
     "href": "artigos/index.html",
     "title": "Publications",
     "section": "",
     "text": "Publications\n\n\n\n\n\n\n\n   \n     \n     \n       Ordenar por\n       Pré-selecionado\n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Título\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n    Marie Skłodowska-Curie (1900) Sur la pénétration des rayons de Becquerel non déviables par le champ magnétique. CR Acad Sci, 130, 76-79..\n  \n\n\n\n\nNenhum item correspondente\n\n De volta ao topo"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Alexsandro Prado",
+    "section": "",
+    "text": "Ordenar por\n       Pré-selecionado\n         \n          Título\n        \n         \n          Data - Mais velho\n        \n         \n          Data - O mais novo\n        \n         \n          Autor\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nPrevisão de receita\n\n\n\neconometria\n\n\nR\n\n\n\n\n\n\n\nAlexsandro Prado\n\n\n7 junho 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nModelos de sobrevivência no R\n\n\n\neconometria\n\n\n\n\n\n\n\nAlexsandro Prado\n\n\n1 junho 2024\n\n\n\n\n\n\n\n\nNenhum item correspondente\n\n De volta ao topo"
+  },
+  {
+    "objectID": "blog/posts/preditiva.html#objetivo",
+    "href": "blog/posts/preditiva.html#objetivo",
+    "title": "Previsão de receita",
+    "section": "Objetivo",
+    "text": "Objetivo\nNosso objetivo é demonstrar, por meio de um exemplo prático, como a análise de demonstrações financeiras pode prever o desempenho futuro de uma empresa. Utilizaremos dados fictícios para simplificação."
+  },
+  {
+    "objectID": "blog/posts/preditiva.html#passo-a-passo-em-r",
+    "href": "blog/posts/preditiva.html#passo-a-passo-em-r",
+    "title": "Previsão de receita",
+    "section": "Passo a Passo em R",
+    "text": "Passo a Passo em R\n\nColeta e Preparação dos Dados\nPrimeiramente, vamos criar um conjunto de dados fictícios representando as demonstrações financeiras de uma empresa ao longo dos anos.\n\n\npacote 'dplyr' desempacotado com sucesso e somas MD5 verificadas\n\nOs pacotes binários baixados estão em\n    C:\\Users\\alexs\\AppData\\Local\\Temp\\Rtmpe2H2AC\\downloaded_packages\n\n\npacote 'ggplot2' desempacotado com sucesso e somas MD5 verificadas\n\nOs pacotes binários baixados estão em\n    C:\\Users\\alexs\\AppData\\Local\\Temp\\Rtmpe2H2AC\\downloaded_packages\n\n\npacote 'forecast' desempacotado com sucesso e somas MD5 verificadas\n\nOs pacotes binários baixados estão em\n    C:\\Users\\alexs\\AppData\\Local\\Temp\\Rtmpe2H2AC\\downloaded_packages\n\n\n    ano receita lucro_liquido\n1  2010     500      45.75155\n2  2011     550      61.34271\n3  2012     600      57.81545\n4  2013     660      76.11166\n5  2014     720      84.68546\n6  2015     780      63.82136\n7  2016     850      85.95559\n8  2017     920     106.44102\n9  2018    1000     102.05740\n10 2019    1100     108.09105\n11 2020    1210     143.11073\n12 2021    1330     130.51738\n13 2022    1460     156.37013\n14 2023    1600     164.64854\n\n\n\n\nAnálise Exploratória dos Dados\nVamos analisar graficamente a evolução da receita e do lucro líquido ao longo dos anos.\n\n\n\n\n\n\n\n\n\n\n\nModelo Preditivo\nUtilizaremos um modelo de série temporal para prever a receita dos próximos anos.\n\n\n\n\n\n\n\n\n\nO gráfico de previsão de receita para os próximos cinco anos mostra uma tendência de crescimento contínuo, com a linha preta indicando a projeção central e áreas sombreadas em azul representando os intervalos de confiança de 80% e 95%. A receita histórica desde 2010 revela um aumento consistente, e a projeção sugere que esse crescimento continuará até 2028, com a incerteza aumentando ao longo do tempo, conforme evidenciado pela ampliação dos intervalos de confiança. Esses intervalos são essenciais para o planejamento estratégico e a análise de risco, fornecendo uma faixa de valores esperados em vez de um único valor fixo.\nA falha na linha do gráfico ocorre na transição entre os dados históricos e as previsões futuras, destacando o ponto onde terminam as observações reais e começam as estimativas geradas pelo modelo. Esta descontinuidade é intencional para diferenciar claramente os dados observados das projeções, ajudando a evitar confusão ao visualizar a tendência histórica e a previsão de crescimento futuro da receita.\n\n\nInterpretação dos Resultados\nA partir do modelo preditivo, podemos analisar a tendência futura da receita da empresa, possibilitando uma melhor tomada de decisão.\n\n\n     Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95\n2024       1746.438 1736.867 1756.009 1731.801 1761.076\n2025       1897.021 1869.968 1924.075 1855.647 1938.396\n2026       2050.273 1997.764 2102.782 1969.967 2130.579\n2027       2205.243 2119.915 2290.571 2074.745 2335.740\n2028       2361.319 2236.458 2486.180 2170.360 2552.277\n\n\nA previsão de receita para os anos de 2024 a 2028 mostra um crescimento contínuo, começando em R$ 1746.44 em 2024 e alcançando R$ 2361,32 em 2028. Os intervalos de confiança de 80% e 95% indicam as faixas nas quais a receita provavelmente se situará, refletindo diferentes níveis de certeza. Em 2024, por exemplo, a receita deve estar entre R$ 1736,87 e R$ 1756,01 com 80% de confiança e entre R$ 1731,80 e R$ 1761,08 com 95% de confiança. Esses intervalos ajudam a quantificar a incerteza nas previsões, essenciais para o planejamento financeiro e análise de risco."
+  },
+  {
+    "objectID": "blog/posts/preditiva.html#conclusão",
+    "href": "blog/posts/preditiva.html#conclusão",
+    "title": "Previsão de receita",
+    "section": "Conclusão",
+    "text": "Conclusão\nAtravés desse exemplo simples com dados fictícios, observamos como a informação contábil, quando analisada e modelada adequadamente, pode fornecer previsões valiosas para o planejamento estratégico das organizações. As demonstrações financeiras, alinhadas às normas contábeis do CPC 00, são essenciais para garantir que essas previsões sejam baseadas em dados relevantes e fidedignos.\nUtilizar a linguagem R para a análise preditiva permite explorar diversos modelos e técnicas estatísticas, facilitando a extração de insights acionáveis que podem direcionar o crescimento sustentável da empresa.\nEste post ilustra a importância de uma contabilidade bem estruturada e da análise de dados para antecipar e responder às dinâmicas do mercado, reforçando o poder preditivo da informação contábil conforme as diretrizes do CPC 00 R2."
   },
   {
     "objectID": "ensino/index.html",
