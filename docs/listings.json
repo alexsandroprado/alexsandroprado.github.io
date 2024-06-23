@@ -6,16 +6,17 @@
     ]
   },
   {
-    "listing": "/artigos/index.html",
+    "listing": "/blog/index.html",
     "items": [
-      "/artigos/uranium.html"
+      "/blog/posts/cpcVersusReceita/cpcVersusReceita.html",
+      "/blog/posts/preditiva.html",
+      "/blog/posts/sobrevivencia.html"
     ]
   },
   {
-    "listing": "/blog/index.html",
+    "listing": "/artigos/index.html",
     "items": [
-      "/blog/posts/preditiva.html",
-      "/blog/posts/sobrevivencia.html"
+      "/artigos/uranium.html"
     ]
   }
 ]

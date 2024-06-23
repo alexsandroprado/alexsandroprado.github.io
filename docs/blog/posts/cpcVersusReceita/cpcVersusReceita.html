@@ -8,7 +8,7 @@
 
 <meta name="author" content="Alexsandro Prado">
 
-<title>Alexsandro Prado - Modelos de sobrevivência no R</title>
+<title>Alexsandro Prado - Conflitos entre IFRS/CPC e Normas Fiscais da Receita Federal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,25 +24,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../../images/favicon.ico" rel="icon">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../images/favicon.ico" rel="icon">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -86,56 +86,11 @@ gtag('config', 'GTM-T9KC9QL7', { 'anonymize_ip': true});
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="Alexsandro Prado - Modelos de sobrevivência no R">
-<meta name="twitter:description" content="Desvendando mistérios dos dados como Sherlock Holmes, mas com laptop e café, não lupa e cachimbo!">
-<meta name="twitter:image" content="https://alexsandroprado.github.io/blog/posts/sobrevivencia.png">
-<meta name="twitter:image-height" content="724">
-<meta name="twitter:image-width" content="1031">
+<link rel="stylesheet" href="../../../styles.css">
+<meta name="twitter:title" content="Alexsandro Prado - Conflitos entre IFRS/CPC e Normas Fiscais da Receita Federal">
+<meta name="twitter:description" content="Resenha">
+<meta name="twitter:image" content="https://alexsandroprado.github.io/blog/posts/cpcVersusReceita/cpcVersusReceita.webp">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -146,7 +101,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">Alexsandro Prado</span>
     </a>
   </div>
@@ -157,7 +112,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html"> 
+    <a class="nav-link" href="../../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -197,7 +152,7 @@ window.Quarto = {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../blog/index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../../blog/index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -218,16 +173,8 @@ window.Quarto = {
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#kaplan-meier-e-log-rank" id="toc-kaplan-meier-e-log-rank" class="nav-link active" data-scroll-target="#kaplan-meier-e-log-rank">Kaplan-Meier e Log-rank</a></li>
-  <li><a href="#modelos-paramétricos" id="toc-modelos-paramétricos" class="nav-link" data-scroll-target="#modelos-paramétricos">Modelos paramétricos</a></li>
-  <li><a href="#modelo-semi-paramétrico-de-cox" id="toc-modelo-semi-paramétrico-de-cox" class="nav-link" data-scroll-target="#modelo-semi-paramétrico-de-cox">Modelo semi-paramétrico de Cox</a></li>
-  <li><a href="#generalized-additive-model-gam" id="toc-generalized-additive-model-gam" class="nav-link" data-scroll-target="#generalized-additive-model-gam">Generalized Additive Model (GAM)</a>
-  <ul class="collapse">
-  <li><a href="#pacote-mgcv" id="toc-pacote-mgcv" class="nav-link" data-scroll-target="#pacote-mgcv">Pacote mgcv</a></li>
-  <li><a href="#exemplo-pnud" id="toc-exemplo-pnud" class="nav-link" data-scroll-target="#exemplo-pnud">Exemplo: PNUD</a></li>
-  <li><a href="#pacote-gamlss" id="toc-pacote-gamlss" class="nav-link" data-scroll-target="#pacote-gamlss">Pacote gamlss</a></li>
-  <li><a href="#exemplo-pnud-1" id="toc-exemplo-pnud-1" class="nav-link" data-scroll-target="#exemplo-pnud-1">Exemplo: PNUD</a></li>
-  </ul></li>
+  <li><a href="#introdução" id="toc-introdução" class="nav-link active" data-scroll-target="#introdução">Introdução</a></li>
+  <li><a href="#principais-divergências" id="toc-principais-divergências" class="nav-link" data-scroll-target="#principais-divergências">Principais divergências</a></li>
   <li><a href="#referências" id="toc-referências" class="nav-link" data-scroll-target="#referências">Referências</a></li>
   </ul>
 </nav>
@@ -237,9 +184,11 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Modelos de sobrevivência no R</h1>
+<h1 class="title">Conflitos entre IFRS/CPC e Normas Fiscais da Receita Federal</h1>
+<p class="subtitle lead">Resenha</p>
   <div class="quarto-categories">
-    <div class="quarto-category">econometria</div>
+    <div class="quarto-category">Contabilidade</div>
+    <div class="quarto-category">Teoria</div>
   </div>
   </div>
 
@@ -257,7 +206,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">1 junho 2024</p>
+      <p class="date">20 junho 2024</p>
     </div>
   </div>
   
@@ -269,262 +218,87 @@ window.Quarto = {
 </header>
 
 
-<p>A Análise de Sobrevivência compreende os estudos em que o interesse principal é avaliar o tempo até a ocorrência de um evento pré-determinado. Esses tempos, chamados de <em>tempos de falha</em>, podem, então, ser explicados por outras variáveis a partir de modelos de regressão paramétricos ou semi-paramétricos. Uma característica fundamental desse tipo de estudo é a presença de censura, definida como a observação parcial do tempo de falha.</p>
-<p>Para ilustrar as funções discutidas aqui, utilizaremos o banco de dados <code>ovarian</code>, do pacote <code>survival</code>. Este banco traz o tempo de sobrevivência (ou censura) de 26 mulheres com câncer de ovário e o objetivo do estudo foi comparar dois tratamentos distintos para essa doença.</p>
-<p>Nesse exemplo, o tempo de falha é o intervalo entre a entrada no estudo e a ocorrência do evento de interesse que, aqui, é a morte da paciente. A censura neste caso é causada pelo abandono do estudo ou pela não ocorrência do evento até o fim do acompanhamento, ou seja, os casos em que a paciente estava viva no fim do estudo.</p>
-<p>Para mais informações sobre o banco de dados, consulte o <code>help(ovarian)</code>.</p>
-<section id="kaplan-meier-e-log-rank" class="level3">
-<h3 class="anchored" data-anchor-id="kaplan-meier-e-log-rank">Kaplan-Meier e Log-rank</h3>
-<p>O Kaplan-Meier é a principal ferramenta para visualizar dados de sobrevivência. Esses gráficos ajustam curvas tipo-escada da proporção de indivíduos <em>em risco</em> — que ainda não falharam e não foram censurados — ao longo do tempo. Para plotar um Kaplan-Meier no R, utilizamos a função <code>survfit()</code> e a função <code>plot()</code>.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
+<style> body {text-align: justify} </style>
+<style>
+  .left-aligned {
+    text-align: left;
+  }
+</style>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="sobrevivencia_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="cpcVersusReceita.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" width="330"></p>
 </figure>
 </div>
-</div>
-</div>
-<p>Também podemos construir um Kaplan-Meier com o <code>ggplot2</code>, mas observe que é necessário fazer algums modificações no objeto <code>fit</code>:</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="sobrevivencia_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>O teste de log-rank para comparação de grupos é realizado pela função <code>survdiff()</code>:</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Call:
-survdiff(formula = Surv(futime, fustat) ~ rx, data = ovarian)
-
-      N Observed Expected (O-E)^2/E (O-E)^2/V
-rx=1 13        7     5.23     0.596      1.06
-rx=2 13        5     6.77     0.461      1.06
-
- Chisq= 1.1  on 1 degrees of freedom, p= 0.3 </code></pre>
-</div>
-</div>
+<section id="introdução" class="level2">
+<h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<p>As Normas Internacionais de Relatórios Financeiros (IFRS) e as Normas Brasileiras de Contabilidade (CPC) visam fornecer uma base transparente e consistente para a preparação das demonstrações financeiras. Em contraste, as Normas Fiscais da Receita Federal do Brasil (RFB) são estabelecidas com o objetivo de regulamentar a arrecadação de impostos. Apesar de ambas serem fundamentais para a prática contábil e fiscal, existem diversas situações onde os princípios das IFRS/CPC conflitam com as normas fiscais. Este documento abordará vinte dessas situações, destacando as divergências entre as práticas contábeis e fiscais, com referências para cada caso.</p>
 </section>
-<section id="modelos-paramétricos" class="level3">
-<h3 class="anchored" data-anchor-id="modelos-paramétricos">Modelos paramétricos</h3>
-<p>Para ajustar modelos paramétricos, podemos utilizar a função <code>survreg()</code>.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-survreg(formula = Surv(futime, fustat) ~ rx + age, data = ovarian, 
-    dist = "exponential")
-              Value Std. Error     z       p
-(Intercept) 12.1225     2.3966  5.06 4.2e-07
-rx           0.6611     0.6159  1.07 0.28310
-age         -0.1051     0.0319 -3.30 0.00098
-
-Scale fixed at 1 
-
-Exponential distribution
-Loglik(model)= -91.2   Loglik(intercept only)= -98
-    Chisq= 13.65 on 2 degrees of freedom, p= 0.0011 
-Number of Newton-Raphson Iterations: 5 
-n= 26 </code></pre>
-</div>
-</div>
-<p>Observe que no exemplo acima utilizamos a distribuição Exponencial. O argumento <code>dist =</code> pode ser modificado para ajustarmos modelos com outras distribuições:</p>
-<ul>
-<li><code>dist = "weibull"</code> — distribuição Weibull (default)</li>
-<li><code>dist = "gaussian"</code> — distribuição Normal</li>
-<li><code>dist = "logistic"</code> — distribuição Logística</li>
-<li><code>dist = "lognormal"</code> — distribuição Log-normal</li>
-<li><code>dist = "loglogistic"</code> — distribuição Log-logística</li>
-</ul>
-</section>
-<section id="modelo-semi-paramétrico-de-cox" class="level3">
-<h3 class="anchored" data-anchor-id="modelo-semi-paramétrico-de-cox">Modelo semi-paramétrico de Cox</h3>
-<p>No R, a função mais utilizada para ajustar modelos de Cox é a <code>coxph()</code>.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Call:
-coxph(formula = Surv(futime, fustat) ~ age + rx, data = ovarian)
-
-  n= 26, number of events= 12 
-
-        coef exp(coef) se(coef)      z Pr(&gt;|z|)   
-age  0.14733   1.15873  0.04615  3.193  0.00141 **
-rx  -0.80397   0.44755  0.63205 -1.272  0.20337   
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-    exp(coef) exp(-coef) lower .95 upper .95
-age    1.1587      0.863    1.0585     1.268
-rx     0.4475      2.234    0.1297     1.545
-
-Concordance= 0.798  (se = 0.076 )
-Likelihood ratio test= 15.89  on 2 df,   p=4e-04
-Wald test            = 13.47  on 2 df,   p=0.001
-Score (logrank) test = 18.56  on 2 df,   p=9e-05</code></pre>
-</div>
-</div>
-</section>
-<section id="generalized-additive-model-gam" class="level2">
-<h2 class="anchored" data-anchor-id="generalized-additive-model-gam">Generalized Additive Model (GAM)</h2>
-<p>Os modelos aditivos generalizados ou GAM são modelos baseados na teoria desenvolvida por Trevor Hastie e Robert Tibshirani, e podem ser vistos como uma generalização de GLM, no sentido de que todos os GLM sãoo casos particulares de GAM.</p>
-<p>Na regressão normal e em GLM assumimos, em geral, que as variáveis aleatórias correspondentes aos indivíduos são independentes, e que existe uma função, denominada função de ligação, que une as médias destas variáveis aleatórias a um certo preditor linear.</p>
-<p>A grande mudança nos modelos aditivos generalizados está na forma do preditor. Para cada variável explicativa, temos associada uma função a ser estimada (ou suavizada), sendo que o preditor fica definido como a soma dessas funções</p>
-<p><span class="math display">
-g(\mu_i) = f_0 + \sum f(x_{ij})
-</span></p>
-<p>Para evitar o desconforto da interpretação das contribuições marginais (funções), uma alternativa é utilizar as funções de suavização para ajustar variáveis de controle em que não há interesse direto, e manter a parte principal com termos paramétricos. Geralmente isso facilita a interpretação e melhora o ajuste do modelo em relação ao GLM.</p>
-<section id="pacote-mgcv" class="level3">
-<h3 class="anchored" data-anchor-id="pacote-mgcv">Pacote mgcv</h3>
-<p>O pacote <code>mgcv</code> é um dos pacotes mais completos do R e permite simulação, ajuste, visualização e análise de resíduos para <code>gam</code>. O pacote gerou até <a href="http://books.google.co.uk/books?id=hr17lZC-3jQC">um livro</a>.</p>
-<p>Na prática, a utilização do GAM não difere muito de modelos GLM. Uma das únicas diferenças na especificação do modelo é que podemos utilizar a função <code>s</code> para determinar quais termos queremos que sejam ajustados com funções aditivas.</p>
-</section>
-<section id="exemplo-pnud" class="level3">
-<h3 class="anchored" data-anchor-id="exemplo-pnud">Exemplo: PNUD</h3>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Family: Gamma 
-Link function: inverse 
-
-Formula:
-espvida ~ ano + s(rdpc) + s(i_escolaridade)
-
-Parametric coefficients:
-              Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  1.234e-01  1.545e-03   79.91   &lt;2e-16 ***
-ano         -5.437e-05  7.722e-07  -70.41   &lt;2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Approximate significance of smooth terms:
-                    edf Ref.df       F p-value    
-s(rdpc)           8.858  8.993 1200.58  &lt;2e-16 ***
-s(i_escolaridade) 5.681  6.817   22.71  &lt;2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-R-sq.(adj) =  0.831   Deviance explained = 81.9%
-GCV = 0.0011938  Scale est. = 0.001185  n = 16695</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="sobrevivencia_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="pacote-gamlss" class="level3">
-<h3 class="anchored" data-anchor-id="pacote-gamlss">Pacote gamlss</h3>
-<p>Se por algum motivo existir algum problema na análise em relação à distribuição, heterocedasticidade, e utilização de preditores lineares, uma possível alternativa é o GAMLSS.</p>
-<p>GAMLSS significa Generalized Additive Models for Location, Scale and Shape. Com GAMLSS é possível modelar não só a média da distribuição <span class="math inline">\mu_i</span> (primeiro momento), mas também a variância <span class="math inline">\sigma_i</span> (segundo momento), a assimetria <span class="math inline">\phi_i</span> (terceiro momento) e a curtose <span class="math inline">\rho_i</span> (quarto momento), usando preditores.</p>
-<p>Por ser um modelo aditivo, o GAMLSS permite que sejam adicionados termos de suavização na fórmula do modelo, o que o torna uma generalização natural do GAM (em relação à modelagem, não ao método de ajuste).</p>
-<p>Por fim, o modelo GAMLSS possui <strong>mais de 50</strong> famílias de distribuições implementadas, o que nos dá uma enorme gama de opções para criação de modelos.</p>
-<p>Também é possível adicionar efeitos aleatórios utilizando o GAMLSS, mas essa parte ainda é experimental.</p>
-<p>Mas tudo vem com um preço. Por ser um grande canhão, o método de ajuste de modelos GAMLSS geralmente são baseados técnicas de otimização aproximadas. Além disso, o ajuste de modelos pode ser mais lento que os concorrentes. Por fim, a análise de resíduos para GAMLSS é bastante limitada (e provavelmente continuará sendo).</p>
-<p>Recomendamos a utilização do <code>gamlss</code> com muito cuidado, e sempre acompanhando outras modelagens, usando <code>glm</code> ou <code>gam</code>, por exemplo.</p>
-</section>
-<section id="exemplo-pnud-1" class="level3">
-<h3 class="anchored" data-anchor-id="exemplo-pnud-1">Exemplo: PNUD</h3>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>GAMLSS-RS iteration 1: Global Deviance = 78553.62 
-GAMLSS-RS iteration 2: Global Deviance = 77935.35 
-GAMLSS-RS iteration 3: Global Deviance = 77903.36 
-GAMLSS-RS iteration 4: Global Deviance = 77900.75 
-GAMLSS-RS iteration 5: Global Deviance = 77900.38 
-GAMLSS-RS iteration 6: Global Deviance = 77900.32 
-GAMLSS-RS iteration 7: Global Deviance = 77900.31 
-GAMLSS-RS iteration 8: Global Deviance = 77900.31 
-GAMLSS-RS iteration 9: Global Deviance = 77900.31 </code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>******************************************************************
-Family:  c("NET", "Normal Exponential t") 
-
-Call:  gamlss(formula = espvida ~ cs(rdpc) + cs(i_escolaridade),  
-    sigma.formula = ~ano, family = NET(), data = dados) 
-
-Fitting method: RS() 
-
-------------------------------------------------------------------
-Mu link function:  identity
-Mu Coefficients:
-                    Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)        6.072e+01  4.392e-02 1382.42   &lt;2e-16 ***
-cs(rdpc)           1.150e-02  1.201e-04   95.71   &lt;2e-16 ***
-cs(i_escolaridade) 1.556e+01  1.958e-01   79.46   &lt;2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-------------------------------------------------------------------
-Sigma link function:  log
-Sigma Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  1.11223    0.01309   85.00   &lt;2e-16 ***
-ano2000     -0.34429    0.01745  -19.73   &lt;2e-16 ***
-ano2010     -0.76936    0.01808  -42.56   &lt;2e-16 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-------------------------------------------------------------------
-Nu parameter is fixed 
-Nu =  1.5 
-------------------------------------------------------------------
-Tau parameter is fixed 
-Tau =  2 
-------------------------------------------------------------------
-NOTE: Additive smoothing terms exist in the formulas: 
- i) Std. Error for smoothers are for the linear effect only. 
-ii) Std. Error for the linear terms maybe are not accurate. 
-------------------------------------------------------------------
-No. of observations in the fit:  16695 
-Degrees of Freedom for the fit:  28.32315
-      Residual Deg. of Freedom:  16666.68 
-                      at cycle:  9 
- 
-Global Deviance:     77900.31 
-            AIC:     77956.95 
-            SBC:     78175.69 
-******************************************************************</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="sobrevivencia_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>******************************************************************
-          Summary of the Quantile Residuals
-                           mean   =  -0.08278299 
-                       variance   =  0.8508743 
-               coef. of skewness  =  0.1034363 
-               coef. of kurtosis  =  2.249083 
-Filliben correlation coefficient  =  0.9937856 
-******************************************************************</code></pre>
-</div>
-</div>
-<p>Para mais informações sobre Análise de Sobrevivência, consultar as seguintes referências:</p>
-<ul>
-<li><p>Colosimo, E.A. e Giolo, S.R.. (2005) Análise de Sobrevivência Aplicada. ABE — Projeto fisher. Editora Edgard Blucher</p></li>
-<li><p>Kalbfleisch, J. D.; Prentice, Ross L. (2002). The statistical analysis of failure time data. New York: John Wiley &amp; Sons.</p></li>
-<li><p>Lawless, Jerald F. (2003). Statistical Models and Methods for Lifetime Data (2nd ed.). Hoboken: John Wiley and Sons.</p></li>
-</ul>
-</section>
+<section id="principais-divergências" class="level2">
+<h2 class="anchored" data-anchor-id="principais-divergências">Principais divergências</h2>
+<p>Uma das principais divergências entre as normas contábeis e fiscais refere-se ao reconhecimento de receita. A IFRS 15 e CPC 47 determinam que a receita deve ser reconhecida quando o controle do bem ou serviço é transferido para o cliente, enquanto a legislação fiscal brasileira pode exigir o reconhecimento da receita em momentos diferentes, baseando-se em critérios de realização e pagamento. Quanto aos ativos intangíveis, a IAS 38 e CPC 04 estabelecem que devem ser reconhecidos quando é provável que os benefícios econômicos futuros atribuíveis ao ativo irão fluir para a entidade. No entanto, as normas fiscais podem não permitir a amortização de determinados intangíveis para fins fiscais.</p>
+<p>Em relação às provisões, a IAS 37 e CPC 25 exigem o reconhecimento de provisões quando há uma obrigação presente resultante de eventos passados. A dedutibilidade fiscal das provisões pode ser limitada, exigindo critérios específicos para sua dedução. No que tange à depreciação de ativos fixos, a IAS 16 e CPC 27 estabelecem que a depreciação deve ser calculada com base na vida útil econômica dos ativos, enquanto a depreciação fiscal segue as taxas fixadas pela RFB, que podem divergir da vida útil econômica estimada.</p>
+<p>Outra área de conflito é o ajuste a valor justo, conforme estabelecido pela IFRS 13 e CPC 46, que requer a mensuração de certos ativos e passivos ao valor justo. A legislação fiscal brasileira pode não reconhecer esses ajustes para fins de apuração do lucro tributável. Quanto aos benefícios a empregados, a IAS 19 e CPC 33 tratam do reconhecimento e mensuração desses benefícios, incluindo planos de pensão, mas a dedutibilidade fiscal pode ser restrita a valores efetivamente pagos.</p>
+<p>Os contratos de leasing também são uma fonte de divergência. A IFRS 16 e CPC 06 (R2) exigem que sejam reconhecidos no balanço como ativos e passivos, enquanto a legislação fiscal pode tratar esses contratos de forma diferente, afetando a base de cálculo dos tributos. No caso das combinações de negócios, a IFRS 3 e CPC 15 exigem o reconhecimento de ativos e passivos adquiridos a valor justo, mas a legislação fiscal pode requerer ajustes para fins de apuração do lucro real.</p>
+<p>Os instrumentos financeiros são tratados pela IFRS 9 e CPC 48, que abordam o reconhecimento e mensuração desses instrumentos, mas pode haver diferenças na tributação de ganhos e perdas. Sobre o imposto de renda diferido, a IAS 12 e CPC 32 tratam do reconhecimento de ativos e passivos fiscais diferidos, mas as normas fiscais podem ter critérios diferentes para esse reconhecimento.</p>
+<p>A reavaliação de ativos é permitida pela IAS 16, enquanto a legislação fiscal pode não permitir essa reavaliação para fins fiscais. A IAS 20 e CPC 07 tratam do reconhecimento de subvenções governamentais, mas a legislação fiscal pode prever a tributação dessas subvenções de maneira diferente. No caso de investimentos em coligadas, a IAS 28 e CPC 18 tratam do método de equivalência patrimonial, mas pode haver diferenças na tributação dos resultados dessas coligadas.</p>
+<p>Quanto aos estoques, a IAS 2 e CPC 16 estabelecem critérios para sua mensuração, enquanto a legislação fiscal pode adotar critérios diferentes. Os ativos biológicos, conforme a IAS 41 e CPC 29, devem ser mensurados a valor justo, mas pode haver restrições à utilização desse valor para fins fiscais. O reconhecimento de dividendos é tratado pelas IAS 10 e CPC 24, enquanto a tributação segue regras específicas da legislação fiscal.</p>
+<p>As propriedades para investimento são tratadas pela IAS 40 e CPC 28, que abordam a mensuração dessas propriedades, mas a legislação fiscal pode adotar critérios diferentes para depreciação e tributação. As concessões públicas são abordadas pela IFRIC 12 e ICPC 01, mas podem ser tratadas de forma diferente para fins fiscais. Os custos de empréstimos são tratados pela IAS 23 e CPC 20, que exigem a capitalização desses custos, enquanto a legislação fiscal pode não permitir a dedução imediata.</p>
+<p>Finalmente, a IFRS 5 e CPC 31 tratam da classificação de ativos não circulantes mantidos para venda, mas a legislação fiscal pode ter regras específicas para a alienação desses ativos e sua tributação.</p>
+<p>As divergências entre as normas IFRS/CPC e as normas fiscais da Receita Federal do Brasil refletem diferentes objetivos e princípios subjacentes às regulamentações contábeis e fiscais. Enquanto as IFRS/CPC visam fornecer uma visão econômica mais precisa e transparente das demonstrações financeiras, as normas fiscais são focadas na arrecadação de impostos e na conformidade tributária. É crucial para os profissionais contábeis entenderem essas diferenças e gerenciar as implicações práticas e regulatórias de cada situação. A harmonização e a conciliação entre essas normas permanecem um desafio contínuo para assegurar a precisão e a conformidade tanto nas demonstrações financeiras quanto nas apurações fiscais.</p>
 </section>
 <section id="referências" class="level2">
 <h2 class="anchored" data-anchor-id="referências">Referências</h2>
-<p>CURSO-R. <strong>curso-r.github.com</strong>. Disponível em: https://github.com/curso-r/curso-r.github.com/. Acesso em: 02 jun. 2024.</p>
+<div class="left-aligned">
+
+<p>BRASIL. Lei nº 12.973, de 13 de maio de 2014. Disponível em: http://www.planalto.gov.br/ccivil_03/_Ato2011-2014/2014/Lei/L12973.htm. Acesso em: 20 jun. 2024.</p>
+<p>BRASIL. Lei nº 9.249, de 26 de dezembro de 1995. Disponível em: http://www.planalto.gov.br/ccivil_03/leis/L9249.htm. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 04 – Ativo Intangível. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=9. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 06 (R2) – Arrendamentos. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=124. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 07 – Subvenção e Assistência Governamentais. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=10. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 15 – Combinação de Negócios. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=23. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 16 – Estoques. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=20. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 18 – Investimento em Coligada, em Controlada e em Empreendimento Controlado em Conjunto. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=17. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 20 – Custos de Empréstimos. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=19. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 24 – Evento Subsequente. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=27. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 25 – Provisões, Passivos Contingentes e Ativos Contingentes. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=22. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 27 – Ativo Imobilizado. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=24. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 28 – Propriedade para Investimento. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=33. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 29 – Ativo Biológico e Produto Agrícola. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=30. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 31 – Ativo Não Circulante Mantido para Venda e Operação Descontinuada. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=36. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 32 – Tributos sobre o Lucro. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=44. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 33 – Benefícios a Empregados. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=43. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 46 – Mensuração do Valor Justo. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=113. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 47 – Receita. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=117. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. CPC 48 – Instrumentos Financeiros. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Pronunciamentos/Pronunciamento?Id=125. Acesso em: 20 jun. 2024.</p>
+<p>COMITÊ DE PRONUNCIAMENTOS CONTÁBEIS. ICPC 01 – Concessões. Disponível em: http://www.cpc.org.br/CPC/Documentos-Emitidos/Interpretações/Interpretação?Id=6. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL ACCOUNTING STANDARDS. IAS 10 – Events after the Reporting Period. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ias-10-events-after-the-reporting-period/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL ACCOUNTING STANDARDS. IAS 12 – Income Taxes. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ias-12-income-taxes/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL ACCOUNTING STANDARDS. IAS 16 – Property, Plant and Equipment. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ias-16-property-plant-and-equipment/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL ACCOUNTING STANDARDS. IAS 19 – Employee Benefits. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ias-19-employee-benefits/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL ACCOUNTING STANDARDS. IAS 2 – Inventories. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL ACCOUNTING STANDARDS. IAS 20 – Accounting for Government Grants and Disclosure of Government Assistance. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ias-20-accounting-for-government-grants-and-disclosure-of-government-assistance/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL ACCOUNTING STANDARDS. IAS 23 – Borrowing Costs. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ias-23-borrowing-costs/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL ACCOUNTING STANDARDS. IAS 28 – Investments in Associates and Joint Ventures. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ias-28-investments-in-associates-and-joint-ventures/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL ACCOUNTING STANDARDS. IAS 37 – Provisions, Contingent Liabilities and Contingent Assets. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ias-37-provisions-contingent-liabilities-and-contingent-assets/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL ACCOUNTING STANDARDS. IAS 38 – Intangible Assets. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ias-38-intangible-assets/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL ACCOUNTING STANDARDS. IAS 41 – Agriculture. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ias-41-agriculture/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL FINANCIAL REPORTING INTERPRETATIONS COMMITTEE. IFRIC 12 – Service Concession Arrangements. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ifric-12-service-concession-arrangements/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL FINANCIAL REPORTING STANDARDS. IFRS 13 – Fair Value Measurement. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ifrs-13-fair-value-measurement/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL FINANCIAL REPORTING STANDARDS. IFRS 15 – Revenue from Contracts with Customers. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ifrs-15-revenue-from-contracts-with-customers/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL FINANCIAL REPORTING STANDARDS. IFRS 16 – Leases. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ifrs-16-leases/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL FINANCIAL REPORTING STANDARDS. IFRS 3 – Business Combinations. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ifrs-3-business-combinations/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL FINANCIAL REPORTING STANDARDS. IFRS 5 – Non-current Assets Held for Sale and Discontinued Operations. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ifrs-5-non-current-assets-held-for-sale-and-discontinued-operations/. Acesso em: 20 jun. 2024.</p>
+<p>INTERNATIONAL FINANCIAL REPORTING STANDARDS. IFRS 9 – Financial Instruments. Disponível em: https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/. Acesso em: 20 jun. 2024.</p>
+<p>RECEITA FEDERAL DO BRASIL. Instrução Normativa RFB nº 162/1998. Disponível em: http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=1627&amp;visao=original. Acesso em: 20 jun. 2024.</p>
+<p>RECEITA FEDERAL DO BRASIL. Instrução Normativa RFB nº 1.700/2017. Disponível em: http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=86725&amp;visao=anotado. Acesso em: 20 jun. 2024.</p>
+<div>
 
 
-</section>
+
+
+
+
+</div></div></section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
