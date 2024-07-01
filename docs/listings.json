@@ -6,17 +6,18 @@
     ]
   },
   {
-    "listing": "/blog/index.html",
-    "items": [
-      "/blog/posts/cpcVersusReceita/cpcVersusReceita.html",
-      "/blog/posts/preditiva.html",
-      "/blog/posts/sobrevivencia.html"
-    ]
-  },
-  {
     "listing": "/artigos/index.html",
     "items": [
       "/artigos/uranium.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/posts/contabdata/contabdata.html",
+      "/blog/posts/cpcVersusReceita/cpcVersusReceita.html",
+      "/blog/posts/preditiva/preditiva.html",
+      "/blog/posts/sobrevivencia/sobrevivencia.html"
     ]
   }
 ]

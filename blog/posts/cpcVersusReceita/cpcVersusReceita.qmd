@@ -3,8 +3,8 @@ title: "Conflitos entre IFRS/CPC e Normas Fiscais da Receita Federal"
 subtitle: "Resenha"
 author: "Alexsandro Prado"
 categories:
-  - Contabilidade
-  - Teoria
+  - contabilidade
+  - teoria
 date: 2024-06-20
 toc: true
 image: "cpcVersusReceita.webp"
