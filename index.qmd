@@ -77,9 +77,9 @@ about:
 
 ^Bacharel em Ciências Contábeis^
 
-## Habilidades
+## Experiência
 
--   [Experiência em análise e visualização de dados em linguagem R]{.smallcaps}
+-   [Análise e visualização de dados em linguagem R]{.smallcaps}
 
 -   [ETL microdados (RAIS, CAGED, PNADc, BGSD, CVM Cias Abertas)]{.smallcaps}
 

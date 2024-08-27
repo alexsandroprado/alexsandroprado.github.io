@@ -30,8 +30,11 @@ website:
 #        text: Software
       - text: Projetos
         menu:
+          - text: GECOMT
+            href: https://gecomt.github.io/
+            target: _blank
           - text: Contabilidados
-            href: https://contabilidados.quarto.pub/
+            href: https://contabilidados.com.br//
             target: _blank
           - text: GECOMT
             href: https://gecomt.shinyapps.io/dashboard/
