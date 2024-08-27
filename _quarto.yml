@@ -36,9 +36,6 @@ website:
           - text: Contabilidados
             href: https://contabilidados.com.br//
             target: _blank
-          - text: GECOMT
-            href: https://gecomt.shinyapps.io/dashboard/
-            target: _blank
           - text: Regulariza
             href: https://regulariza.shinyapps.io/dashboard/
             target: _blank
