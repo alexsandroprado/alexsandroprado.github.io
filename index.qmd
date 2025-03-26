@@ -50,6 +50,9 @@ about:
       text: Github
       href: https://github.com/alexsandroprado
       target: _blank
+    - icon: fa-kaggle
+      text: Kaggle
+      href: https://www.kaggle.com/alexsandroprado
     - icon: steam
       text: Steam
       href: https://steamcommunity.com/id/lecksan/
