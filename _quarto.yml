@@ -8,12 +8,15 @@ lang: pt
 website:
   title: "Alexsandro Prado"
   site-url: "https://alexsandroprado.github.io/"
-  favicon: "images/favicon.ico"
+  favicon: "images/logo.ico"
   twitter-card: true
   description: "Desvendando mistérios dos dados como Sherlock Holmes, mas com laptop e café, não lupa e cachimbo!"
   google-analytics: "GTM-T9KC9QL7"
   back-to-top-navigation: true
   reader-mode: false
+  search:
+    location: navbar
+    type: overlay
   navbar:
     type: light
     background: "#000000"

@@ -2,7 +2,7 @@
 title: Alexsandro Prado
 comments: false
 about:
-  template: trestles
+  template: broadside
   image: /images/alexsandro.png
   links:
     - icon: envelope
