@@ -102,3 +102,47 @@ about:
 :::
 
 ------------------------------------------------------------------------
+
+```{=html}
+<script>
+(function() {
+  function injectBanner() {
+    if (document.getElementById('ap-profile-banner')) return;
+    var target = document.querySelector('.quarto-about-trestles') ||
+                 document.querySelector('.about-entity') ||
+                 document.querySelector('#quarto-content');
+    if (!target) return;
+    var banner = document.createElement('div');
+    banner.id = 'ap-profile-banner';
+    banner.style.background = '#0f2554';
+    banner.style.padding = '2.5rem 2rem 2rem';
+    banner.style.position = 'relative';
+    banner.style.overflow = 'hidden';
+    var grid = document.createElement('div');
+    grid.style.cssText = 'position:absolute;top:0;right:0;bottom:0;left:0;' +
+      'background-image:linear-gradient(rgba(37,99,235,.15) 1px,transparent 1px),' +
+      'linear-gradient(90deg,rgba(37,99,235,.15) 1px,transparent 1px);' +
+      'background-size:32px 32px;pointer-events:none';
+    var inner = document.createElement('div');
+    inner.style.cssText = 'position:relative;z-index:1';
+    inner.innerHTML =
+      '<div style="font-family:JetBrains Mono,monospace;font-size:10px;' +
+        'letter-spacing:.12em;text-transform:uppercase;color:#00b4d8;margin-bottom:.5rem">' +
+        '// perfil</div>' +
+      '<div style="font-size:26px;font-weight:600;color:#fff;letter-spacing:-.02em;line-height:1.2">' +
+        'Alexsandro Prado</div>' +
+      '<div style="font-size:13px;color:rgba(255,255,255,.45);margin-top:.4rem">' +
+        'Professor \u00b7 Dr. Economia Aplicada \u00b7 UFERSA</div>';
+    banner.appendChild(grid);
+    banner.appendChild(inner);
+    var main = document.querySelector('main') || document.getElementById('quarto-content');
+    if (main) main.insertBefore(banner, main.firstChild);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', injectBanner);
+  } else {
+    setTimeout(injectBanner, 50);
+  }
+})();
+</script>
+```

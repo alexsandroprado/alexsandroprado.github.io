@@ -1,16 +1,6 @@
 ---
-listing:
-  contents: .
-  template: pubs.ejs
-  sort: "date desc"
-  categories: false
-  sort-ui: [date, title, author]
-  filter-ui: [date, title, author, details]
-  date-format: "YYYY"
-  page-size: 50
-sidebar: false
-page-layout: full
-title-block-banner: false
+title: "Artigos"
+comments: false
 ---
 
-# Publications
+<!-- Conteúdo em breve -->

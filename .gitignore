@@ -6,3 +6,5 @@ _freeze/*
 .Rhistory
 /_*.local
 alexsandroprado.github.io.Rproj
+
+**/*.quarto_ipynb

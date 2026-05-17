@@ -4,40 +4,45 @@ project:
   render:
     - "*.qmd"
     - "*.md"
+    - "!ensino/**"
+    - "!palestras/**"
+    - "!artigos/**"
+    - "!software/**"
+    - "!README.md"
+    - "!readme.md"
 lang: pt
 website:
   title: "Alexsandro Prado"
   site-url: "https://alexsandroprado.github.io/"
   favicon: "images/logo.ico"
   twitter-card: true
-  description: "Desvendando mistérios dos dados como Sherlock Holmes, mas com laptop e café, não lupa e cachimbo!"
-  google-analytics: "GTM-T9KC9QL7"
+  description: "Econometria, Data Science e Contabilidade — análises aplicadas com R."
   back-to-top-navigation: true
   reader-mode: false
   search:
     location: navbar
     type: overlay
   navbar:
-    type: light
-    background: "#000000"
+    type: dark
+    background: "#0f2554"
     left:
       - href: blog/index.qmd
         text: Blog
       # - href: artigos/index.qmd
       #   text: Artigos
-#      - href: palestras/index.qmd
-#        text: Palestras
-#     - href: Ensino/index.qmd
-#        text: Ensino
-#      - href: software/index.qmd
-#        text: Software
+      # - href: palestras/index.qmd
+      #   text: Palestras
+      # - href: ensino/index.qmd
+      #   text: Ensino
+      # - href: software/index.qmd
+      #   text: Software
       - text: Projetos
         menu:
           - text: GECOMT
             href: https://gecomt.github.io/
             target: _blank
           - text: Contabilidados
-            href: https://contabilidados.com.br//
+            href: https://contabilidados.com.br/
             target: _blank
           - text: Regulariza
             href: https://regulariza.shinyapps.io/dashboard/
@@ -52,33 +57,39 @@ website:
         href: https://www.youtube.com/@profalexsandroprado
       - icon: rss
         href: blog/index.xml
+
   page-footer:
-    left: "Alexsando Prado (2024)"
+    left: "// alexsandro_prado · 2024"
     right:
       - icon: github
         href: https://github.com/alexsandroprado
       - icon: twitter-x
         href: https://twitter.com/alexsandroprado
-    background: "#000000"
+    background: "#0f2554"
 
-date-format: "D MMMM YYYY"
+date-format: "YYYY-MM-DD"
 
 format:
   html:
     theme:
-      light: united
-      dark: cyborg
-    css: styles.css
+      light: [united, styles.scss]
+      dark:  [cyborg, styles-dark.scss]
     toc: true
+    toc-depth: 3
     html-math-method: katex
     include-in-header:
       file: header.html
+    code-copy: true
+    code-overflow: wrap
 
-blog:
-  - folder: blog
-    feed: true
-
-comments:
-  giscus:
-    repo: alexsandroprado/alexsandroprado.github.io
-
+# AÇÃO NECESSÁRIA: descomente e preencha após obter os IDs em https://giscus.app/
+# Habilite GitHub Discussions no repositório antes de configurar.
+# comments:
+#   giscus:
+#     repo: alexsandroprado/alexsandroprado.github.io
+#     repo-id: "COLE_SEU_REPO_ID"
+#     category: "Announcements"
+#     category-id: "COLE_SEU_CATEGORY_ID"
+#     mapping: "pathname"
+#     reactions-enabled: true
+#     loading: lazy

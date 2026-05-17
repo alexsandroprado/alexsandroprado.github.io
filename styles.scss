@@ -1,0 +1,651 @@
+// ============================================================
+//  ALEXSANDRO PRADO — BLOG REDESIGN (LIGHT)
+//  Tech-blue · Minimalista · Acadêmico
+//  Posit/Quarto best practice: scss:defaults → Bootstrap vars
+//  scss:rules → component overrides (sem !important em excesso)
+// ============================================================
+
+/*-- scss:defaults --*/
+
+// ── Fontes ───────────────────────────────────────────────────
+// Google Fonts carregadas via header.html
+$font-family-sans-serif:  'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+$font-family-monospace:   'JetBrains Mono', 'Fira Mono', 'Courier New', monospace;
+$font-size-base:          0.9375rem !default;  // 15px
+$line-height-base:        1.7 !default;
+
+// ── Paleta de cores ──────────────────────────────────────────
+$navy:         #0f2554;
+$blue-mid:     #1a4ab5;
+$blue-accent:  #2563eb;
+$cyan:         #00b4d8;
+$blue-light:   #e8eeff;
+
+// ── Cores Bootstrap / Quarto ─────────────────────────────────
+$body-bg:      #f4f6fb !default;
+$body-color:   #0b0f1a !default;
+$link-color:   $blue-accent !default;
+$link-hover-color: $blue-mid !default;
+
+// ── Navbar ───────────────────────────────────────────────────
+$navbar-bg:    $navy !default;
+$navbar-fg:    rgba(255, 255, 255, 0.55) !default;
+$navbar-hl:    $cyan !default;
+
+// ── Rodapé ───────────────────────────────────────────────────
+$footer-bg:    $navy !default;
+$footer-fg:    rgba(255, 255, 255, 0.35) !default;
+
+// ── Código inline ────────────────────────────────────────────
+$code-bg:      $blue-light !default;
+$code-color:   $blue-mid !default;
+
+// ── Blocos de código ─────────────────────────────────────────
+$code-block-bg: $navy !default;
+
+// ── Headings ─────────────────────────────────────────────────
+$headings-font-weight:   600 !default;
+$headings-letter-spacing: -0.02em;
+$h1-font-size:  2rem !default;
+$h2-font-size:  1.45rem !default;
+$h3-font-size:  1.2rem !default;
+
+// ── Bordas / Cards ───────────────────────────────────────────
+$border-color:  #e0e5f0 !default;
+$border-radius: 4px !default;
+
+// ── Botões primários ─────────────────────────────────────────
+$primary: $blue-accent !default;
+
+
+/*-- scss:rules --*/
+
+// ── Tipografia ───────────────────────────────────────────────
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: $headings-letter-spacing;
+}
+
+p {
+  color: #3a4459;
+  line-height: 1.75;
+}
+
+// ── Navbar ───────────────────────────────────────────────────
+.navbar-brand {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  background-color: transparent;
+  background-image: none;
+  padding-left: 0;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: $cyan;
+    margin-right: 0.55rem;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+}
+
+// Nav-links desktop: indicador ativo com borda ciano
+.navbar-expand-lg .nav-link,
+.navbar-expand-lg .navbar-nav .nav-link {
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.navbar-expand-lg .nav-link.active,
+.navbar-expand-lg .navbar-nav .nav-link.active {
+  border-bottom-color: $cyan;
+}
+
+// Ícones navbar
+.navbar-expand-lg .nav-link i,
+.navbar-expand-lg .nav-link .bi {
+  font-size: 14px;
+}
+
+// Dropdown Projetos
+.navbar .dropdown-menu {
+  background: $navy;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: $border-radius;
+  padding: 0.25rem 0;
+  min-width: 180px;
+}
+
+.navbar .dropdown-item {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0.5rem 1.25rem;
+  letter-spacing: 0.02em;
+
+  &:hover {
+    background: rgba($blue-accent, 0.25);
+    color: #ffffff;
+  }
+}
+
+// Nav-links mobile: sem border-bottom no menu colapsado
+@media (max-width: 991px) {
+  .navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0.6rem 1rem;
+    border-bottom: none;
+    letter-spacing: 0.04em;
+  }
+}
+
+// ── Navbar right: ícones, dark toggle e lupa ────────────────
+// Quarto injeta automaticamente:
+//   - ícones do right: como .nav-link com .bi-* (Bootstrap Icons)
+//   - dark toggle como .quarto-color-scheme-toggle
+//   - lupa como #quarto-search .quarto-search-button
+
+// Ícones Bootstrap (GitHub, X, YouTube, RSS)
+.navbar-nav .nav-link .bi,
+.navbar .nav-link .bi {
+  font-size: 16px;
+  vertical-align: -2px;
+}
+
+// Espaçamento uniforme entre ícones do right
+.navbar-nav.navbar-nav-scroll .nav-item {
+  margin: 0 1px;
+}
+
+// Dark mode toggle
+.quarto-color-scheme-toggle {
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0 6px;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .bi {
+    font-size: 17px;
+    vertical-align: -2px;
+  }
+}
+
+// Search button (lupa)
+.quarto-search-button,
+#quarto-search .aa-DetachedSearchButton {
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0 6px;
+  background: transparent;
+  border: none;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .bi {
+    font-size: 17px;
+    vertical-align: -2px;
+  }
+}
+
+// ── Banner — todas as páginas (.quarto-title-banner) ───────────
+.quarto-title-banner {
+  background: $navy;
+  position: relative;
+  overflow: hidden;
+
+  // Grid pattern de fundo
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image:
+      linear-gradient(rgba($blue-accent, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba($blue-accent, 0.15) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+  }
+}
+
+.quarto-title-banner .title,
+.quarto-title-banner h1 {
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+.quarto-title-banner .description,
+.quarto-title-banner p.subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  position: relative;
+  z-index: 1;
+}
+
+// Título no banner: especificidade do ID (#title-block-header)
+// é maior que .quarto-title-banner .title — não definir color aqui
+// para não sobrescrever o branco definido acima.
+#title-block-header .title {
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+// ── Contador de artigos/temas no banner ──────────────────────
+// O JS em blog/index.qmd injeta .banner-stats dentro de
+// .quarto-title-banner .quarto-title após o render do listing.
+.banner-stats {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-end;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-stat {
+  text-align: right;
+}
+
+.banner-stat-n {
+  font-family: $font-family-monospace;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1;
+  display: block;
+}
+
+.banner-stat-l {
+  font-family: $font-family-monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 0.35rem;
+  display: block;
+}
+
+// Reposiciona o bloco de título do banner para flex
+// permitindo que os stats fiquem à direita
+.quarto-title-banner #title-block-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.quarto-title-banner .quarto-title {
+  flex: 1;
+}
+
+// ── About page: overrides completos do template trestles ────────
+// O trestles tem estrutura própria — sobrescrevemos para alinhar
+// com o design do site.
+
+// Foto: quadrada com cantos arredondados (não circular)
+.about-entity .about-image img,
+#quarto-content .about-image img {
+  border-radius: 6px !important;
+  object-fit: cover;
+  border: 2px solid -color;
+}
+
+// Links do trestles: lista vertical com bordas (não botões horizontais)
+.about-links {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.3rem !important;
+  margin-top: 1rem !important;
+}
+
+.about-link {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  font-size: 12.5px !important;
+  color: #3a4459 !important;
+  border: 1px solid -color !important;
+  border-radius: 3px !important;
+  padding: 0.35rem 0.75rem !important;
+  width: 100% !important;
+  text-decoration: none !important;
+  transition: border-color 0.15s, color 0.15s, background 0.15s !important;
+
+  &:hover {
+    border-color: -accent !important;
+    color: -accent !important;
+    background: -light !important;
+  }
+
+  // Ícone Bootstrap dentro do link
+  .bi {
+    font-size: 13px !important;
+    width: 16px !important;
+    text-align: center !important;
+    color: #7a8499 !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+// Banner do trestles: o trestles ignora title-block-banner padrão.
+// Adicionamos um banner sintético via CSS no topo da .about-entity.
+// O banner real (navy + grid) é injetado via JS no index.qmd.
+.quarto-title-banner .quarto-title h1.title,
+.quarto-title-banner h1 {
+  font-size: 2rem !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.025em !important;
+}
+
+// Nome no trestles (abaixo da foto)
+.about-entity .about-name {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  color: #0b0f1a !important;
+  letter-spacing: -0.01em !important;
+  margin-top: 0.75rem !important;
+}
+
+// Dark mode: about links
+[data-bs-theme="dark"] .about-link {
+  color: #a0aabb !important;
+  border-color: #1e2740 !important;
+
+  &:hover {
+    border-color: #60a5fa !important;
+    color: #60a5fa !important;
+    background: rgba(37, 99, 235, 0.15) !important;
+  }
+}
+// Com title-block-banner:true o título vai pro banner navy.
+// O trestles coloca .about-entity abaixo do banner — não precisa de ajuste.
+// Apenas garantir que o nome (title) fique grande e visível no banner.
+.quarto-title-banner .quarto-title h1.title {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+// ── Grid de posts (listing type: grid) ──────────────────────
+.quarto-grid-item {
+  background: #ffffff;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    border-color: $blue-accent;
+    box-shadow: 0 0 0 1px $blue-accent;
+  }
+}
+
+.quarto-grid-item .listing-image img,
+.listing-image img {
+  border-radius: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.quarto-grid-item .listing-title,
+.listing-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+}
+
+.quarto-grid-item .listing-title:hover {
+  color: $blue-accent;
+}
+
+.quarto-grid-item .listing-description,
+.listing-description {
+  font-size: 11.5px;
+  line-height: 1.65;
+}
+
+.quarto-grid-item .listing-date,
+.listing-date {
+  font-family: $font-family-monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+}
+
+// Categorias nos cards
+.quarto-grid-item .listing-categories .listing-category,
+.listing-category {
+  font-family: $font-family-monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  background: $blue-light;
+  color: $blue-mid;
+  border: none;
+  border-radius: 2px;
+  padding: 0.2rem 0.55rem;
+  font-weight: 500;
+}
+
+// Filtro / busca do listing
+.quarto-listing-sort,
+.quarto-listing-filter {
+  font-family: $font-family-monospace;
+  font-size: 11px;
+}
+
+.quarto-listing-filter input {
+  font-family: $font-family-monospace;
+  font-size: 11px;
+  border: 1px solid $border-color;
+  border-radius: 2px;
+  padding: 0.35rem 0.75rem;
+
+  &:focus {
+    outline: none;
+    border-color: $blue-accent;
+    box-shadow: 0 0 0 2px rgba($blue-accent, 0.15);
+  }
+}
+
+// Sidebar de categorias
+.quarto-listing-category-title {
+  font-family: $font-family-monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.quarto-listing-category .category {
+  font-family: $font-family-monospace;
+  font-size: 11px;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  justify-content: space-between;
+
+  &:hover,
+  &.active {
+    color: $blue-accent;
+  }
+}
+
+// ── Post individual ──────────────────────────────────────────
+.quarto-title .title {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.quarto-title-meta {
+  font-family: $font-family-monospace;
+  font-size: 11px;
+  background: transparent;
+  border-top: 1px solid $border-color;
+  padding-top: 0.75rem;
+  margin-top: 1rem;
+}
+
+.quarto-title-meta-heading {
+  font-family: $font-family-monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 0.2rem;
+}
+
+.quarto-title-meta-contents {
+  font-family: $font-family-monospace;
+  font-size: 11px;
+}
+
+// Categorias no post individual
+.quarto-categories .quarto-category {
+  font-family: $font-family-monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+  background: $blue-light;
+  color: $blue-mid;
+  border: none;
+  border-radius: 2px;
+  padding: 0.2rem 0.6rem;
+}
+
+// ── TOC ──────────────────────────────────────────────────────
+#TOC {
+  font-size: 12.5px;
+  border-left: 2px solid $border-color;
+  padding-left: 1rem;
+}
+
+#TOC .toc-title {
+  font-family: $font-family-monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+#TOC a {
+  font-size: 12px;
+}
+
+#TOC a:hover,
+#TOC a.active {
+  color: $blue-accent;
+}
+
+// ── Conteúdo do artigo ───────────────────────────────────────
+.page-layout-article .page-columns > article {
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+// ── Blocos de código ─────────────────────────────────────────
+pre.sourceCode,
+div.sourceCode,
+.cell-code pre {
+  border-radius: $border-radius;
+  padding: 1rem 1.25rem;
+  line-height: 1.6;
+}
+
+// Inline code (elementos comuns em prosa acadêmica)
+p code, li code, td code,
+h1 code, h2 code, h3 code,
+th code, blockquote code, dt code {
+  border-radius: 2px;
+  font-size: 13px;
+  padding: 0.15em 0.4em;
+}
+
+// Botão copiar código
+.code-copy-button {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+
+  &:hover {
+    background: rgba($blue-accent, 0.3);
+    border-color: $blue-accent;
+  }
+}
+
+// ── Botões ───────────────────────────────────────────────────
+.btn-primary,
+.btn-outline-primary {
+  font-family: $font-family-monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  border-radius: 2px;
+}
+
+// ── Rodapé ───────────────────────────────────────────────────
+.nav-footer {
+  font-family: $font-family-monospace;
+  font-size: 11px;
+  padding: 1.25rem 2rem;
+}
+
+.nav-footer-left,
+.nav-footer-right {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+// ── About page ───────────────────────────────────────────────
+.about-entity .about-image img {
+  border-radius: $border-radius;
+  border: 2px solid $border-color;
+}
+
+.about-links .about-link {
+  font-size: 12.5px;
+  border: 1px solid $border-color;
+  border-radius: 2px;
+  padding: 0.35rem 0.75rem;
+  transition: border-color 0.15s, color 0.15s;
+
+  &:hover {
+    border-color: $blue-accent;
+    background: $blue-light;
+  }
+}
+
+// ── Responsivo ───────────────────────────────────────────────
+@media (max-width: 991px) {
+  .quarto-title .title {
+    font-size: 1.5rem;
+  }
+
+  pre.sourceCode,
+  div.sourceCode {
+    font-size: 12px;
+  }
+}

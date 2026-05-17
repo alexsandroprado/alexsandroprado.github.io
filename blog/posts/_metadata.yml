@@ -1,5 +1,20 @@
-# options specified here will apply to all posts in this folder
+# Metadados padrão para todos os posts do blog
 
-# freeze computational output
-# (see https://quarto.org/docs/projects/code-execution.html#freeze)
 freeze: true
+
+author: "Alexsandro Prado"
+
+reading-time: true
+
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Conteúdo"
+    code-copy: true
+    code-overflow: wrap
+
+execute:
+  echo: false
+  warning: false
+  error: false

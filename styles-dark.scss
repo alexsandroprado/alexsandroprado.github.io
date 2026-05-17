@@ -1,0 +1,56 @@
+// ============================================================
+//  ALEXSANDRO PRADO — BLOG REDESIGN (DARK)
+//  Sobrescreve apenas as variáveis que diferem do light theme.
+//  Herdado sobre o tema cyborg do Quarto.
+// ============================================================
+
+/*-- scss:defaults --*/
+
+// ── Paleta dark ──────────────────────────────────────────────
+$navy-dark:    #0a1628;
+$blue-accent:  #60a5fa;   // maior contraste sobre fundo escuro (WCAG AA)
+$blue-mid:     #93b8f8;
+$blue-light:   rgba(37, 99, 235, 0.15);
+
+// ── Cores Bootstrap / Quarto ─────────────────────────────────
+$body-bg:      #0d1117 !default;
+$body-color:   #e8ecf4 !default;
+$link-color:   $blue-accent !default;
+$link-hover-color: $blue-mid !default;
+
+// ── Navbar / Rodapé ──────────────────────────────────────────
+$navbar-bg:    $navy-dark !default;
+$navbar-fg:    rgba(255, 255, 255, 0.55) !default;
+$footer-bg:    $navy-dark !default;
+$footer-fg:    rgba(255, 255, 255, 0.35) !default;
+
+// ── Código inline ────────────────────────────────────────────
+$code-bg:      $blue-light !default;
+$code-color:   $blue-mid !default;
+
+// ── Código em bloco ──────────────────────────────────────────
+$code-block-bg: #0a1628 !default;
+
+// ── Bordas ───────────────────────────────────────────────────
+$border-color:  #1e2740 !default;
+
+
+/*-- scss:rules --*/
+
+// Cards no dark mode
+.quarto-grid-item {
+  background: #131926;
+}
+
+// Categorias inline code no dark mode
+.listing-category {
+  background: rgba(37, 99, 235, 0.2);
+  color: $blue-mid;
+}
+
+p code, li code, td code,
+h1 code, h2 code, h3 code,
+th code, blockquote code, dt code {
+  background: rgba(37, 99, 235, 0.2);
+  color: $blue-mid;
+}

@@ -1,14 +1,85 @@
 ---
-# title: "My blog"
-# description: "Thoughts on research"
+title: "Blog"
+description: "Econometria · Data Science · Contabilidade · R"
 comments: false
 listing:
-  contents: ["**/*.qmd"] 
-  feed: true 
+  contents: "posts/**/*.qmd"
+  feed: true
   sort: "date desc"
   type: grid
+  grid-columns: 3
+  image-height: "160px"
   categories: true
   sort-ui: true
   filter-ui: true
+  fields: [image, date, title, description, categories, reading-time]
+toc: false
 page-layout: full
+title-block-banner: true
 ---
+
+```{=html}
+<script>
+(function () {
+  function buildStats() {
+    const cards   = document.querySelectorAll('.quarto-grid-item');
+    const artigos = cards.length;
+    const temaSet = new Set();
+    cards.forEach(card => {
+      card.querySelectorAll('.listing-category').forEach(el => {
+        const cat = el.textContent.trim().toLowerCase();
+        if (cat) temaSet.add(cat);
+      });
+    });
+    const temas  = temaSet.size;
+    const banner = document.querySelector('.quarto-title-banner #title-block-header');
+    if (!banner || document.querySelector('.banner-stats')) return;
+    const el = document.createElement('div');
+    el.className = 'banner-stats';
+    el.innerHTML =
+      '<div class="banner-stat">' +
+        '<span class="banner-stat-n" id="bs-artigos">' + artigos + '</span>' +
+        '<span class="banner-stat-l">artigos</span>' +
+      '</div>' +
+      '<div class="banner-stat">' +
+        '<span class="banner-stat-n" id="bs-temas">' + temas + '</span>' +
+        '<span class="banner-stat-l">temas</span>' +
+      '</div>';
+    banner.appendChild(el);
+  }
+
+  function updateStats() {
+    const visible = Array.prototype.filter.call(
+      document.querySelectorAll('.quarto-grid-item'),
+      function(c) { return c.offsetParent !== null; }
+    );
+    var temaSet = new Set();
+    visible.forEach(function(card) {
+      card.querySelectorAll('.listing-category').forEach(function(el) {
+        temaSet.add(el.textContent.trim().toLowerCase());
+      });
+    });
+    var sa = document.getElementById('bs-artigos');
+    var st = document.getElementById('bs-temas');
+    if (sa) sa.textContent = visible.length;
+    if (st) st.textContent = temaSet.size;
+  }
+
+  function observeGrid() {
+    var grid = document.querySelector('.quarto-listing-container');
+    if (!grid) return;
+    var observer = new MutationObserver(updateStats);
+    observer.observe(grid, { attributes: true, subtree: true,
+                              attributeFilter: ['style', 'class'] });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      buildStats(); observeGrid();
+    });
+  } else {
+    setTimeout(function() { buildStats(); observeGrid(); }, 100);
+  }
+})();
+</script>
+```
