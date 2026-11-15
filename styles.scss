@@ -398,6 +398,34 @@ table, .cell-output, pre {
   }
 }
 
+// Tipo de produção técnica (CAPES)
+.tipo-capes {
+  display: inline-block;
+  font-family: var(--ap-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--ap-accent);
+  background: var(--ap-accent-soft);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 0.1rem 0.45rem;
+  margin: 0 0.3rem 0.5rem 0;
+
+  &.tipo-neutro {
+    color: var(--ap-muted);
+    background: transparent;
+    border-color: var(--ap-border);
+  }
+}
+
+// Cabeçalho dentro dos menus da navbar
+.navbar .dropdown-header {
+  font-family: var(--ap-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 // ── Blog ─────────────────────────────────────────────────────
 div.quarto-post {
   border-bottom: 1px solid var(--ap-border);

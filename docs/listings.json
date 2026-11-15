@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/publicacoes/index.html",
+    "items": []
+  },
+  {
     "listing": "/novidades/index.html",
     "items": [
       "/novidades/2026-11-27-anpcont/index.html",
@@ -28,9 +32,5 @@
       "/novidades/2026-03-31-bsd/index.html",
       "/novidades/2025-03-31-cgg/index.html"
     ]
-  },
-  {
-    "listing": "/publicacoes/index.html",
-    "items": []
   }
 ]

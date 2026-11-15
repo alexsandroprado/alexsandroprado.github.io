@@ -6,6 +6,7 @@ project:
     - "!README.md"
   resources:
     - "assets/katex/**"
+    - "assets/js/**"
 
 lang: pt-BR
 
@@ -37,18 +38,35 @@ website:
     logo: images/logo-ap-icone.svg
     logo-alt: "Logo AP"
     left:
-      - href: pesquisa/index.qmd
-        text: Pesquisa
-      - href: publicacoes/index.qmd
-        text: Publicações
-      - href: software/index.qmd
-        text: Software e dados
-      - href: ensino/index.qmd
-        text: Ensino
-      - href: novidades/index.qmd
-        text: Novidades
-      - href: blog/index.qmd
-        text: Blog
+      - text: Ensino
+        menu:
+          - href: ensino/index.qmd
+            text: Disciplinas
+          - href: ensino/index.qmd#orientacao
+            text: Orientação
+          - href: ensino/index.qmd#materiais
+            text: Materiais
+      - text: Pesquisa
+        menu:
+          - href: pesquisa/index.qmd#linhas
+            text: Linhas e projetos
+          - href: pesquisa/index.qmd#indicadores
+            text: Indicadores do emprego formal
+          - text: "---"
+          - href: publicacoes/index.qmd
+            text: Publicações
+          - href: producao-tecnica/index.qmd
+            text: Produção técnica
+      - text: Extensão
+        menu:
+          - href: extensao/index.qmd
+            text: Projetos e cursos
+          - text: "---"
+          - text: "Divulgação"
+          - href: novidades/index.qmd
+            text: Novidades
+          - href: blog/index.qmd
+            text: Blog
     right:
       - icon: github
         href: https://github.com/alexsandroprado

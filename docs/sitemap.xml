@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://alexsandroprado.github.io/software/index.html</loc>
-    <lastmod>2026-11-15T06:09:25.831Z</lastmod>
+    <loc>https://alexsandroprado.github.io/publicacoes/index.html</loc>
+    <lastmod>2026-11-15T06:08:44.608Z</lastmod>
   </url>
   <url>
     <loc>https://alexsandroprado.github.io/privacidade.html</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://alexsandroprado.github.io/novidades/2026-11-15-novo-site/index.html</loc>
-    <lastmod>2026-11-15T13:02:31.938Z</lastmod>
+    <lastmod>2026-11-15T13:44:16.998Z</lastmod>
   </url>
   <url>
     <loc>https://alexsandroprado.github.io/novidades/2026-06-30-rccc/index.html</loc>
@@ -25,11 +25,15 @@
     <lastmod>2026-11-15T13:02:44.123Z</lastmod>
   </url>
   <url>
-    <loc>https://alexsandroprado.github.io/ensino/index.html</loc>
-    <lastmod>2026-11-15T06:09:18.573Z</lastmod>
+    <loc>https://alexsandroprado.github.io/extensao/index.html</loc>
+    <lastmod>2026-11-15T13:44:07.591Z</lastmod>
   </url>
   <url>
-    <loc>https://alexsandroprado.github.io/blog/posts/heterocedasticidade/heterocedasticidade.html</loc>
+    <loc>https://alexsandroprado.github.io/blog/posts/preditiva/preditiva.html</loc>
+    <lastmod>2026-11-15T13:17:22.959Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexsandroprado.github.io/blog/posts/contabdata/contabdata.html</loc>
     <lastmod>2026-11-15T13:17:22.959Z</lastmod>
   </url>
   <url>
@@ -37,12 +41,12 @@
     <lastmod>2026-11-15T05:00:43.083Z</lastmod>
   </url>
   <url>
-    <loc>https://alexsandroprado.github.io/blog/posts/contabdata/contabdata.html</loc>
+    <loc>https://alexsandroprado.github.io/blog/posts/heterocedasticidade/heterocedasticidade.html</loc>
     <lastmod>2026-11-15T13:17:22.959Z</lastmod>
   </url>
   <url>
-    <loc>https://alexsandroprado.github.io/blog/posts/preditiva/preditiva.html</loc>
-    <lastmod>2026-11-15T13:17:22.959Z</lastmod>
+    <loc>https://alexsandroprado.github.io/ensino/index.html</loc>
+    <lastmod>2026-11-15T13:44:16.998Z</lastmod>
   </url>
   <url>
     <loc>https://alexsandroprado.github.io/index.html</loc>
@@ -54,7 +58,7 @@
   </url>
   <url>
     <loc>https://alexsandroprado.github.io/novidades/2026-10-13-datacaged-cran/index.html</loc>
-    <lastmod>2026-11-15T13:02:31.938Z</lastmod>
+    <lastmod>2026-11-15T13:44:16.998Z</lastmod>
   </url>
   <url>
     <loc>https://alexsandroprado.github.io/novidades/2026-11-27-anpcont/index.html</loc>
@@ -62,10 +66,10 @@
   </url>
   <url>
     <loc>https://alexsandroprado.github.io/pesquisa/index.html</loc>
-    <lastmod>2026-11-15T06:09:18.573Z</lastmod>
+    <lastmod>2026-11-15T13:44:16.998Z</lastmod>
   </url>
   <url>
-    <loc>https://alexsandroprado.github.io/publicacoes/index.html</loc>
-    <lastmod>2026-11-15T06:08:44.608Z</lastmod>
+    <loc>https://alexsandroprado.github.io/producao-tecnica/index.html</loc>
+    <lastmod>2026-11-15T13:43:44.939Z</lastmod>
   </url>
 </urlset>

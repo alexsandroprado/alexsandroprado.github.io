@@ -51,7 +51,8 @@ Blog de Alexsandro Prado, professor do magistério superior há 12 anos nas áre
 ├── artigos/                 # Seção futura (excluída do render)
 ├── ensino/                  # Seção futura (excluída do render)
 ├── palestras/               # Seção futura (excluída do render)
-└── software/                # Seção futura (excluída do render)
+├── extensao/               # Projetos, cursos e eventos de extensão
+└── producao-tecnica/       # Produção técnica (antigo software/)
 ```
 
 ---

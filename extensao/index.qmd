@@ -1,0 +1,94 @@
+---
+title: "Extensão"
+description: "Projetos de extensão, cursos, eventos e divulgação científica junto à comunidade."
+---
+
+As ações de extensão aproximam o curso de Ciências Contábeis da UFERSA da comunidade de Mossoró e do Semiárido potiguar, com foco em educação financeira, assessoria contábil a pequenos negócios, preparação para exames profissionais e uso de dados na tomada de decisão.
+
+::: {.kpis}
+::: {.kpi}
+[Projetos em andamento]{.kpi-rotulo}
+
+[3]{.kpi-valor}
+
+[dois sob coordenação]{.kpi-nota}
+:::
+
+::: {.kpi}
+[Projetos concluídos]{.kpi-rotulo}
+
+[19]{.kpi-valor}
+
+[desde 2011]{.kpi-nota}
+:::
+
+::: {.kpi}
+[Eventos organizados]{.kpi-rotulo}
+
+[4]{.kpi-valor}
+
+[fóruns, workshops e olimpíada]{.kpi-nota}
+:::
+:::
+
+## Projetos em andamento {#em-andamento}
+
+::: {.formacao}
+Olimpíada Brasileira de Educação Financeira (OBEF) [desde 2022]{.ano}
+:   Coordenação. Programa de extensão voltado a estudantes do ensino fundamental e médio, que trata a educação financeira como forma de inclusão social a partir de três eixos: estrutura familiar, ambiente escolar e vida profissional. É realizado por professores e estudantes de graduação da UFERSA em parceria com universidades de outros estados.
+
+Regulariza: assessoria contábil e gerencial para micro e pequenas empresas do Semiárido Potiguar [desde 2021]{.ano}
+:   Coordenação. Assessoria a micro e pequenas empresas de Mossoró e região com pendências fiscais, afetadas pela pandemia, por meio de análise documental e fiscal e de entrevistas periódicas com os empresários. O objetivo é regularizar as empresas perante o fisco, organizar suas demonstrações contábeis e apoiar a gestão, contribuindo para a geração de emprego e renda na economia local.
+
+O custo do seu negócio: teoria e prática [desde 2018]{.ano}
+:   Participação, sob coordenação de Luciana Batista Sales. Integra estudantes das disciplinas de Contabilidade de Custos e Análise de Custos a empresas associadas à Associação Comercial e Industrial de Mossoró, por meio de cursos, oficinas, palestras, visitas e feiras de negócio.
+:::
+
+## Projetos concluídos {#concluidos}
+
+### Sob coordenação
+
+- **Revisão ENADE 2022: Ciências Contábeis** (2022). Revisão dos conteúdos do componente específico da prova para os estudantes do curso.
+- **A importância do ERP na gestão do agronegócio** (2022). Uso de sistemas integrados de gestão para controle de custos, rotinas fiscais e logística no setor rural.
+- **PAAC: Programa de Acompanhamento do Aprendizado em Contabilidade** (2014 a 2016 e 2017). Simulados periódicos on-line para o Exame de Suficiência do CFC e o ENADE, com identificação dos conteúdos de menor desempenho.
+- **I Curso Preparatório para o Exame de Suficiência do CFC** (2016).
+- **II Fórum da Profissão Contábil** (2016).
+- **I Workshop para Concursos Públicos** (2014).
+
+### Participação
+
+- **Apoio à escrita científica com Mendeley e CopySpider** (2022).
+- **Análise de dados com Economatica e R** (2022).
+- **UFERSA3: Liga de Mercado Financeiro da UFERSA** (2020 a 2022).
+- **Recepção aos ingressantes** (2018).
+- **II Curso Preparatório para o Exame de Suficiência do CFC** (2017).
+- **Contabilidade e a Comunidade Empresarial** (2017).
+- **Estudos sobre Imposto de Renda Pessoa Física 2016** (2016).
+- **Folha de Pagamento: Teoria e Prática** (2016).
+- **V Jornada Norte-rio-grandense sobre Educação Fiscal: sensibilização acadêmica** (2016).
+- **Auditoria das Demonstrações Contábeis da Fundação Guimarães Duque** (2015).
+- **Observatório Social de Cabedelo** (2012), projeto da Universidade Federal da Paraíba para estimular a cidadania fiscal e o monitoramento das receitas e dos gastos públicos municipais.
+- **Espaço Contábil: um novo portal para o curso de Ciências Contábeis na Internet** (2011 a 2012).
+
+## Cursos ministrados {#cursos}
+
+- **A tecnologia XBRL como instrumento da Contabilidade**, minicurso (2016).
+- **Construção de Blogs Educativos** (2012).
+- **Criação e estruturação de página na internet** para o Observatório Social de Cabedelo, oficina (2012).
+- **A utilização de blogs educativos no processo de ensino** (2011).
+
+## Organização de eventos {#eventos}
+
+- **Olimpíada Brasileira de Educação Financeira (OBEF)** (2025).
+- **Workshop: Coleta de Dados no Economatica** (2025).
+- **II Fórum da Profissão Contábil** (2016).
+- **Simpósio de Novas Tecnologias na Comunicação e na Estratégia dos Negócios** (2013).
+
+## Divulgação científica {#divulgacao}
+
+Textos sobre análise de dados, contabilidade e mercado de trabalho são publicados no [blog](../blog/index.qmd), e as notícias sobre artigos, prêmios e produtos aparecem em [Novidades](../novidades/index.qmd). Aulas e conteúdos de apoio sobre análise de dados em R estão no canal do [YouTube](https://www.youtube.com/@profalexsandroprado).
+
+Participações na mídia:
+
+- *Finanças em Foco*, edição 10, programa de entrevistas (2017).
+- *UERN TV Notícias*, edição 62, sobre a Exposição de Gestão e Custos do curso de Ciências Contábeis da UFERSA (2017).

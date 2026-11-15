@@ -3,7 +3,7 @@ title: "Ensino"
 description: "Disciplinas ministradas e orientação acadêmica."
 ---
 
-## Graduação
+## Graduação {#disciplinas}
 
 Curso de Ciências Contábeis, Universidade Federal Rural do Semi-Árido (UFERSA).
 
@@ -13,12 +13,14 @@ Curso de Ciências Contábeis, Universidade Federal Rural do Semi-Árido (UFERSA
 
 Membro do colegiado do curso de Ciências Contábeis, do qual foi vice-coordenador entre 2020 e 2022.
 
+Projeto de monitoria da disciplina Teoria da Contabilidade, sob coordenação, desde 2022.
+
 ## Pós-graduação
 
 - **Gestão Financeira Baseada em Dados**: Programa de Pós-Graduação em Administração (PPGA/UFERSA).
 - **Comportamento Organizacional**: Especialização em Gestão Pública (UFERSA).
 
-## Orientação
+## Orientação {#orientacao}
 
 Orientação de dissertações no Programa de Pós-Graduação em Administração (PPGA/UFERSA) e de Trabalhos de Conclusão de Curso (TCC) em Ciências Contábeis, preferencialmente nas linhas de [pesquisa](../pesquisa/index.qmd) descritas neste site.
 
@@ -55,6 +57,6 @@ Dissertações em andamento no PPGA/UFERSA:
 
 Estudantes interessados em orientação ou em participar das atividades do grupo [GECOMT](https://gecomt.github.io/) podem entrar em contato pelo e-mail [alexsandro.prado@ufersa.edu.br](mailto:alexsandro.prado@ufersa.edu.br).
 
-## Materiais
+## Materiais {#materiais}
 
 Aulas e conteúdos de apoio sobre análise de dados em R são publicados no canal do [YouTube](https://www.youtube.com/@profalexsandroprado) e no [blog](../blog/index.qmd).

@@ -48,7 +48,7 @@
 
 
 
-<p>O site foi reformulado e passa a reunir, em um só lugar, (i) as <a href="../../publicacoes/index.html">publicações</a>, com referências no padrão ABNT, estrato Qualis e filtros por tipo; (ii) os <a href="../../software/index.html">pacotes em R e as bases de dados abertas</a> desenvolvidos nas pesquisas; e (iii) <a href="../../pesquisa/index.html">indicadores mensais do emprego formal</a>, calculados a partir dos microdados do Novo CAGED para Brasil, Nordeste, Rio Grande do Norte e Mossoró, incluindo as ocupações contábeis.</p>
+<p>O site foi reformulado e passa a reunir, em um só lugar, (i) as <a href="../../publicacoes/index.html">publicações</a>, com referências no padrão ABNT, estrato Qualis e filtros por tipo; (ii) os <a href="../../producao-tecnica/index.html">pacotes em R e as bases de dados abertas</a> desenvolvidos nas pesquisas; e (iii) <a href="../../pesquisa/index.html">indicadores mensais do emprego formal</a>, calculados a partir dos microdados do Novo CAGED para Brasil, Nordeste, Rio Grande do Norte e Mossoró, incluindo as ocupações contábeis.</p>
 <p>Os indicadores são atualizados automaticamente a cada nova divulgação do Ministério do Trabalho e Emprego.</p>
 
 
@@ -74,7 +74,7 @@ background-color: null;
 font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"datacaged"</span>)</span></code></pre></div></div>
-<p>Mais informações na página <a href="../../software/index.html">Software e dados</a> e no <a href="https://github.com/gecomt/datacaged">repositório do GitHub</a>.</p>
+<p>Mais informações na página <a href="../../producao-tecnica/index.html">Produção técnica</a> e no <a href="https://github.com/gecomt/datacaged">repositório do GitHub</a>.</p>
 
 
 

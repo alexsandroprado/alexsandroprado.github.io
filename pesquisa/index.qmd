@@ -3,9 +3,9 @@ title: "Pesquisa"
 description: "Linhas de pesquisa, grupo de pesquisa e dados abertos."
 ---
 
-## Emprego formal em números
+## Emprego formal em números {#indicadores}
 
-Indicador mensal do mercado de trabalho formal, calculado a partir dos microdados do Novo Cadastro Geral de Empregados e Desempregados (Novo CAGED) com o pacote [datacaged](../software/index.qmd) e atualizado automaticamente a cada nova divulgação.
+Indicador mensal do mercado de trabalho formal, calculado a partir dos microdados do Novo Cadastro Geral de Empregados e Desempregados (Novo CAGED) com o pacote [datacaged](../producao-tecnica/index.qmd) e atualizado automaticamente a cada nova divulgação.
 
 ::: {.indicador}
 
@@ -178,7 +178,7 @@ Fonte: Ministério do Trabalho e Emprego, Novo CAGED (movimentações declaradas
 
 :::
 
-## Linhas de pesquisa
+## Linhas de pesquisa {#linhas}
 
 ### Economia do trabalho e microdados administrativos
 
@@ -208,7 +208,7 @@ contabiliDados: Contabilidade e Finanças [desde 2023]{.ano}
 
 ## Dados abertos
 
-Bases construídas no âmbito das pesquisas e disponibilizadas publicamente, conforme descrito em [Software e dados](../software/index.qmd):
+Bases construídas no âmbito das pesquisas e disponibilizadas publicamente, conforme descrito em [Produção técnica](../producao-tecnica/index.qmd):
 
 - **Segmentos de listagem da B3 por companhia (2010 a 2026):** painel anual, verificado documento a documento, do segmento de listagem de cada companhia aberta brasileira.
 - **Microdados do CAGED e da RAIS:** espelhos públicos dos arquivos do Ministério do Trabalho e Emprego, organizados para acesso programático a partir do R.
