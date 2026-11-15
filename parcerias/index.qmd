@@ -1,11 +1,11 @@
 ---
-title: "Parcerias e análises de dados"
-description: "Análises sob demanda com dados públicos do mercado de trabalho, da contabilidade e do mercado de capitais, para organizações que precisam decidir com evidência."
+title: "Consultoria e parcerias"
+description: "Consultoria, pareceres técnicos e análises sob demanda com dados públicos do mercado de trabalho, da contabilidade e do mercado de capitais."
 toc: false
 ---
 
 ::: {.cta-faixa}
-Prefeituras, empresas, entidades de classe, escritórios contábeis e equipes de recursos humanos frequentemente precisam responder perguntas que os dados públicos brasileiros já permitem responder: quanto se paga por uma ocupação na região, onde o emprego formal está crescendo, como um setor se compara ao restante do estado. As parcerias descritas nesta página transformam essas bases em informação aplicada, com método transparente e resultados reprodutíveis.
+Prefeituras, empresas, entidades de classe, escritórios contábeis e equipes de recursos humanos frequentemente precisam responder perguntas que os dados públicos brasileiros já permitem responder: quanto se paga por uma ocupação na região, onde o emprego formal está crescendo, como um setor se compara ao restante do estado. A consultoria e as parcerias descritas nesta página transformam essas bases em informação aplicada, com método transparente e resultados reprodutíveis, nas áreas de especialidade do docente: economia do trabalho, contabilidade financeira e governança corporativa.
 
 [Conversar sobre um projeto](#contato){.btn .btn-primary .cta-botao} [Ver exemplos de entregas](#exemplos){.btn .btn-outline-secondary .cta-botao}
 :::
@@ -54,6 +54,16 @@ Para análise setorial, pesquisa aplicada e due diligence
 :::
 
 ::: {.cartao}
+### Pareceres e laudos técnicos
+
+Pareceres e laudos fundamentados em microdados oficiais sobre remuneração, emprego e informações contábeis, com descrição das fontes, dos critérios e das limitações da análise.
+
+::: {.meta}
+Para subsídio técnico em processos e decisões
+:::
+:::
+
+::: {.cartao}
 ### Capacitação em análise de dados
 
 Cursos e oficinas para equipes sobre análise de dados com R, uso de microdados públicos e construção de relatórios reprodutíveis, ajustados ao nível e às necessidades do grupo.
@@ -91,11 +101,24 @@ Os materiais a seguir estão publicados neste site e mostram, em pequena escala,
 ::: {.etapa}
 [3]{.etapa-num}
 
-**Entrega.** Relatório, painel ou base de dados, acompanhados da documentação do método.
+**Autorização.** No caso de consultoria, aprovação prévia da atividade pela Assembleia Departamental da UFERSA.
+:::
+
+::: {.etapa}
+[4]{.etapa-num}
+
+**Entrega.** Relatório, parecer, painel ou base de dados, acompanhados da documentação do método.
 :::
 :::
 
-As parcerias são formalizadas por meio de projetos institucionais da Universidade Federal Rural do Semi-Árido (UFERSA), como ações de extensão e de prestação de serviços, ou como colaboração técnica eventual, sempre conforme as normas da universidade. Os estudantes do grupo [GECOMT](https://gecomt.github.io/) podem participar das atividades, o que aproxima a formação acadêmica dos problemas reais das organizações.
+## Formalização {#formalizacao}
+
+Os trabalhos podem ser formalizados de duas formas:
+
+- **Consultoria por colaboração esporádica.** Prevista na Resolução Consepe/UFERSA nº 5, de 21 de janeiro de 2025, que regulamenta a colaboração esporádica remunerada de docentes em regime de Dedicação Exclusiva em assuntos de sua especialidade científica ou tecnológica, como consultorias, assessorias, laudos, pareceres e outros serviços técnico-profissionais, sem vínculo empregatício. Cada atividade é aprovada previamente pela Assembleia Departamental, registrada no Sistema Integrado de Gestão de Atividades Acadêmicas (SIGAA) e limitada a 8 horas semanais (416 horas anuais), o que é considerado no planejamento dos prazos.
+- **Parcerias institucionais.** Projetos firmados com a Universidade Federal Rural do Semi-Árido (UFERSA), como ações de extensão e de prestação de serviços, nas quais estudantes do grupo [GECOMT](https://gecomt.github.io/) podem participar, aproximando a formação acadêmica dos problemas reais das organizações.
+
+Em ambos os casos, as atividades são realizadas sem prejuízo dos encargos de ensino, pesquisa e extensão na universidade.
 
 ::: {.callout-note appearance="simple"}
 ## Sobre os dados

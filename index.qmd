@@ -117,4 +117,4 @@ Melhor trabalho na área de Contabilidade Financeira [2021]{.ano}
 Departamento de Ciências Sociais Aplicadas e Humanas (DCSAH), Universidade Federal Rural do Semi-Árido (UFERSA), Mossoró, RN.\
 E-mail: [alexsandro.prado@ufersa.edu.br](mailto:alexsandro.prado@ufersa.edu.br)
 
-Para projetos com organizações e análises de dados sob demanda, veja a página de [Parcerias](parcerias/index.qmd).
+Para consultoria, pareceres técnicos e análises de dados sob demanda, veja a página de [Consultoria e parcerias](parcerias/index.qmd).
