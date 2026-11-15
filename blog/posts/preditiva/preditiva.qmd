@@ -4,7 +4,8 @@ title: "Previsão de receita"
 categories:                                           
   - econometria
   - R
-# image: preditiva.jpg
+image: capa.webp
+image-alt: "Série de receita observada e previsão com intervalos de confiança"
 
 format:
   html:
@@ -18,7 +19,7 @@ execute:
   freeze: true
 ---
 
-![](preditiva.jpg){.centered fig-align="center" width="439"}
+![](capa.webp){fig-alt="Série de receita observada e previsão com intervalos de confiança"}
 
 # Introdução
 

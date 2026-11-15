@@ -4,7 +4,8 @@ title: "A Importância da Análise de Dados na Contabilidade"
 categories:                                           
   - contabilidade
   - datascience
-image: contabdata.webp
+image: capa.webp
+image-alt: "Demonstração do resultado ao lado de gráfico de receita e margem líquida"
 
 format:
   html:

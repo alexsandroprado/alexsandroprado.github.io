@@ -5,7 +5,8 @@ draft: false
 categories:
   - econometria
 
-image: heterocedasticidade.png
+image: capa.webp
+image-alt: "Resíduos em forma de funil e função de autocorrelação dos resíduos"
 editor:
   markdown:
     wrap: 72
