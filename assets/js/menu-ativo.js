@@ -12,4 +12,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+
+  // Itens de primeiro nível (Blog): mantém o destaque também nos posts
+  document.querySelectorAll(".navbar .navbar-nav > .nav-item > a.nav-link:not(.dropdown-toggle)").forEach(function (a) {
+    var alvo = new URL(a.href, window.location.href).pathname.replace(/index\.html$/, "");
+    if (alvo !== "/" && atual.indexOf(alvo) === 0) {
+      a.classList.add("active");
+      a.setAttribute("aria-current", "page");
+    }
+  });
 });

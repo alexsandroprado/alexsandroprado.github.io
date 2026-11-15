@@ -38,6 +38,8 @@ website:
     logo: images/logo-ap-icone.svg
     logo-alt: "Logo AP"
     left:
+      - href: blog/index.qmd
+        text: Blog
       - text: Ensino
         menu:
           - href: ensino/index.qmd
@@ -65,8 +67,6 @@ website:
           - text: "Divulgação"
           - href: novidades/index.qmd
             text: Novidades
-          - href: blog/index.qmd
-            text: Blog
     right:
       - icon: github
         href: https://github.com/alexsandroprado
