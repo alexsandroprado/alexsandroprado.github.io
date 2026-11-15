@@ -42,3 +42,4 @@ comments:
     theme:
       light: light
       dark: transparent_dark
+body-classes: post

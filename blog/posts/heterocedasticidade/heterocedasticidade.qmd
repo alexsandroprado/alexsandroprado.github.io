@@ -18,7 +18,6 @@ execute:
   cache: true
   freeze: true
 ---
-<p style="text-align: justify;">
 A heterocedasticidade e a autocorrelação são problemas comuns na análise de regressão, especialmente em séries temporais e dados econométricos, que podem afetar a validade das inferências e a análise de causalidade.
 
 Heterocedasticidade refere-se à condição em que a variância dos erros (ou resíduos) de um modelo de regressão não é constante ao longo das observações. Em outras palavras, os erros variam em intensidade dependendo do nível da variável independente. Esse problema pode levar a estimativas ineficientes dos coeficientes da regressão, fazendo com que os testes estatísticos, como o teste t e o teste F, se tornem não confiáveis. Isso significa que as inferências sobre a significância das variáveis podem ser incorretas, resultando em um erro na identificação das relações causais.
@@ -26,7 +25,6 @@ Heterocedasticidade refere-se à condição em que a variância dos erros (ou re
 Autocorrelação, por outro lado, ocorre quando os erros do modelo de regressão não são independentes uns dos outros, mas sim correlacionados ao longo do tempo ou das observações. Esse problema é particularmente prevalente em dados de séries temporais. A presença de autocorrelação indica que há padrões não capturados pelo modelo, o que pode levar a subestimação ou superestimação da variabilidade dos coeficientes de regressão. Assim como a heterocedasticidade, a autocorrelação torna os testes estatísticos tradicionais inapropriados, resultando em inferências enganosas e dificultando a análise de causalidade correta.
 
 Ambos os problemas prejudicam a capacidade de um modelo de fornecer estimativas confiáveis e podem levar à formulação de políticas ou decisões baseadas em conclusões erradas. Para mitigar esses problemas, podem ser utilizadas técnicas como a transformação dos dados, o uso de modelos robustos a heterocedasticidade e autocorrelação, ou a aplicação de modelos que explicitamente modelam a estrutura dos erros, como modelos GARCH para heterocedasticidade e modelos ARIMA para autocorrelação.
-</p>
 
 # Passo 1: Identificar a Heterocedasticidade
 
