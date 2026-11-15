@@ -24,17 +24,11 @@ jobs:
           use-public-rspm: true
 
       - name: Instalar pacotes
-        run: Rscript -e 'install.packages(c("datacaged", "dplyr", "DBI"))'
+        # jsonlite: exigido pelo httr2 >= 1.3 para ler as respostas do Hugging Face
+        run: Rscript -e 'install.packages(c("datacaged", "dplyr", "DBI", "jsonlite"))'
 
       - name: Atualizar dados
         run: Rscript scripts/atualiza_indicador_caged.R
-
-      - name: Diagnóstico de acesso ao Hugging Face
-        if: failure()
-        run: |
-          curl -sS -o /dev/null -w "curl: HTTP %{http_code}\n" \
-            "https://huggingface.co/api/datasets/alexsandroprado/caged/tree/main/NOVO_CAGED" || true
-          Rscript -e 'library(datacaged); print(sessionInfo()$otherPkgs$datacaged$Version); print(packageVersion("httr2")); print(Sys.getlocale()); print(datacaged:::.HF_API); print(datacaged:::.HF_PASTA_NOVO); print(datacaged:::.hf_list_dir(datacaged:::.HF_PASTA_NOVO)); r <- httr2::req_perform(httr2::req_error(httr2::request(paste0(datacaged:::.HF_API, "/", datacaged:::.HF_PASTA_NOVO)), is_error = function(r) FALSE)); print(httr2::resp_status(r)); print(try(httr2::resp_body_json(r)[[1]]))' || true
 
       - name: Publicar alterações
         run: |
@@ -45,5 +39,6 @@ jobs:
             echo "Sem alterações."
           else
             git commit -m "Atualiza indicador do CAGED"
+            git pull --rebase
             git push
           fi
