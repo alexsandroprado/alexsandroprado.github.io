@@ -29,6 +29,13 @@ jobs:
       - name: Atualizar dados
         run: Rscript scripts/atualiza_indicador_caged.R
 
+      - name: Diagnóstico de acesso ao Hugging Face
+        if: failure()
+        run: |
+          curl -sS -o /dev/null -w "curl: HTTP %{http_code}\n" \
+            "https://huggingface.co/api/datasets/alexsandroprado/caged/tree/main/NOVO_CAGED" || true
+          Rscript -e 'r <- httr2::req_perform(httr2::req_error(httr2::request("https://huggingface.co/api/datasets/alexsandroprado/caged/tree/main/NOVO_CAGED"), is_error = function(r) FALSE)); print(httr2::resp_status(r)); print(substr(httr2::resp_body_string(r), 1, 300))' || true
+
       - name: Publicar alterações
         run: |
           git config user.name "github-actions[bot]"
