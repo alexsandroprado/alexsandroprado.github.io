@@ -34,7 +34,7 @@ jobs:
         run: |
           curl -sS -o /dev/null -w "curl: HTTP %{http_code}\n" \
             "https://huggingface.co/api/datasets/alexsandroprado/caged/tree/main/NOVO_CAGED" || true
-          Rscript -e 'r <- httr2::req_perform(httr2::req_error(httr2::request("https://huggingface.co/api/datasets/alexsandroprado/caged/tree/main/NOVO_CAGED"), is_error = function(r) FALSE)); print(httr2::resp_status(r)); print(substr(httr2::resp_body_string(r), 1, 300))' || true
+          Rscript -e 'library(datacaged); print(sessionInfo()$otherPkgs$datacaged$Version); print(packageVersion("httr2")); print(Sys.getlocale()); print(datacaged:::.HF_API); print(datacaged:::.HF_PASTA_NOVO); print(datacaged:::.hf_list_dir(datacaged:::.HF_PASTA_NOVO)); r <- httr2::req_perform(httr2::req_error(httr2::request(paste0(datacaged:::.HF_API, "/", datacaged:::.HF_PASTA_NOVO)), is_error = function(r) FALSE)); print(httr2::resp_status(r)); print(try(httr2::resp_body_json(r)[[1]]))' || true
 
       - name: Publicar alterações
         run: |
