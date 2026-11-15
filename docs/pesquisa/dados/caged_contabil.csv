@@ -1,0 +1,1097 @@
+competencia,recorte,ocupacao,admissoes,desligamentos,saldo,salario_soma,salario_n
+2020-01-01,Brasil,Auditor,672,436,236,2414115.61,669
+2020-01-01,Brasil,Auxiliar de contabilidade,6760,5075,1685,11723455.0,6726
+2020-01-01,Brasil,Contador,2517,2499,18,9712970.98,2502
+2020-01-01,Brasil,Perito contábil,9,10,-1,23753.14,9
+2020-01-01,Brasil,Técnico de contabilidade,171,213,-42,431380.95,168
+2020-01-01,Nordeste,Auditor,39,37,2,102619.57,38
+2020-01-01,Nordeste,Auxiliar de contabilidade,896,617,279,1321887.92,888
+2020-01-01,Nordeste,Contador,284,290,-6,739699.09,281
+2020-01-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2020-01-01,Nordeste,Técnico de contabilidade,13,28,-15,22110.52,13
+2020-01-01,Rio Grande do Norte,Auditor,1,2,-1,1364.0,1
+2020-01-01,Rio Grande do Norte,Auxiliar de contabilidade,41,48,-7,54720.3,41
+2020-01-01,Rio Grande do Norte,Contador,28,16,12,55124.85,28
+2020-01-01,Rio Grande do Norte,Técnico de contabilidade,2,0,2,4353.42,2
+2020-02-01,Brasil,Auditor,388,418,-30,1550273.03,363
+2020-02-01,Brasil,Auxiliar de contabilidade,5578,4816,762,8657271.66,4946
+2020-02-01,Brasil,Contador,2115,2308,-193,7636955.81,1953
+2020-02-01,Brasil,Perito contábil,6,10,-4,13897.0,6
+2020-02-01,Brasil,Técnico de contabilidade,151,190,-39,382296.75,136
+2020-02-01,Nordeste,Auditor,26,32,-6,73890.3,23
+2020-02-01,Nordeste,Auxiliar de contabilidade,649,532,117,862127.83,570
+2020-02-01,Nordeste,Contador,223,231,-8,578745.91,201
+2020-02-01,Nordeste,Técnico de contabilidade,18,25,-7,31521.26,16
+2020-02-01,Rio Grande do Norte,Auditor,2,0,2,2200.0,1
+2020-02-01,Rio Grande do Norte,Auxiliar de contabilidade,48,17,31,110335.11,45
+2020-02-01,Rio Grande do Norte,Contador,11,18,-7,19077.8,10
+2020-02-01,Rio Grande do Norte,Técnico de contabilidade,0,1,-1,0.0,0
+2020-03-01,Brasil,Auditor,359,411,-52,1650336.05,357
+2020-03-01,Brasil,Auxiliar de contabilidade,5461,5399,62,9542828.36,5421
+2020-03-01,Brasil,Contador,2134,2457,-323,8579135.55,2121
+2020-03-01,Brasil,Perito contábil,7,7,0,27045.0,7
+2020-03-01,Brasil,Técnico de contabilidade,145,185,-40,409110.37,144
+2020-03-01,Nordeste,Auditor,18,41,-23,83860.44,17
+2020-03-01,Nordeste,Auxiliar de contabilidade,613,646,-33,878786.82,603
+2020-03-01,Nordeste,Contador,218,241,-23,601008.67,216
+2020-03-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2020-03-01,Nordeste,Técnico de contabilidade,12,27,-15,20690.24,12
+2020-03-01,Rio Grande do Norte,Auditor,1,2,-1,2200.0,1
+2020-03-01,Rio Grande do Norte,Auxiliar de contabilidade,31,43,-12,44331.24,30
+2020-03-01,Rio Grande do Norte,Contador,14,17,-3,24369.31,14
+2020-03-01,Rio Grande do Norte,Perito contábil,0,1,-1,0.0,0
+2020-03-01,Rio Grande do Norte,Técnico de contabilidade,0,2,-2,0.0,0
+2020-04-01,Brasil,Auditor,136,440,-304,753653.53,130
+2020-04-01,Brasil,Auxiliar de contabilidade,1860,5189,-3329,3068277.56,1661
+2020-04-01,Brasil,Contador,994,2377,-1383,4381171.73,931
+2020-04-01,Brasil,Perito contábil,3,8,-5,5936.66,3
+2020-04-01,Brasil,Técnico de contabilidade,56,193,-137,135142.39,52
+2020-04-01,Nordeste,Auditor,10,49,-39,58715.92,10
+2020-04-01,Nordeste,Auxiliar de contabilidade,207,632,-425,282753.96,181
+2020-04-01,Nordeste,Contador,104,270,-166,292617.0,91
+2020-04-01,Nordeste,Técnico de contabilidade,6,30,-24,8345.0,5
+2020-04-01,Rio Grande do Norte,Auditor,1,3,-2,2496.0,1
+2020-04-01,Rio Grande do Norte,Auxiliar de contabilidade,10,24,-14,12949.27,10
+2020-04-01,Rio Grande do Norte,Contador,8,12,-4,13243.9,7
+2020-04-01,Rio Grande do Norte,Técnico de contabilidade,0,1,-1,0.0,0
+2020-05-01,Brasil,Auditor,161,369,-208,662775.7,159
+2020-05-01,Brasil,Auxiliar de contabilidade,2122,3739,-1617,3535195.51,1976
+2020-05-01,Brasil,Contador,1042,1848,-806,4159668.79,981
+2020-05-01,Brasil,Perito contábil,2,6,-4,3952.38,2
+2020-05-01,Brasil,Técnico de contabilidade,63,113,-50,140524.89,54
+2020-05-01,Nordeste,Auditor,5,26,-21,17384.24,5
+2020-05-01,Nordeste,Auxiliar de contabilidade,154,482,-328,224025.73,149
+2020-05-01,Nordeste,Contador,82,209,-127,219526.4,73
+2020-05-01,Nordeste,Técnico de contabilidade,3,13,-10,4893.68,3
+2020-05-01,Rio Grande do Norte,Auditor,0,1,-1,0.0,0
+2020-05-01,Rio Grande do Norte,Auxiliar de contabilidade,9,37,-28,11062.94,9
+2020-05-01,Rio Grande do Norte,Contador,5,14,-9,6969.32,4
+2020-06-01,Brasil,Auditor,160,409,-249,797412.84,150
+2020-06-01,Brasil,Auxiliar de contabilidade,2918,3017,-99,4807136.67,2724
+2020-06-01,Brasil,Contador,1316,1647,-331,5409525.55,1246
+2020-06-01,Brasil,Perito contábil,5,6,-1,10010.8,4
+2020-06-01,Brasil,Técnico de contabilidade,87,111,-24,273289.31,81
+2020-06-01,Nordeste,Auditor,9,44,-35,57269.98,9
+2020-06-01,Nordeste,Auxiliar de contabilidade,288,303,-15,427678.95,272
+2020-06-01,Nordeste,Contador,104,154,-50,275148.31,95
+2020-06-01,Nordeste,Técnico de contabilidade,6,10,-4,7977.92,5
+2020-06-01,Rio Grande do Norte,Auditor,0,1,-1,0.0,0
+2020-06-01,Rio Grande do Norte,Auxiliar de contabilidade,20,23,-3,31261.72,20
+2020-06-01,Rio Grande do Norte,Contador,8,12,-4,17051.87,8
+2020-06-01,Rio Grande do Norte,Técnico de contabilidade,0,1,-1,0.0,0
+2020-07-01,Brasil,Auditor,223,301,-78,1080902.1,217
+2020-07-01,Brasil,Auxiliar de contabilidade,3822,3181,641,6301917.26,3574
+2020-07-01,Brasil,Contador,1611,1702,-91,6063578.78,1518
+2020-07-01,Brasil,Perito contábil,8,5,3,25745.16,8
+2020-07-01,Brasil,Técnico de contabilidade,101,140,-39,238352.31,93
+2020-07-01,Nordeste,Auditor,27,22,5,73981.48,26
+2020-07-01,Nordeste,Auxiliar de contabilidade,442,346,96,618891.21,419
+2020-07-01,Nordeste,Contador,152,179,-27,415663.26,144
+2020-07-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2020-07-01,Nordeste,Técnico de contabilidade,11,11,0,18790.0,10
+2020-07-01,Rio Grande do Norte,Auxiliar de contabilidade,33,20,13,41002.03,31
+2020-07-01,Rio Grande do Norte,Contador,11,13,-2,22559.0,11
+2020-07-01,Rio Grande do Norte,Técnico de contabilidade,1,0,1,1045.0,1
+2020-08-01,Brasil,Auditor,329,379,-50,1472186.91,324
+2020-08-01,Brasil,Auxiliar de contabilidade,4435,3566,869,7415092.75,4161
+2020-08-01,Brasil,Contador,2090,1824,266,8096307.56,2004
+2020-08-01,Brasil,Perito contábil,3,6,-3,6000.0,3
+2020-08-01,Brasil,Técnico de contabilidade,93,147,-54,224124.48,78
+2020-08-01,Nordeste,Auditor,26,37,-11,94965.7,26
+2020-08-01,Nordeste,Auxiliar de contabilidade,552,386,166,744197.01,517
+2020-08-01,Nordeste,Contador,197,150,47,540560.46,188
+2020-08-01,Nordeste,Perito contábil,1,0,1,2200.0,1
+2020-08-01,Nordeste,Técnico de contabilidade,15,22,-7,15972.47,10
+2020-08-01,Rio Grande do Norte,Auditor,1,3,-2,1300.0,1
+2020-08-01,Rio Grande do Norte,Auxiliar de contabilidade,31,24,7,41071.9,29
+2020-08-01,Rio Grande do Norte,Contador,16,10,6,27117.44,16
+2020-08-01,Rio Grande do Norte,Técnico de contabilidade,0,2,-2,0.0,0
+2020-09-01,Brasil,Auditor,604,380,224,2234322.46,576
+2020-09-01,Brasil,Auxiliar de contabilidade,5184,3880,1304,8679697.11,4908
+2020-09-01,Brasil,Contador,2194,2015,179,8404763.32,2102
+2020-09-01,Brasil,Perito contábil,10,7,3,36276.5,10
+2020-09-01,Brasil,Técnico de contabilidade,125,167,-42,345573.17,121
+2020-09-01,Nordeste,Auditor,53,24,29,125253.21,47
+2020-09-01,Nordeste,Auxiliar de contabilidade,630,417,213,879177.18,595
+2020-09-01,Nordeste,Contador,245,185,60,634125.62,225
+2020-09-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2020-09-01,Nordeste,Técnico de contabilidade,14,19,-5,28341.58,14
+2020-09-01,Rio Grande do Norte,Auditor,1,2,-1,1300.0,1
+2020-09-01,Rio Grande do Norte,Auxiliar de contabilidade,54,27,27,72019.79,50
+2020-09-01,Rio Grande do Norte,Contador,23,20,3,46907.4,22
+2020-09-01,Rio Grande do Norte,Técnico de contabilidade,0,1,-1,0.0,0
+2020-10-01,Brasil,Auditor,700,398,302,2497898.53,656
+2020-10-01,Brasil,Auxiliar de contabilidade,5599,4182,1417,9411089.09,5307
+2020-10-01,Brasil,Contador,2340,2048,292,9059768.79,2265
+2020-10-01,Brasil,Perito contábil,3,5,-2,8732.0,3
+2020-10-01,Brasil,Técnico de contabilidade,135,155,-20,379702.04,130
+2020-10-01,Nordeste,Auditor,48,30,18,171005.84,46
+2020-10-01,Nordeste,Auxiliar de contabilidade,702,461,241,934270.07,661
+2020-10-01,Nordeste,Contador,238,200,38,656877.45,227
+2020-10-01,Nordeste,Técnico de contabilidade,16,12,4,30740.25,14
+2020-10-01,Rio Grande do Norte,Auditor,1,2,-1,1733.62,1
+2020-10-01,Rio Grande do Norte,Auxiliar de contabilidade,58,25,33,72496.04,58
+2020-10-01,Rio Grande do Norte,Contador,10,9,1,18658.45,8
+2020-10-01,Rio Grande do Norte,Técnico de contabilidade,2,0,2,2757.4,2
+2020-11-01,Brasil,Auditor,464,399,65,2141311.69,453
+2020-11-01,Brasil,Auxiliar de contabilidade,5352,3757,1595,9100135.49,5115
+2020-11-01,Brasil,Contador,2302,1920,382,9398051.5,2222
+2020-11-01,Brasil,Perito contábil,8,5,3,45996.7,8
+2020-11-01,Brasil,Técnico de contabilidade,111,150,-39,289291.86,106
+2020-11-01,Nordeste,Auditor,26,26,0,82641.81,25
+2020-11-01,Nordeste,Auxiliar de contabilidade,644,390,254,855139.22,606
+2020-11-01,Nordeste,Contador,235,214,21,667197.32,226
+2020-11-01,Nordeste,Técnico de contabilidade,7,11,-4,10800.0,4
+2020-11-01,Rio Grande do Norte,Auditor,2,1,1,3122.0,2
+2020-11-01,Rio Grande do Norte,Auxiliar de contabilidade,57,19,38,69750.19,55
+2020-11-01,Rio Grande do Norte,Contador,12,14,-2,32729.58,12
+2020-11-01,Rio Grande do Norte,Técnico de contabilidade,1,0,1,1100.0,1
+2020-12-01,Brasil,Auditor,383,431,-48,1758727.89,375
+2020-12-01,Brasil,Auxiliar de contabilidade,3761,4083,-322,6484886.03,3607
+2020-12-01,Brasil,Contador,1870,2101,-231,7576911.12,1813
+2020-12-01,Brasil,Perito contábil,6,1,5,22840.34,5
+2020-12-01,Brasil,Técnico de contabilidade,88,148,-60,266381.14,83
+2020-12-01,Nordeste,Auditor,26,28,-2,102679.49,26
+2020-12-01,Nordeste,Auxiliar de contabilidade,506,461,45,724139.87,490
+2020-12-01,Nordeste,Contador,211,199,12,571717.18,202
+2020-12-01,Nordeste,Perito contábil,2,0,2,1764.09,1
+2020-12-01,Nordeste,Técnico de contabilidade,9,18,-9,20754.55,9
+2020-12-01,Rio Grande do Norte,Auditor,1,1,0,6027.45,1
+2020-12-01,Rio Grande do Norte,Auxiliar de contabilidade,42,39,3,54680.43,41
+2020-12-01,Rio Grande do Norte,Contador,14,14,0,30424.39,14
+2020-12-01,Rio Grande do Norte,Técnico de contabilidade,1,0,1,2163.83,1
+2021-01-01,Brasil,Auditor,818,430,388,2957640.68,801
+2021-01-01,Brasil,Auxiliar de contabilidade,7684,4634,3050,12931985.37,7315
+2021-01-01,Brasil,Contador,2843,2285,558,10989733.88,2721
+2021-01-01,Brasil,Perito contábil,5,11,-6,22017.5,5
+2021-01-01,Brasil,Técnico de contabilidade,188,139,49,463063.77,176
+2021-01-01,Nordeste,Auditor,49,30,19,121650.29,44
+2021-01-01,Nordeste,Auxiliar de contabilidade,1158,594,564,1574023.97,1088
+2021-01-01,Nordeste,Contador,349,254,95,966808.86,329
+2021-01-01,Nordeste,Perito contábil,1,3,-2,7500.0,1
+2021-01-01,Nordeste,Técnico de contabilidade,21,16,5,40214.3,20
+2021-01-01,Rio Grande do Norte,Auditor,2,1,1,5000.0,2
+2021-01-01,Rio Grande do Norte,Auxiliar de contabilidade,65,45,20,84010.48,64
+2021-01-01,Rio Grande do Norte,Contador,19,17,2,41887.84,16
+2021-02-01,Brasil,Auditor,478,464,14,2045808.27,464
+2021-02-01,Brasil,Auxiliar de contabilidade,6811,4869,1942,11636955.55,6531
+2021-02-01,Brasil,Contador,2662,2356,306,9922358.31,2569
+2021-02-01,Brasil,Perito contábil,10,8,2,38066.32,10
+2021-02-01,Brasil,Técnico de contabilidade,176,174,2,477275.16,172
+2021-02-01,Nordeste,Auditor,33,26,7,92530.83,33
+2021-02-01,Nordeste,Auxiliar de contabilidade,859,531,328,1219557.53,809
+2021-02-01,Nordeste,Contador,300,253,47,796804.92,286
+2021-02-01,Nordeste,Técnico de contabilidade,22,19,3,96272.73,22
+2021-02-01,Rio Grande do Norte,Auditor,2,0,2,10300.0,2
+2021-02-01,Rio Grande do Norte,Auxiliar de contabilidade,77,39,38,108896.78,74
+2021-02-01,Rio Grande do Norte,Contador,22,23,-1,71331.81,22
+2021-02-01,Rio Grande do Norte,Técnico de contabilidade,2,0,2,4344.56,2
+2021-03-01,Brasil,Auditor,512,488,24,2531129.76,503
+2021-03-01,Brasil,Auxiliar de contabilidade,6452,5297,1155,11177755.43,6236
+2021-03-01,Brasil,Contador,2932,2516,416,11692907.87,2858
+2021-03-01,Brasil,Perito contábil,12,4,8,47382.78,12
+2021-03-01,Brasil,Técnico de contabilidade,171,203,-32,499125.69,163
+2021-03-01,Nordeste,Auditor,31,38,-7,98605.62,30
+2021-03-01,Nordeste,Auxiliar de contabilidade,780,585,195,1083623.86,743
+2021-03-01,Nordeste,Contador,306,231,75,834652.13,300
+2021-03-01,Nordeste,Técnico de contabilidade,12,24,-12,18906.0,11
+2021-03-01,Rio Grande do Norte,Auxiliar de contabilidade,62,36,26,81627.16,61
+2021-03-01,Rio Grande do Norte,Contador,16,18,-2,59771.42,16
+2021-03-01,Rio Grande do Norte,Técnico de contabilidade,0,2,-2,0.0,0
+2021-04-01,Brasil,Auditor,460,481,-21,2247300.5,454
+2021-04-01,Brasil,Auxiliar de contabilidade,5750,4712,1038,10108575.1,5573
+2021-04-01,Brasil,Contador,2969,2277,692,12182382.8,2880
+2021-04-01,Brasil,Perito contábil,11,7,4,30950.57,11
+2021-04-01,Brasil,Técnico de contabilidade,170,168,2,446861.34,161
+2021-04-01,Nordeste,Auditor,24,33,-9,90865.88,23
+2021-04-01,Nordeste,Auxiliar de contabilidade,787,532,255,1134902.61,757
+2021-04-01,Nordeste,Contador,323,203,120,895607.64,307
+2021-04-01,Nordeste,Técnico de contabilidade,20,23,-3,30348.24,19
+2021-04-01,Rio Grande do Norte,Auditor,0,2,-2,0.0,0
+2021-04-01,Rio Grande do Norte,Auxiliar de contabilidade,59,46,13,86572.77,59
+2021-04-01,Rio Grande do Norte,Contador,12,17,-5,21324.85,12
+2021-04-01,Rio Grande do Norte,Técnico de contabilidade,1,0,1,1100.0,1
+2021-05-01,Brasil,Auditor,469,498,-29,2275262.49,462
+2021-05-01,Brasil,Auxiliar de contabilidade,5835,5002,833,10520347.17,5731
+2021-05-01,Brasil,Contador,2780,2338,442,11854818.72,2724
+2021-05-01,Brasil,Perito contábil,7,1,6,40640.69,7
+2021-05-01,Brasil,Técnico de contabilidade,172,162,10,470361.19,169
+2021-05-01,Nordeste,Auditor,29,32,-3,107082.9,28
+2021-05-01,Nordeste,Auxiliar de contabilidade,698,585,113,1080473.57,684
+2021-05-01,Nordeste,Contador,269,204,65,823123.53,260
+2021-05-01,Nordeste,Perito contábil,1,0,1,1200.0,1
+2021-05-01,Nordeste,Técnico de contabilidade,20,14,6,49414.29,19
+2021-05-01,Rio Grande do Norte,Auditor,2,2,0,9200.0,2
+2021-05-01,Rio Grande do Norte,Auxiliar de contabilidade,58,44,14,82007.5,58
+2021-05-01,Rio Grande do Norte,Contador,13,10,3,39491.73,13
+2021-05-01,Rio Grande do Norte,Técnico de contabilidade,1,1,0,1369.96,1
+2021-06-01,Brasil,Auditor,514,479,35,2516842.13,507
+2021-06-01,Brasil,Auxiliar de contabilidade,6082,5163,919,10817119.74,5976
+2021-06-01,Brasil,Contador,2872,2509,363,11955828.69,2836
+2021-06-01,Brasil,Perito contábil,7,6,1,28800.0,6
+2021-06-01,Brasil,Técnico de contabilidade,141,139,2,371900.77,138
+2021-06-01,Nordeste,Auditor,37,39,-2,128732.56,37
+2021-06-01,Nordeste,Auxiliar de contabilidade,754,559,195,1074976.43,730
+2021-06-01,Nordeste,Contador,297,248,49,859445.88,294
+2021-06-01,Nordeste,Técnico de contabilidade,23,21,2,50785.22,21
+2021-06-01,Rio Grande do Norte,Auditor,2,1,1,9527.45,2
+2021-06-01,Rio Grande do Norte,Auxiliar de contabilidade,43,31,12,60612.43,42
+2021-06-01,Rio Grande do Norte,Contador,19,13,6,59396.95,19
+2021-06-01,Rio Grande do Norte,Técnico de contabilidade,2,3,-1,2000.0,1
+2021-07-01,Brasil,Auditor,521,534,-13,2517423.58,516
+2021-07-01,Brasil,Auxiliar de contabilidade,6543,5262,1281,11750403.92,6443
+2021-07-01,Brasil,Contador,2973,2558,415,12867275.07,2934
+2021-07-01,Brasil,Perito contábil,8,8,0,24284.0,8
+2021-07-01,Brasil,Técnico de contabilidade,175,161,14,491947.0,169
+2021-07-01,Nordeste,Auditor,30,40,-10,84859.63,29
+2021-07-01,Nordeste,Auxiliar de contabilidade,785,599,186,1148606.18,767
+2021-07-01,Nordeste,Contador,275,230,45,830215.83,271
+2021-07-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2021-07-01,Nordeste,Técnico de contabilidade,12,13,-1,22951.0,12
+2021-07-01,Rio Grande do Norte,Auditor,1,1,0,1628.16,1
+2021-07-01,Rio Grande do Norte,Auxiliar de contabilidade,58,42,16,81911.74,57
+2021-07-01,Rio Grande do Norte,Contador,23,18,5,58453.93,23
+2021-07-01,Rio Grande do Norte,Técnico de contabilidade,0,1,-1,0.0,0
+2021-08-01,Brasil,Auditor,525,496,29,2337855.74,522
+2021-08-01,Brasil,Auxiliar de contabilidade,6695,5544,1151,12026328.71,6601
+2021-08-01,Brasil,Contador,3041,2729,312,12960374.86,3009
+2021-08-01,Brasil,Perito contábil,8,5,3,19646.82,8
+2021-08-01,Brasil,Técnico de contabilidade,165,157,8,529966.03,160
+2021-08-01,Nordeste,Auditor,48,31,17,173844.26,47
+2021-08-01,Nordeste,Auxiliar de contabilidade,803,588,215,1158491.53,788
+2021-08-01,Nordeste,Contador,302,261,41,822222.89,296
+2021-08-01,Nordeste,Técnico de contabilidade,16,18,-2,20141.42,12
+2021-08-01,Rio Grande do Norte,Auxiliar de contabilidade,54,48,6,73379.89,54
+2021-08-01,Rio Grande do Norte,Contador,33,22,11,74134.14,33
+2021-08-01,Rio Grande do Norte,Técnico de contabilidade,2,1,1,2928.0,2
+2021-09-01,Brasil,Auditor,484,545,-61,2127899.97,476
+2021-09-01,Brasil,Auxiliar de contabilidade,6592,5684,908,12018037.75,6516
+2021-09-01,Brasil,Contador,2819,2615,204,12175072.35,2788
+2021-09-01,Brasil,Perito contábil,7,18,-11,37045.04,7
+2021-09-01,Brasil,Técnico de contabilidade,131,186,-55,385754.75,125
+2021-09-01,Nordeste,Auditor,28,29,-1,90539.76,27
+2021-09-01,Nordeste,Auxiliar de contabilidade,810,646,164,1174811.08,804
+2021-09-01,Nordeste,Contador,261,247,14,830770.64,259
+2021-09-01,Nordeste,Perito contábil,1,0,1,4400.0,1
+2021-09-01,Nordeste,Técnico de contabilidade,10,17,-7,15871.96,8
+2021-09-01,Rio Grande do Norte,Auditor,1,1,0,1300.0,1
+2021-09-01,Rio Grande do Norte,Auxiliar de contabilidade,53,43,10,70568.21,51
+2021-09-01,Rio Grande do Norte,Contador,16,14,2,39806.32,16
+2021-09-01,Rio Grande do Norte,Técnico de contabilidade,3,1,2,6899.96,3
+2021-10-01,Brasil,Auditor,505,528,-23,2442398.43,498
+2021-10-01,Brasil,Auxiliar de contabilidade,6245,5687,558,11493015.52,6172
+2021-10-01,Brasil,Contador,2718,2629,89,11890087.61,2687
+2021-10-01,Brasil,Perito contábil,9,8,1,33182.6,9
+2021-10-01,Brasil,Técnico de contabilidade,151,195,-44,486468.93,149
+2021-10-01,Nordeste,Auditor,34,37,-3,115717.84,31
+2021-10-01,Nordeste,Auxiliar de contabilidade,726,642,84,1056594.84,715
+2021-10-01,Nordeste,Contador,268,280,-12,861233.73,262
+2021-10-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2021-10-01,Nordeste,Técnico de contabilidade,17,20,-3,48783.89,17
+2021-10-01,Rio Grande do Norte,Auditor,1,0,1,2597.25,1
+2021-10-01,Rio Grande do Norte,Auxiliar de contabilidade,50,38,12,71728.16,50
+2021-10-01,Rio Grande do Norte,Contador,11,17,-6,55422.96,10
+2021-10-01,Rio Grande do Norte,Técnico de contabilidade,2,3,-1,13726.84,2
+2021-11-01,Brasil,Auditor,594,509,85,2542948.43,578
+2021-11-01,Brasil,Auxiliar de contabilidade,5978,5173,805,11121814.92,5940
+2021-11-01,Brasil,Contador,2881,2391,490,11887750.12,2667
+2021-11-01,Brasil,Perito contábil,14,13,1,51301.33,14
+2021-11-01,Brasil,Técnico de contabilidade,141,174,-33,463187.38,137
+2021-11-01,Nordeste,Auditor,30,25,5,109219.89,29
+2021-11-01,Nordeste,Auxiliar de contabilidade,726,593,133,1095878.26,723
+2021-11-01,Nordeste,Contador,246,238,8,698767.4,221
+2021-11-01,Nordeste,Perito contábil,1,0,1,4400.0,1
+2021-11-01,Nordeste,Técnico de contabilidade,14,31,-17,24000.41,13
+2021-11-01,Rio Grande do Norte,Auditor,1,0,1,3500.0,1
+2021-11-01,Rio Grande do Norte,Auxiliar de contabilidade,35,44,-9,51626.84,34
+2021-11-01,Rio Grande do Norte,Contador,16,17,-1,35196.66,12
+2021-11-01,Rio Grande do Norte,Técnico de contabilidade,3,1,2,4858.18,3
+2021-12-01,Brasil,Auditor,379,568,-189,1811474.95,376
+2021-12-01,Brasil,Auxiliar de contabilidade,4519,5657,-1138,8476400.64,4482
+2021-12-01,Brasil,Contador,2580,2748,-168,9689424.82,2172
+2021-12-01,Brasil,Perito contábil,7,12,-5,53584.0,7
+2021-12-01,Brasil,Técnico de contabilidade,112,226,-114,410327.62,110
+2021-12-01,Nordeste,Auditor,22,33,-11,56846.68,22
+2021-12-01,Nordeste,Auxiliar de contabilidade,575,669,-94,857332.23,566
+2021-12-01,Nordeste,Contador,259,260,-1,638228.18,207
+2021-12-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2021-12-01,Nordeste,Técnico de contabilidade,9,30,-21,28315.13,9
+2021-12-01,Rio Grande do Norte,Auxiliar de contabilidade,32,30,2,49189.58,32
+2021-12-01,Rio Grande do Norte,Contador,21,14,7,64849.25,18
+2021-12-01,Rio Grande do Norte,Técnico de contabilidade,1,2,-1,1400.0,1
+2022-01-01,Brasil,Auditor,547,538,9,2655674.43,545
+2022-01-01,Brasil,Auxiliar de contabilidade,7949,6155,1794,15014627.25,7905
+2022-01-01,Brasil,Contador,3059,3041,18,13282023.86,3012
+2022-01-01,Brasil,Perito contábil,14,8,6,77853.93,14
+2022-01-01,Brasil,Técnico de contabilidade,173,209,-36,499099.65,169
+2022-01-01,Nordeste,Auditor,35,39,-4,138105.68,34
+2022-01-01,Nordeste,Auxiliar de contabilidade,973,807,166,1493927.3,964
+2022-01-01,Nordeste,Contador,322,386,-64,1031301.92,319
+2022-01-01,Nordeste,Perito contábil,1,0,1,2500.0,1
+2022-01-01,Nordeste,Técnico de contabilidade,24,35,-11,50913.58,23
+2022-01-01,Rio Grande do Norte,Auditor,0,1,-1,0.0,0
+2022-01-01,Rio Grande do Norte,Auxiliar de contabilidade,52,43,9,76261.89,52
+2022-01-01,Rio Grande do Norte,Contador,26,30,-4,102229.19,25
+2022-01-01,Rio Grande do Norte,Técnico de contabilidade,0,2,-2,0.0,0
+2022-02-01,Brasil,Auditor,505,502,3,2460294.07,503
+2022-02-01,Brasil,Auxiliar de contabilidade,7588,6727,861,14430679.42,7538
+2022-02-01,Brasil,Contador,3009,2989,20,12736960.25,2981
+2022-02-01,Brasil,Perito contábil,8,13,-5,38424.0,8
+2022-02-01,Brasil,Técnico de contabilidade,182,241,-59,558014.17,179
+2022-02-01,Nordeste,Auditor,34,31,3,116576.86,34
+2022-02-01,Nordeste,Auxiliar de contabilidade,899,831,68,1350033.03,878
+2022-02-01,Nordeste,Contador,349,350,-1,1076453.1,348
+2022-02-01,Nordeste,Perito contábil,0,2,-2,0.0,0
+2022-02-01,Nordeste,Técnico de contabilidade,16,25,-9,30493.12,16
+2022-02-01,Rio Grande do Norte,Auditor,1,2,-1,1700.0,1
+2022-02-01,Rio Grande do Norte,Auxiliar de contabilidade,50,49,1,69320.1,49
+2022-02-01,Rio Grande do Norte,Contador,30,25,5,80379.66,30
+2022-02-01,Rio Grande do Norte,Técnico de contabilidade,1,1,0,1818.0,1
+2022-03-01,Brasil,Auditor,529,472,57,2592790.78,526
+2022-03-01,Brasil,Auxiliar de contabilidade,7795,7326,469,15143722.72,7757
+2022-03-01,Brasil,Contador,3236,3174,62,14020393.96,3205
+2022-03-01,Brasil,Perito contábil,15,13,2,73599.84,15
+2022-03-01,Brasil,Técnico de contabilidade,194,237,-43,584024.78,190
+2022-03-01,Nordeste,Auditor,44,25,19,171412.41,43
+2022-03-01,Nordeste,Auxiliar de contabilidade,824,933,-109,1307520.02,818
+2022-03-01,Nordeste,Contador,305,329,-24,946094.38,301
+2022-03-01,Nordeste,Perito contábil,1,1,0,2654.13,1
+2022-03-01,Nordeste,Técnico de contabilidade,22,24,-2,52337.3,22
+2022-03-01,Rio Grande do Norte,Auditor,2,1,1,1300.0,1
+2022-03-01,Rio Grande do Norte,Auxiliar de contabilidade,43,59,-16,61795.32,42
+2022-03-01,Rio Grande do Norte,Contador,13,29,-16,41234.43,13
+2022-03-01,Rio Grande do Norte,Técnico de contabilidade,2,4,-2,3654.41,2
+2022-04-01,Brasil,Auditor,471,506,-35,2595867.63,471
+2022-04-01,Brasil,Auxiliar de contabilidade,6811,6689,122,13227625.18,6790
+2022-04-01,Brasil,Contador,3253,2996,257,14666842.66,3229
+2022-04-01,Brasil,Perito contábil,5,14,-9,21422.62,5
+2022-04-01,Brasil,Técnico de contabilidade,156,206,-50,490729.35,153
+2022-04-01,Nordeste,Auditor,34,39,-5,158278.55,34
+2022-04-01,Nordeste,Auxiliar de contabilidade,775,802,-27,1246063.21,770
+2022-04-01,Nordeste,Contador,306,358,-52,962480.45,304
+2022-04-01,Nordeste,Perito contábil,2,2,0,7600.0,2
+2022-04-01,Nordeste,Técnico de contabilidade,23,23,0,50802.63,22
+2022-04-01,Rio Grande do Norte,Auditor,0,1,-1,0.0,0
+2022-04-01,Rio Grande do Norte,Auxiliar de contabilidade,41,44,-3,62344.02,41
+2022-04-01,Rio Grande do Norte,Contador,15,19,-4,45947.78,15
+2022-04-01,Rio Grande do Norte,Técnico de contabilidade,1,3,-2,2500.0,1
+2022-05-01,Brasil,Auditor,446,552,-106,2232292.1,441
+2022-05-01,Brasil,Auxiliar de contabilidade,6999,6597,402,13741637.27,6968
+2022-05-01,Brasil,Contador,3231,3028,203,14147989.93,3189
+2022-05-01,Brasil,Perito contábil,8,17,-9,57501.16,8
+2022-05-01,Brasil,Técnico de contabilidade,162,194,-32,531174.11,154
+2022-05-01,Nordeste,Auditor,28,43,-15,95704.31,26
+2022-05-01,Nordeste,Auxiliar de contabilidade,772,799,-27,1238367.83,766
+2022-05-01,Nordeste,Contador,311,296,15,948478.87,307
+2022-05-01,Nordeste,Perito contábil,1,2,-1,8630.28,1
+2022-05-01,Nordeste,Técnico de contabilidade,8,24,-16,17386.77,8
+2022-05-01,Rio Grande do Norte,Auditor,0,4,-4,0.0,0
+2022-05-01,Rio Grande do Norte,Auxiliar de contabilidade,46,49,-3,70207.99,46
+2022-05-01,Rio Grande do Norte,Contador,22,22,0,50003.71,20
+2022-05-01,Rio Grande do Norte,Técnico de contabilidade,2,3,-1,3947.0,2
+2022-06-01,Brasil,Auditor,408,489,-81,2309875.82,402
+2022-06-01,Brasil,Auxiliar de contabilidade,6952,6212,740,13723372.76,6940
+2022-06-01,Brasil,Contador,3081,2958,123,14089853.63,3062
+2022-06-01,Brasil,Perito contábil,6,9,-3,34765.0,6
+2022-06-01,Brasil,Técnico de contabilidade,150,184,-34,482421.88,145
+2022-06-01,Nordeste,Auditor,22,26,-4,66667.59,20
+2022-06-01,Nordeste,Auxiliar de contabilidade,789,710,79,1229256.99,788
+2022-06-01,Nordeste,Contador,299,297,2,953878.4,292
+2022-06-01,Nordeste,Técnico de contabilidade,15,24,-9,27019.2,12
+2022-06-01,Rio Grande do Norte,Auditor,1,0,1,1900.0,1
+2022-06-01,Rio Grande do Norte,Auxiliar de contabilidade,41,50,-9,59994.94,41
+2022-06-01,Rio Grande do Norte,Contador,20,18,2,47637.82,20
+2022-07-01,Brasil,Auditor,447,504,-57,2727817.01,436
+2022-07-01,Brasil,Auxiliar de contabilidade,6543,6375,168,12861399.96,6501
+2022-07-01,Brasil,Contador,2987,3051,-64,13798166.53,2962
+2022-07-01,Brasil,Perito contábil,19,10,9,113513.84,19
+2022-07-01,Brasil,Técnico de contabilidade,150,165,-15,434821.9,143
+2022-07-01,Nordeste,Auditor,28,22,6,151532.55,28
+2022-07-01,Nordeste,Auxiliar de contabilidade,758,745,13,1212836.46,745
+2022-07-01,Nordeste,Contador,275,291,-16,906087.06,272
+2022-07-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2022-07-01,Nordeste,Técnico de contabilidade,11,20,-9,20558.0,11
+2022-07-01,Rio Grande do Norte,Auditor,2,0,2,48300.0,2
+2022-07-01,Rio Grande do Norte,Auxiliar de contabilidade,45,48,-3,70597.31,45
+2022-07-01,Rio Grande do Norte,Contador,22,19,3,60387.26,22
+2022-07-01,Rio Grande do Norte,Perito contábil,0,1,-1,0.0,0
+2022-07-01,Rio Grande do Norte,Técnico de contabilidade,2,2,0,2928.0,2
+2022-08-01,Brasil,Auditor,496,556,-60,2521913.09,485
+2022-08-01,Brasil,Auxiliar de contabilidade,7041,6764,277,14018694.67,7005
+2022-08-01,Brasil,Contador,3162,3051,111,14505119.11,3131
+2022-08-01,Brasil,Perito contábil,15,5,10,75110.0,14
+2022-08-01,Brasil,Técnico de contabilidade,199,199,0,605586.39,195
+2022-08-01,Nordeste,Auditor,25,30,-5,82441.83,25
+2022-08-01,Nordeste,Auxiliar de contabilidade,833,830,3,1321416.19,826
+2022-08-01,Nordeste,Contador,310,345,-35,935636.17,309
+2022-08-01,Nordeste,Perito contábil,1,0,1,1960.0,1
+2022-08-01,Nordeste,Técnico de contabilidade,20,18,2,45905.08,20
+2022-08-01,Rio Grande do Norte,Auxiliar de contabilidade,54,37,17,78914.19,54
+2022-08-01,Rio Grande do Norte,Contador,27,26,1,72452.46,27
+2022-08-01,Rio Grande do Norte,Técnico de contabilidade,2,2,0,3770.8,2
+2022-09-01,Brasil,Auditor,529,477,52,2643369.37,524
+2022-09-01,Brasil,Auxiliar de contabilidade,6629,6071,558,13343520.09,6610
+2022-09-01,Brasil,Contador,2942,2867,75,13293191.57,2913
+2022-09-01,Brasil,Perito contábil,11,8,3,66996.71,11
+2022-09-01,Brasil,Técnico de contabilidade,126,198,-72,359437.01,120
+2022-09-01,Nordeste,Auditor,31,42,-11,136391.47,31
+2022-09-01,Nordeste,Auxiliar de contabilidade,795,706,89,1300488.74,793
+2022-09-01,Nordeste,Contador,330,335,-5,1086842.3,326
+2022-09-01,Nordeste,Perito contábil,1,1,0,8630.28,1
+2022-09-01,Nordeste,Técnico de contabilidade,14,26,-12,37803.55,14
+2022-09-01,Rio Grande do Norte,Auditor,1,1,0,3108.97,1
+2022-09-01,Rio Grande do Norte,Auxiliar de contabilidade,46,32,14,68573.32,46
+2022-09-01,Rio Grande do Norte,Contador,16,16,0,27324.66,16
+2022-09-01,Rio Grande do Norte,Técnico de contabilidade,0,1,-1,0.0,0
+2022-10-01,Brasil,Auditor,372,417,-45,2221704.88,368
+2022-10-01,Brasil,Auxiliar de contabilidade,6229,5633,596,12587621.93,6215
+2022-10-01,Brasil,Contador,2891,2678,213,13686186.01,2869
+2022-10-01,Brasil,Perito contábil,13,8,5,68361.71,13
+2022-10-01,Brasil,Técnico de contabilidade,136,177,-41,387934.38,128
+2022-10-01,Nordeste,Auditor,22,29,-7,104016.04,22
+2022-10-01,Nordeste,Auxiliar de contabilidade,701,740,-39,1141855.15,697
+2022-10-01,Nordeste,Contador,274,289,-15,1007612.38,271
+2022-10-01,Nordeste,Perito contábil,1,1,0,15533.99,1
+2022-10-01,Nordeste,Técnico de contabilidade,11,23,-12,33101.0,11
+2022-10-01,Rio Grande do Norte,Auditor,0,2,-2,0.0,0
+2022-10-01,Rio Grande do Norte,Auxiliar de contabilidade,36,55,-19,59329.43,36
+2022-10-01,Rio Grande do Norte,Contador,6,17,-11,17751.21,6
+2022-10-01,Rio Grande do Norte,Técnico de contabilidade,1,2,-1,7854.0,1
+2022-11-01,Brasil,Auditor,406,405,1,2227000.99,406
+2022-11-01,Brasil,Auxiliar de contabilidade,5729,5356,373,11749839.42,5699
+2022-11-01,Brasil,Contador,2581,2490,91,12091907.21,2564
+2022-11-01,Brasil,Perito contábil,8,11,-3,30050.84,7
+2022-11-01,Brasil,Técnico de contabilidade,144,135,9,523438.4,143
+2022-11-01,Nordeste,Auditor,20,25,-5,80144.82,20
+2022-11-01,Nordeste,Auxiliar de contabilidade,699,623,76,1158319.08,697
+2022-11-01,Nordeste,Contador,276,273,3,991780.71,274
+2022-11-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2022-11-01,Nordeste,Técnico de contabilidade,8,14,-6,17955.48,8
+2022-11-01,Rio Grande do Norte,Auditor,0,4,-4,0.0,0
+2022-11-01,Rio Grande do Norte,Auxiliar de contabilidade,34,37,-3,51933.83,34
+2022-11-01,Rio Grande do Norte,Contador,18,19,-1,45186.23,18
+2022-12-01,Brasil,Auditor,389,408,-19,1549867.96,344
+2022-12-01,Brasil,Auxiliar de contabilidade,3882,5328,-1446,7919672.48,3872
+2022-12-01,Brasil,Contador,1956,2422,-466,9418092.97,1938
+2022-12-01,Brasil,Perito contábil,6,4,2,33483.6,6
+2022-12-01,Brasil,Técnico de contabilidade,100,157,-57,338437.2,98
+2022-12-01,Nordeste,Auditor,32,28,4,141811.61,32
+2022-12-01,Nordeste,Auxiliar de contabilidade,482,644,-162,781076.65,479
+2022-12-01,Nordeste,Contador,208,243,-35,705102.91,205
+2022-12-01,Nordeste,Perito contábil,1,2,-1,2167.0,1
+2022-12-01,Nordeste,Técnico de contabilidade,5,23,-18,7979.2,5
+2022-12-01,Rio Grande do Norte,Auxiliar de contabilidade,28,40,-12,44842.5,28
+2022-12-01,Rio Grande do Norte,Contador,12,19,-7,39491.69,12
+2023-01-01,Brasil,Auditor,408,563,-155,2097843.43,406
+2023-01-01,Brasil,Auxiliar de contabilidade,8022,6388,1634,16444520.89,7995
+2023-01-01,Brasil,Contador,3181,2797,384,14316094.22,3159
+2023-01-01,Brasil,Perito contábil,7,9,-2,32835.09,7
+2023-01-01,Brasil,Técnico de contabilidade,186,194,-8,604874.58,180
+2023-01-01,Nordeste,Auditor,25,27,-2,92032.29,25
+2023-01-01,Nordeste,Auxiliar de contabilidade,1109,789,320,1835347.96,1105
+2023-01-01,Nordeste,Contador,387,279,108,1189656.99,384
+2023-01-01,Nordeste,Técnico de contabilidade,20,25,-5,46840.63,19
+2023-01-01,Rio Grande do Norte,Auditor,2,0,2,2604.0,2
+2023-01-01,Rio Grande do Norte,Auxiliar de contabilidade,64,40,24,101902.79,63
+2023-01-01,Rio Grande do Norte,Contador,38,17,21,100643.78,37
+2023-01-01,Rio Grande do Norte,Técnico de contabilidade,4,1,3,8604.0,4
+2023-02-01,Brasil,Auditor,411,394,17,2151748.46,411
+2023-02-01,Brasil,Auxiliar de contabilidade,6757,6095,662,14036278.67,6738
+2023-02-01,Brasil,Contador,2650,2699,-49,12188875.29,2647
+2023-02-01,Brasil,Perito contábil,9,11,-2,24730.68,8
+2023-02-01,Brasil,Técnico de contabilidade,155,193,-38,465441.64,151
+2023-02-01,Nordeste,Auditor,33,27,6,127646.35,33
+2023-02-01,Nordeste,Auxiliar de contabilidade,793,702,91,1322789.53,788
+2023-02-01,Nordeste,Contador,262,305,-43,854018.45,262
+2023-02-01,Nordeste,Perito contábil,0,2,-2,0.0,0
+2023-02-01,Nordeste,Técnico de contabilidade,26,18,8,60004.36,25
+2023-02-01,Rio Grande do Norte,Auditor,0,1,-1,0.0,0
+2023-02-01,Rio Grande do Norte,Auxiliar de contabilidade,60,45,15,102557.29,60
+2023-02-01,Rio Grande do Norte,Contador,18,23,-5,50063.85,18
+2023-02-01,Rio Grande do Norte,Técnico de contabilidade,2,1,1,4400.0,2
+2023-03-01,Brasil,Auditor,413,502,-89,2166764.87,412
+2023-03-01,Brasil,Auxiliar de contabilidade,7676,6957,719,15928518.19,7647
+2023-03-01,Brasil,Contador,3035,3660,-625,13655275.74,3020
+2023-03-01,Brasil,Perito contábil,12,9,3,72952.9,12
+2023-03-01,Brasil,Técnico de contabilidade,157,218,-61,535008.36,156
+2023-03-01,Nordeste,Auditor,26,39,-13,94834.1,26
+2023-03-01,Nordeste,Auxiliar de contabilidade,881,782,99,1495920.9,872
+2023-03-01,Nordeste,Contador,343,400,-57,1139165.53,341
+2023-03-01,Nordeste,Perito contábil,1,0,1,2000.0,1
+2023-03-01,Nordeste,Técnico de contabilidade,14,34,-20,28032.72,14
+2023-03-01,Rio Grande do Norte,Auxiliar de contabilidade,41,45,-4,69375.31,41
+2023-03-01,Rio Grande do Norte,Contador,19,18,1,44656.53,19
+2023-03-01,Rio Grande do Norte,Perito contábil,1,0,1,2000.0,1
+2023-03-01,Rio Grande do Norte,Técnico de contabilidade,1,2,-1,2700.0,1
+2023-04-01,Brasil,Auditor,358,453,-95,2011837.62,353
+2023-04-01,Brasil,Auxiliar de contabilidade,6685,5688,997,13973095.3,6667
+2023-04-01,Brasil,Contador,2858,2874,-16,13632794.09,2845
+2023-04-01,Brasil,Perito contábil,12,17,-5,35692.86,12
+2023-04-01,Brasil,Técnico de contabilidade,136,170,-34,465532.57,136
+2023-04-01,Nordeste,Auditor,21,34,-13,81385.28,21
+2023-04-01,Nordeste,Auxiliar de contabilidade,769,661,108,1306290.84,766
+2023-04-01,Nordeste,Contador,311,329,-18,1071897.13,306
+2023-04-01,Nordeste,Técnico de contabilidade,12,18,-6,29899.02,12
+2023-04-01,Rio Grande do Norte,Auxiliar de contabilidade,35,42,-7,55707.96,35
+2023-04-01,Rio Grande do Norte,Contador,26,20,6,86341.25,26
+2023-04-01,Rio Grande do Norte,Técnico de contabilidade,1,0,1,1570.0,1
+2023-05-01,Brasil,Auditor,398,498,-100,2140082.55,394
+2023-05-01,Brasil,Auxiliar de contabilidade,6771,6216,555,14293285.21,6747
+2023-05-01,Brasil,Contador,3158,3171,-13,15078349.62,3142
+2023-05-01,Brasil,Perito contábil,10,13,-3,22899.05,10
+2023-05-01,Brasil,Técnico de contabilidade,163,188,-25,587044.7,161
+2023-05-01,Nordeste,Auditor,17,39,-22,75490.06,17
+2023-05-01,Nordeste,Auxiliar de contabilidade,756,713,43,1282169.38,751
+2023-05-01,Nordeste,Contador,333,319,14,1161587.74,330
+2023-05-01,Nordeste,Perito contábil,2,0,2,2660.0,2
+2023-05-01,Nordeste,Técnico de contabilidade,14,22,-8,29230.01,14
+2023-05-01,Rio Grande do Norte,Auditor,1,2,-1,6000.0,1
+2023-05-01,Rio Grande do Norte,Auxiliar de contabilidade,48,32,16,82360.27,48
+2023-05-01,Rio Grande do Norte,Contador,18,22,-4,49728.22,17
+2023-05-01,Rio Grande do Norte,Perito contábil,1,0,1,660.0,1
+2023-05-01,Rio Grande do Norte,Técnico de contabilidade,1,2,-1,2186.14,1
+2023-06-01,Brasil,Auditor,406,426,-20,2210798.05,399
+2023-06-01,Brasil,Auxiliar de contabilidade,6357,6101,256,13452753.79,6340
+2023-06-01,Brasil,Contador,3094,3199,-105,14753378.28,3073
+2023-06-01,Brasil,Perito contábil,14,14,0,54988.18,14
+2023-06-01,Brasil,Técnico de contabilidade,174,173,1,573219.11,172
+2023-06-01,Nordeste,Auditor,31,42,-11,152775.76,29
+2023-06-01,Nordeste,Auxiliar de contabilidade,787,674,113,1323700.16,785
+2023-06-01,Nordeste,Contador,340,357,-17,1171316.62,331
+2023-06-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2023-06-01,Nordeste,Técnico de contabilidade,17,22,-5,34643.34,17
+2023-06-01,Rio Grande do Norte,Auxiliar de contabilidade,45,39,6,77932.1,45
+2023-06-01,Rio Grande do Norte,Contador,13,19,-6,36787.17,13
+2023-06-01,Rio Grande do Norte,Técnico de contabilidade,1,3,-2,2200.0,1
+2023-07-01,Brasil,Auditor,314,427,-113,1595316.25,311
+2023-07-01,Brasil,Auxiliar de contabilidade,6440,5748,692,13729747.74,6424
+2023-07-01,Brasil,Contador,2871,3056,-185,13931270.89,2853
+2023-07-01,Brasil,Perito contábil,11,11,0,47019.9,11
+2023-07-01,Brasil,Técnico de contabilidade,162,183,-21,561338.61,161
+2023-07-01,Nordeste,Auditor,22,31,-9,74134.36,22
+2023-07-01,Nordeste,Auxiliar de contabilidade,797,705,92,1398984.18,794
+2023-07-01,Nordeste,Contador,305,367,-62,1066477.92,301
+2023-07-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2023-07-01,Nordeste,Técnico de contabilidade,15,29,-14,38171.39,15
+2023-07-01,Rio Grande do Norte,Auditor,0,2,-2,0.0,0
+2023-07-01,Rio Grande do Norte,Auxiliar de contabilidade,46,38,8,75585.57,45
+2023-07-01,Rio Grande do Norte,Contador,21,29,-8,52080.38,21
+2023-07-01,Rio Grande do Norte,Técnico de contabilidade,0,2,-2,0.0,0
+2023-08-01,Brasil,Auditor,385,398,-13,2152812.8,382
+2023-08-01,Brasil,Auxiliar de contabilidade,6999,6342,657,14888084.53,6975
+2023-08-01,Brasil,Contador,3118,3429,-311,15142648.24,3103
+2023-08-01,Brasil,Perito contábil,7,12,-5,42777.32,7
+2023-08-01,Brasil,Técnico de contabilidade,164,190,-26,614802.3,162
+2023-08-01,Nordeste,Auditor,22,27,-5,78562.07,22
+2023-08-01,Nordeste,Auxiliar de contabilidade,861,750,111,1457893.83,854
+2023-08-01,Nordeste,Contador,354,383,-29,1204915.39,350
+2023-08-01,Nordeste,Perito contábil,1,0,1,20388.35,1
+2023-08-01,Nordeste,Técnico de contabilidade,13,30,-17,31956.82,13
+2023-08-01,Rio Grande do Norte,Auditor,0,1,-1,0.0,0
+2023-08-01,Rio Grande do Norte,Auxiliar de contabilidade,48,33,15,81083.07,48
+2023-08-01,Rio Grande do Norte,Contador,21,19,2,60281.75,21
+2023-08-01,Rio Grande do Norte,Técnico de contabilidade,1,2,-1,2100.0,1
+2023-09-01,Brasil,Auditor,446,429,17,2318147.86,444
+2023-09-01,Brasil,Auxiliar de contabilidade,6556,5799,757,13992464.57,6540
+2023-09-01,Brasil,Contador,2725,2993,-268,13311811.78,2709
+2023-09-01,Brasil,Perito contábil,9,12,-3,67689.2,9
+2023-09-01,Brasil,Técnico de contabilidade,137,163,-26,492805.07,134
+2023-09-01,Nordeste,Auditor,29,44,-15,93489.6,29
+2023-09-01,Nordeste,Auxiliar de contabilidade,872,702,170,1534810.55,871
+2023-09-01,Nordeste,Contador,299,321,-22,1102714.27,297
+2023-09-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2023-09-01,Nordeste,Técnico de contabilidade,15,17,-2,32666.11,15
+2023-09-01,Rio Grande do Norte,Auditor,1,3,-2,2131.0,1
+2023-09-01,Rio Grande do Norte,Auxiliar de contabilidade,46,33,13,76901.25,46
+2023-09-01,Rio Grande do Norte,Contador,16,19,-3,58671.92,16
+2023-09-01,Rio Grande do Norte,Técnico de contabilidade,2,1,1,2969.34,2
+2023-10-01,Brasil,Auditor,388,358,30,2163984.85,386
+2023-10-01,Brasil,Auxiliar de contabilidade,6588,5632,956,14194066.94,6565
+2023-10-01,Brasil,Contador,2758,2884,-126,13452213.33,2739
+2023-10-01,Brasil,Perito contábil,8,9,-1,37951.14,8
+2023-10-01,Brasil,Técnico de contabilidade,172,187,-15,598648.59,170
+2023-10-01,Nordeste,Auditor,20,20,0,64013.63,20
+2023-10-01,Nordeste,Auxiliar de contabilidade,848,652,196,1487162.97,840
+2023-10-01,Nordeste,Contador,266,300,-34,926539.32,261
+2023-10-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2023-10-01,Nordeste,Técnico de contabilidade,18,28,-10,32762.85,17
+2023-10-01,Rio Grande do Norte,Auditor,1,0,1,2784.0,1
+2023-10-01,Rio Grande do Norte,Auxiliar de contabilidade,45,26,19,75872.53,44
+2023-10-01,Rio Grande do Norte,Contador,19,10,9,46581.53,18
+2023-10-01,Rio Grande do Norte,Técnico de contabilidade,1,0,1,0.0,0
+2023-11-01,Brasil,Auditor,359,351,8,1951784.67,357
+2023-11-01,Brasil,Auxiliar de contabilidade,5968,5583,385,13076833.02,5960
+2023-11-01,Brasil,Contador,2627,2768,-141,12651735.36,2603
+2023-11-01,Brasil,Perito contábil,9,13,-4,69839.5,9
+2023-11-01,Brasil,Técnico de contabilidade,150,153,-3,510639.38,148
+2023-11-01,Nordeste,Auditor,31,20,11,117476.98,30
+2023-11-01,Nordeste,Auxiliar de contabilidade,739,621,118,1302811.07,738
+2023-11-01,Nordeste,Contador,267,277,-10,913681.44,264
+2023-11-01,Nordeste,Perito contábil,0,3,-3,0.0,0
+2023-11-01,Nordeste,Técnico de contabilidade,14,16,-2,27246.96,14
+2023-11-01,Rio Grande do Norte,Auditor,2,0,2,8511.26,2
+2023-11-01,Rio Grande do Norte,Auxiliar de contabilidade,32,34,-2,55217.7,32
+2023-11-01,Rio Grande do Norte,Contador,16,9,7,56921.57,15
+2023-11-01,Rio Grande do Norte,Técnico de contabilidade,0,2,-2,0.0,0
+2023-12-01,Brasil,Auditor,300,382,-82,1571179.1,299
+2023-12-01,Brasil,Auxiliar de contabilidade,4250,5218,-968,9296141.54,4238
+2023-12-01,Brasil,Contador,1922,2743,-821,9517057.73,1903
+2023-12-01,Brasil,Perito contábil,6,9,-3,18460.73,6
+2023-12-01,Brasil,Técnico de contabilidade,94,188,-94,366739.59,94
+2023-12-01,Nordeste,Auditor,29,36,-7,97180.85,28
+2023-12-01,Nordeste,Auxiliar de contabilidade,546,655,-109,970423.76,545
+2023-12-01,Nordeste,Contador,196,299,-103,686366.57,194
+2023-12-01,Nordeste,Perito contábil,1,5,-4,2000.0,1
+2023-12-01,Nordeste,Técnico de contabilidade,5,19,-14,18214.05,5
+2023-12-01,Rio Grande do Norte,Auditor,0,3,-3,0.0,0
+2023-12-01,Rio Grande do Norte,Auxiliar de contabilidade,32,31,1,56784.55,32
+2023-12-01,Rio Grande do Norte,Contador,10,24,-14,35569.96,10
+2023-12-01,Rio Grande do Norte,Perito contábil,0,1,-1,0.0,0
+2024-01-01,Brasil,Auditor,421,468,-47,2224497.52,419
+2024-01-01,Brasil,Auxiliar de contabilidade,8541,6373,2168,18568880.16,8515
+2024-01-01,Brasil,Contador,3157,2967,190,14729986.44,3142
+2024-01-01,Brasil,Perito contábil,12,10,2,52233.84,12
+2024-01-01,Brasil,Técnico de contabilidade,183,165,18,592065.83,179
+2024-01-01,Nordeste,Auditor,34,39,-5,135815.56,33
+2024-01-01,Nordeste,Auxiliar de contabilidade,1162,801,361,2060781.22,1155
+2024-01-01,Nordeste,Contador,370,368,2,1198701.27,369
+2024-01-01,Nordeste,Perito contábil,0,2,-2,0.0,0
+2024-01-01,Nordeste,Técnico de contabilidade,24,19,5,66201.46,24
+2024-01-01,Rio Grande do Norte,Auditor,1,0,1,1484.0,1
+2024-01-01,Rio Grande do Norte,Auxiliar de contabilidade,61,40,21,106423.75,61
+2024-01-01,Rio Grande do Norte,Contador,15,18,-3,41419.03,15
+2024-01-01,Rio Grande do Norte,Técnico de contabilidade,1,1,0,4000.0,1
+2024-02-01,Brasil,Auditor,428,413,15,2236331.35,425
+2024-02-01,Brasil,Auxiliar de contabilidade,7641,6787,854,16850984.52,7625
+2024-02-01,Brasil,Contador,3029,3279,-250,14235907.47,3013
+2024-02-01,Brasil,Perito contábil,11,19,-8,47184.23,11
+2024-02-01,Brasil,Técnico de contabilidade,150,182,-32,561354.33,150
+2024-02-01,Nordeste,Auditor,29,17,12,149770.31,28
+2024-02-01,Nordeste,Auxiliar de contabilidade,882,774,108,1620531.78,880
+2024-02-01,Nordeste,Contador,290,334,-44,947713.75,289
+2024-02-01,Nordeste,Perito contábil,0,2,-2,0.0,0
+2024-02-01,Nordeste,Técnico de contabilidade,20,14,6,63382.53,20
+2024-02-01,Rio Grande do Norte,Auxiliar de contabilidade,46,37,9,79066.03,46
+2024-02-01,Rio Grande do Norte,Contador,11,22,-11,22585.65,11
+2024-02-01,Rio Grande do Norte,Perito contábil,0,1,-1,0.0,0
+2024-03-01,Brasil,Auditor,460,422,38,2548214.95,451
+2024-03-01,Brasil,Auxiliar de contabilidade,7651,6957,694,17039270.28,7638
+2024-03-01,Brasil,Contador,3139,3314,-175,14904804.33,3123
+2024-03-01,Brasil,Perito contábil,9,14,-5,41375.01,9
+2024-03-01,Brasil,Técnico de contabilidade,173,171,2,595906.69,172
+2024-03-01,Nordeste,Auditor,35,25,10,146533.53,35
+2024-03-01,Nordeste,Auxiliar de contabilidade,921,789,132,1702462.23,917
+2024-03-01,Nordeste,Contador,357,364,-7,1342350.61,356
+2024-03-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2024-03-01,Nordeste,Técnico de contabilidade,17,23,-6,46446.99,17
+2024-03-01,Rio Grande do Norte,Auxiliar de contabilidade,49,40,9,89643.49,49
+2024-03-01,Rio Grande do Norte,Contador,18,14,4,74090.4,17
+2024-03-01,Rio Grande do Norte,Técnico de contabilidade,2,1,1,6603.0,2
+2024-04-01,Brasil,Auditor,430,482,-52,2355853.25,419
+2024-04-01,Brasil,Auxiliar de contabilidade,7892,6931,961,17711562.96,7866
+2024-04-01,Brasil,Contador,3273,3416,-143,15952522.92,3263
+2024-04-01,Brasil,Perito contábil,9,3,6,43702.73,9
+2024-04-01,Brasil,Técnico de contabilidade,168,194,-26,594884.0,166
+2024-04-01,Nordeste,Auditor,40,41,-1,121458.95,40
+2024-04-01,Nordeste,Auxiliar de contabilidade,942,822,120,1702427.16,934
+2024-04-01,Nordeste,Contador,306,352,-46,1119236.8,306
+2024-04-01,Nordeste,Perito contábil,2,1,1,3900.0,2
+2024-04-01,Nordeste,Técnico de contabilidade,8,21,-13,16996.18,7
+2024-04-01,Rio Grande do Norte,Auditor,0,1,-1,0.0,0
+2024-04-01,Rio Grande do Norte,Auxiliar de contabilidade,56,40,16,99147.63,55
+2024-04-01,Rio Grande do Norte,Contador,9,21,-12,26643.09,9
+2024-05-01,Brasil,Auditor,411,481,-70,2311666.03,408
+2024-05-01,Brasil,Auxiliar de contabilidade,7035,6804,231,15872940.25,7021
+2024-05-01,Brasil,Contador,3048,3448,-400,14808758.48,3024
+2024-05-01,Brasil,Perito contábil,14,11,3,62895.81,14
+2024-05-01,Brasil,Técnico de contabilidade,142,152,-10,518667.28,142
+2024-05-01,Nordeste,Auditor,27,39,-12,113698.63,27
+2024-05-01,Nordeste,Auxiliar de contabilidade,950,763,187,1760022.41,947
+2024-05-01,Nordeste,Contador,330,393,-63,1193359.7,328
+2024-05-01,Nordeste,Perito contábil,1,0,1,3163.0,1
+2024-05-01,Nordeste,Técnico de contabilidade,18,22,-4,53083.37,18
+2024-05-01,Rio Grande do Norte,Auditor,1,0,1,2775.81,1
+2024-05-01,Rio Grande do Norte,Auxiliar de contabilidade,41,36,5,76742.64,41
+2024-05-01,Rio Grande do Norte,Contador,11,17,-6,30223.11,11
+2024-05-01,Rio Grande do Norte,Técnico de contabilidade,3,1,2,7912.0,3
+2024-06-01,Brasil,Auditor,402,422,-20,2453884.15,401
+2024-06-01,Brasil,Auxiliar de contabilidade,6658,6194,464,15186735.78,6645
+2024-06-01,Brasil,Contador,3033,3222,-189,14986520.19,3013
+2024-06-01,Brasil,Perito contábil,12,14,-2,38028.02,12
+2024-06-01,Brasil,Técnico de contabilidade,186,197,-11,616208.91,184
+2024-06-01,Nordeste,Auditor,27,21,6,117159.85,27
+2024-06-01,Nordeste,Auxiliar de contabilidade,849,698,151,1600206.43,845
+2024-06-01,Nordeste,Contador,334,334,0,1208380.11,330
+2024-06-01,Nordeste,Perito contábil,0,2,-2,0.0,0
+2024-06-01,Nordeste,Técnico de contabilidade,29,21,8,67029.1,29
+2024-06-01,Rio Grande do Norte,Auditor,1,0,1,1560.0,1
+2024-06-01,Rio Grande do Norte,Auxiliar de contabilidade,47,31,16,89804.53,47
+2024-06-01,Rio Grande do Norte,Contador,19,16,3,51655.58,19
+2024-06-01,Rio Grande do Norte,Técnico de contabilidade,3,2,1,7912.0,3
+2024-07-01,Brasil,Auditor,424,485,-61,2311784.34,420
+2024-07-01,Brasil,Auxiliar de contabilidade,6956,6469,487,15706468.26,6939
+2024-07-01,Brasil,Contador,3290,3217,73,16495651.96,3272
+2024-07-01,Brasil,Perito contábil,14,9,5,53596.87,14
+2024-07-01,Brasil,Técnico de contabilidade,176,182,-6,624379.27,172
+2024-07-01,Nordeste,Auditor,36,45,-9,134407.68,36
+2024-07-01,Nordeste,Auxiliar de contabilidade,907,790,117,1654242.42,904
+2024-07-01,Nordeste,Contador,336,349,-13,1197990.32,334
+2024-07-01,Nordeste,Técnico de contabilidade,22,17,5,54051.02,22
+2024-07-01,Rio Grande do Norte,Auxiliar de contabilidade,33,47,-14,68133.62,33
+2024-07-01,Rio Grande do Norte,Contador,21,22,-1,76993.57,21
+2024-07-01,Rio Grande do Norte,Técnico de contabilidade,1,1,0,5000.0,1
+2024-08-01,Brasil,Auditor,401,422,-21,2144865.9,401
+2024-08-01,Brasil,Auxiliar de contabilidade,7021,6544,477,15817583.62,6999
+2024-08-01,Brasil,Contador,3132,3501,-369,15361236.81,3115
+2024-08-01,Brasil,Perito contábil,10,15,-5,62728.84,10
+2024-08-01,Brasil,Técnico de contabilidade,167,174,-7,613880.14,164
+2024-08-01,Nordeste,Auditor,24,30,-6,89218.55,24
+2024-08-01,Nordeste,Auxiliar de contabilidade,907,765,142,1654986.97,903
+2024-08-01,Nordeste,Contador,316,380,-64,1155688.96,314
+2024-08-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2024-08-01,Nordeste,Técnico de contabilidade,20,17,3,61376.16,20
+2024-08-01,Rio Grande do Norte,Auditor,0,1,-1,0.0,0
+2024-08-01,Rio Grande do Norte,Auxiliar de contabilidade,53,33,20,101147.05,53
+2024-08-01,Rio Grande do Norte,Contador,16,22,-6,61717.96,16
+2024-08-01,Rio Grande do Norte,Técnico de contabilidade,1,0,1,4500.0,1
+2024-09-01,Brasil,Auditor,472,397,75,2543199.97,470
+2024-09-01,Brasil,Auxiliar de contabilidade,6756,6050,706,15423305.81,6734
+2024-09-01,Brasil,Contador,2941,3207,-266,14448747.88,2920
+2024-09-01,Brasil,Perito contábil,11,13,-2,56443.24,11
+2024-09-01,Brasil,Técnico de contabilidade,147,166,-19,526707.89,146
+2024-09-01,Nordeste,Auditor,42,29,13,173774.26,41
+2024-09-01,Nordeste,Auxiliar de contabilidade,824,681,143,1528699.24,822
+2024-09-01,Nordeste,Contador,309,363,-54,1052289.81,307
+2024-09-01,Nordeste,Perito contábil,1,1,0,8726.9,1
+2024-09-01,Nordeste,Técnico de contabilidade,10,18,-8,30481.44,10
+2024-09-01,Rio Grande do Norte,Auditor,3,0,3,4178.0,2
+2024-09-01,Rio Grande do Norte,Auxiliar de contabilidade,34,38,-4,64077.6,34
+2024-09-01,Rio Grande do Norte,Contador,19,19,0,55502.4,19
+2024-09-01,Rio Grande do Norte,Técnico de contabilidade,0,1,-1,0.0,0
+2024-10-01,Brasil,Auditor,475,476,-1,2582234.73,473
+2024-10-01,Brasil,Auxiliar de contabilidade,7143,6583,560,16522854.37,7124
+2024-10-01,Brasil,Contador,3002,3278,-276,15170828.09,2978
+2024-10-01,Brasil,Perito contábil,12,12,0,54962.33,11
+2024-10-01,Brasil,Técnico de contabilidade,169,171,-2,653516.47,167
+2024-10-01,Nordeste,Auditor,36,37,-1,153746.79,36
+2024-10-01,Nordeste,Auxiliar de contabilidade,861,786,75,1619216.76,857
+2024-10-01,Nordeste,Contador,288,368,-80,1018751.19,287
+2024-10-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2024-10-01,Nordeste,Técnico de contabilidade,15,26,-11,43011.77,15
+2024-10-01,Rio Grande do Norte,Auditor,0,1,-1,0.0,0
+2024-10-01,Rio Grande do Norte,Auxiliar de contabilidade,53,28,25,94491.94,53
+2024-10-01,Rio Grande do Norte,Contador,7,15,-8,26082.1,7
+2024-10-01,Rio Grande do Norte,Técnico de contabilidade,0,4,-4,0.0,0
+2024-11-01,Brasil,Auditor,414,444,-30,2231032.41,413
+2024-11-01,Brasil,Auxiliar de contabilidade,5766,5522,244,13361903.83,5754
+2024-11-01,Brasil,Contador,2707,2975,-268,14112816.48,2688
+2024-11-01,Brasil,Perito contábil,21,6,15,102023.39,21
+2024-11-01,Brasil,Técnico de contabilidade,133,158,-25,458976.44,131
+2024-11-01,Nordeste,Auditor,30,28,2,119843.75,30
+2024-11-01,Nordeste,Auxiliar de contabilidade,774,693,81,1450318.74,771
+2024-11-01,Nordeste,Contador,267,312,-45,1015066.6,265
+2024-11-01,Nordeste,Perito contábil,1,0,1,1823.0,1
+2024-11-01,Nordeste,Técnico de contabilidade,14,26,-12,40695.33,14
+2024-11-01,Rio Grande do Norte,Auditor,4,0,4,8499.77,4
+2024-11-01,Rio Grande do Norte,Auxiliar de contabilidade,36,42,-6,65843.63,36
+2024-11-01,Rio Grande do Norte,Contador,17,23,-6,48347.39,16
+2024-11-01,Rio Grande do Norte,Técnico de contabilidade,3,1,2,7500.0,3
+2024-12-01,Brasil,Auditor,288,400,-112,1591434.02,284
+2024-12-01,Brasil,Auxiliar de contabilidade,4006,5256,-1250,9160075.68,3996
+2024-12-01,Brasil,Contador,1954,2747,-793,9977654.98,1935
+2024-12-01,Brasil,Perito contábil,10,8,2,49248.32,10
+2024-12-01,Brasil,Técnico de contabilidade,91,154,-63,357734.14,89
+2024-12-01,Nordeste,Auditor,34,20,14,120420.37,34
+2024-12-01,Nordeste,Auxiliar de contabilidade,562,701,-139,1059171.81,560
+2024-12-01,Nordeste,Contador,213,307,-94,726763.41,213
+2024-12-01,Nordeste,Perito contábil,1,0,1,1485.0,1
+2024-12-01,Nordeste,Técnico de contabilidade,13,21,-8,33464.64,13
+2024-12-01,Rio Grande do Norte,Auditor,1,0,1,1460.0,1
+2024-12-01,Rio Grande do Norte,Auxiliar de contabilidade,32,40,-8,55619.41,32
+2024-12-01,Rio Grande do Norte,Contador,17,29,-12,75555.83,17
+2024-12-01,Rio Grande do Norte,Técnico de contabilidade,0,2,-2,0.0,0
+2025-01-01,Brasil,Auditor,488,511,-23,2696335.05,482
+2025-01-01,Brasil,Auxiliar de contabilidade,8642,6698,1944,19936425.32,8615
+2025-01-01,Brasil,Contador,3335,3439,-104,16057073.9,3295
+2025-01-01,Brasil,Perito contábil,16,7,9,86790.83,16
+2025-01-01,Brasil,Técnico de contabilidade,185,197,-12,665908.29,184
+2025-01-01,Nordeste,Auditor,45,52,-7,190065.33,44
+2025-01-01,Nordeste,Auxiliar de contabilidade,1155,922,233,2182231.08,1149
+2025-01-01,Nordeste,Contador,424,477,-53,1473873.89,421
+2025-01-01,Nordeste,Perito contábil,1,0,1,5100.0,1
+2025-01-01,Nordeste,Técnico de contabilidade,27,29,-2,63351.74,27
+2025-01-01,Rio Grande do Norte,Auditor,2,1,1,4497.47,1
+2025-01-01,Rio Grande do Norte,Auxiliar de contabilidade,52,53,-1,100804.28,52
+2025-01-01,Rio Grande do Norte,Contador,22,32,-10,60366.36,21
+2025-01-01,Rio Grande do Norte,Técnico de contabilidade,3,3,0,6309.0,3
+2025-02-01,Brasil,Auditor,462,463,-1,2546271.6,460
+2025-02-01,Brasil,Auxiliar de contabilidade,8398,7139,1259,19465250.62,8379
+2025-02-01,Brasil,Contador,3301,3533,-232,15995437.23,3279
+2025-02-01,Brasil,Perito contábil,12,7,5,55744.58,12
+2025-02-01,Brasil,Técnico de contabilidade,186,212,-26,671835.82,185
+2025-02-01,Nordeste,Auditor,33,33,0,101525.7,33
+2025-02-01,Nordeste,Auxiliar de contabilidade,1125,884,241,2148253.88,1123
+2025-02-01,Nordeste,Contador,345,372,-27,1299311.49,341
+2025-02-01,Nordeste,Técnico de contabilidade,19,30,-11,46491.21,18
+2025-02-01,Rio Grande do Norte,Auditor,0,2,-2,0.0,0
+2025-02-01,Rio Grande do Norte,Auxiliar de contabilidade,61,33,28,114215.85,61
+2025-02-01,Rio Grande do Norte,Contador,21,22,-1,64645.26,20
+2025-02-01,Rio Grande do Norte,Técnico de contabilidade,1,3,-2,2500.0,1
+2025-03-01,Brasil,Auditor,397,490,-93,2289336.76,396
+2025-03-01,Brasil,Auxiliar de contabilidade,7481,6994,487,17412734.41,7452
+2025-03-01,Brasil,Contador,3109,3483,-374,15484317.71,3088
+2025-03-01,Brasil,Perito contábil,6,9,-3,40568.68,6
+2025-03-01,Brasil,Técnico de contabilidade,172,226,-54,668040.09,171
+2025-03-01,Nordeste,Auditor,27,33,-6,150276.02,27
+2025-03-01,Nordeste,Auxiliar de contabilidade,927,833,94,1775896.47,923
+2025-03-01,Nordeste,Contador,316,329,-13,1097944.44,316
+2025-03-01,Nordeste,Técnico de contabilidade,15,21,-6,46772.35,15
+2025-03-01,Rio Grande do Norte,Auditor,1,1,0,1650.0,1
+2025-03-01,Rio Grande do Norte,Auxiliar de contabilidade,56,46,10,110326.46,56
+2025-03-01,Rio Grande do Norte,Contador,10,15,-5,20962.38,10
+2025-03-01,Rio Grande do Norte,Técnico de contabilidade,0,2,-2,0.0,0
+2025-04-01,Brasil,Auditor,413,490,-77,2376583.85,412
+2025-04-01,Brasil,Auxiliar de contabilidade,7794,6580,1214,18538892.55,7777
+2025-04-01,Brasil,Contador,3459,3466,-7,17552373.24,3442
+2025-04-01,Brasil,Perito contábil,21,9,12,107454.2,21
+2025-04-01,Brasil,Técnico de contabilidade,186,185,1,685510.22,184
+2025-04-01,Nordeste,Auditor,35,42,-7,157287.28,35
+2025-04-01,Nordeste,Auxiliar de contabilidade,1046,759,287,2039410.88,1040
+2025-04-01,Nordeste,Contador,377,362,15,1341372.7,375
+2025-04-01,Nordeste,Perito contábil,4,1,3,10200.0,4
+2025-04-01,Nordeste,Técnico de contabilidade,19,19,0,39977.13,19
+2025-04-01,Rio Grande do Norte,Auditor,2,0,2,5858.0,2
+2025-04-01,Rio Grande do Norte,Auxiliar de contabilidade,64,40,24,129850.8,64
+2025-04-01,Rio Grande do Norte,Contador,15,18,-3,71680.55,15
+2025-04-01,Rio Grande do Norte,Técnico de contabilidade,2,1,1,5100.0,2
+2025-05-01,Brasil,Auditor,391,475,-84,2303603.35,388
+2025-05-01,Brasil,Auxiliar de contabilidade,6865,6761,104,16347139.76,6837
+2025-05-01,Brasil,Contador,3182,3484,-302,16146149.69,3166
+2025-05-01,Brasil,Perito contábil,11,17,-6,37086.0,11
+2025-05-01,Brasil,Técnico de contabilidade,153,201,-48,575602.84,151
+2025-05-01,Nordeste,Auditor,34,31,3,105879.05,34
+2025-05-01,Nordeste,Auxiliar de contabilidade,866,812,54,1694490.15,863
+2025-05-01,Nordeste,Contador,341,376,-35,1211063.57,340
+2025-05-01,Nordeste,Perito contábil,2,2,0,3318.0,2
+2025-05-01,Nordeste,Técnico de contabilidade,16,29,-13,39324.34,16
+2025-05-01,Rio Grande do Norte,Auditor,1,3,-2,2900.0,1
+2025-05-01,Rio Grande do Norte,Auxiliar de contabilidade,54,36,18,104596.14,54
+2025-05-01,Rio Grande do Norte,Contador,12,19,-7,30231.91,12
+2025-05-01,Rio Grande do Norte,Técnico de contabilidade,0,4,-4,0.0,0
+2025-06-01,Brasil,Auditor,389,435,-46,2422019.38,387
+2025-06-01,Brasil,Auxiliar de contabilidade,6840,6256,584,16443592.76,6807
+2025-06-01,Brasil,Contador,3158,3505,-347,16726559.2,3136
+2025-06-01,Brasil,Perito contábil,13,10,3,62355.28,13
+2025-06-01,Brasil,Técnico de contabilidade,163,193,-30,608798.8,162
+2025-06-01,Nordeste,Auditor,22,29,-7,106971.62,22
+2025-06-01,Nordeste,Auxiliar de contabilidade,884,742,142,1679521.49,876
+2025-06-01,Nordeste,Contador,303,362,-59,1098085.34,301
+2025-06-01,Nordeste,Perito contábil,1,1,0,1823.0,1
+2025-06-01,Nordeste,Técnico de contabilidade,24,20,4,65900.72,24
+2025-06-01,Rio Grande do Norte,Auxiliar de contabilidade,55,44,11,109342.39,55
+2025-06-01,Rio Grande do Norte,Contador,14,26,-12,43487.06,14
+2025-06-01,Rio Grande do Norte,Técnico de contabilidade,1,0,1,3500.0,1
+2025-07-01,Brasil,Auditor,428,490,-62,2480769.31,426
+2025-07-01,Brasil,Auxiliar de contabilidade,7184,6623,561,17239344.65,7165
+2025-07-01,Brasil,Contador,3342,3503,-161,17046558.65,3310
+2025-07-01,Brasil,Perito contábil,14,12,2,70758.32,14
+2025-07-01,Brasil,Técnico de contabilidade,142,204,-62,612108.86,141
+2025-07-01,Nordeste,Auditor,30,40,-10,101850.35,30
+2025-07-01,Nordeste,Auxiliar de contabilidade,923,863,60,1887193.84,922
+2025-07-01,Nordeste,Contador,359,369,-10,1296786.97,352
+2025-07-01,Nordeste,Perito contábil,2,1,1,8300.0,2
+2025-07-01,Nordeste,Técnico de contabilidade,11,26,-15,32798.22,11
+2025-07-01,Rio Grande do Norte,Auditor,0,1,-1,0.0,0
+2025-07-01,Rio Grande do Norte,Auxiliar de contabilidade,35,37,-2,69992.4,35
+2025-07-01,Rio Grande do Norte,Contador,26,19,7,63186.93,21
+2025-07-01,Rio Grande do Norte,Perito contábil,1,0,1,2000.0,1
+2025-07-01,Rio Grande do Norte,Técnico de contabilidade,1,4,-3,5000.0,1
+2025-08-01,Brasil,Auditor,408,512,-104,2412620.25,407
+2025-08-01,Brasil,Auxiliar de contabilidade,7041,6631,410,16967880.11,7023
+2025-08-01,Brasil,Contador,3230,3721,-491,17769341.78,3214
+2025-08-01,Brasil,Perito contábil,7,17,-10,30998.13,7
+2025-08-01,Brasil,Técnico de contabilidade,162,218,-56,656963.21,160
+2025-08-01,Nordeste,Auditor,26,40,-14,100285.11,26
+2025-08-01,Nordeste,Auxiliar de contabilidade,980,884,96,1962047.33,977
+2025-08-01,Nordeste,Contador,327,435,-108,1354434.41,327
+2025-08-01,Nordeste,Perito contábil,1,1,0,3500.0,1
+2025-08-01,Nordeste,Técnico de contabilidade,20,28,-8,49980.74,20
+2025-08-01,Rio Grande do Norte,Auxiliar de contabilidade,47,45,2,93151.11,47
+2025-08-01,Rio Grande do Norte,Contador,18,26,-8,63273.27,18
+2025-08-01,Rio Grande do Norte,Técnico de contabilidade,2,2,0,6946.8,2
+2025-09-01,Brasil,Auditor,504,436,68,2819214.61,504
+2025-09-01,Brasil,Auxiliar de contabilidade,7136,6459,677,17537844.66,7121
+2025-09-01,Brasil,Contador,3442,3402,40,18252438.85,3412
+2025-09-01,Brasil,Perito contábil,13,10,3,49042.7,13
+2025-09-01,Brasil,Técnico de contabilidade,166,161,5,644592.78,165
+2025-09-01,Nordeste,Auditor,31,34,-3,141435.62,31
+2025-09-01,Nordeste,Auxiliar de contabilidade,1040,832,208,2063255.8,1040
+2025-09-01,Nordeste,Contador,372,349,23,1371900.63,370
+2025-09-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2025-09-01,Nordeste,Técnico de contabilidade,13,16,-3,32809.7,13
+2025-09-01,Rio Grande do Norte,Auditor,3,1,2,4554.0,3
+2025-09-01,Rio Grande do Norte,Auxiliar de contabilidade,59,54,5,120962.52,59
+2025-09-01,Rio Grande do Norte,Contador,28,16,12,92247.88,28
+2025-09-01,Rio Grande do Norte,Técnico de contabilidade,2,2,0,7300.0,2
+2025-10-01,Brasil,Auditor,453,459,-6,2553637.67,453
+2025-10-01,Brasil,Auxiliar de contabilidade,6830,6778,52,16731247.13,6811
+2025-10-01,Brasil,Contador,3126,3728,-602,17346317.13,3110
+2025-10-01,Brasil,Perito contábil,15,14,1,69602.31,14
+2025-10-01,Brasil,Técnico de contabilidade,146,196,-50,584017.03,145
+2025-10-01,Nordeste,Auditor,36,33,3,134713.67,36
+2025-10-01,Nordeste,Auxiliar de contabilidade,919,858,61,1810857.68,917
+2025-10-01,Nordeste,Contador,345,425,-80,1272546.73,342
+2025-10-01,Nordeste,Perito contábil,0,1,-1,0.0,0
+2025-10-01,Nordeste,Técnico de contabilidade,12,19,-7,29286.21,12
+2025-10-01,Rio Grande do Norte,Auditor,1,2,-1,4108.83,1
+2025-10-01,Rio Grande do Norte,Auxiliar de contabilidade,49,43,6,96334.73,49
+2025-10-01,Rio Grande do Norte,Contador,15,20,-5,46042.74,15
+2025-10-01,Rio Grande do Norte,Técnico de contabilidade,2,2,0,6700.0,2
+2025-11-01,Brasil,Auditor,353,430,-77,2140889.19,353
+2025-11-01,Brasil,Auxiliar de contabilidade,5913,5463,450,14952154.47,5900
+2025-11-01,Brasil,Contador,2918,3044,-126,15630009.96,2904
+2025-11-01,Brasil,Perito contábil,14,11,3,53730.87,14
+2025-11-01,Brasil,Técnico de contabilidade,115,168,-53,474832.29,115
+2025-11-01,Nordeste,Auditor,27,39,-12,119236.37,27
+2025-11-01,Nordeste,Auxiliar de contabilidade,827,681,146,1656258.91,824
+2025-11-01,Nordeste,Contador,312,317,-5,1191811.62,311
+2025-11-01,Nordeste,Perito contábil,1,3,-2,2700.0,1
+2025-11-01,Nordeste,Técnico de contabilidade,12,16,-4,38426.0,12
+2025-11-01,Rio Grande do Norte,Auditor,1,0,1,1518.0,1
+2025-11-01,Rio Grande do Norte,Auxiliar de contabilidade,38,36,2,71061.36,38
+2025-11-01,Rio Grande do Norte,Contador,11,14,-3,55210.78,11
+2025-11-01,Rio Grande do Norte,Perito contábil,0,1,-1,0.0,0
+2025-11-01,Rio Grande do Norte,Técnico de contabilidade,1,1,0,2600.0,1
+2025-12-01,Brasil,Auditor,297,398,-101,1850336.95,296
+2025-12-01,Brasil,Auxiliar de contabilidade,3980,5249,-1269,9826054.2,3969
+2025-12-01,Brasil,Contador,2011,2889,-878,11266364.19,2002
+2025-12-01,Brasil,Perito contábil,7,12,-5,58353.95,7
+2025-12-01,Brasil,Técnico de contabilidade,96,159,-63,409083.61,95
+2025-12-01,Nordeste,Auditor,26,26,0,99393.62,26
+2025-12-01,Nordeste,Auxiliar de contabilidade,609,697,-88,1226385.07,607
+2025-12-01,Nordeste,Contador,235,311,-76,916134.3,235
+2025-12-01,Nordeste,Técnico de contabilidade,10,17,-7,33361.28,9
+2025-12-01,Rio Grande do Norte,Auxiliar de contabilidade,37,39,-2,75265.55,37
+2025-12-01,Rio Grande do Norte,Contador,11,15,-4,28872.44,11
+2025-12-01,Rio Grande do Norte,Técnico de contabilidade,1,3,-2,3400.0,1
+2026-01-01,Brasil,Auditor,438,446,-8,2603390.52,432
+2026-01-01,Brasil,Auxiliar de contabilidade,8734,6746,1988,21509314.17,8706
+2026-01-01,Brasil,Contador,3533,3515,18,18379981.83,3482
+2026-01-01,Brasil,Perito contábil,11,7,4,44517.28,11
+2026-01-01,Brasil,Técnico de contabilidade,176,188,-12,689797.61,176
+2026-01-01,Nordeste,Auditor,28,43,-15,116012.84,28
+2026-01-01,Nordeste,Auxiliar de contabilidade,1249,897,352,2529641.73,1246
+2026-01-01,Nordeste,Contador,407,424,-17,1539265.45,407
+2026-01-01,Nordeste,Perito contábil,1,0,1,4500.0,1
+2026-01-01,Nordeste,Técnico de contabilidade,25,30,-5,58614.31,25
+2026-01-01,Rio Grande do Norte,Auditor,0,3,-3,0.0,0
+2026-01-01,Rio Grande do Norte,Auxiliar de contabilidade,70,53,17,139735.37,70
+2026-01-01,Rio Grande do Norte,Contador,26,17,9,109237.24,26
+2026-01-01,Rio Grande do Norte,Técnico de contabilidade,3,2,1,7308.79,3
+2026-02-01,Brasil,Auditor,668,475,193,2977645.85,665
+2026-02-01,Brasil,Auxiliar de contabilidade,8238,7204,1034,20699643.31,8218
+2026-02-01,Brasil,Contador,3310,3718,-408,16616233.49,3281
+2026-02-01,Brasil,Perito contábil,12,9,3,46988.57,12
+2026-02-01,Brasil,Técnico de contabilidade,168,199,-31,644595.51,167
+2026-02-01,Nordeste,Auditor,27,38,-11,86478.33,26
+2026-02-01,Nordeste,Auxiliar de contabilidade,1029,894,135,2116484.26,1027
+2026-02-01,Nordeste,Contador,368,398,-30,1321133.54,367
+2026-02-01,Nordeste,Perito contábil,1,2,-1,1816.18,1
+2026-02-01,Nordeste,Técnico de contabilidade,24,22,2,65872.05,24
+2026-02-01,Rio Grande do Norte,Auditor,1,2,-1,0.0,0
+2026-02-01,Rio Grande do Norte,Auxiliar de contabilidade,53,37,16,105733.79,53
+2026-02-01,Rio Grande do Norte,Contador,15,13,2,49527.29,15
+2026-03-01,Brasil,Auditor,1527,763,764,4895940.7,1524
+2026-03-01,Brasil,Auxiliar de contabilidade,9422,7847,1575,23689444.59,9404
+2026-03-01,Brasil,Contador,3777,4078,-301,19293244.24,3764
+2026-03-01,Brasil,Perito contábil,13,17,-4,64917.91,13
+2026-03-01,Brasil,Técnico de contabilidade,216,239,-23,860754.62,214
+2026-03-01,Nordeste,Auditor,43,36,7,202171.01,43
+2026-03-01,Nordeste,Auxiliar de contabilidade,1252,923,329,2571715.17,1246
+2026-03-01,Nordeste,Contador,451,453,-2,1714621.93,450
+2026-03-01,Nordeste,Perito contábil,1,0,1,3600.0,1
+2026-03-01,Nordeste,Técnico de contabilidade,22,20,2,63411.87,22
+2026-03-01,Rio Grande do Norte,Auxiliar de contabilidade,73,50,23,149989.52,72
+2026-03-01,Rio Grande do Norte,Contador,20,28,-8,78314.66,20
+2026-03-01,Rio Grande do Norte,Técnico de contabilidade,0,2,-2,0.0,0
+2026-04-01,Brasil,Auditor,825,1270,-445,3645865.83,823
+2026-04-01,Brasil,Auxiliar de contabilidade,8062,7524,538,20469545.35,8045
+2026-04-01,Brasil,Contador,3634,4008,-374,19284828.79,3618
+2026-04-01,Brasil,Perito contábil,11,17,-6,55353.0,11
+2026-04-01,Brasil,Técnico de contabilidade,192,214,-22,868201.53,192
+2026-04-01,Nordeste,Auditor,41,35,6,158416.71,40
+2026-04-01,Nordeste,Auxiliar de contabilidade,1039,916,123,2110615.77,1037
+2026-04-01,Nordeste,Contador,407,461,-54,1571349.93,403
+2026-04-01,Nordeste,Técnico de contabilidade,24,19,5,71753.38,24
+2026-04-01,Rio Grande do Norte,Auditor,1,0,1,10715.0,1
+2026-04-01,Rio Grande do Norte,Auxiliar de contabilidade,42,46,-4,87495.37,42
+2026-04-01,Rio Grande do Norte,Contador,21,24,-3,72460.43,21
+2026-04-01,Rio Grande do Norte,Técnico de contabilidade,1,1,0,2200.0,1
+2026-05-01,Brasil,Auditor,390,866,-476,2477192.1,389
+2026-05-01,Brasil,Auxiliar de contabilidade,7344,6939,405,18778055.74,7324
+2026-05-01,Brasil,Contador,3492,3777,-285,18842276.66,3484
+2026-05-01,Brasil,Perito contábil,13,14,-1,53306.04,13
+2026-05-01,Brasil,Técnico de contabilidade,143,167,-24,579570.82,143
+2026-05-01,Nordeste,Auditor,27,21,6,149164.32,27
+2026-05-01,Nordeste,Auxiliar de contabilidade,1079,902,177,2218005.2,1075
+2026-05-01,Nordeste,Contador,357,391,-34,1466762.54,352
+2026-05-01,Nordeste,Perito contábil,1,2,-1,3000.0,1
+2026-05-01,Nordeste,Técnico de contabilidade,18,17,1,45967.46,18
+2026-05-01,Rio Grande do Norte,Auxiliar de contabilidade,52,51,1,113578.53,52
+2026-05-01,Rio Grande do Norte,Contador,24,24,0,102465.39,23
+2026-05-01,Rio Grande do Norte,Técnico de contabilidade,1,1,0,3500.0,1
+2026-06-01,Brasil,Auditor,435,849,-414,2608327.88,434
+2026-06-01,Brasil,Auxiliar de contabilidade,7328,6921,407,18999744.46,7314
+2026-06-01,Brasil,Contador,3490,3810,-320,19565439.87,3479
+2026-06-01,Brasil,Perito contábil,7,10,-3,29036.38,7
+2026-06-01,Brasil,Técnico de contabilidade,181,169,12,748975.83,181
+2026-06-01,Nordeste,Auditor,24,36,-12,97113.67,24
+2026-06-01,Nordeste,Auxiliar de contabilidade,1045,883,162,2165803.21,1042
+2026-06-01,Nordeste,Contador,372,410,-38,1520434.21,370
+2026-06-01,Nordeste,Perito contábil,1,0,1,9200.0,1
+2026-06-01,Nordeste,Técnico de contabilidade,19,16,3,57026.83,19
+2026-06-01,Rio Grande do Norte,Auditor,1,1,0,2900.0,1
+2026-06-01,Rio Grande do Norte,Auxiliar de contabilidade,57,40,17,120310.27,56
+2026-06-01,Rio Grande do Norte,Contador,15,25,-10,46393.13,15
+2026-06-01,Rio Grande do Norte,Perito contábil,1,0,1,9200.0,1
+2026-06-01,Rio Grande do Norte,Técnico de contabilidade,3,4,-1,7020.0,3
+2026-07-01,Brasil,Auditor,384,501,-117,2364798.07,382
+2026-07-01,Brasil,Auxiliar de contabilidade,7547,7239,308,19514694.92,7526
+2026-07-01,Brasil,Contador,3401,3905,-504,18836399.25,3390
+2026-07-01,Brasil,Perito contábil,8,8,0,32150.0,8
+2026-07-01,Brasil,Técnico de contabilidade,165,185,-20,703155.96,163
+2026-07-01,Nordeste,Auditor,23,39,-16,94200.24,22
+2026-07-01,Nordeste,Auxiliar de contabilidade,1077,951,126,2240630.39,1070
+2026-07-01,Nordeste,Contador,366,420,-54,1445944.06,363
+2026-07-01,Nordeste,Técnico de contabilidade,17,19,-2,50117.44,16
+2026-07-01,Rio Grande do Norte,Auditor,0,1,-1,0.0,0
+2026-07-01,Rio Grande do Norte,Auxiliar de contabilidade,48,43,5,96030.64,47
+2026-07-01,Rio Grande do Norte,Contador,15,22,-7,54752.12,15
+2026-07-01,Rio Grande do Norte,Técnico de contabilidade,1,1,0,3000.0,1
+2026-08-01,Brasil,Auditor,372,470,-98,2183968.9,372
+2026-08-01,Brasil,Auxiliar de contabilidade,7574,6937,637,19657184.53,7550
+2026-08-01,Brasil,Contador,3675,3966,-291,20457300.78,3668
+2026-08-01,Brasil,Perito contábil,11,14,-3,39028.35,11
+2026-08-01,Brasil,Técnico de contabilidade,173,208,-35,700035.89,172
+2026-08-01,Nordeste,Auditor,32,44,-12,131424.97,32
+2026-08-01,Nordeste,Auxiliar de contabilidade,1172,941,231,2459389.48,1168
+2026-08-01,Nordeste,Contador,409,438,-29,1585300.67,406
+2026-08-01,Nordeste,Técnico de contabilidade,20,24,-4,56017.09,20
+2026-08-01,Rio Grande do Norte,Auditor,3,2,1,4863.0,3
+2026-08-01,Rio Grande do Norte,Auxiliar de contabilidade,64,42,22,131755.08,64
+2026-08-01,Rio Grande do Norte,Contador,19,30,-11,71921.17,19
+2026-08-01,Rio Grande do Norte,Técnico de contabilidade,2,1,1,5019.28,2
+2026-09-01,Brasil,Auditor,437,543,-106,2435347.2,436
+2026-09-01,Brasil,Auxiliar de contabilidade,7247,6961,286,19112653.43,7231
+2026-09-01,Brasil,Contador,3466,3599,-133,19583972.76,3459
+2026-09-01,Brasil,Perito contábil,17,17,0,73863.58,17
+2026-09-01,Brasil,Técnico de contabilidade,169,173,-4,702642.59,168
+2026-09-01,Nordeste,Auditor,26,28,-2,177867.57,26
+2026-09-01,Nordeste,Auxiliar de contabilidade,1047,882,165,2223007.86,1044
+2026-09-01,Nordeste,Contador,397,389,8,1519579.78,394
+2026-09-01,Nordeste,Perito contábil,1,1,0,5000.0,1
+2026-09-01,Nordeste,Técnico de contabilidade,16,21,-5,43829.7,15
+2026-09-01,Rio Grande do Norte,Auditor,0,2,-2,0.0,0
+2026-09-01,Rio Grande do Norte,Auxiliar de contabilidade,54,53,1,117251.4,54
+2026-09-01,Rio Grande do Norte,Contador,19,19,0,57462.82,19
+2026-09-01,Rio Grande do Norte,Técnico de contabilidade,4,2,2,12359.31,4

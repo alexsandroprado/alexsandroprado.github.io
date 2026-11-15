@@ -1,0 +1,505 @@
+# Publicações exibidas em publicacoes/index.qmd
+# Fonte: Currículo Lattes (atualizado em 25/08/2026) e Crossref (DOIs).
+#
+# Para incluir uma publicação, copie um item e preencha:
+#   title:      título do trabalho (texto simples)
+#   date:       ano no formato AAAA-01-01 (usado na ordenação)
+#   author:     autores em texto simples (usado na busca)
+#   autores:    autores no padrão ABNT, com o seu nome entre <strong></strong>
+#   veiculo:    periódico, livro ou evento no padrão ABNT, em HTML
+#   doi / path: DOI e link (opcionais)
+#   qualis:     estrato Qualis/CAPES 2021-2024 (opcional, só periódicos)
+#   nota:       observação curta, como prêmio ou "no prelo" (opcional)
+#   categories: [Artigo em periódico], [Capítulo de livro] ou [Trabalho em evento]
+
+- title: Poison pills e o gerenciamento de resultados por decisões operacionais no mercado acionário brasileiro
+  date: '2026-01-01'
+  author: SILVA, A. C.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; PRADO, A. G. S.; DUARTE, C. A. A.
+  autores: SILVA, A. C.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; <strong>PRADO, A. G. S.</strong>; DUARTE, C. A. A.
+  veiculo: <strong><em>Revista Evidenciação Contábil &amp; Finanças</em></strong>, 2026. No prelo
+  categories:
+  - Artigo em periódico
+  nota: Aceito para publicação
+- title: Family hands, greener firms? The effects of family management and ownership on ESG performance
+  date: '2026-01-01'
+  author: RIBEIRO, M. J. S.; AZEVEDO, Y. G. P.; PRADO, A. G. S.; PINHEIRO, A. B.
+  autores: RIBEIRO, M. J. S.; AZEVEDO, Y. G. P.; <strong>PRADO, A. G. S.</strong>; PINHEIRO, A. B.
+  veiculo: <strong><em>Business Strategy &amp; Development</em></strong>, v. 9, n. 2, 2026
+  categories:
+  - Artigo em periódico
+  doi: 10.1002/bsd2.70331
+  path: https://doi.org/10.1002/bsd2.70331
+  qualis: A1
+- title: Disclosure de transformação digital em companhias listadas na B3
+  date: '2026-01-01'
+  author: NASCIMENTO, M. N.; CIRNE, G. M. P.; PRADO, A. G. S.; AZEVEDO, Y. G. P.; FREIRE, K. P. S. O.
+  autores: NASCIMENTO, M. N.; CIRNE, G. M. P.; <strong>PRADO, A. G. S.</strong>; AZEVEDO, Y. G. P.; FREIRE, K. P. S. O.
+  veiculo: <strong><em>Revista Catarinense da Ciência Contábil</em></strong>, v. 25, e3641, 2026
+  categories:
+  - Artigo em periódico
+  doi: 10.16930/2237-766220263641
+  path: https://doi.org/10.16930/2237-766220263641
+  qualis: A3
+- title: 'The impact of the tax reform proposed by PEC 45/2019 on the accounting profession: perceptions and challenges'
+  date: '2026-01-01'
+  author: CHAVES, R. M. M.; PRADO, A. G. S.; MORAIS, M. A. O.; LIMA, C. T. A.; LIMA, J. L. A.
+  autores: CHAVES, R. M. M.; <strong>PRADO, A. G. S.</strong>; MORAIS, M. A. O.; LIMA, C. T. A.; LIMA, J. L. A.
+  veiculo: <strong><em>Artefactum</em></strong>, Rio de Janeiro, v. 25, e2977, 2026
+  categories:
+  - Artigo em periódico
+  qualis: A3
+- title: 'Índices financeiros e geração de valor: estudo no setor de energia elétrica brasileiro'
+  date: '2025-01-01'
+  author: QUEIROZ, B. F.; MORAIS, M. A. O.; PRADO, A. G. S.
+  autores: QUEIROZ, B. F.; MORAIS, M. A. O.; <strong>PRADO, A. G. S.</strong>
+  veiculo: <strong><em>Revista Paraense de Contabilidade</em></strong>, v. 10, p. 31-46, 2025
+  categories:
+  - Artigo em periódico
+  qualis: B3
+- title: 'Índice de Sustentabilidade Empresarial (ISE) e índices de rentabilidade: um estudo em empresas do setor de energia elétrica brasileiro'
+  date: '2025-01-01'
+  author: OLIVEIRA, F. I. B.; MORAIS, M. A. O.; PRADO, A. G. S.
+  autores: OLIVEIRA, F. I. B.; MORAIS, M. A. O.; <strong>PRADO, A. G. S.</strong>
+  veiculo: <strong><em>Revista de Administração e Contabilidade da FAT</em></strong>, v. 17, p. 1-16, 2025
+  categories:
+  - Artigo em periódico
+  qualis: B3
+- title: A influência da pandemia do coronavírus SARS-CoV-2 na complexidade da auditoria em companhias abertas brasileiras
+  date: '2025-01-01'
+  author: SOUSA, F. M.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; SILVA, M. C. G.; PRADO, A. G. S.
+  autores: SOUSA, F. M.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; SILVA, M. C. G.; <strong>PRADO, A. G. S.</strong>
+  veiculo: <strong><em>Contabilidade Gestão e Governança</em></strong>, v. 27, n. 3, p. 410-444, 2025
+  categories:
+  - Artigo em periódico
+  doi: 10.51341/cgg.v27i3.3274
+  path: https://doi.org/10.51341/cgg.v27i3.3274
+  qualis: A4
+- title: 'O impacto do Perse na recuperação do setor de eventos: empregos e salários pós-pandemia'
+  date: '2025-01-01'
+  author: PRADO, A. G. S.; RIBEIRO, A. W. A.; DUARTE, L. T. G.; SOUZA NETO, M. O.
+  autores: <strong>PRADO, A. G. S.</strong>; RIBEIRO, A. W. A.; DUARTE, L. T. G.; SOUZA NETO, M. O.
+  veiculo: <strong><em>Revista Brasileira de Contabilidade</em></strong>, v. LIV, p. 49-67, 2025
+  categories:
+  - Artigo em periódico
+  qualis: B3
+- title: Gerenciamento de resultado e impairment nas empresas brasileiras de capital aberto
+  date: '2024-01-01'
+  author: MORAIS, M. A. O.; GOMES, A. M.; PRADO, A. G. S.; MOTA, R. H. G.; MIRANDA, K. F.
+  autores: MORAIS, M. A. O.; GOMES, A. M.; <strong>PRADO, A. G. S.</strong>; MOTA, R. H. G.; MIRANDA, K. F.
+  veiculo: <strong><em>Revista Conhecimento Contábil</em></strong>, v. 14, p. 1-20, 2024
+  categories:
+  - Artigo em periódico
+  qualis: B3
+- title: 'A influência dos critérios ESG no desempenho dos indicadores econômico-financeiros: evidências e impactos'
+  date: '2024-01-01'
+  author: PRADO, A. G. S.; LEITE, J. R. C.; MORAIS, M. A. O.; LIMA, J. L. A.; MORAIS, L. N.; LIMA, C. T. A.; ALVES, A. G. S. D.; BATISTA JÚNIOR, A.
+  autores: <strong>PRADO, A. G. S.</strong>; LEITE, J. R. C.; MORAIS, M. A. O.; LIMA, J. L. A.; MORAIS, L. N.; LIMA, C. T. A.; ALVES, A. G. S. D.; BATISTA JÚNIOR, A.
+  veiculo: '<strong><em>Aracê: Direitos Humanos em Revista</em></strong>, v. 6, p. 18325-18348, 2024'
+  categories:
+  - Artigo em periódico
+  qualis: B1
+- title: 'Desempenho financeiro e governança: uma análise durante a pandemia da COVID-19 nas empresas listadas na B3'
+  date: '2024-01-01'
+  author: PRADO, A. G. S.; COSTA, J. N. O.; MORAIS, M. A. O.; LIMA, J. L. A.; MORAIS, L. N.; LIMA, C. T. A.; ALVES, A. G. S. D.; MOURA, R. R.
+  autores: <strong>PRADO, A. G. S.</strong>; COSTA, J. N. O.; MORAIS, M. A. O.; LIMA, J. L. A.; MORAIS, L. N.; LIMA, C. T. A.; ALVES, A. G. S. D.; MOURA, R. R.
+  veiculo: <strong><em>Caderno Pedagógico</em></strong>, Lajeado, v. 21, e12205, 2024
+  categories:
+  - Artigo em periódico
+  qualis: C
+- title: Discriminação salarial por gênero e raça na Paraíba e em João Pessoa
+  date: '2023-01-01'
+  author: PRADO, A. G. S.; SILVA, J. A.; FERREIRA, F. D. S.; GOMES, T. G. P.; TORRES, V. S.; CAMPOS, R. H. C.
+  autores: <strong>PRADO, A. G. S.</strong>; SILVA, J. A.; FERREIRA, F. D. S.; GOMES, T. G. P.; TORRES, V. S.; CAMPOS, R. H. C.
+  veiculo: <strong><em>Revista de Economia Mackenzie</em></strong>, v. 20, p. 58-91, 2023
+  categories:
+  - Artigo em periódico
+  qualis: B2
+- title: Disclosure voluntário ambiental via Twitter das empresas listadas no IBrX-100
+  date: '2023-01-01'
+  author: LIMA, C. R. M.; SOUZA, J. M.; PRADO, A. G. S.
+  autores: LIMA, C. R. M.; SOUZA, J. M.; <strong>PRADO, A. G. S.</strong>
+  veiculo: <strong><em>Revista Evidenciação Contábil &amp; Finanças</em></strong>, v. 11, p. 101, 2023
+  categories:
+  - Artigo em periódico
+  qualis: A4
+- title: 'The priming effect on accounting fraud assessment: an experimental approach with accounting science students'
+  date: '2023-01-01'
+  author: FREITAS, E.; MOREIRA, C.; MACEDO, A.; OLIVEIRA, K.; PRADO, A. G. S.
+  autores: FREITAS, E.; MOREIRA, C.; MACEDO, A.; OLIVEIRA, K.; <strong>PRADO, A. G. S.</strong>
+  veiculo: <strong><em>Revista Gestão em Análise</em></strong>, v. 12, p. 115, 2023
+  categories:
+  - Artigo em periódico
+  qualis: B2
+- title: 'Rentabilidade no Novo Mercado de governança corporativa da B3: estudo com empresas do setor de construção civil'
+  date: '2023-01-01'
+  author: MOURA, T. L. S.; PRADO, A. G. S.; MORAIS, M. A. O.
+  autores: MOURA, T. L. S.; <strong>PRADO, A. G. S.</strong>; MORAIS, M. A. O.
+  veiculo: <strong><em>Revista Paraense de Contabilidade</em></strong>, v. 7, p. 57-72, 2023
+  categories:
+  - Artigo em periódico
+  qualis: B3
+- title: 'Teste de impairment: nível de disclosure das empresas de saneamento listadas na B3 conforme o CPC 01 (R1)'
+  date: '2023-01-01'
+  author: MORAIS, M. A. O.; PRADO, A. G. S.; MESQUITA, G. V.
+  autores: MORAIS, M. A. O.; <strong>PRADO, A. G. S.</strong>; MESQUITA, G. V.
+  veiculo: <strong><em>Revista de Informação Contábil</em></strong>, v. 17, p. 1-15, 2023
+  categories:
+  - Artigo em periódico
+  qualis: B3
+- title: Análise da estabilidade do emprego em João Pessoa (PB) em 2020
+  date: '2023-01-01'
+  author: TORRES, V. S.; ARAUJO, S. M.; SILVA, F. D.; PRADO, A. G. S.; SILVA, J. A.; GOMES, T. G. P.; CAMPOS, R. H. C.
+  autores: TORRES, V. S.; ARAUJO, S. M.; SILVA, F. D.; <strong>PRADO, A. G. S.</strong>; SILVA, J. A.; GOMES, T. G. P.; CAMPOS, R. H. C.
+  veiculo: <strong><em>Revista Eletrônica Documento/Monumento</em></strong>, v. 34, p. 176, 2023
+  categories:
+  - Artigo em periódico
+  qualis: B4
+- title: Impacto do CPC 06(R2) no preço das ações das empresas da Bovespa
+  date: '2023-01-01'
+  author: MORAIS, M. A. O.; PRADO, A. G. S.; MELO, L. G. G.; SILVA FILHO, R. B.; MARTINS, J. D. M.; MOTA, R. H. G.; MOURA, R. R.; BATISTA JÚNIOR, A.
+  autores: MORAIS, M. A. O.; <strong>PRADO, A. G. S.</strong>; MELO, L. G. G.; SILVA FILHO, R. B.; MARTINS, J. D. M.; MOTA, R. H. G.; MOURA, R. R.; BATISTA JÚNIOR, A.
+  veiculo: <strong><em>Revista de Gestão e Secretariado</em></strong>, v. 14, n. 3, p. 4134-4151, 2023
+  categories:
+  - Artigo em periódico
+  doi: 10.7769/gesec.v14i3.1873
+  path: https://doi.org/10.7769/gesec.v14i3.1873
+  qualis: C
+- title: 'Geração e distribuição do valor adicionado: análise das empresas listadas no ISE'
+  date: '2023-01-01'
+  author: SILVA, A. R.; MORAIS, M. A. O.; PRADO, A. G. S.; SOUZA, R. D. R.; MENEZES, E. R.; JESUS, S. M. S.; COSTA, Y. P. D.; REGO FILHO, F. S.
+  autores: SILVA, A. R.; MORAIS, M. A. O.; <strong>PRADO, A. G. S.</strong>; SOUZA, R. D. R.; MENEZES, E. R.; JESUS, S. M. S.; COSTA, Y. P. D.; REGO FILHO, F. S.
+  veiculo: <strong><em>Revista de Gestão e Secretariado</em></strong>, v. 14, n. 3, p. 4187-4205, 2023
+  categories:
+  - Artigo em periódico
+  doi: 10.7769/gesec.v14i3.1876
+  path: https://doi.org/10.7769/gesec.v14i3.1876
+  qualis: C
+- title: 'Contabilidade de custos: caso de uma indústria de temperos pauferrense'
+  date: '2023-01-01'
+  author: MORAIS, M. A. O.; PRADO, A. G. S.; MELO, L. G. G.; SILVA FILHO, R. B.; MARTINS, J. D. M.; MOTA, R. H. G.; MOURA, R. R.; BATISTA JÚNIOR, A.
+  autores: MORAIS, M. A. O.; <strong>PRADO, A. G. S.</strong>; MELO, L. G. G.; SILVA FILHO, R. B.; MARTINS, J. D. M.; MOTA, R. H. G.; MOURA, R. R.; BATISTA JÚNIOR, A.
+  veiculo: <strong><em>Revista de Gestão e Secretariado</em></strong>, v. 14, n. 3, p. 4206-4219, 2023
+  categories:
+  - Artigo em periódico
+  doi: 10.7769/gesec.v14i3.1877
+  path: https://doi.org/10.7769/gesec.v14i3.1877
+  qualis: C
+- title: 'Atributos de transação e pressupostos comportamentais: um estudo multicaso nas empresas exportadoras do segmento meloeiro no estado do Rio Grande do Norte'
+  date: '2023-01-01'
+  author: MELO, A. D.; SALES, L. B.; OLIVEIRA, A. M.; ALMEIDA, C. A. S.; LIMA, J. E. N. C.; MORAIS, M. A. O.; PRADO, A. G. S.
+  autores: MELO, A. D.; SALES, L. B.; OLIVEIRA, A. M.; ALMEIDA, C. A. S.; LIMA, J. E. N. C.; MORAIS, M. A. O.; <strong>PRADO, A. G. S.</strong>
+  veiculo: <strong><em>Revista Campo da História</em></strong>, v. 8, p. 366-388, 2023
+  categories:
+  - Artigo em periódico
+  qualis: C
+- title: Valor justo e sinalização nas empresas da B3 com nível de governança 1
+  date: '2022-01-01'
+  author: MORAIS, M. A. O.; GOMES, A. M.; PRADO, A. G. S.
+  autores: MORAIS, M. A. O.; GOMES, A. M.; <strong>PRADO, A. G. S.</strong>
+  veiculo: <strong><em>Revista Conhecimento Contábil</em></strong>, v. 13, p. 1-16, 2022
+  categories:
+  - Artigo em periódico
+  qualis: B3
+- title: Qualidade da informação ambiental versus rentabilidade de empresas do setor elétrico listadas no ISE
+  date: '2020-01-01'
+  author: SANTOS, A. L.; PRADO, A. G. S.; MOREIRA, C. S.; SOARES, J. M. M. V.
+  autores: SANTOS, A. L.; <strong>PRADO, A. G. S.</strong>; MOREIRA, C. S.; SOARES, J. M. M. V.
+  veiculo: '<strong><em>RACE: Revista de Administração, Contabilidade e Economia</em></strong>, v. 19, n. 3, p. 537-566, 2020'
+  categories:
+  - Artigo em periódico
+  doi: 10.18593/race.21762
+  path: https://doi.org/10.18593/race.21762
+  qualis: B1
+- title: 'Análise do disclosure ambiental das empresas listadas no Índice Carbono Eficiente (ICO2): participantes potencialmente poluidores'
+  date: '2020-01-01'
+  author: LIMA, A. T. F.; MOTA, R. H. G.; PRADO, A. G. S.; FEITOSA, M. O.
+  autores: LIMA, A. T. F.; MOTA, R. H. G.; <strong>PRADO, A. G. S.</strong>; FEITOSA, M. O.
+  veiculo: <strong><em>Revista de Contabilidade da UFBA</em></strong>, v. 14, p. 33-50, 2020
+  categories:
+  - Artigo em periódico
+  qualis: B3
+- title: 'Os conhecimentos básicos de contabilidade e áreas afins: um estudo nas universidades potiguares à luz do currículo mundial'
+  date: '2017-01-01'
+  author: FERREIRA, K. K. P. M.; MIRANDA, K. F.; RÊGO, T. F.; PRADO, A. G. S.
+  autores: FERREIRA, K. K. P. M.; MIRANDA, K. F.; RÊGO, T. F.; <strong>PRADO, A. G. S.</strong>
+  veiculo: <strong><em>Revista Gestão Universitária na América Latina (GUAL)</em></strong>, v. 10, n. 3, p. 248-271, 2017
+  categories:
+  - Artigo em periódico
+- title: Uma análise da mensuração e evidenciação de propriedades para investimento nas companhias brasileiras do setor de exploração de imóveis
+  date: '2013-01-01'
+  author: BATISTA, F. F.; PRADO, A. G. S.; MACHADO, M. R.; PAULO, E.
+  autores: BATISTA, F. F.; <strong>PRADO, A. G. S.</strong>; MACHADO, M. R.; PAULO, E.
+  veiculo: <strong><em>Revista Ambiente Contábil</em></strong>, v. 5, n. 1, p. 281-299, 2013
+  categories:
+  - Artigo em periódico
+  qualis: B1
+- title: 'Criatividade: diferencial para se alcançar o sucesso no empreendedorismo'
+  date: '2013-01-01'
+  author: PINHEIRO, F. F. G.; PRADO, A. G. S.; SILVA, G. R. A.; WICKBOLDT, L. A.
+  autores: PINHEIRO, F. F. G.; <strong>PRADO, A. G. S.</strong>; SILVA, G. R. A.; WICKBOLDT, L. A.
+  veiculo: <strong><em>Revista Polys</em></strong>, v. 2, n. 1, p. 34-62, 2013
+  categories:
+  - Artigo em periódico
+- title: Análise do processo de gestão de custos dos agentes que compõem a cadeia produtiva da cultura do sisal no estado da Paraíba
+  date: '2012-01-01'
+  author: CUNHA, M. C. F.; CAVALCANTE, P. R. N.; PRADO, A. G. S.; CUNHA E SILVA FILHO, A. C.
+  autores: CUNHA, M. C. F.; CAVALCANTE, P. R. N.; <strong>PRADO, A. G. S.</strong>; CUNHA E SILVA FILHO, A. C.
+  veiculo: <strong><em>Custos e @gronegócio On Line</em></strong>, v. 7, p. 61-92, 2012
+  categories:
+  - Artigo em periódico
+  qualis: B1
+- title: 'Convergência contábil no setor público: uma análise das percepções dos contadores municipais do estado da Paraíba'
+  date: '2012-01-01'
+  author: CUNHA E SILVA FILHO, A. C.; VENTURA, A. F. A.; MARTINS, V. G.; PONTES, L. F. A. G.; PRADO, A. G. S.; ECHTERNACHT, T. H. S.; ARAUJO, A. O.
+  autores: CUNHA E SILVA FILHO, A. C.; VENTURA, A. F. A.; MARTINS, V. G.; PONTES, L. F. A. G.; <strong>PRADO, A. G. S.</strong>; ECHTERNACHT, T. H. S.; ARAUJO, A. O.
+  veiculo: <strong><em>Revista do CCEI</em></strong>, v. 16, p. 137-156, 2012
+  categories:
+  - Artigo em periódico
+  qualis: B4
+- title: 'Geração e distribuição do valor adicionado: análise das empresas listadas no ISE (Índice de Sustentabilidade Empresarial)'
+  date: '2023-01-01'
+  author: PRADO, A. G. S.; MORAIS, M. A. O.; MELO, L. G. G.
+  autores: <strong>PRADO, A. G. S.</strong>; MORAIS, M. A. O.; MELO, L. G. G.
+  veiculo: '<em>In</em>: MORAIS, M. A. O. <em>et al.</em> (org.). <strong><em>Gestão empresarial e contabilidade</em></strong>. Mossoró: Edições UERN, 2023. p. 70-87'
+  categories:
+  - Capítulo de livro
+- title: 'Contabilidade de custos: caso de uma indústria de temperos pauferrense'
+  date: '2023-01-01'
+  author: MORAIS, M. A. O.; PRADO, A. G. S.; MELO, L. G. G.; SILVA FILHO, R. B.
+  autores: MORAIS, M. A. O.; <strong>PRADO, A. G. S.</strong>; MELO, L. G. G.; SILVA FILHO, R. B.
+  veiculo: '<em>In</em>: MORAIS, M. A. O. <em>et al.</em> (org.). <strong><em>Gestão empresarial e contabilidade</em></strong>. Mossoró: Edições UERN, 2023. p. 56-69'
+  categories:
+  - Capítulo de livro
+- title: Qualidade da informação ambiental versus rentabilidade de empresas do setor elétrico listadas no ISE
+  date: '2022-01-01'
+  author: SANTOS, A. L.; PRADO, A. G. S.; MOREIRA, C. S.; SOARES, J. M. M. V.; MORAIS, M. A. O.
+  autores: SANTOS, A. L.; <strong>PRADO, A. G. S.</strong>; MOREIRA, C. S.; SOARES, J. M. M. V.; MORAIS, M. A. O.
+  veiculo: '<em>In</em>: SENHORAS, E. M. (org.). <strong><em>Gestão da qualidade: agendas contemporâneas</em></strong>. Boa Vista: IOLE, 2022. p. 133-169'
+  categories:
+  - Capítulo de livro
+- title: Um estudo bibliométrico a respeito do uso dos custos como ferramenta para o planejamento, controle e apoio às decisões
+  date: '2021-01-01'
+  author: ALMEIDA, F. S.; RÊGO, T. F.; PRADO, A. G. S.; MORAIS, M. A. O.
+  autores: ALMEIDA, F. S.; RÊGO, T. F.; <strong>PRADO, A. G. S.</strong>; MORAIS, M. A. O.
+  veiculo: '<em>In</em>: CASTRO, A. C. (org.). <strong><em>Administração: princípios de administração e suas tendências</em></strong>: volume 2. 2. ed. Guarujá: Científica Digital, 2021. p. 420-433'
+  categories:
+  - Capítulo de livro
+- title: Uma análise empírica da volatilidade do retorno do boi gordo para o Brasil
+  date: '2020-01-01'
+  author: PRADO, A. G. S.; RODRIGUES, F. L.; OLIVEIRA, K. C.; LACERDA, M. A. D.
+  autores: <strong>PRADO, A. G. S.</strong>; RODRIGUES, F. L.; OLIVEIRA, K. C.; LACERDA, M. A. D.
+  veiculo: '<em>In</em>: <strong><em>O conhecimento científico na fronteira das diversas áreas da economia 2</em></strong>. [<em>S. l.</em>]: Atena Editora, 2020. p. 73-83'
+  categories:
+  - Capítulo de livro
+- title: Aplicação do modelo ARIMA à previsão de arrecadação de tributos federais
+  date: '2020-01-01'
+  author: OLIVEIRA, K. C.; RODRIGUES, F. L.; LACERDA, M. A. D.; PRADO, A. G. S.; MARQUES, F. R. V.
+  autores: OLIVEIRA, K. C.; RODRIGUES, F. L.; LACERDA, M. A. D.; <strong>PRADO, A. G. S.</strong>; MARQUES, F. R. V.
+  veiculo: '<em>In</em>: <strong><em>O conhecimento científico na fronteira das diversas áreas da economia 2</em></strong>. [<em>S. l.</em>]: Atena Editora, 2020. p. 1-15'
+  categories:
+  - Capítulo de livro
+- title: Uma análise do disclosure ambiental das empresas de energia elétrica com certificação ISO 14001 listadas no Índice de Sustentabilidade Empresarial
+  date: '2020-01-01'
+  author: COSTA, L. D. C.; PRADO, A. G. S.; RÊGO, T. F.; FILGUEIRA, P. J. G.; FEITOSA, M. O.
+  autores: COSTA, L. D. C.; <strong>PRADO, A. G. S.</strong>; RÊGO, T. F.; FILGUEIRA, P. J. G.; FEITOSA, M. O.
+  veiculo: '<em>In</em>: <strong><em>Sustentabilidade e responsabilidade social em foco</em></strong>: volume 15. Belo Horizonte: Poisson, 2020. p. 109-123'
+  categories:
+  - Capítulo de livro
+- title: Uma avaliação da gestão dos sistemas e tecnologias de informação em hospitais da cidade de João Pessoa
+  date: '2014-01-01'
+  author: PAIVA, S. B.; BALLONI, A. J.; CUNHA, M. C. F.; PRADO, A. G. S.
+  autores: PAIVA, S. B.; BALLONI, A. J.; CUNHA, M. C. F.; <strong>PRADO, A. G. S.</strong>
+  veiculo: '<em>In</em>: BRASIL. Ministério da Saúde. <strong><em>Por que GESITI?</em></strong> Gestão de sistemas e tecnologias da informação em hospitais: panorama, tendências e perspectivas em saúde.
+    Brasília: Ministério da Saúde, 2014. v. 1, p. 143-164'
+  categories:
+  - Capítulo de livro
+- title: 'Inovação verde e valor de mercado: evidências no contexto brasileiro'
+  date: '2026-01-01'
+  author: PRADO, A. G. S.; MORAIS, M. A. O.; VASCONCELOS, A. C.
+  autores: <strong>PRADO, A. G. S.</strong>; MORAIS, M. A. O.; VASCONCELOS, A. C.
+  veiculo: '<em>In</em>: USP INTERNATIONAL CONFERENCE IN ACCOUNTING, 26., 2026, São Paulo. <strong><em>Anais</em></strong> [...]. São Paulo: FEA/USP, 2026'
+  categories:
+  - Trabalho em evento
+- title: 'Adoção de artefatos gerenciais em micro e pequenas empresas: uma perspectiva da gestão informacional integrada de desempenho'
+  date: '2026-01-01'
+  author: SANTOS, A. N.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; PRADO, A. G. S.; SOUZA NETO, M. O.
+  autores: SANTOS, A. N.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; <strong>PRADO, A. G. S.</strong>; SOUZA NETO, M. O.
+  veiculo: '<em>In</em>: USP INTERNATIONAL CONFERENCE IN ACCOUNTING, 26., 2026, São Paulo. <strong><em>Anais</em></strong> [...]. São Paulo: FEA/USP, 2026'
+  categories:
+  - Trabalho em evento
+- title: 'O impacto da carga tributária na mortalidade de empresas brasileiras: uma revisão integrativa da literatura e proposição de agenda de pesquisa'
+  date: '2026-01-01'
+  author: SOUZA NETO, M. O.; CAVALCANTE, M. J. S.; MIRANDA, K. F.; PRADO, A. G. S.; AZEVEDO, Y. G. P.
+  autores: SOUZA NETO, M. O.; CAVALCANTE, M. J. S.; MIRANDA, K. F.; <strong>PRADO, A. G. S.</strong>; AZEVEDO, Y. G. P.
+  veiculo: '<em>In</em>: USP INTERNATIONAL CONFERENCE IN ACCOUNTING, 26., 2026, São Paulo. <strong><em>Anais</em></strong> [...]. São Paulo: FEA/USP, 2026'
+  categories:
+  - Trabalho em evento
+- title: 'A influência da divulgação ESG na rentabilidade: um estudo em empresas brasileiras de capital aberto'
+  date: '2025-01-01'
+  author: MORAIS, M. A. O.; CABRAL, A. C. A.; SANTOS, S. M.; PRADO, A. G. S.
+  autores: MORAIS, M. A. O.; CABRAL, A. C. A.; SANTOS, S. M.; <strong>PRADO, A. G. S.</strong>
+  veiculo: '<em>In</em>: CONFERÊNCIA SUL-AMERICANA DE CONTABILIDADE AMBIENTAL, 9., 2025, Fortaleza. <strong><em>Anais</em></strong> [...]. Fortaleza, 2025'
+  categories:
+  - Trabalho em evento
+- title: 'Discriminação salarial por gênero e raça: um estudo entre os administradores do Brasil'
+  date: '2024-01-01'
+  author: BANDEIRA, L. S. M.; PEDROSA, C. K. A.; PRADO, A. G. S.; NOBRE, L. H. N.
+  autores: BANDEIRA, L. S. M.; PEDROSA, C. K. A.; <strong>PRADO, A. G. S.</strong>; NOBRE, L. H. N.
+  veiculo: '<em>In</em>: SEMINÁRIOS EM ADMINISTRAÇÃO, 18., 2024, São Paulo. <strong><em>Anais</em></strong> [...]. São Paulo: FEA/USP, 2024'
+  categories:
+  - Trabalho em evento
+- title: Remuneração de executivos nos períodos pré e pós-pandemia da COVID-19
+  date: '2023-01-01'
+  author: VALE, J. V. F.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; PRADO, A. G. S.
+  autores: VALE, J. V. F.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; <strong>PRADO, A. G. S.</strong>
+  veiculo: '<em>In</em>: CONGRESSO NACIONAL DE ADMINISTRAÇÃO E CONTABILIDADE, 14., 2023, Rio de Janeiro. <strong><em>Anais</em></strong> [...]. Rio de Janeiro: UFRJ, 2023'
+  categories:
+  - Trabalho em evento
+- title: Relação do endividamento em decisões de short-termism nos clubes de futebol brasileiros
+  date: '2023-01-01'
+  author: SILVA, D. M. B.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; PRADO, A. G. S.
+  autores: SILVA, D. M. B.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; <strong>PRADO, A. G. S.</strong>
+  veiculo: '<em>In</em>: INTERNATIONAL CONFERENCE IN MANAGEMENT AND ACCOUNTING, 5., 2023. <strong><em>Anais</em></strong> [...]. 2023'
+  categories:
+  - Trabalho em evento
+- title: 'Desempenho environmental, social and governance (ESG) e desempenho da empresa: um estudo bibliométrico'
+  date: '2023-01-01'
+  author: BENTO, F. J. S.; NOBRE, F. C.; PRADO, A. G. S.; NOBRE, L. H. N.; PERLIN, A. P.
+  autores: BENTO, F. J. S.; NOBRE, F. C.; <strong>PRADO, A. G. S.</strong>; NOBRE, L. H. N.; PERLIN, A. P.
+  veiculo: '<em>In</em>: ENCONTRO INTERNACIONAL SOBRE GESTÃO EMPRESARIAL E MEIO AMBIENTE, 25., 2023, São Paulo. <strong><em>Anais</em></strong> [...]. São Paulo, 2023'
+  categories:
+  - Trabalho em evento
+- title: O nível de dependência dos municípios brasileiros de pequeno porte frente às transferências intergovernamentais
+  date: '2023-01-01'
+  author: JESUS, K. F.; XAVIER JUNIOR, A. E.; FREITAS, E. N.; PRADO, A. G. S.; MACEDO, A. F. P.
+  autores: JESUS, K. F.; XAVIER JUNIOR, A. E.; FREITAS, E. N.; <strong>PRADO, A. G. S.</strong>; MACEDO, A. F. P.
+  veiculo: '<em>In</em>: CONGRESSO VIRTUAL DE ADMINISTRAÇÃO, 20., 2023. <strong><em>Anais</em></strong> [...]. 2023'
+  categories:
+  - Trabalho em evento
+- title: O papel do contador na transformação da consciência sobre sustentabilidade nas empresas brasileiras
+  date: '2023-01-01'
+  author: BASTOS, M. F. L.; PRADO, A. G. S.
+  autores: BASTOS, M. F. L.; <strong>PRADO, A. G. S.</strong>
+  veiculo: '<em>In</em>: SEMINÁRIO INTERDISCIPLINAR EM COGNIÇÃO, TECNOLOGIAS E INSTITUIÇÕES, 5., 2023, Mossoró. <strong><em>Anais</em></strong> [...]. Mossoró, 2023'
+  categories:
+  - Trabalho em evento
+- title: Discriminação salarial em relação às pessoas com deficiência no mercado de trabalho contábil
+  date: '2023-01-01'
+  author: MAIA, F. A.; MORAIS, M. A. O.; PRADO, A. G. S.; REGO, K. M. N.; SOUZA, S. V. C.
+  autores: MAIA, F. A.; MORAIS, M. A. O.; <strong>PRADO, A. G. S.</strong>; REGO, K. M. N.; SOUZA, S. V. C.
+  veiculo: '<em>In</em>: SEMANA DO ADMINISTRADOR, 18.; ENCONTRO DE INICIAÇÃO CIENTÍFICA DO NEOP, 4., 2023, Pau dos Ferros. <strong><em>Anais</em></strong> [...]. Pau dos Ferros, 2023'
+  categories:
+  - Trabalho em evento
+- title: 'Índices financeiros e geração de valor: estudo no setor de energia elétrica brasileiro'
+  date: '2023-01-01'
+  author: QUEIROZ, B. F.; MORAIS, M. A. O.; PRADO, A. G. S.
+  autores: QUEIROZ, B. F.; MORAIS, M. A. O.; <strong>PRADO, A. G. S.</strong>
+  veiculo: '<em>In</em>: SEMANA DO ADMINISTRADOR, 18.; ENCONTRO DE INICIAÇÃO CIENTÍFICA DO NEOP, 4., 2023, Pau dos Ferros. <strong><em>Anais</em></strong> [...]. Pau dos Ferros, 2023'
+  categories:
+  - Trabalho em evento
+- title: 'Índice de Sustentabilidade Empresarial (ISE) e rentabilidade: estudo no setor de energia elétrica brasileiro'
+  date: '2023-01-01'
+  author: OLIVEIRA, F. I. B.; MORAIS, M. A. O.; PRADO, A. G. S.
+  autores: OLIVEIRA, F. I. B.; MORAIS, M. A. O.; <strong>PRADO, A. G. S.</strong>
+  veiculo: '<em>In</em>: SEMANA DO ADMINISTRADOR, 18.; ENCONTRO DE INICIAÇÃO CIENTÍFICA DO NEOP, 4., 2023, Pau dos Ferros. <strong><em>Anais</em></strong> [...]. Pau dos Ferros, 2023'
+  categories:
+  - Trabalho em evento
+- title: 'O ensino da contabilidade no curso de Administração: estudo em uma universidade pública potiguar'
+  date: '2023-01-01'
+  author: COSTA, L. A. N. N.; MORAIS, M. A. O.; PRADO, A. G. S.; REGO, K. M. N.; SOUZA, S. V. C.
+  autores: COSTA, L. A. N. N.; MORAIS, M. A. O.; <strong>PRADO, A. G. S.</strong>; REGO, K. M. N.; SOUZA, S. V. C.
+  veiculo: '<em>In</em>: SEMANA DO ADMINISTRADOR, 18.; ENCONTRO DE INICIAÇÃO CIENTÍFICA DO NEOP, 4., 2023, Pau dos Ferros. <strong><em>Anais</em></strong> [...]. Pau dos Ferros, 2023'
+  categories:
+  - Trabalho em evento
+- title: 'A influência do grau de eficiência orçamentária em relação ao Índice Firjan de Desenvolvimento Municipal (IFDM): um estudo nos municípios do Rio Grande do Norte'
+  date: '2022-01-01'
+  author: BEZERRA, D. M.; XAVIER JUNIOR, A. E.; MACEDO, A. F. P.; PRADO, A. G. S.; MEDEIROS, K. N.
+  autores: BEZERRA, D. M.; XAVIER JUNIOR, A. E.; MACEDO, A. F. P.; <strong>PRADO, A. G. S.</strong>; MEDEIROS, K. N.
+  veiculo: '<em>In</em>: CONGRESSO BRASILEIRO DE CUSTOS, 29., 2022, João Pessoa. <strong><em>Anais</em></strong> [...]. João Pessoa: ABCustos, 2022'
+  categories:
+  - Trabalho em evento
+- title: Discriminação salarial por gênero e raça na Paraíba e em João Pessoa
+  date: '2022-01-01'
+  author: PRADO, A. G. S.; SILVA, J. A.; GOMES, T. G. P.; CAMPOS, R. H. C.; FERREIRA, F. D. S.; TORRES, V. S.
+  autores: <strong>PRADO, A. G. S.</strong>; SILVA, J. A.; GOMES, T. G. P.; CAMPOS, R. H. C.; FERREIRA, F. D. S.; TORRES, V. S.
+  veiculo: '<em>In</em>: ENCONTRO NACIONAL DE ECONOMIA DO VALE DO AÇU, 2022, Assú. <strong><em>Anais</em></strong> [...]. Mossoró, 2022'
+  categories:
+  - Trabalho em evento
+- title: 'Geração e distribuição do valor adicionado: análise das empresas listadas no ISE'
+  date: '2022-01-01'
+  author: SILVA, A. R.; PRADO, A. G. S.; MORAIS, M. A. O.; MELO, L. G. G.
+  autores: SILVA, A. R.; <strong>PRADO, A. G. S.</strong>; MORAIS, M. A. O.; MELO, L. G. G.
+  veiculo: '<em>In</em>: SEMANA DO ADMINISTRADOR, 17.; ENCONTRO DE INICIAÇÃO CIENTÍFICA DO NEOP, 3., 2022, Pau dos Ferros. <strong><em>Anais</em></strong> [...]. Pau dos Ferros, 2022'
+  categories:
+  - Trabalho em evento
+- title: Impacto do CPC 06(R2) no preço das ações das empresas da Bovespa
+  date: '2022-01-01'
+  author: MORAIS, M. A. O.; MELO, L. G. G.; PRADO, A. G. S.
+  autores: MORAIS, M. A. O.; MELO, L. G. G.; <strong>PRADO, A. G. S.</strong>
+  veiculo: '<em>In</em>: SEMANA DO ADMINISTRADOR, 17.; ENCONTRO DE INICIAÇÃO CIENTÍFICA DO NEOP, 3., 2022, Pau dos Ferros. <strong><em>Anais</em></strong> [...]. Pau dos Ferros, 2022'
+  categories:
+  - Trabalho em evento
+- title: 'Contabilidade de custos: caso de uma indústria de temperos pauferrense'
+  date: '2022-01-01'
+  author: MORAIS, M. A. O.; PRADO, A. G. S.; MELO, L. G. G.; SILVA FILHO, R. B.
+  autores: MORAIS, M. A. O.; <strong>PRADO, A. G. S.</strong>; MELO, L. G. G.; SILVA FILHO, R. B.
+  veiculo: '<em>In</em>: SEMANA DO ADMINISTRADOR, 17.; ENCONTRO DE INICIAÇÃO CIENTÍFICA DO NEOP, 3., 2022, Pau dos Ferros. <strong><em>Anais</em></strong> [...]. Pau dos Ferros, 2022'
+  categories:
+  - Trabalho em evento
+- title: 'O efeito priming na avaliação de fraudes contábeis: uma abordagem experimental com os discentes de Ciências Contábeis'
+  date: '2021-01-01'
+  author: FREITAS, E. N.; MOREIRA, C. S.; MACEDO, A. F. P.; PRADO, A. G. S.
+  autores: FREITAS, E. N.; MOREIRA, C. S.; MACEDO, A. F. P.; <strong>PRADO, A. G. S.</strong>
+  veiculo: '<em>In</em>: USP INTERNATIONAL CONFERENCE IN ACCOUNTING, 21., 2021, São Paulo. <strong><em>Anais</em></strong> [...]. São Paulo: FEA/USP, 2021'
+  categories:
+  - Trabalho em evento
+- title: Disclosure voluntário ambiental via Twitter das empresas listadas no IBrX-100
+  date: '2021-01-01'
+  author: SOUZA, J. M.; LIMA, C. R. M.; PRADO, A. G. S.
+  autores: SOUZA, J. M.; LIMA, C. R. M.; <strong>PRADO, A. G. S.</strong>
+  veiculo: '<em>In</em>: CONGRESSO USP DE INICIAÇÃO CIENTÍFICA EM CONTABILIDADE, 2021, São Paulo. <strong><em>Anais</em></strong> [...]. São Paulo: FEA/USP, 2021'
+  categories:
+  - Trabalho em evento
+- title: Método quantitativo à luz da perspectiva crítica em contabilidade
+  date: '2020-01-01'
+  author: FEITOSA, M. O.; MACAGNAN, C. B.; PRADO, A. G. S.; FERREIRA, J. C.
+  autores: FEITOSA, M. O.; MACAGNAN, C. B.; <strong>PRADO, A. G. S.</strong>; FERREIRA, J. C.
+  veiculo: '<em>In</em>: CONGRESSO ANPCONT, 14., 2020. <strong><em>Anais</em></strong> [...]. 2020'
+  categories:
+  - Trabalho em evento
+- title: Análise do disclosure ambiental das empresas listadas no Índice Carbono Eficiente (ICO2) participantes de segmentos considerados potencialmente poluidores
+  date: '2019-01-01'
+  author: LIMA, A. T. F.; MOTA, R. H. G.; PRADO, A. G. S.
+  autores: LIMA, A. T. F.; MOTA, R. H. G.; <strong>PRADO, A. G. S.</strong>
+  veiculo: '<em>In</em>: ENCONTRO NORTE-RIO-GRANDENSE DE CIÊNCIAS CONTÁBEIS, 15., 2019, Natal. <strong><em>Anais</em></strong> [...]. Natal: CRC/RN, 2019'
+  categories:
+  - Trabalho em evento
+  nota: 'Prêmio: 1º lugar em artigo científico (apresentação oral)'
+- title: Um estudo bibliométrico a respeito do uso dos custos como ferramenta para o planejamento, controle e apoio a decisões, no Congresso Brasileiro de Custos
+  date: '2017-01-01'
+  author: ALMEIDA, F. S.; RÊGO, T. F.; PRADO, A. G. S.
+  autores: ALMEIDA, F. S.; RÊGO, T. F.; <strong>PRADO, A. G. S.</strong>
+  veiculo: '<em>In</em>: CONGRESSO BRASILEIRO DE CUSTOS, 24., 2017, Florianópolis. <strong><em>Anais</em></strong> [...]. Florianópolis: ABCustos, 2017'
+  categories:
+  - Trabalho em evento
+- title: Uma análise da mensuração e evidenciação de propriedades para investimento nas companhias brasileiras do setor de exploração de imóveis
+  date: '2012-01-01'
+  author: BATISTA, F. F.; PRADO, A. G. S.; MACHADO, M. R.; SANTIAGO, J. S.
+  autores: BATISTA, F. F.; <strong>PRADO, A. G. S.</strong>; MACHADO, M. R.; SANTIAGO, J. S.
+  veiculo: '<em>In</em>: CONGRESSO ANPCONT, 6., 2012, Florianópolis. <strong><em>Anais</em></strong> [...]. Florianópolis, 2012'
+  categories:
+  - Trabalho em evento
+- title: 'Avaliação das propriedades para investimento: uma análise dos fatores que influenciam na decisão entre valor justo e modelo de custo'
+  date: '2012-01-01'
+  author: PRADO, A. G. S.; BATISTA, F. F.; BONOLI, E. L.
+  autores: <strong>PRADO, A. G. S.</strong>; BATISTA, F. F.; BONOLI, E. L.
+  veiculo: '<em>In</em>: CONGRESSO USP DE CONTROLADORIA E CONTABILIDADE, 12., 2012, São Paulo. <strong><em>Anais</em></strong> [...]. São Paulo: FEA/USP, 2012'
+  categories:
+  - Trabalho em evento
+- title: Uma análise do uso da tecnologia da informação nas organizações contábeis da cidade de João Pessoa
+  date: '2008-01-01'
+  author: CUNHA, M. C. F.; PRADO, A. G. S.; PAIVA, S. B.; QUEIROZ, D. B.; SANTOS, J. L.
+  autores: CUNHA, M. C. F.; <strong>PRADO, A. G. S.</strong>; PAIVA, S. B.; QUEIROZ, D. B.; SANTOS, J. L.
+  veiculo: '<em>In</em>: CONGRESSO BRASILEIRO DE CUSTOS, 15., 2008, Curitiba. <strong><em>Anais</em></strong> [...]. Curitiba: ABCustos, 2008. p. 64'
+  categories:
+  - Trabalho em evento

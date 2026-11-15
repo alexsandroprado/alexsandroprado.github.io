@@ -3,87 +3,80 @@ project:
   output-dir: docs
   render:
     - "*.qmd"
-    - "*.md"
-    - "!ensino/**"
-    - "!palestras/**"
-    - "!artigos/**"
-    - "!software/**"
     - "!README.md"
-    - "!readme.md"
-lang: pt
+
+lang: pt-BR
+
 website:
   title: "Alexsandro Prado"
   site-url: "https://alexsandroprado.github.io/"
+  description: "Professor Adjunto da UFERSA. Economia do trabalho, contabilidade financeira, ESG e governança corporativa."
   favicon: "images/logo.ico"
+  image: "images/alexsandro.png"
+  open-graph: true
+  # Aviso de cookies (LGPD): o Google Tag Manager só carrega após o consentimento
+  cookie-consent:
+    type: express
+    style: simple
+    palette: light
+    language: pt
+    policy-url: /privacidade.html
+    prefs-text: "Preferências de cookies"
   twitter-card: true
-  description: "Econometria, Data Science e Contabilidade — análises aplicadas com R."
   back-to-top-navigation: true
   reader-mode: false
   search:
     location: navbar
     type: overlay
   navbar:
-    type: dark
-    background: "#0f2554"
     left:
+      - href: pesquisa/index.qmd
+        text: Pesquisa
+      - href: publicacoes/index.qmd
+        text: Publicações
+      - href: software/index.qmd
+        text: Software e dados
+      - href: ensino/index.qmd
+        text: Ensino
       - href: blog/index.qmd
         text: Blog
-      # - href: artigos/index.qmd
-      #   text: Artigos
-      # - href: palestras/index.qmd
-      #   text: Palestras
-      # - href: ensino/index.qmd
-      #   text: Ensino
-      # - href: software/index.qmd
-      #   text: Software
-      - text: Projetos
-        menu:
-          - text: GECOMT
-            href: https://gecomt.github.io/
-            target: _blank
-          - text: Contabilidados
-            href: https://contabilidados.com.br/
-            target: _blank
-          - text: Regulariza
-            href: https://regulariza.shinyapps.io/dashboard/
-            target: _blank
-
     right:
       - icon: github
         href: https://github.com/alexsandroprado
-      - icon: twitter-x
-        href: https://twitter.com/alexsandroprado
-      - icon: youtube
-        href: https://www.youtube.com/@profalexsandroprado
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/alexsandroprado/
+        aria-label: LinkedIn
       - icon: rss
         href: blog/index.xml
+        aria-label: RSS do blog
 
   page-footer:
-    left: "// alexsandro_prado · 2024"
-    right:
-      - icon: github
-        href: https://github.com/alexsandroprado
-      - icon: twitter-x
-        href: https://twitter.com/alexsandroprado
-    background: "#0f2554"
+    left: "© 2026 Alexsandro Prado · Universidade Federal Rural do Semi-Árido (UFERSA) · [Privacidade](/privacidade.html)"
+    right: "Conteúdo sob licença [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt-br) · Feito com [Quarto](https://quarto.org)"
 
-date-format: "YYYY-MM-DD"
+date-format: "DD/MM/YYYY"
+
+# Faixa escura com o título no topo de cada página (cores em styles.scss)
+title-block-banner: true
 
 format:
   html:
     theme:
-      light: [united, styles.scss]
-      dark:  [cyborg, styles-dark.scss]
+      light: [cosmo, styles.scss]
+      dark: [darkly, styles-dark.scss]
     toc: true
     toc-depth: 3
+    toc-title: "Nesta página"
     html-math-method: katex
     include-in-header:
       file: header.html
     code-copy: true
     code-overflow: wrap
+    smooth-scroll: true
 
-# AÇÃO NECESSÁRIA: descomente e preencha após obter os IDs em https://giscus.app/
-# Habilite GitHub Discussions no repositório antes de configurar.
+# Comentários (opcional): habilite GitHub Discussions no repositório,
+# obtenha os IDs em https://giscus.app/ e descomente o bloco abaixo.
 # comments:
 #   giscus:
 #     repo: alexsandroprado/alexsandroprado.github.io

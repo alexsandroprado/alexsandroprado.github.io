@@ -1,56 +1,52 @@
 // ============================================================
-//  ALEXSANDRO PRADO — BLOG REDESIGN (DARK)
-//  Sobrescreve apenas as variáveis que diferem do light theme.
-//  Herdado sobre o tema cyborg do Quarto.
+//  Alexsandro Prado: tema escuro (base: darkly)
+//  Carregado por cima de styles.scss; redefine as variáveis --ap-*.
 // ============================================================
 
 /*-- scss:defaults --*/
 
-// ── Paleta dark ──────────────────────────────────────────────
-$navy-dark:    #0a1628;
-$blue-accent:  #60a5fa;   // maior contraste sobre fundo escuro (WCAG AA)
-$blue-mid:     #93b8f8;
-$blue-light:   rgba(37, 99, 235, 0.15);
+$font-family-sans-serif: "Inter", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:  "IBM Plex Mono", SFMono-Regular, Menlo, Consolas, monospace;
+$headings-font-family:   $font-family-sans-serif;
+$font-size-base:         1rem;
+$line-height-base:       1.7;
+$headings-font-weight:   600;
 
-// ── Cores Bootstrap / Quarto ─────────────────────────────────
-$body-bg:      #0d1117 !default;
-$body-color:   #e8ecf4 !default;
-$link-color:   $blue-accent !default;
-$link-hover-color: $blue-mid !default;
+$ap-accent:  #5ec4dc;
+$ap-muted:   #94a3b8;
+$ap-border:  #1e293b;
+$ap-soft:    #111a2b;
 
-// ── Navbar / Rodapé ──────────────────────────────────────────
-$navbar-bg:    $navy-dark !default;
-$navbar-fg:    rgba(255, 255, 255, 0.55) !default;
-$footer-bg:    $navy-dark !default;
-$footer-fg:    rgba(255, 255, 255, 0.35) !default;
+$body-bg:          #0b1220;
+$body-color:       #cbd5e1;
+$headings-color:   #f1f5f9;
+$primary:          #22a3c2;
+$link-color:       $ap-accent;
+$link-hover-color: #a5e3f1;
+$border-color:     $ap-border;
+$border-radius:    4px;
 
-// ── Código inline ────────────────────────────────────────────
-$code-bg:      $blue-light !default;
-$code-color:   $blue-mid !default;
+$navbar-bg:  #060b16;
+$navbar-fg:  #cbd5e1;
+$navbar-hl:  $ap-accent;
 
-// ── Código em bloco ──────────────────────────────────────────
-$code-block-bg: #0a1628 !default;
+$footer-bg:  #060b16;
+$footer-fg:  $ap-muted;
 
-// ── Bordas ───────────────────────────────────────────────────
-$border-color:  #1e2740 !default;
-
+$code-color:    #f9a8d4;
+$code-block-bg: #0b1220;
 
 /*-- scss:rules --*/
 
-// Cards no dark mode
-.quarto-grid-item {
-  background: #131926;
-}
-
-// Categorias inline code no dark mode
-.listing-category {
-  background: rgba(37, 99, 235, 0.2);
-  color: $blue-mid;
-}
-
-p code, li code, td code,
-h1 code, h2 code, h3 code,
-th code, blockquote code, dt code {
-  background: rgba(37, 99, 235, 0.2);
-  color: $blue-mid;
+:root {
+  --ap-ink:    #f1f5f9;
+  --ap-accent: #{$ap-accent};
+  --ap-accent-soft: rgba(94, 196, 220, 0.1);
+  --ap-muted:  #{$ap-muted};
+  --ap-border: #{$ap-border};
+  --ap-soft:   #{$ap-soft};
+  --ap-grid:   #334155;
+  --ap-card:   #0f172a;
+  --ap-banner: #060b16;
+  --ap-banner-dots: rgba(148, 163, 184, 0.16);
 }

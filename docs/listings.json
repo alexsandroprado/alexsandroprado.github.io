@@ -1,10 +1,22 @@
 [
   {
+    "listing": "/index.html",
+    "items": [
+      "/blog/posts/contabdata/contabdata.html",
+      "/blog/posts/preditiva/preditiva.html",
+      "/blog/posts/heterocedasticidade/heterocedasticidade.html"
+    ]
+  },
+  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/posts/contabdata/contabdata.html",
       "/blog/posts/preditiva/preditiva.html",
       "/blog/posts/heterocedasticidade/heterocedasticidade.html"
     ]
+  },
+  {
+    "listing": "/publicacoes/index.html",
+    "items": []
   }
 ]

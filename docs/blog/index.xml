@@ -8,7 +8,14 @@
 <title>Alexsandro Prado</title>
 <link>https://alexsandroprado.github.io/blog/</link>
 <atom:link href="https://alexsandroprado.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
-<description>Econometria · Data Science · Contabilidade · R</description>
+<description>Notas sobre econometria aplicada, contabilidade e análise de dados em R.</description>
+<image>
+<url>https://alexsandroprado.github.io/images/alexsandro.png</url>
+<title>Alexsandro Prado</title>
+<link>https://alexsandroprado.github.io/blog/</link>
+<height>144</height>
+<width>144</width>
+</image>
 <generator>quarto-1.9.37</generator>
 <lastBuildDate>Sun, 30 Jun 2024 03:00:00 GMT</lastBuildDate>
 <item>
@@ -16,6 +23,7 @@
   <dc:creator>Alexsandro Prado</dc:creator>
   <link>https://alexsandroprado.github.io/blog/posts/contabdata/contabdata.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -30,7 +38,10 @@
 <section id="introdução" class="level3">
 <h3 class="anchored" data-anchor-id="introdução">Introdução</h3>
 <p>A análise de dados tem se tornado uma ferramenta crucial em diversos setores, incluindo a contabilidade. Com a crescente quantidade de dados gerados diariamente, a capacidade de analisar e interpretar essas informações é essencial para tomar decisões informadas e estratégicas. Este artigo explora a importância da análise de dados na contabilidade, destacando como ela transforma a prática contábil e oferece benefícios significativos para as organizações.</p>
-<p>Transformação Digital na Contabilidade A contabilidade tradicional tem evoluído significativamente com a introdução de tecnologias avançadas. A transformação digital permite que contadores acessem grandes volumes de dados e utilizem ferramentas analíticas para extrair insights valiosos. Esta evolução digital é fundamental para a modernização da contabilidade, tornando os processos mais eficientes e precisos.</p>
+</section>
+<section id="transformação-digital-na-contabilidade" class="level3">
+<h3 class="anchored" data-anchor-id="transformação-digital-na-contabilidade">Transformação Digital na Contabilidade</h3>
+<p>A contabilidade tradicional tem evoluído significativamente com a introdução de tecnologias avançadas. A transformação digital permite que contadores acessem grandes volumes de dados e utilizem ferramentas analíticas para extrair insights valiosos. Esta evolução digital é fundamental para a modernização da contabilidade, tornando os processos mais eficientes e precisos.</p>
 </section>
 <section id="benefícios-da-análise-de-dados-na-contabilidade" class="level3">
 <h3 class="anchored" data-anchor-id="benefícios-da-análise-de-dados-na-contabilidade">Benefícios da Análise de Dados na Contabilidade</h3>
@@ -70,7 +81,10 @@
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citação</h2><div><div class="quarto-appendix-secondary-label">Por favor, cite este trabalho como:</div><div id="ref-prado2024" class="csl-entry quarto-appendix-citeas">
+Prado, Alexsandro. 2024. <span>“A Importância da Análise de Dados na
+Contabilidade.”</span> June 30. <a href="https://alexsandroprado.github.io/blog/posts/contabdata/contabdata.html">https://alexsandroprado.github.io/blog/posts/contabdata/contabdata.html</a>.
+</div></div></section></div> ]]></description>
   <category>contabilidade</category>
   <category>datascience</category>
   <guid>https://alexsandroprado.github.io/blog/posts/contabdata/contabdata.html</guid>
@@ -82,6 +96,7 @@
   <dc:creator>Alexsandro Prado</dc:creator>
   <link>https://alexsandroprado.github.io/blog/posts/preditiva/preditiva.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -108,70 +123,30 @@
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;"># Instalar e carregar pacotes necessários</span></span>
-<span id="cb1-2"><span class="fu" style="color: #4758AB;
+font-style: inherit;"># Carregar pacotes necessários</span></span>
+<span id="cb1-2"><span class="co" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">options</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">repos =</span> <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">c</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">CRAN =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"https://cran.rstudio.com/"</span>))</span>
-<span id="cb1-3"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"dplyr"</span>)</span></code></pre></div></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>package 'dplyr' successfully unpacked and MD5 sums checked
-
-Os pacotes binários baixados estão em
-    C:\Users\alexs\AppData\Local\Temp\RtmpaopuQ4\downloaded_packages</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"ggplot2"</span>)</span></code></pre></div></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>package 'ggplot2' successfully unpacked and MD5 sums checked
-
-Os pacotes binários baixados estão em
-    C:\Users\alexs\AppData\Local\Temp\RtmpaopuQ4\downloaded_packages</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"forecast"</span>)</span></code></pre></div></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>package 'forecast' successfully unpacked and MD5 sums checked
-
-Os pacotes binários baixados estão em
-    C:\Users\alexs\AppData\Local\Temp\RtmpaopuQ4\downloaded_packages</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+font-style: inherit;"># (instale antes, uma única vez: install.packages(c("dplyr", "ggplot2", "forecast")))</span></span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(dplyr)</span>
-<span id="cb7-2"><span class="fu" style="color: #4758AB;
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(ggplot2)</span>
-<span id="cb7-3"><span class="fu" style="color: #4758AB;
+<span id="cb1-6"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">library</span>(forecast)</span>
-<span id="cb7-4"></span>
-<span id="cb7-5"><span class="co" style="color: #5E5E5E;
+<span id="cb1-7"></span>
+<span id="cb1-8"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Criar dados fictícios</span></span>
-<span id="cb7-6"><span class="fu" style="color: #4758AB;
+<span id="cb1-9"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">123</span>)</span>
-<span id="cb7-7">anos <span class="ot" style="color: #003B4F;
+<span id="cb1-10">anos <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
 background-color: null;
@@ -180,7 +155,7 @@ background-color: null;
 font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2023</span></span>
-<span id="cb7-8">receita <span class="ot" style="color: #003B4F;
+<span id="cb1-11">receita <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -213,7 +188,7 @@ background-color: null;
 font-style: inherit;">1460</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1600</span>)</span>
-<span id="cb7-9">lucro_liquido <span class="ot" style="color: #003B4F;
+<span id="cb1-12">lucro_liquido <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> receita <span class="sc" style="color: #5E5E5E;
 background-color: null;
@@ -226,8 +201,8 @@ background-color: null;
 font-style: inherit;">0.08</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0.12</span>)</span>
-<span id="cb7-10"></span>
-<span id="cb7-11">dados <span class="ot" style="color: #003B4F;
+<span id="cb1-13"></span>
+<span id="cb1-14">dados <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -238,11 +213,11 @@ background-color: null;
 font-style: inherit;">receita =</span> receita, <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">lucro_liquido =</span> lucro_liquido)</span>
-<span id="cb7-12"></span>
-<span id="cb7-13"><span class="co" style="color: #5E5E5E;
+<span id="cb1-15"></span>
+<span id="cb1-16"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Visualizar os dados</span></span>
-<span id="cb7-14"><span class="fu" style="color: #4758AB;
+<span id="cb1-17"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(dados)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
@@ -268,10 +243,10 @@ font-style: inherit;">print</span>(dados)</span></code></pre></div></div>
 <h3 class="anchored" data-anchor-id="análise-exploratória-dos-dados">Análise Exploratória dos Dados</h3>
 <p>Vamos analisar graficamente a evolução da receita e do lucro líquido ao longo dos anos.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Visualização dos dados</span></span>
-<span id="cb9-2"><span class="fu" style="color: #4758AB;
+<span id="cb3-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">ggplot</span>(dados, <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -280,7 +255,7 @@ background-color: null;
 font-style: inherit;">x =</span> ano)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb9-3">  <span class="fu" style="color: #4758AB;
+<span id="cb3-3">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_line</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -293,7 +268,7 @@ background-color: null;
 font-style: inherit;">"Receita"</span>)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb9-4">  <span class="fu" style="color: #4758AB;
+<span id="cb3-4">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">geom_line</span>(<span class="fu" style="color: #4758AB;
 background-color: null;
@@ -306,26 +281,26 @@ background-color: null;
 font-style: inherit;">"Lucro Líquido"</span>)) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb9-5">  <span class="fu" style="color: #4758AB;
+<span id="cb3-5">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Evolução da Receita e do Lucro Líquido"</span>,</span>
-<span id="cb9-6">       <span class="at" style="color: #657422;
+<span id="cb3-6">       <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Ano"</span>,</span>
-<span id="cb9-7">       <span class="at" style="color: #657422;
+<span id="cb3-7">       <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Valores (em milhares)"</span>) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb9-8">  <span class="fu" style="color: #4758AB;
+<span id="cb3-8">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">scale_color_manual</span>(<span class="at" style="color: #657422;
 background-color: null;
@@ -361,10 +336,10 @@ font-style: inherit;">"green"</span>))</span></code></pre></div></div>
 <h3 class="anchored" data-anchor-id="modelo-preditivo">Modelo Preditivo</h3>
 <p>Utilizaremos um modelo de série temporal para prever a receita dos próximos anos.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Modelagem de série temporal</span></span>
-<span id="cb10-2">ts_receita <span class="ot" style="color: #003B4F;
+<span id="cb4-2">ts_receita <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -381,20 +356,20 @@ background-color: null;
 font-style: inherit;">frequency =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>)</span>
-<span id="cb10-3"></span>
-<span id="cb10-4"><span class="co" style="color: #5E5E5E;
+<span id="cb4-3"></span>
+<span id="cb4-4"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Ajustar um modelo ARIMA</span></span>
-<span id="cb10-5">modelo_arima <span class="ot" style="color: #003B4F;
+<span id="cb4-5">modelo_arima <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">auto.arima</span>(ts_receita)</span>
-<span id="cb10-6"></span>
-<span id="cb10-7"><span class="co" style="color: #5E5E5E;
+<span id="cb4-6"></span>
+<span id="cb4-7"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Previsão para os próximos 5 anos</span></span>
-<span id="cb10-8">previsao <span class="ot" style="color: #003B4F;
+<span id="cb4-8">previsao <span class="ot" style="color: #003B4F;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
@@ -403,28 +378,28 @@ background-color: null;
 font-style: inherit;">h =</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">5</span>)</span>
-<span id="cb10-9"></span>
-<span id="cb10-10"><span class="co" style="color: #5E5E5E;
+<span id="cb4-9"></span>
+<span id="cb4-10"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Visualização da previsão</span></span>
-<span id="cb10-11"><span class="fu" style="color: #4758AB;
+<span id="cb4-11"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">autoplot</span>(previsao) <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb10-12">  <span class="fu" style="color: #4758AB;
+<span id="cb4-12">  <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Previsão da Receita para os Próximos 5 Anos"</span>,</span>
-<span id="cb10-13">       <span class="at" style="color: #657422;
+<span id="cb4-13">       <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Ano"</span>,</span>
-<span id="cb10-14">       <span class="at" style="color: #657422;
+<span id="cb4-14">       <span class="at" style="color: #657422;
 background-color: null;
 font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
 background-color: null;
@@ -444,10 +419,10 @@ font-style: inherit;">"Receita (em milhares)"</span>)</span></code></pre></div><
 <h3 class="anchored" data-anchor-id="interpretação-dos-resultados">Interpretação dos Resultados</h3>
 <p>A partir do modelo preditivo, podemos analisar a tendência futura da receita da empresa, possibilitando uma melhor tomada de decisão.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Exibir previsões</span></span>
-<span id="cb11-2"><span class="fu" style="color: #4758AB;
+<span id="cb5-2"><span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">print</span>(previsao)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
@@ -472,7 +447,9 @@ font-style: inherit;">print</span>(previsao)</span></code></pre></div></div>
 </section>
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citação</h2><div><div class="quarto-appendix-secondary-label">Por favor, cite este trabalho como:</div><div id="ref-prado2024" class="csl-entry quarto-appendix-citeas">
+Prado, Alexsandro. 2024. <span>“Previsão de receita.”</span> June 7. <a href="https://alexsandroprado.github.io/blog/posts/preditiva/preditiva.html">https://alexsandroprado.github.io/blog/posts/preditiva/preditiva.html</a>.
+</div></div></section></div> ]]></description>
   <category>econometria</category>
   <category>R</category>
   <guid>https://alexsandroprado.github.io/blog/posts/preditiva/preditiva.html</guid>
@@ -483,6 +460,7 @@ font-style: inherit;">print</span>(previsao)</span></code></pre></div></div>
   <dc:creator>Alexsandro Prado</dc:creator>
   <link>https://alexsandroprado.github.io/blog/posts/heterocedasticidade/heterocedasticidade.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -512,16 +490,16 @@ Residuals:
 -1069.88  -309.87   -33.51   254.44  1702.00 
 
 Coefficients:
-            Estimate Std. Error t value            Pr(&gt;|t|)    
-(Intercept)  4749.48     465.62   10.20 &lt;0.0000000000000002 ***
-experience    995.12      28.89   34.45 &lt;0.0000000000000002 ***
-education     320.02      27.27   11.74 &lt;0.0000000000000002 ***
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  4749.48     465.62   10.20   &lt;2e-16 ***
+experience    995.12      28.89   34.45   &lt;2e-16 ***
+education     320.02      27.27   11.74   &lt;2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 524.1 on 97 degrees of freedom
 Multiple R-squared:  0.9299,    Adjusted R-squared:  0.9285 
-F-statistic: 643.8 on 2 and 97 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+F-statistic: 643.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
@@ -547,10 +525,10 @@ BP = 17.285, df = 2, p-value = 0.0001764</code></pre>
 <pre><code>
 t test of coefficients:
 
-            Estimate Std. Error t value              Pr(&gt;|t|)    
-(Intercept) 4749.481    459.819  10.329 &lt; 0.00000000000000022 ***
-experience   995.117     37.144  26.791 &lt; 0.00000000000000022 ***
-education    320.022     26.539  12.059 &lt; 0.00000000000000022 ***
+            Estimate Std. Error t value  Pr(&gt;|t|)    
+(Intercept) 4749.481    459.819  10.329 &lt; 2.2e-16 ***
+experience   995.117     37.144  26.791 &lt; 2.2e-16 ***
+education    320.022     26.539  12.059 &lt; 2.2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
@@ -574,16 +552,16 @@ Residuals:
 -0.071087 -0.021134 -0.000469  0.018983  0.091538 
 
 Coefficients:
-            Estimate Std. Error t value            Pr(&gt;|t|)    
-(Intercept) 8.906897   0.029442  302.52 &lt;0.0000000000000002 ***
-experience  0.067282   0.001827   36.84 &lt;0.0000000000000002 ***
-education   0.022101   0.001724   12.82 &lt;0.0000000000000002 ***
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 8.906897   0.029442  302.52   &lt;2e-16 ***
+experience  0.067282   0.001827   36.84   &lt;2e-16 ***
+education   0.022101   0.001724   12.82   &lt;2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 0.03314 on 97 degrees of freedom
 Multiple R-squared:  0.9384,    Adjusted R-squared:  0.9371 
-F-statistic:   739 on 2 and 97 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+F-statistic:   739 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 <p>Raiz Quadrada: Usar a raiz quadrada da variável dependente pode ser útil em alguns casos.</p>
@@ -598,16 +576,16 @@ Residuals:
 -4.2463 -1.2381 -0.2119  1.1691  5.9950 
 
 Coefficients:
-            Estimate Std. Error t value            Pr(&gt;|t|)    
-(Intercept)  79.9427     1.8098   44.17 &lt;0.0000000000000002 ***
-experience    4.0817     0.1123   36.35 &lt;0.0000000000000002 ***
-education     1.3270     0.1060   12.52 &lt;0.0000000000000002 ***
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  79.9427     1.8098   44.17   &lt;2e-16 ***
+experience    4.0817     0.1123   36.35   &lt;2e-16 ***
+education     1.3270     0.1060   12.52   &lt;2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 2.037 on 97 degrees of freedom
 Multiple R-squared:  0.9368,    Adjusted R-squared:  0.9354 
-F-statistic: 718.3 on 2 and 97 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+F-statistic: 718.3 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
@@ -625,16 +603,16 @@ Weighted Residuals:
 -2.6267 -0.8224 -0.1781  0.7972  3.0487 
 
 Coefficients:
-            Estimate Std. Error t value            Pr(&gt;|t|)    
-(Intercept)  5057.32     348.80   14.50 &lt;0.0000000000000002 ***
-experience    993.10      18.41   53.94 &lt;0.0000000000000002 ***
-education     301.39      22.46   13.42 &lt;0.0000000000000002 ***
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  5057.32     348.80   14.50   &lt;2e-16 ***
+experience    993.10      18.41   53.94   &lt;2e-16 ***
+education     301.39      22.46   13.42   &lt;2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 1.295 on 97 degrees of freedom
 Multiple R-squared:   0.97, Adjusted R-squared:  0.9694 
-F-statistic:  1569 on 2 and 97 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+F-statistic:  1569 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
@@ -649,10 +627,10 @@ glm(formula = salary ~ experience + education, family = Gamma(link = "log"),
     data = data)
 
 Coefficients:
-            Estimate Std. Error t value            Pr(&gt;|t|)    
-(Intercept) 8.907700   0.029539  301.56 &lt;0.0000000000000002 ***
-experience  0.067364   0.001833   36.76 &lt;0.0000000000000002 ***
-education   0.022057   0.001730   12.75 &lt;0.0000000000000002 ***
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 8.907700   0.029539  301.56   &lt;2e-16 ***
+experience  0.067364   0.001833   36.76   &lt;2e-16 ***
+education   0.022057   0.001730   12.75   &lt;2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -687,17 +665,17 @@ Residuals:
 -2491.38  -653.92    56.64   670.33  2532.10 
 
 Coefficients:
-            Estimate Std. Error t value             Pr(&gt;|t|)    
-(Intercept)  4979.10    1050.34   4.740         0.0000073938 ***
-experience    972.27      58.44  16.638 &lt; 0.0000000000000002 ***
-education     323.11      54.73   5.904         0.0000000535 ***
-age           144.26      11.22  12.854 &lt; 0.0000000000000002 ***
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  4979.10    1050.34   4.740 7.39e-06 ***
+experience    972.27      58.44  16.638  &lt; 2e-16 ***
+education     323.11      54.73   5.904 5.35e-08 ***
+age           144.26      11.22  12.854  &lt; 2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 1052 on 96 degrees of freedom
 Multiple R-squared:  0.8153,    Adjusted R-squared:  0.8095 
-F-statistic: 141.3 on 3 and 96 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+F-statistic: 141.3 on 3 and 96 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -744,7 +722,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 1063 on 90 degrees of freedom
 Multiple R-squared:  0.823, Adjusted R-squared:  0.8053 
-F-statistic: 46.49 on 9 and 90 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+F-statistic: 46.49 on 9 and 90 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -804,10 +782,10 @@ Residuals:
 -5497.9 -1321.4  -106.2  1311.4  6532.0 
 
 Coefficients:
-            Estimate Std. Error t value            Pr(&gt;|t|)    
-(Intercept) 21069.94     222.54  94.677 &lt;0.0000000000000002 ***
-PC1            96.68     208.52   0.464              0.6439    
-PC2          -394.22     225.92  -1.745              0.0842 .  
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 21069.94     222.54  94.677   &lt;2e-16 ***
+PC1            96.68     208.52   0.464   0.6439    
+PC2          -394.22     225.92  -1.745   0.0842 .  
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -826,10 +804,10 @@ BP = 0.050589, df = 2, p-value = 0.975</code></pre>
 <pre><code>
 t test of coefficients:
 
-             Estimate Std. Error t value             Pr(&gt;|t|)    
-(Intercept) 21069.939    222.545 94.6773 &lt; 0.0000000000000002 ***
-PC1            96.679    180.262  0.5363              0.59296    
-PC2          -394.219    203.820 -1.9342              0.05601 .  
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 21069.939    222.545 94.6773  &lt; 2e-16 ***
+PC1            96.679    180.262  0.5363  0.59296    
+PC2          -394.219    203.820 -1.9342  0.05601 .  
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
@@ -847,7 +825,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </section>
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citação</h2><div><div class="quarto-appendix-secondary-label">Por favor, cite este trabalho como:</div><div id="ref-prado2024" class="csl-entry quarto-appendix-citeas">
+Prado, Alexsandro. 2024. <span>“Heterocedasticidade e Autocorrelação:
+como resolver na prática?”</span> May 22. <a href="https://alexsandroprado.github.io/blog/posts/heterocedasticidade/heterocedasticidade.html">https://alexsandroprado.github.io/blog/posts/heterocedasticidade/heterocedasticidade.html</a>.
+</div></div></section></div> ]]></description>
   <category>econometria</category>
   <guid>https://alexsandroprado.github.io/blog/posts/heterocedasticidade/heterocedasticidade.html</guid>
   <pubDate>Wed, 22 May 2024 03:00:00 GMT</pubDate>

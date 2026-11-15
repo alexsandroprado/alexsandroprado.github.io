@@ -1,17 +1,16 @@
 ---
 date: "2024-05-22"
 title: "Heterocedasticidade e Autocorrelação: como resolver na prática?"
-author: "Alexsandro Prado"
 draft: false
 categories:
   - econometria
 
 image: heterocedasticidade.png
-editor: 
-  markdown: 
+editor:
+  markdown:
     wrap: 72
 
-  execute:
+execute:
   echo: false
   warning: false
   error: false

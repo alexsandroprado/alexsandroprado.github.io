@@ -1,7 +1,6 @@
 ---
 date: "2024-06-30"                                    
 title: "A Importância da Análise de Dados na Contabilidade" 
-author: "Alexsandro Prado"                            
 categories:                                           
   - contabilidade
   - datascience
@@ -37,7 +36,9 @@ knitr::opts_chunk$set(echo = FALSE, fig.align = "center", out.width = "100%")
 
 A análise de dados tem se tornado uma ferramenta crucial em diversos setores, incluindo a contabilidade. Com a crescente quantidade de dados gerados diariamente, a capacidade de analisar e interpretar essas informações é essencial para tomar decisões informadas e estratégicas. Este artigo explora a importância da análise de dados na contabilidade, destacando como ela transforma a prática contábil e oferece benefícios significativos para as organizações.
 
-Transformação Digital na Contabilidade A contabilidade tradicional tem evoluído significativamente com a introdução de tecnologias avançadas. A transformação digital permite que contadores acessem grandes volumes de dados e utilizem ferramentas analíticas para extrair insights valiosos. Esta evolução digital é fundamental para a modernização da contabilidade, tornando os processos mais eficientes e precisos.
+### Transformação Digital na Contabilidade
+
+A contabilidade tradicional tem evoluído significativamente com a introdução de tecnologias avançadas. A transformação digital permite que contadores acessem grandes volumes de dados e utilizem ferramentas analíticas para extrair insights valiosos. Esta evolução digital é fundamental para a modernização da contabilidade, tornando os processos mais eficientes e precisos.
 
 ### Benefícios da Análise de Dados na Contabilidade
 

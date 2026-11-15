@@ -1,15 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://alexsandroprado.github.io/index.html</loc>
-    <lastmod>2026-05-17T09:00:42.000Z</lastmod>
+    <loc>https://alexsandroprado.github.io/software/index.html</loc>
+    <lastmod>2026-11-15T06:09:25.831Z</lastmod>
   </url>
   <url>
-    <loc>https://alexsandroprado.github.io/blog/index.html</loc>
-    <lastmod>2026-05-11T23:41:08.000Z</lastmod>
+    <loc>https://alexsandroprado.github.io/privacidade.html</loc>
+    <lastmod>2026-11-15T05:41:57.675Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexsandroprado.github.io/index.html</loc>
+    <lastmod>2026-11-15T06:09:02.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexsandroprado.github.io/blog/posts/preditiva/preditiva.html</loc>
+    <lastmod>2026-11-15T04:59:08.060Z</lastmod>
   </url>
   <url>
     <loc>https://alexsandroprado.github.io/blog/posts/contabdata/contabdata.html</loc>
-    <lastmod>2026-05-11T22:49:50.000Z</lastmod>
+    <lastmod>2026-11-15T04:59:08.059Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexsandroprado.github.io/blog/index.html</loc>
+    <lastmod>2026-11-15T05:00:43.083Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexsandroprado.github.io/blog/posts/heterocedasticidade/heterocedasticidade.html</loc>
+    <lastmod>2026-11-15T04:59:08.060Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexsandroprado.github.io/ensino/index.html</loc>
+    <lastmod>2026-11-15T06:09:18.573Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexsandroprado.github.io/pesquisa/index.html</loc>
+    <lastmod>2026-11-15T06:09:18.573Z</lastmod>
+  </url>
+  <url>
+    <loc>https://alexsandroprado.github.io/publicacoes/index.html</loc>
+    <lastmod>2026-11-15T06:08:44.608Z</lastmod>
   </url>
 </urlset>

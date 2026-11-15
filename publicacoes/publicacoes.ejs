@@ -1,0 +1,20 @@
+```{=html}
+<div class="list pub-lista">
+<% for (const item of items) { %>
+<div class="pub-item" <%= metadataAttrs(item) %>>
+  <div class="pub-ano listing-date"><%= item.date ? new Date(item.date).getUTCFullYear() : '' %></div>
+  <div class="pub-ref">
+    <span class="listing-author" style="display:none"><%= item.author %></span>
+    <%= item.autores %>
+    <span class="listing-title"><% if (item.path) { %><a href="<%- item.path %>"><%= item.title %></a><% } else { %><%= item.title %><% } %></span>.
+    <%= item.veiculo %>.<% if (item.doi) { %> DOI: <a class="pub-doi" href="https://doi.org/<%- item.doi %>"><%= item.doi %></a>.<% } %>
+    <div class="pub-meta">
+      <% if (item.categories) { %><span class="listing-categories"><% for (const cat of item.categories) { %><span class="listing-category"><%= cat %></span><% } %></span><% } %>
+      <% if (item.qualis) { %><span class="pub-qualis" title="Estrato Qualis/CAPES 2021-2024">Qualis <%= item.qualis %></span><% } %>
+      <% if (item.nota) { %><span class="pub-nota"><%= item.nota %></span><% } %>
+    </div>
+  </div>
+</div>
+<% } %>
+</div>
+```

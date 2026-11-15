@@ -1,7 +1,6 @@
 ---
 date: "2024-06-07"                                    
 title: "Previsão de receita"
-author: "Alexsandro Prado"                            
 categories:                                           
   - econometria
   - R
@@ -38,11 +37,8 @@ Nosso objetivo é demonstrar, por meio de um exemplo prático, como a análise d
 Primeiramente, vamos criar um conjunto de dados fictícios representando as demonstrações financeiras de uma empresa ao longo dos anos.
 
 ```{r echo = T, warning=FALSE, message=FALSE}
-# Instalar e carregar pacotes necessários
-options(repos = c(CRAN = "https://cran.rstudio.com/"))
-install.packages("dplyr")
-install.packages("ggplot2")
-install.packages("forecast")
+# Carregar pacotes necessários
+# (instale antes, uma única vez: install.packages(c("dplyr", "ggplot2", "forecast")))
 
 library(dplyr)
 library(ggplot2)

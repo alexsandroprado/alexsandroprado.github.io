@@ -1,651 +1,795 @@
 // ============================================================
-//  ALEXSANDRO PRADO — BLOG REDESIGN (LIGHT)
-//  Tech-blue · Minimalista · Acadêmico
-//  Posit/Quarto best practice: scss:defaults → Bootstrap vars
-//  scss:rules → component overrides (sem !important em excesso)
+//  Alexsandro Prado: tema claro (base: cosmo)
+//  Moderno e discreto, com referências visuais à análise de dados:
+//  fonte monoespaçada em rótulos, marcadores de seção no estilo de
+//  legenda de gráfico e fundo pontilhado leve nos títulos.
+//
+//  Observação: no modo escuro o Quarto mantém esta folha ativa e
+//  carrega styles-dark.scss por cima. Por isso as regras abaixo
+//  usam variáveis CSS (--ap-*, --bs-*), que o tema escuro redefine.
+//  Evite cores fixas nas regras.
 // ============================================================
 
 /*-- scss:defaults --*/
 
-// ── Fontes ───────────────────────────────────────────────────
-// Google Fonts carregadas via header.html
-$font-family-sans-serif:  'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
-$font-family-monospace:   'JetBrains Mono', 'Fira Mono', 'Courier New', monospace;
-$font-size-base:          0.9375rem !default;  // 15px
-$line-height-base:        1.7 !default;
+// Fontes (carregadas em header.html)
+$font-family-sans-serif: "Inter", "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace:  "IBM Plex Mono", SFMono-Regular, Menlo, Consolas, monospace;
+$headings-font-family:   $font-family-sans-serif;
+$font-size-base:         1rem;
+$line-height-base:       1.7;
+$headings-font-weight:   600;
 
-// ── Paleta de cores ──────────────────────────────────────────
-$navy:         #0f2554;
-$blue-mid:     #1a4ab5;
-$blue-accent:  #2563eb;
-$cyan:         #00b4d8;
-$blue-light:   #e8eeff;
+// Paleta (tons de ardósia com azul-petróleo como destaque)
+$ap-ink:     #0f172a;
+$ap-accent:  #0e7490;
+$ap-muted:   #64748b;
+$ap-border:  #e2e8f0;
+$ap-soft:    #f8fafc;
+$ap-grid:    #cbd5e1;
+$ap-navy:    #0f172a;
 
-// ── Cores Bootstrap / Quarto ─────────────────────────────────
-$body-bg:      #f4f6fb !default;
-$body-color:   #0b0f1a !default;
-$link-color:   $blue-accent !default;
-$link-hover-color: $blue-mid !default;
+$body-bg:          #eef2f6;
+$body-color:       #1e293b;
+$headings-color:   $ap-ink;
+$primary:          $ap-accent;
+$link-color:       $ap-accent;
+$link-hover-color: #155e75;
+$border-color:     $ap-border;
+$border-radius:    4px;
 
-// ── Navbar ───────────────────────────────────────────────────
-$navbar-bg:    $navy !default;
-$navbar-fg:    rgba(255, 255, 255, 0.55) !default;
-$navbar-hl:    $cyan !default;
+$navbar-bg:  $ap-navy;
+$navbar-fg:  #cbd5e1;
+$navbar-hl:  #5ec4dc;
 
-// ── Rodapé ───────────────────────────────────────────────────
-$footer-bg:    $navy !default;
-$footer-fg:    rgba(255, 255, 255, 0.35) !default;
+$footer-bg:  $ap-navy;
+$footer-fg:  #94a3b8;
 
-// ── Código inline ────────────────────────────────────────────
-$code-bg:      $blue-light !default;
-$code-color:   $blue-mid !default;
-
-// ── Blocos de código ─────────────────────────────────────────
-$code-block-bg: $navy !default;
-
-// ── Headings ─────────────────────────────────────────────────
-$headings-font-weight:   600 !default;
-$headings-letter-spacing: -0.02em;
-$h1-font-size:  2rem !default;
-$h2-font-size:  1.45rem !default;
-$h3-font-size:  1.2rem !default;
-
-// ── Bordas / Cards ───────────────────────────────────────────
-$border-color:  #e0e5f0 !default;
-$border-radius: 4px !default;
-
-// ── Botões primários ─────────────────────────────────────────
-$primary: $blue-accent !default;
-
+$code-color:    #be185d;
+$code-block-bg: #ffffff;
 
 /*-- scss:rules --*/
 
-// ── Tipografia ───────────────────────────────────────────────
-h1, h2, h3, h4, h5, h6 {
-  letter-spacing: $headings-letter-spacing;
+// ── Variáveis do site (redefinidas no tema escuro) ───────────
+:root {
+  --ap-ink:    #{$ap-ink};
+  --ap-accent: #{$ap-accent};
+  --ap-accent-soft: rgba(14, 116, 144, 0.08);
+  --ap-muted:  #{$ap-muted};
+  --ap-border: #{$ap-border};
+  --ap-soft:   #{$ap-soft};
+  --ap-grid:   #{$ap-grid};
+  --ap-card:   #ffffff;
+  --ap-banner: #{$ap-navy};
+  --ap-banner-dots: rgba(148, 163, 184, 0.22);
+  --ap-mono:   #{$font-family-monospace};
 }
 
-p {
-  color: #3a4459;
-  line-height: 1.75;
-}
-
-// ── Navbar ───────────────────────────────────────────────────
-.navbar-brand {
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.01em;
-  background-color: transparent;
-  background-image: none;
-  padding-left: 0;
-
-  &::before {
-    content: '';
-    display: inline-block;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: $cyan;
-    margin-right: 0.55rem;
-    vertical-align: middle;
-    position: relative;
-    top: -1px;
-  }
-}
-
-// Nav-links desktop: indicador ativo com borda ciano
-.navbar-expand-lg .nav-link,
-.navbar-expand-lg .navbar-nav .nav-link {
-  font-size: 11.5px;
+// Rótulo monoespaçado reutilizável
+%ap-label {
+  font-family: var(--ap-mono);
+  font-size: 0.72rem;
   font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 0.85rem 1rem;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s, border-color 0.15s;
+  color: var(--ap-muted);
 }
 
-.navbar-expand-lg .nav-link.active,
-.navbar-expand-lg .navbar-nav .nav-link.active {
-  border-bottom-color: $cyan;
+// ── Ícones Academicons (fonte hospedada no próprio site) ─────
+// Nos links da página inicial use: icon: ai-lattes | ai-orcid |
+// ai-scholar | ai-wos
+@font-face {
+  font-family: "Academicons";
+  src: url("assets/fonts/academicons.woff") format("woff"),
+       url("assets/fonts/academicons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
-// Ícones navbar
-.navbar-expand-lg .nav-link i,
-.navbar-expand-lg .nav-link .bi {
-  font-size: 14px;
-}
-
-// Dropdown Projetos
-.navbar .dropdown-menu {
-  background: $navy;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: $border-radius;
-  padding: 0.25rem 0;
-  min-width: 180px;
-}
-
-.navbar .dropdown-item {
-  font-size: 12.5px;
-  color: rgba(255, 255, 255, 0.6);
-  padding: 0.5rem 1.25rem;
-  letter-spacing: 0.02em;
-
-  &:hover {
-    background: rgba($blue-accent, 0.25);
-    color: #ffffff;
-  }
-}
-
-// Nav-links mobile: sem border-bottom no menu colapsado
-@media (max-width: 991px) {
-  .navbar {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 13px;
-    font-weight: 500;
-    padding: 0.6rem 1rem;
-    border-bottom: none;
-    letter-spacing: 0.04em;
-  }
-}
-
-// ── Navbar right: ícones, dark toggle e lupa ────────────────
-// Quarto injeta automaticamente:
-//   - ícones do right: como .nav-link com .bi-* (Bootstrap Icons)
-//   - dark toggle como .quarto-color-scheme-toggle
-//   - lupa como #quarto-search .quarto-search-button
-
-// Ícones Bootstrap (GitHub, X, YouTube, RSS)
-.navbar-nav .nav-link .bi,
-.navbar .nav-link .bi {
-  font-size: 16px;
-  vertical-align: -2px;
-}
-
-// Espaçamento uniforme entre ícones do right
-.navbar-nav.navbar-nav-scroll .nav-item {
-  margin: 0 1px;
-}
-
-// Dark mode toggle
-.quarto-color-scheme-toggle {
-  color: rgba(255, 255, 255, 0.5);
-  padding: 0 6px;
-
-  &:hover {
-    color: rgba(255, 255, 255, 0.9);
-  }
-
-  .bi {
-    font-size: 17px;
-    vertical-align: -2px;
-  }
-}
-
-// Search button (lupa)
-.quarto-search-button,
-#quarto-search .aa-DetachedSearchButton {
-  color: rgba(255, 255, 255, 0.5);
-  padding: 0 6px;
-  background: transparent;
-  border: none;
-
-  &:hover {
-    color: rgba(255, 255, 255, 0.9);
-  }
-
-  .bi {
-    font-size: 17px;
-    vertical-align: -2px;
-  }
-}
-
-// ── Banner — todas as páginas (.quarto-title-banner) ───────────
-.quarto-title-banner {
-  background: $navy;
-  position: relative;
-  overflow: hidden;
-
-  // Grid pattern de fundo
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image:
-      linear-gradient(rgba($blue-accent, 0.15) 1px, transparent 1px),
-      linear-gradient(90deg, rgba($blue-accent, 0.15) 1px, transparent 1px);
-    background-size: 32px 32px;
-    pointer-events: none;
-  }
-}
-
-.quarto-title-banner .title,
-.quarto-title-banner h1 {
-  color: #ffffff;
-  position: relative;
-  z-index: 1;
-}
-
-.quarto-title-banner .description,
-.quarto-title-banner p.subtitle {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 13px;
-  position: relative;
-  z-index: 1;
-}
-
-// Título no banner: especificidade do ID (#title-block-header)
-// é maior que .quarto-title-banner .title — não definir color aqui
-// para não sobrescrever o branco definido acima.
-#title-block-header .title {
-  font-size: 1.9rem;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-}
-
-// ── Contador de artigos/temas no banner ──────────────────────
-// O JS em blog/index.qmd injeta .banner-stats dentro de
-// .quarto-title-banner .quarto-title após o render do listing.
-.banner-stats {
-  display: flex;
-  gap: 2.5rem;
-  align-items: flex-end;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 1;
-}
-
-.banner-stat {
-  text-align: right;
-}
-
-.banner-stat-n {
-  font-family: $font-family-monospace;
-  font-size: 2rem;
-  font-weight: 500;
-  color: #ffffff;
+.bi.bi-ai-lattes::before,
+.bi.bi-ai-orcid::before,
+.bi.bi-ai-scholar::before,
+.bi.bi-ai-wos::before {
+  font-family: "Academicons" !important;
+  font-style: normal;
+  font-weight: normal !important;
   line-height: 1;
-  display: block;
+}
+.bi.bi-ai-lattes::before  { content: "\e9b3"; }
+.bi.bi-ai-orcid::before   { content: "\e9d9"; }
+.bi.bi-ai-scholar::before { content: "\e9d4"; }
+.bi.bi-ai-wos::before     { content: "\e924"; }
+
+// ── Tipografia ───────────────────────────────────────────────
+body {
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
 }
 
-.banner-stat-l {
-  font-family: $font-family-monospace;
-  font-size: 9px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.35);
-  margin-top: 0.35rem;
-  display: block;
+h1, h2, h3, h4, .h1, .h2, .h3, .h4, .title {
+  letter-spacing: -0.02em;
 }
 
-// Reposiciona o bloco de título do banner para flex
-// permitindo que os stats fiquem à direita
-.quarto-title-banner #title-block-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
+// Seções com marcador no estilo de legenda de gráfico
+h2 {
+  margin-top: 2.5rem;
+  font-size: 1.45rem;
 
-.quarto-title-banner .quarto-title {
-  flex: 1;
-}
-
-// ── About page: overrides completos do template trestles ────────
-// O trestles tem estrutura própria — sobrescrevemos para alinhar
-// com o design do site.
-
-// Foto: quadrada com cantos arredondados (não circular)
-.about-entity .about-image img,
-#quarto-content .about-image img {
-  border-radius: 6px !important;
-  object-fit: cover;
-  border: 2px solid -color;
-}
-
-// Links do trestles: lista vertical com bordas (não botões horizontais)
-.about-links {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 0.3rem !important;
-  margin-top: 1rem !important;
-}
-
-.about-link {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.5rem !important;
-  font-size: 12.5px !important;
-  color: #3a4459 !important;
-  border: 1px solid -color !important;
-  border-radius: 3px !important;
-  padding: 0.35rem 0.75rem !important;
-  width: 100% !important;
-  text-decoration: none !important;
-  transition: border-color 0.15s, color 0.15s, background 0.15s !important;
-
-  &:hover {
-    border-color: -accent !important;
-    color: -accent !important;
-    background: -light !important;
-  }
-
-  // Ícone Bootstrap dentro do link
-  .bi {
-    font-size: 13px !important;
-    width: 16px !important;
-    text-align: center !important;
-    color: #7a8499 !important;
-    flex-shrink: 0 !important;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 0.55rem;
+    height: 0.55rem;
+    margin-right: 0.65rem;
+    border-radius: 2px;
+    background: var(--ap-accent);
+    vertical-align: 0.18em;
   }
 }
 
-// Banner do trestles: o trestles ignora title-block-banner padrão.
-// Adicionamos um banner sintético via CSS no topo da .about-entity.
-// O banner real (navy + grid) é injetado via JS no index.qmd.
-.quarto-title-banner .quarto-title h1.title,
-.quarto-title-banner h1 {
-  font-size: 2rem !important;
-  color: #ffffff !important;
-  font-weight: 600 !important;
-  letter-spacing: -0.025em !important;
+h3 {
+  font-size: 1.15rem;
 }
 
-// Nome no trestles (abaixo da foto)
-.about-entity .about-name {
-  font-size: 1.2rem !important;
-  font-weight: 600 !important;
-  color: #0b0f1a !important;
-  letter-spacing: -0.01em !important;
-  margin-top: 0.75rem !important;
+// Números alinhados em tabelas e saídas
+table, .cell-output, pre {
+  font-variant-numeric: tabular-nums;
 }
 
-// Dark mode: about links
-[data-bs-theme="dark"] .about-link {
-  color: #a0aabb !important;
-  border-color: #1e2740 !important;
+// ── Faixa de título escura com pontilhado ───────────────────
+.quarto-title-banner {
+  background-color: var(--ap-banner) !important;
+  background-image: radial-gradient(var(--ap-banner-dots) 1px, transparent 1px);
+  background-size: 18px 18px;
+  color: #e2e8f0;
+  padding-top: 2.25rem;
+  padding-bottom: 2rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 3px solid var(--ap-accent);
 
-  &:hover {
-    border-color: #60a5fa !important;
-    color: #60a5fa !important;
-    background: rgba(37, 99, 235, 0.15) !important;
+  .title,
+  h1 {
+    color: #ffffff !important;
   }
-}
-// Com title-block-banner:true o título vai pro banner navy.
-// O trestles coloca .about-entity abaixo do banner — não precisa de ajuste.
-// Apenas garantir que o nome (title) fique grande e visível no banner.
-.quarto-title-banner .quarto-title h1.title {
-  font-size: 2rem;
-  color: #ffffff;
-}
 
-// ── Grid de posts (listing type: grid) ──────────────────────
-.quarto-grid-item {
-  background: #ffffff;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  overflow: hidden;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  .description,
+  p.subtitle,
+  .quarto-categories .quarto-category {
+    color: #94a3b8 !important;
+  }
 
-  &:hover {
-    border-color: $blue-accent;
-    box-shadow: 0 0 0 1px $blue-accent;
+  .quarto-categories .quarto-category {
+    background: rgba(148, 163, 184, 0.12);
   }
 }
 
-.quarto-grid-item .listing-image img,
-.listing-image img {
-  border-radius: 0;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.quarto-grid-item .listing-title,
-.listing-title {
-  font-size: 13.5px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  line-height: 1.4;
-}
-
-.quarto-grid-item .listing-title:hover {
-  color: $blue-accent;
-}
-
-.quarto-grid-item .listing-description,
-.listing-description {
-  font-size: 11.5px;
-  line-height: 1.65;
-}
-
-.quarto-grid-item .listing-date,
-.listing-date {
-  font-family: $font-family-monospace;
-  font-size: 10.5px;
-  letter-spacing: 0.04em;
-}
-
-// Categorias nos cards
-.quarto-grid-item .listing-categories .listing-category,
-.listing-category {
-  font-family: $font-family-monospace;
-  font-size: 9.5px;
-  letter-spacing: 0.06em;
-  text-transform: lowercase;
-  background: $blue-light;
-  color: $blue-mid;
-  border: none;
-  border-radius: 2px;
-  padding: 0.2rem 0.55rem;
-  font-weight: 500;
-}
-
-// Filtro / busca do listing
-.quarto-listing-sort,
-.quarto-listing-filter {
-  font-family: $font-family-monospace;
-  font-size: 11px;
-}
-
-.quarto-listing-filter input {
-  font-family: $font-family-monospace;
-  font-size: 11px;
-  border: 1px solid $border-color;
-  border-radius: 2px;
-  padding: 0.35rem 0.75rem;
-
-  &:focus {
-    outline: none;
-    border-color: $blue-accent;
-    box-shadow: 0 0 0 2px rgba($blue-accent, 0.15);
-  }
-}
-
-// Sidebar de categorias
-.quarto-listing-category-title {
-  font-family: $font-family-monospace;
-  font-size: 9.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-.quarto-listing-category .category {
-  font-family: $font-family-monospace;
-  font-size: 11px;
-  padding: 0.3rem 0;
-  border-bottom: 1px solid $border-color;
-  display: flex;
-  justify-content: space-between;
-
-  &:hover,
-  &.active {
-    color: $blue-accent;
-  }
-}
-
-// ── Post individual ──────────────────────────────────────────
-.quarto-title .title {
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  line-height: 1.25;
-}
-
-.quarto-title-meta {
-  font-family: $font-family-monospace;
-  font-size: 11px;
-  background: transparent;
-  border-top: 1px solid $border-color;
-  padding-top: 0.75rem;
-  margin-top: 1rem;
-}
-
-.quarto-title-meta-heading {
-  font-family: $font-family-monospace;
-  font-size: 9.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin: 0 0 0.2rem;
-}
-
-.quarto-title-meta-contents {
-  font-family: $font-family-monospace;
-  font-size: 11px;
-}
-
-// Categorias no post individual
-.quarto-categories .quarto-category {
-  font-family: $font-family-monospace;
-  font-size: 10px;
-  letter-spacing: 0.06em;
-  text-transform: lowercase;
-  background: $blue-light;
-  color: $blue-mid;
-  border: none;
-  border-radius: 2px;
-  padding: 0.2rem 0.6rem;
-}
-
-// ── TOC ──────────────────────────────────────────────────────
-#TOC {
-  font-size: 12.5px;
-  border-left: 2px solid $border-color;
-  padding-left: 1rem;
-}
-
-#TOC .toc-title {
-  font-family: $font-family-monospace;
-  font-size: 9.5px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-weight: 500;
+#title-block-header .quarto-title-meta {
   margin-bottom: 0.5rem;
 }
 
-#TOC a {
-  font-size: 12px;
+.quarto-title .title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.15;
 }
 
-#TOC a:hover,
-#TOC a.active {
-  color: $blue-accent;
+.quarto-title p.subtitle,
+.quarto-title .description {
+  color: var(--ap-muted);
+  font-size: 1.05rem;
 }
 
-// ── Conteúdo do artigo ───────────────────────────────────────
-.page-layout-article .page-columns > article {
-  font-size: 15px;
-  line-height: 1.8;
-  max-width: 680px;
+.quarto-title-meta-heading {
+  @extend %ap-label;
 }
 
-// ── Blocos de código ─────────────────────────────────────────
-pre.sourceCode,
-div.sourceCode,
-.cell-code pre {
-  border-radius: $border-radius;
-  padding: 1rem 1.25rem;
-  line-height: 1.6;
+.quarto-title-meta-contents {
+  font-size: 0.92rem;
 }
 
-// Inline code (elementos comuns em prosa acadêmica)
-p code, li code, td code,
-h1 code, h2 code, h3 code,
-th code, blockquote code, dt code {
-  border-radius: 2px;
-  font-size: 13px;
-  padding: 0.15em 0.4em;
+// ── Barra de navegação ───────────────────────────────────────
+.navbar {
+  border-top: 3px solid var(--ap-accent);
+  box-shadow: none;
 }
 
-// Botão copiar código
-.code-copy-button {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 2px;
-
-  &:hover {
-    background: rgba($blue-accent, 0.3);
-    border-color: $blue-accent;
-  }
+.navbar .navbar-title,
+.navbar .bi {
+  color: #f1f5f9;
 }
 
-// ── Botões ───────────────────────────────────────────────────
-.btn-primary,
-.btn-outline-primary {
-  font-family: $font-family-monospace;
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  border-radius: 2px;
+.navbar-brand .navbar-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+}
+
+.navbar .nav-link {
+  font-size: 0.93rem;
+  font-weight: 500;
+}
+
+.navbar .nav-link.active {
+  color: #5ec4dc !important;
 }
 
 // ── Rodapé ───────────────────────────────────────────────────
 .nav-footer {
-  font-family: $font-family-monospace;
-  font-size: 11px;
-  padding: 1.25rem 2rem;
+  border-top: 3px solid var(--ap-accent);
+  font-family: var(--ap-mono);
+  font-size: 0.75rem;
 }
 
-.nav-footer-left,
-.nav-footer-right {
-  color: rgba(255, 255, 255, 0.35);
+// ── Página inicial (template trestles) ───────────────────────
+.quarto-about-trestles .about-entity #title-block-header::before {
+  display: none;  // a página inicial usa o pontilhado atrás da foto
 }
 
-// ── About page ───────────────────────────────────────────────
-.about-entity .about-image img {
-  border-radius: $border-radius;
-  border: 2px solid $border-color;
+.quarto-about-trestles .about-entity #title-block-header {
+  border-bottom: none;
+  padding: 0;
+  margin-bottom: 0;
 }
 
-.about-links .about-link {
-  font-size: 12.5px;
-  border: 1px solid $border-color;
-  border-radius: 2px;
-  padding: 0.35rem 0.75rem;
-  transition: border-color 0.15s, color 0.15s;
+.quarto-about-trestles .about-entity .description {
+  display: none;  // a descrição fica só nos metadados (SEO)
+}
+
+.quarto-about-trestles .about-entity h1.title {
+  font-size: 2rem;
+}
+
+.quarto-about-trestles .about-entity p.subtitle {
+  @extend %ap-label;
+  text-align: center;
+  font-size: 0.78rem;
+  margin-top: 0.4rem;
+}
+
+.about-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 1rem;
+}
+
+.quarto-about-trestles .about-entity .about-links .about-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  font-size: 0.9rem;
+  color: var(--bs-body-color);
+  background: var(--ap-card);
+  border: 1px solid var(--ap-border);
+  border-radius: 4px;
+  padding: 0.38rem 0.75rem;
+  text-decoration: none;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
 
   &:hover {
-    border-color: $blue-accent;
-    background: $blue-light;
+    border-color: var(--ap-accent);
+    color: var(--ap-accent);
+    background: var(--ap-accent-soft);
   }
+
+  .bi {
+    width: 1.1rem;
+    text-align: center;
+    color: var(--ap-muted);
+  }
+
+  &:hover .bi {
+    color: var(--ap-accent);
+  }
+}
+
+// ── Blocos de conteúdo ───────────────────────────────────────
+.lead-academic {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--ap-ink);
+}
+
+.formacao dt {
+  font-weight: 600;
+  color: var(--ap-ink);
+}
+
+.formacao dd {
+  color: var(--ap-muted);
+  margin-bottom: 0.85rem;
+}
+
+// Ano em destaque (formação)
+.ano {
+  font-family: var(--ap-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ap-accent);
+  background: var(--ap-accent-soft);
+  border-radius: 3px;
+  padding: 0.05rem 0.4rem;
+  margin-left: 0.35rem;
+}
+
+// Ferramentas (chips monoespaçados)
+.ferramentas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.25rem 0 1rem;
+
+  span {
+    font-family: var(--ap-mono);
+    font-size: 0.78rem;
+    color: var(--bs-body-color);
+    border: 1px solid var(--ap-border);
+    background: var(--ap-soft);
+    border-radius: 3px;
+    padding: 0.15rem 0.55rem;
+  }
+}
+
+// Referências (página de publicações)
+.refs > p {
+  margin-bottom: 0.9rem;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--ap-border);
+  line-height: 1.6;
+  transition: border-color 0.15s;
+
+  &:hover {
+    border-left-color: var(--ap-accent);
+  }
+
+  a[href*="doi.org"] {
+    font-family: var(--ap-mono);
+    font-size: 0.85em;
+  }
+}
+
+.pub-ano {
+  font-family: var(--ap-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ap-accent);
+  margin: 1.75rem 0 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--ap-border);
+  }
+}
+
+// Cartões (software e dados)
+.cartao {
+  border: 1px solid var(--ap-border);
+  border-radius: 6px;
+  background: var(--ap-card);
+  padding: 1.15rem 1.35rem 0.5rem;
+  margin-bottom: 1.25rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+
+  &:hover {
+    border-color: var(--ap-accent);
+    box-shadow: 0 1px 0 0 var(--ap-accent);
+  }
+
+  h3 {
+    margin-top: 0;
+    font-family: var(--ap-mono);
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+
+  .meta {
+    @extend %ap-label;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    font-size: 0.75rem;
+    margin-top: -0.35rem;
+  }
+}
+
+// ── Blog ─────────────────────────────────────────────────────
+div.quarto-post {
+  border-bottom: 1px solid var(--ap-border);
+}
+
+div.quarto-post .thumbnail {
+  flex-basis: 150px;
+  max-width: 150px;
+}
+
+div.quarto-post .thumbnail img {
+  border-radius: 4px;
+  object-fit: cover;
+  filter: saturate(0.85);
+}
+
+div.quarto-post .listing-title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+div.quarto-post .listing-date,
+.listing-date,
+.listing-reading-time {
+  font-family: var(--ap-mono);
+  font-size: 0.78rem;
+  color: var(--ap-muted);
+}
+
+.listing-category,
+.quarto-category {
+  font-family: var(--ap-mono);
+  background: var(--ap-accent-soft);
+  color: var(--ap-accent);
+  border: none;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+
+.quarto-listing-category-title {
+  @extend %ap-label;
+}
+
+.quarto-listing-category .category {
+  font-size: 0.9rem;
+}
+
+// ── Código ───────────────────────────────────────────────────
+div.sourceCode,
+pre.sourceCode {
+  border: 1px solid var(--ap-border);
+  border-radius: 4px;
+}
+
+p code:not(.sourceCode),
+li code:not(.sourceCode) {
+  font-size: 0.87em;
+}
+
+// ── Sumário lateral ──────────────────────────────────────────
+#TOC .toc-title,
+#toc-title {
+  @extend %ap-label;
+}
+
+#TOC a.nav-link {
+  font-size: 0.85rem;
+}
+
+#TOC a.nav-link.active {
+  color: var(--ap-accent);
+  border-left-color: var(--ap-accent);
 }
 
 // ── Responsivo ───────────────────────────────────────────────
-@media (max-width: 991px) {
-  .quarto-title .title {
-    font-size: 1.5rem;
+@media (max-width: 767px) {
+  .quarto-about-trestles .about-entity {
+    margin-top: 1.25rem;
   }
 
-  pre.sourceCode,
-  div.sourceCode {
-    font-size: 12px;
+  .quarto-title .title {
+    font-size: 1.75rem;
   }
+}
+
+// O título do sumário lateral também é um h2: sem marcador
+#toc-title::before,
+.quarto-listing-category-title::before,
+nav h2::before {
+  display: none;
+}
+
+// ── Conteúdo em folha branca sobre o fundo acinzentado ───────
+main.content,
+#quarto-document-content {
+  background: var(--ap-card);
+  border: 1px solid var(--ap-border);
+  border-radius: 8px;
+  padding: 1.75rem 2.25rem 2rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+// Com a faixa de título, o cabeçalho fica fora da folha
+main.content > #title-block-header {
+  margin-top: 0;
+}
+
+.nav-footer a,
+.nav-footer .nav-footer-left,
+.nav-footer .nav-footer-right {
+  color: #94a3b8;
+}
+
+.nav-footer a:hover {
+  color: #ffffff;
+}
+
+// Sumário e categorias ficam sobre o fundo acinzentado
+#quarto-margin-sidebar,
+#quarto-sidebar {
+  background: transparent;
+}
+
+@media (max-width: 767px) {
+  main.content,
+  #quarto-document-content {
+    padding: 1.25rem 1.1rem 1.5rem;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+// Página inicial: coluna da foto também em bloco branco
+.quarto-about-trestles .about-entity {
+  background: var(--ap-card);
+  border: 1px solid var(--ap-border);
+  border-top: 3px solid var(--ap-accent);
+  border-radius: 8px;
+  padding: 1.75rem 1.5rem 1.5rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  align-self: flex-start;
+}
+
+.quarto-about-trestles {
+  margin-top: 1.5rem;
+}
+
+// Celular: o bloco da foto não pode passar da largura da tela
+.quarto-about-trestles .about-entity {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.quarto-about-trestles .about-entity .about-image {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .quarto-about-trestles {
+    margin-top: 0.75rem;
+  }
+
+  .quarto-about-trestles .about-entity {
+    width: 100%;
+    padding: 1.25rem 1rem;
+  }
+}
+
+// ── Publicações (listagem com busca e filtro) ────────────────
+.pub-lista {
+  margin-top: 0.5rem;
+}
+
+.pub-item {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 0.25rem 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--ap-border);
+  line-height: 1.6;
+
+  .pub-ano {
+    font-family: var(--ap-mono);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ap-accent);
+    padding-top: 0.1rem;
+  }
+
+  .listing-title,
+  .listing-title a {
+    color: var(--bs-body-color);
+    text-decoration: none;
+  }
+
+  .listing-title a:hover {
+    color: var(--ap-accent);
+    text-decoration: underline;
+  }
+
+  .pub-doi {
+    font-family: var(--ap-mono);
+    font-size: 0.85em;
+  }
+
+  .listing-categories {
+    margin-top: 0.35rem;
+  }
+}
+
+// ── Página inicial: últimas do blog ──────────────────────────
+#ultimos-posts table {
+  margin-bottom: 0.5rem;
+
+  th {
+    @extend %ap-label;
+  }
+
+  td.listing-date,
+  td:first-child {
+    font-family: var(--ap-mono);
+    font-size: 0.8rem;
+    color: var(--ap-muted);
+    white-space: nowrap;
+  }
+}
+
+.ver-todos {
+  font-family: var(--ap-mono);
+  font-size: 0.82rem;
+}
+
+// ── Indicador do mercado de trabalho (OJS) ───────────────────
+.indicador {
+  border: 1px solid var(--ap-border);
+  border-radius: 8px;
+  padding: 1rem 1.25rem 0.75rem;
+  margin: 0.5rem 0 1rem;
+  background: var(--ap-soft);
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin: 0.75rem 0 0.5rem;
+}
+
+.kpi {
+  background: var(--ap-card);
+  border: 1px solid var(--ap-border);
+  border-radius: 6px;
+  padding: 0.65rem 0.85rem;
+
+  .kpi-rotulo {
+    @extend %ap-label;
+    font-size: 0.66rem;
+  }
+
+  .kpi-valor {
+    font-family: var(--ap-mono);
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: var(--ap-ink);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .kpi-nota {
+    font-size: 0.75rem;
+    color: var(--ap-muted);
+  }
+}
+
+.fonte-dados {
+  font-size: 0.78rem;
+  color: var(--ap-muted);
+}
+
+// Aviso de cookies no padrão visual do site
+.termsfeed-com---nb .cc-nb-main-container {
+  font-family: $font-family-sans-serif;
+}
+
+// Ajustes finos: publicações
+.pub-item {
+  align-items: start;
+
+  .pub-ano {
+    display: block;
+    margin: 0;
+    &::after { display: none; }
+  }
+
+  .listing-categories {
+    display: flex;
+    gap: 0.3rem;
+  }
+
+  .listing-category {
+    display: inline-block;
+    width: auto;
+    padding: 0.05rem 0.45rem;
+  }
+}
+
+// Indicador: sem botões de copiar código
+.indicador .code-copy-button,
+.indicador .code-copy-outer-scaffold > button {
+  display: none !important;
+}
+
+// Aviso de cookies nas cores do site
+.termsfeed-com---palette-light {
+  .cc-nb-main-container { padding: 1.5rem 2rem; }
+  .cc-nb-title { font-size: 1.15rem; font-weight: 600; }
+  .cc-nb-text { font-size: 0.9rem; }
+  .cc-nb-okagree,
+  .cc-nb-reject {
+    background-color: var(--ap-accent) !important;
+    color: #ffffff !important;
+    border-radius: 4px !important;
+  }
+  .cc-nb-changep {
+    border-radius: 4px !important;
+  }
+}
+
+.cookie-consent-footer a,
+.nav-footer .cookie-consent-footer {
+  font-family: var(--ap-mono);
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+// Tabela das ocupações contábeis
+.tabela-contabil {
+  font-size: 0.88rem;
+  margin: 0.5rem 0 1rem;
+  background: var(--ap-card);
+
+  th {
+    @extend %ap-label;
+    font-size: 0.66rem;
+  }
+
+  td:not(:first-child),
+  th:not(:first-child) {
+    text-align: right;
+    font-family: var(--ap-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  td.neg {
+    color: #d97706;
+  }
+}
+
+.indicador form {
+  margin-bottom: 0.25rem;
+}
+
+// Publicações: Qualis e observações
+.pub-item .pub-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+
+  .listing-categories { margin-top: 0; }
+}
+
+.pub-qualis,
+.pub-nota {
+  font-family: var(--ap-mono);
+  font-size: 0.7rem;
+  border-radius: 3px;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--ap-border);
+  color: var(--ap-muted);
+}
+
+.pub-nota {
+  border-color: #d97706;
+  color: #b45309;
+}
+
+// Cartões de números escritos em Markdown (sem margem entre parágrafos)
+.kpi p {
+  margin: 0;
 }

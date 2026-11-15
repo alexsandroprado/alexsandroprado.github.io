@@ -1,0 +1,214 @@
+---
+title: "Pesquisa"
+description: "Linhas de pesquisa, grupo de pesquisa e dados abertos."
+---
+
+## Emprego formal em números
+
+Indicador mensal do mercado de trabalho formal, calculado a partir dos microdados do Novo Cadastro Geral de Empregados e Desempregados (Novo CAGED) com o pacote [datacaged](../software/index.qmd) e atualizado automaticamente a cada nova divulgação.
+
+::: {.indicador}
+
+```{ojs}
+//| echo: false
+dados = FileAttachment("dados/caged_saldo.csv").csv({typed: true})
+  .then(ds => ds.map(d => ({...d, data: new Date(d.competencia)})))
+
+viewof recorte = Inputs.radio(
+  ["Brasil", "Rio Grande do Norte", "Mossoró"],
+  {value: "Rio Grande do Norte"}
+)
+
+viewof janela = Inputs.radio(
+  new Map([["Últimos 24 meses", 24], ["Desde 2020", 1000]]),
+  {value: 24}
+)
+```
+
+```{ojs}
+//| echo: false
+serie = dados
+  .filter(d => d.recorte === recorte)
+  .sort((a, b) => a.data - b.data)
+
+recorteJanela = serie.slice(-janela)
+ultimo = serie[serie.length - 1]
+anoUltimo = ultimo.data.getUTCFullYear()
+acumAno = d3.sum(serie.filter(d => d.data.getUTCFullYear() === anoUltimo), d => d.saldo)
+acum12 = d3.sum(serie.slice(-12), d => d.saldo)
+
+fmt = v => (v > 0 ? "+" : "") + v.toLocaleString("pt-BR")
+mesAno = d => d.toLocaleDateString("pt-BR", {month: "long", year: "numeric", timeZone: "UTC"})
+mesCurto = d => d.toLocaleDateString("pt-BR", {month: "short", year: "2-digit", timeZone: "UTC"}).replace(". de ", "/").replace(" de ", "/")
+
+html`<div class="kpis">
+  <div class="kpi"><div class="kpi-rotulo">Saldo do mês</div>
+    <div class="kpi-valor">${fmt(ultimo.saldo)}</div>
+    <div class="kpi-nota">${mesAno(ultimo.data)}</div></div>
+  <div class="kpi"><div class="kpi-rotulo">Acumulado no ano</div>
+    <div class="kpi-valor">${fmt(acumAno)}</div>
+    <div class="kpi-nota">janeiro a ${ultimo.data.toLocaleDateString("pt-BR", {month: "long", timeZone: "UTC"})} de ${anoUltimo}</div></div>
+  <div class="kpi"><div class="kpi-rotulo">Últimos 12 meses</div>
+    <div class="kpi-valor">${fmt(acum12)}</div>
+    <div class="kpi-nota">soma dos saldos mensais</div></div>
+  <div class="kpi"><div class="kpi-rotulo">Admissões no mês</div>
+    <div class="kpi-valor">${ultimo.admissoes.toLocaleString("pt-BR")}</div>
+    <div class="kpi-nota">${ultimo.desligamentos.toLocaleString("pt-BR")} desligamentos</div></div>
+</div>`
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  height: 260,
+  marginLeft: 64,
+  style: {fontFamily: "IBM Plex Mono, monospace", fontSize: "11px", background: "transparent"},
+  x: {type: "band", label: null, tickFormat: d => mesCurto(new Date(d)),
+      ticks: recorteJanela.filter((d, i) => i % (janela > 24 ? 6 : 3) === 0).map(d => d.data.getTime())},
+  y: {label: "Saldo (admissões menos desligamentos)", grid: true,
+      tickFormat: v => v.toLocaleString("pt-BR")},
+  color: {domain: [true, false], range: ["#1f8fae", "#d97706"]},
+  marks: [
+    Plot.ruleY([0], {stroke: "#94a3b8"}),
+    Plot.barY(recorteJanela, {
+      x: d => d.data.getTime(), y: "saldo", fill: d => d.saldo >= 0,
+      inset: 0.5,
+      title: d => `${mesAno(d.data)}\nSaldo: ${fmt(d.saldo)}\nAdmissões: ${d.admissoes.toLocaleString("pt-BR")}\nDesligamentos: ${d.desligamentos.toLocaleString("pt-BR")}`,
+      tip: true
+    })
+  ]
+})
+```
+
+::: {.fonte-dados}
+Fonte: Ministério do Trabalho e Emprego, Novo CAGED (movimentações declaradas no prazo, sem ajustes). Elaboração própria com o pacote datacaged. Valores mensais por competência.
+:::
+
+:::
+
+## Mercado de trabalho contábil
+
+Admissões, desligamentos e salário de admissão das ocupações contábeis no emprego formal, segundo a Classificação Brasileira de Ocupações (CBO): Contador (2522-10), Auditor (2522-05), Perito contábil (2522-15), Técnico de contabilidade (3511-05) e Auxiliar de contabilidade (4131-10).
+
+::: {.indicador}
+
+```{ojs}
+//| echo: false
+contabil = FileAttachment("dados/caged_contabil.csv").csv({typed: true})
+  .then(ds => ds.map(d => ({...d, data: new Date(d.competencia), ano: new Date(d.competencia).getUTCFullYear()})))
+
+ocupacoesTodas = ["Contador", "Auditor", "Perito contábil", "Técnico de contabilidade", "Auxiliar de contabilidade"]
+
+viewof recorteCont = Inputs.radio(
+  ["Brasil", "Nordeste", "Rio Grande do Norte"],
+  {value: "Rio Grande do Norte"}
+)
+
+viewof ocupSel = Inputs.checkbox(ocupacoesTodas, {value: ocupacoesTodas})
+```
+
+```{ojs}
+//| echo: false
+contR = contabil.filter(d => d.recorte === recorteCont && ocupSel.includes(d.ocupacao))
+compsCont = [...new Set(contabil.map(d => d.data.getTime()))].sort((a, b) => a - b)
+ult12 = new Set(compsCont.slice(-12))
+ultimaCont = new Date(compsCont[compsCont.length - 1])
+inicio12 = new Date(compsCont[compsCont.length - 12])
+c12 = contR.filter(d => ult12.has(d.data.getTime()))
+somaC = (arr, k) => d3.sum(arr, d => d[k])
+salMedio = arr => somaC(arr, "salario_soma") / Math.max(1, somaC(arr, "salario_n"))
+brl = v => v.toLocaleString("pt-BR", {style: "currency", currency: "BRL", maximumFractionDigits: 0})
+periodo12 = `${mesCurto(inicio12)} a ${mesCurto(ultimaCont)}`
+
+html`<div class="kpis">
+  <div class="kpi"><div class="kpi-rotulo">Admissões (12 meses)</div>
+    <div class="kpi-valor">${somaC(c12, "admissoes").toLocaleString("pt-BR")}</div>
+    <div class="kpi-nota">${periodo12}</div></div>
+  <div class="kpi"><div class="kpi-rotulo">Saldo (12 meses)</div>
+    <div class="kpi-valor">${fmt(somaC(c12, "admissoes") - somaC(c12, "desligamentos"))}</div>
+    <div class="kpi-nota">admissões menos desligamentos</div></div>
+  <div class="kpi"><div class="kpi-rotulo">Salário médio de admissão</div>
+    <div class="kpi-valor">${brl(salMedio(c12))}</div>
+    <div class="kpi-nota">últimos 12 meses, valor nominal</div></div>
+</div>`
+```
+
+```{ojs}
+//| echo: false
+tabela12 = ocupSel.map(o => {
+  const r = c12.filter(d => d.ocupacao === o)
+  return {o, adm: somaC(r, "admissoes"), desl: somaC(r, "desligamentos"), sal: salMedio(r), n: somaC(r, "salario_n")}
+})
+
+html`<table class="table table-sm tabela-contabil">
+  <thead><tr><th>Ocupação</th><th>Admissões</th><th>Desligamentos</th><th>Saldo</th><th>Salário médio de admissão</th></tr></thead>
+  <tbody>${tabela12.map(r => html`<tr>
+    <td>${r.o}</td>
+    <td>${r.adm.toLocaleString("pt-BR")}</td>
+    <td>${r.desl.toLocaleString("pt-BR")}</td>
+    <td class="${r.adm - r.desl < 0 ? "neg" : ""}">${fmt(r.adm - r.desl)}</td>
+    <td>${r.n >= 10 ? brl(r.sal) : "—"}</td></tr>`)}</tbody>
+</table>`
+```
+
+```{ojs}
+//| echo: false
+salAnual = d3.flatRollup(contR, v => ({sal: salMedio(v), n: somaC(v, "salario_n")}), d => d.ano, d => d.ocupacao)
+  .map(([ano, ocupacao, v]) => ({ano, ocupacao, ...v, sal: v.n >= 10 ? v.sal : NaN}))
+  .sort((a, b) => a.ano - b.ano)
+
+Plot.plot({
+  height: 280,
+  marginLeft: 70,
+  style: {fontFamily: "IBM Plex Mono, monospace", fontSize: "11px", background: "transparent"},
+  x: {label: null, tickFormat: d => String(d), ticks: [...new Set(salAnual.map(d => d.ano))]},
+  y: {label: "Salário médio de admissão (R$, nominal)", grid: true, tickFormat: v => v.toLocaleString("pt-BR")},
+  color: {domain: ocupacoesTodas, range: ["#0e7490", "#7c3aed", "#d97706", "#64748b", "#94a3b8"], legend: true},
+  marks: [
+    Plot.line(salAnual, {x: "ano", y: "sal", stroke: "ocupacao", strokeWidth: 2}),
+    Plot.dot(salAnual.filter(d => d.n >= 10), {x: "ano", y: "sal", fill: "ocupacao", r: 3,
+      title: d => `${d.ocupacao}, ${d.ano}\n${brl(d.sal)} (${d.n.toLocaleString("pt-BR")} admissões)`, tip: true})
+  ]
+})
+```
+
+::: {.fonte-dados}
+Fonte: Ministério do Trabalho e Emprego, Novo CAGED (movimentações declaradas no prazo). Elaboração própria com o pacote datacaged. O salário médio de admissão considera apenas admissões não intermitentes com salário contratual entre R$ 500 e R$ 60.000, em valores nominais; médias com menos de 10 admissões não são exibidas. O ano corrente reúne apenas os meses já divulgados.
+:::
+
+:::
+
+## Linhas de pesquisa
+
+### Economia do trabalho e microdados administrativos
+
+Investiga-se o funcionamento do mercado de trabalho formal brasileiro a partir de registros administrativos, em especial o Cadastro Geral de Empregados e Desempregados (CAGED) e a Relação Anual de Informações Sociais (RAIS). Entre os temas estudados, destacam-se o uso repetido do seguro-desemprego, os diferenciais salariais por gênero e raça e a dinâmica do emprego em profissões contábeis. Para isso, empregam-se métodos como a decomposição de Oaxaca-Blinder, a análise de sobrevivência e estimadores de diferenças em diferenças.
+
+### Sustentabilidade, ESG e governança corporativa
+
+Analisa-se a relação entre práticas ambientais, sociais e de governança (ESG), a qualidade da evidenciação e o desempenho das companhias abertas brasileiras. Nesse sentido, os estudos abordam a legibilidade dos relatórios de sustentabilidade, o efeito da estrutura de propriedade e de gestão familiar sobre o desempenho ESG e a divulgação de transformação digital, com base em dados da Comissão de Valores Mobiliários (CVM) e da B3.
+
+### Contabilidade financeira e mercado de capitais
+
+Examinam-se a remuneração de executivos, o gerenciamento de resultados e a reação do mercado a normas e eventos contábeis, com o uso de dados em painel e de modelos econométricos aplicados às companhias listadas na B3.
+
+## Grupo de pesquisa
+
+Coordenação do **Grupo de Estudos sobre Contabilidade e Mercado de Trabalho (GECOMT)**, criado em 2022, que reúne docentes e discentes em torno de estudos sobre o profissional contábil e o mercado de trabalho, com uso intensivo de dados públicos. As atividades do grupo abrangem reuniões científicas, cursos de capacitação, orientação de bolsistas de iniciação científica e extensão, além da produção de artigos, livros e capítulos. Informações sobre o grupo, seus projetos e produtos estão disponíveis em [gecomt.github.io](https://gecomt.github.io/).
+
+## Projetos em andamento
+
+::: {.formacao}
+Diferenciais salariais por gênero e raça: uma análise do mercado de trabalho contábil [desde 2022]{.ano}
+:   Coordenação. O projeto identifica variáveis representativas do capital social individual e seus efeitos sobre a composição dos salários e as diferenças salariais por sexo, raça e quantis de rendimento, com dados da Relação Anual de Informações Sociais (RAIS) de 1986 a 2021. Para isso, combinam-se a equação minceriana de salários, a regressão quantílica incondicional (RIF) e a decomposição de Oaxaca-Blinder.
+
+contabiliDados: Contabilidade e Finanças [desde 2023]{.ano}
+:   Participação, sob coordenação de Kléber Formiga Miranda. O projeto investiga métodos e técnicas que transformam bases de dados contábeis e financeiras disponíveis na web em informação útil ao processo decisório de gestores e investidores.
+:::
+
+## Dados abertos
+
+Bases construídas no âmbito das pesquisas e disponibilizadas publicamente, conforme descrito em [Software e dados](../software/index.qmd):
+
+- **Segmentos de listagem da B3 por companhia (2010 a 2026):** painel anual, verificado documento a documento, do segmento de listagem de cada companhia aberta brasileira.
+- **Microdados do CAGED e da RAIS:** espelhos públicos dos arquivos do Ministério do Trabalho e Emprego, organizados para acesso programático a partir do R.

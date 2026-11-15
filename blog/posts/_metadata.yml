@@ -2,15 +2,22 @@
 
 freeze: true
 
-author: "Alexsandro Prado"
+author:
+  - name: "Alexsandro Prado"
+    affiliation: "Universidade Federal Rural do Semi-Árido (UFERSA)"
+    orcid: "0000-0002-7072-3621"
 
 reading-time: true
+
+# Gera o bloco "Citação" (texto e BibTeX) ao final de cada post
+citation: true
+appendix-cite-as: display
 
 format:
   html:
     toc: true
     toc-depth: 3
-    toc-title: "Conteúdo"
+    toc-title: "Nesta página"
     code-copy: true
     code-overflow: wrap
 
@@ -18,3 +25,20 @@ execute:
   echo: false
   warning: false
   error: false
+
+# Comentários via giscus (GitHub Discussions)
+# Requisitos: Discussions ativadas no repositório e o app giscus instalado
+# (https://github.com/apps/giscus). O Quarto obtém os IDs automaticamente.
+comments:
+  giscus:
+    repo: alexsandroprado/alexsandroprado.github.io
+    repo-id: "R_kgDOLvpplg"
+    category: "Announcements"
+    mapping: "pathname"
+    reactions-enabled: true
+    input-position: top
+    loading: lazy
+    language: pt
+    theme:
+      light: light
+      dark: transparent_dark

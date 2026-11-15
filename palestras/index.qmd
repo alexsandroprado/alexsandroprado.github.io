@@ -1,6 +1,0 @@
----
-title: "Palestras"
-comments: false
----
-
-<!-- Conteúdo em breve -->

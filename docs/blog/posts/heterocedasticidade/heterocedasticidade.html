@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.37">
@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Alexsandro Prado">
-<meta name="dcterms.date" content="2024-05-22">
 
 <title>Heterocedasticidade e Autocorrelação: como resolver na prática? – Alexsandro Prado</title>
 <style>
@@ -36,20 +35,22 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
 <link href="../../../images/logo.ico" rel="icon">
+<script src="../../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
 <script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-6d23ae59213da9e3fc396c68983829ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-9755d03cb5a693fd820ccb36c03ac07a.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-6d23ae59213da9e3fc396c68983829ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-3e64db84d37dea41f36a9f8c79e61bb0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-83d3bb3b42d8ab66882b7ec26868c250.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-3e64db84d37dea41f36a9f8c79e61bb0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-27dfa573cfd744f54cc53404cafb7c60.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-e6a6c5f325e02424b9b52f2a39274dff.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-27dfa573cfd744f54cc53404cafb7c60.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-9731c3b18b4bd13c161f8d43c7db45c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-6422df623a12f4e78606cfff81464e4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-9731c3b18b4bd13c161f8d43c7db45c1.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,16 +77,33 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Procurar"
   }
 }</script>
-<!-- Fontes carregadas via mainfont/monofont em _quarto.yml -->
 
-<!-- Academicons (para ícones Lattes, ORCID, etc.) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"express",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":"",
+"website_privacy_policy_url":"/privacidade.html"
+  ,
+"language":"pt"
+  });
+});
+</script> 
+  
+<style>html{ scroll-behavior: smooth; }</style>
+<!-- Fontes: Inter (texto e títulos), IBM Plex Mono (rótulos, datas e código) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 
-<!-- Font Awesome -->
-<script src="https://kit.fontawesome.com/0fba9333d8.js" crossorigin="anonymous"></script>
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<!-- Google Tag Manager (carregado apenas após o consentimento de cookies) -->
+<script type="text/plain" cookie-consent="tracking">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -93,8 +111,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 
+<meta property="og:title" content="Heterocedasticidade e Autocorrelação: como resolver na prática? – Alexsandro Prado">
+<meta property="og:description" content="Professor Adjunto da UFERSA. Economia do trabalho, contabilidade financeira, ESG e governança corporativa.">
+<meta property="og:image" content="https://alexsandroprado.github.io/blog/posts/heterocedasticidade/heterocedasticidade.png">
+<meta property="og:site_name" content="Alexsandro Prado">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1024">
 <meta name="twitter:title" content="Heterocedasticidade e Autocorrelação: como resolver na prática? – Alexsandro Prado">
-<meta name="twitter:description" content="Econometria, Data Science e Contabilidade — análises aplicadas com R.">
+<meta name="twitter:description" content="Professor Adjunto da UFERSA. Economia do trabalho, contabilidade financeira, ESG e governança corporativa.">
 <meta name="twitter:image" content="https://alexsandroprado.github.io/blog/posts/heterocedasticidade/heterocedasticidade.png">
 <meta name="twitter:image-height" content="1024">
 <meta name="twitter:image-width" content="1024">
@@ -266,7 +290,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -281,47 +305,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
+    <a class="nav-link" href="../../../pesquisa/index.html"> 
+<span class="menu-text">Pesquisa</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../publicacoes/index.html"> 
+<span class="menu-text">Publicações</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../software/index.html"> 
+<span class="menu-text">Software e dados</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../ensino/index.html"> 
+<span class="menu-text">Ensino</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../../blog/index.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projetos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Projetos</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-projetos">    
-        <li>
-    <a class="dropdown-item" href="https://gecomt.github.io/" target="_blank">
- <span class="dropdown-text">GECOMT</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://contabilidados.com.br/" target="_blank">
- <span class="dropdown-text">Contabilidados</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://regulariza.shinyapps.io/dashboard/" target="_blank">
- <span class="dropdown-text">Regulariza</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/alexsandroprado"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/alexsandroprado"> <i class="bi bi-github" role="img" aria-label="GitHub">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/alexsandroprado"> <i class="bi bi-twitter-x" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/alexsandroprado/"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.youtube.com/@profalexsandroprado"> <i class="bi bi-youtube" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="../../../blog/index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../../blog/index.xml"> <i class="bi bi-rss" role="img" aria-label="RSS do blog">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -334,12 +350,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Heterocedasticidade e Autocorrelação: como resolver na prática?</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">econometria</div>
+              </div>
+                  </div>
+  </div>
+    
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-heading">Afiliação</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author">Alexsandro Prado <a href="https://orcid.org/0000-0002-7072-3621" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    </div>
+    <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              Universidade Federal Rural do Semi-Árido (UFERSA)
+            </p>
+        </div>
+    </div>
+
+  <div class="quarto-title-meta">
+
+        
+      <div>
+      <div class="quarto-title-meta-heading">Data de Publicação</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">22/05/2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Conteúdo</h2>
+    <h2 id="toc-title">Nesta página</h2>
    
   <ul>
   <li><a href="#passo-1-identificar-a-heterocedasticidade" id="toc-passo-1-identificar-a-heterocedasticidade" class="nav-link active" data-scroll-target="#passo-1-identificar-a-heterocedasticidade">Passo 1: Identificar a Heterocedasticidade</a></li>
@@ -370,41 +424,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Heterocedasticidade e Autocorrelação: como resolver na prática?</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">econometria</div>
-  </div>
-  </div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor</div>
-    <div class="quarto-title-meta-contents">
-             <p>Alexsandro Prado </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Data de Publicação</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">2024-05-22</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <p style="text-align: justify;">
@@ -431,16 +455,16 @@ Residuals:
 -1069.88  -309.87   -33.51   254.44  1702.00 
 
 Coefficients:
-            Estimate Std. Error t value            Pr(&gt;|t|)    
-(Intercept)  4749.48     465.62   10.20 &lt;0.0000000000000002 ***
-experience    995.12      28.89   34.45 &lt;0.0000000000000002 ***
-education     320.02      27.27   11.74 &lt;0.0000000000000002 ***
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  4749.48     465.62   10.20   &lt;2e-16 ***
+experience    995.12      28.89   34.45   &lt;2e-16 ***
+education     320.02      27.27   11.74   &lt;2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 524.1 on 97 degrees of freedom
 Multiple R-squared:  0.9299,    Adjusted R-squared:  0.9285 
-F-statistic: 643.8 on 2 and 97 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+F-statistic: 643.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
@@ -466,10 +490,10 @@ BP = 17.285, df = 2, p-value = 0.0001764</code></pre>
 <pre><code>
 t test of coefficients:
 
-            Estimate Std. Error t value              Pr(&gt;|t|)    
-(Intercept) 4749.481    459.819  10.329 &lt; 0.00000000000000022 ***
-experience   995.117     37.144  26.791 &lt; 0.00000000000000022 ***
-education    320.022     26.539  12.059 &lt; 0.00000000000000022 ***
+            Estimate Std. Error t value  Pr(&gt;|t|)    
+(Intercept) 4749.481    459.819  10.329 &lt; 2.2e-16 ***
+experience   995.117     37.144  26.791 &lt; 2.2e-16 ***
+education    320.022     26.539  12.059 &lt; 2.2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
@@ -493,16 +517,16 @@ Residuals:
 -0.071087 -0.021134 -0.000469  0.018983  0.091538 
 
 Coefficients:
-            Estimate Std. Error t value            Pr(&gt;|t|)    
-(Intercept) 8.906897   0.029442  302.52 &lt;0.0000000000000002 ***
-experience  0.067282   0.001827   36.84 &lt;0.0000000000000002 ***
-education   0.022101   0.001724   12.82 &lt;0.0000000000000002 ***
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 8.906897   0.029442  302.52   &lt;2e-16 ***
+experience  0.067282   0.001827   36.84   &lt;2e-16 ***
+education   0.022101   0.001724   12.82   &lt;2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 0.03314 on 97 degrees of freedom
 Multiple R-squared:  0.9384,    Adjusted R-squared:  0.9371 
-F-statistic:   739 on 2 and 97 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+F-statistic:   739 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 <p>Raiz Quadrada: Usar a raiz quadrada da variável dependente pode ser útil em alguns casos.</p>
@@ -517,16 +541,16 @@ Residuals:
 -4.2463 -1.2381 -0.2119  1.1691  5.9950 
 
 Coefficients:
-            Estimate Std. Error t value            Pr(&gt;|t|)    
-(Intercept)  79.9427     1.8098   44.17 &lt;0.0000000000000002 ***
-experience    4.0817     0.1123   36.35 &lt;0.0000000000000002 ***
-education     1.3270     0.1060   12.52 &lt;0.0000000000000002 ***
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  79.9427     1.8098   44.17   &lt;2e-16 ***
+experience    4.0817     0.1123   36.35   &lt;2e-16 ***
+education     1.3270     0.1060   12.52   &lt;2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 2.037 on 97 degrees of freedom
 Multiple R-squared:  0.9368,    Adjusted R-squared:  0.9354 
-F-statistic: 718.3 on 2 and 97 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+F-statistic: 718.3 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
@@ -544,16 +568,16 @@ Weighted Residuals:
 -2.6267 -0.8224 -0.1781  0.7972  3.0487 
 
 Coefficients:
-            Estimate Std. Error t value            Pr(&gt;|t|)    
-(Intercept)  5057.32     348.80   14.50 &lt;0.0000000000000002 ***
-experience    993.10      18.41   53.94 &lt;0.0000000000000002 ***
-education     301.39      22.46   13.42 &lt;0.0000000000000002 ***
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  5057.32     348.80   14.50   &lt;2e-16 ***
+experience    993.10      18.41   53.94   &lt;2e-16 ***
+education     301.39      22.46   13.42   &lt;2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 1.295 on 97 degrees of freedom
 Multiple R-squared:   0.97, Adjusted R-squared:  0.9694 
-F-statistic:  1569 on 2 and 97 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+F-statistic:  1569 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
@@ -568,10 +592,10 @@ glm(formula = salary ~ experience + education, family = Gamma(link = "log"),
     data = data)
 
 Coefficients:
-            Estimate Std. Error t value            Pr(&gt;|t|)    
-(Intercept) 8.907700   0.029539  301.56 &lt;0.0000000000000002 ***
-experience  0.067364   0.001833   36.76 &lt;0.0000000000000002 ***
-education   0.022057   0.001730   12.75 &lt;0.0000000000000002 ***
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 8.907700   0.029539  301.56   &lt;2e-16 ***
+experience  0.067364   0.001833   36.76   &lt;2e-16 ***
+education   0.022057   0.001730   12.75   &lt;2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -606,17 +630,17 @@ Residuals:
 -2491.38  -653.92    56.64   670.33  2532.10 
 
 Coefficients:
-            Estimate Std. Error t value             Pr(&gt;|t|)    
-(Intercept)  4979.10    1050.34   4.740         0.0000073938 ***
-experience    972.27      58.44  16.638 &lt; 0.0000000000000002 ***
-education     323.11      54.73   5.904         0.0000000535 ***
-age           144.26      11.22  12.854 &lt; 0.0000000000000002 ***
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  4979.10    1050.34   4.740 7.39e-06 ***
+experience    972.27      58.44  16.638  &lt; 2e-16 ***
+education     323.11      54.73   5.904 5.35e-08 ***
+age           144.26      11.22  12.854  &lt; 2e-16 ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 1052 on 96 degrees of freedom
 Multiple R-squared:  0.8153,    Adjusted R-squared:  0.8095 
-F-statistic: 141.3 on 3 and 96 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+F-statistic: 141.3 on 3 and 96 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -663,7 +687,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 1063 on 90 degrees of freedom
 Multiple R-squared:  0.823, Adjusted R-squared:  0.8053 
-F-statistic: 46.49 on 9 and 90 DF,  p-value: &lt; 0.00000000000000022</code></pre>
+F-statistic: 46.49 on 9 and 90 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -723,10 +747,10 @@ Residuals:
 -5497.9 -1321.4  -106.2  1311.4  6532.0 
 
 Coefficients:
-            Estimate Std. Error t value            Pr(&gt;|t|)    
-(Intercept) 21069.94     222.54  94.677 &lt;0.0000000000000002 ***
-PC1            96.68     208.52   0.464              0.6439    
-PC2          -394.22     225.92  -1.745              0.0842 .  
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 21069.94     222.54  94.677   &lt;2e-16 ***
+PC1            96.68     208.52   0.464   0.6439    
+PC2          -394.22     225.92  -1.745   0.0842 .  
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -745,10 +769,10 @@ BP = 0.050589, df = 2, p-value = 0.975</code></pre>
 <pre><code>
 t test of coefficients:
 
-             Estimate Std. Error t value             Pr(&gt;|t|)    
-(Intercept) 21069.939    222.545 94.6773 &lt; 0.0000000000000002 ***
-PC1            96.679    180.262  0.5363              0.59296    
-PC2          -394.219    203.820 -1.9342              0.05601 .  
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 21069.939    222.545 94.6773  &lt; 2e-16 ***
+PC1            96.679    180.262  0.5363  0.59296    
+PC2          -394.219    203.820 -1.9342  0.05601 .  
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
@@ -766,7 +790,10 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </section>
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citação</h2><div><div class="quarto-appendix-secondary-label">Por favor, cite este trabalho como:</div><div id="ref-prado2024" class="csl-entry quarto-appendix-citeas" role="listitem">
+Prado, Alexsandro. 2024. <span>“Heterocedasticidade e Autocorrelação:
+como resolver na prática?”</span> May 22. <a href="https://alexsandroprado.github.io/blog/posts/heterocedasticidade/heterocedasticidade.html">https://alexsandroprado.github.io/blog/posts/heterocedasticidade/heterocedasticidade.html</a>.
+</div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
@@ -1184,31 +1211,19 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>// alexsandro_prado · 2024</p>
+<p>© 2026 Alexsandro Prado · Universidade Federal Rural do Semi-Árido (UFERSA) · <a href="../../../privacidade.html">Privacidade</a></p>
 </div>   
     <div class="nav-footer-center">
-      &nbsp;
-    </div>
+
+<div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Preferências de cookies</a></div></div>
     <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/alexsandroprado">
-      <i class="bi bi-github" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/alexsandroprado">
-      <i class="bi bi-twitter-x" role="img">
-</i> 
-    </a>
-  </li>  
-</ul>
-    </div>
+<p>Conteúdo sob licença <a href="https://creativecommons.org/licenses/by/4.0/deed.pt-br">CC BY 4.0</a> · Feito com <a href="https://quarto.org">Quarto</a></p>
+</div>
   </div>
 </footer>
 
 
 
 
+<script src="../../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -1,148 +1,118 @@
 ---
-title: Alexsandro Prado
-comments: false
+title: "Alexsandro Prado"
+subtitle: "Professor Adjunto · UFERSA"
+pagetitle: "Alexsandro Prado · UFERSA"
+description: "Professor Adjunto da UFERSA. Economia do trabalho, contabilidade financeira, ESG e governança corporativa."
+toc: false
+title-block-banner: false
+listing:
+  id: ultimos-posts
+  contents: "blog/posts/*/*.qmd"
+  sort: "date desc"
+  type: table
+  max-items: 3
+  fields: [date, title]
+  date-format: "DD/MM/YYYY"
+  sort-ui: false
+  filter-ui: false
+  table-hover: true
+  field-display-names:
+    date: "Data"
+    title: "Título"
 about:
   template: trestles
-  image: /images/alexsandro.png
+  image: images/alexsandro.png
+  image-alt: "Foto de Alexsandro Prado"
   links:
     - icon: envelope
-      text: E-mail
+      text: alexsandro.prado@ufersa.edu.br
       href: mailto:alexsandro.prado@ufersa.edu.br
-    - icon: person-fill
-      text: Lattes
+    - icon: ai-lattes
+      text: Currículo Lattes
       href: http://lattes.cnpq.br/4254857944224293
-      target: _blank
-    - icon: filter-square-fill          
-      text: Orcid
+    - icon: ai-orcid
+      text: ORCID
       href: https://orcid.org/0000-0002-7072-3621
-    - icon: person-fill-check
-      text: Sigaa
-      href: https://sigaa.ufersa.edu.br/sigaa/public/docente/portal.jsf?siape=1987186
-      target: _blank    
-    - icon: award-fill
-      text: Web of science
+    - icon: ai-scholar
+      text: Google Acadêmico
+      href: https://scholar.google.com.br/citations?user=vMRqbikAAAAJ&hl=pt-BR
+    - icon: ai-wos
+      text: Web of Science
       href: https://www.webofscience.com/wos/author/record/2370799
-      target: _blank  
-    - icon: google
-      text: Google acadêmico
-      href: https://scholar.google.com.br/citations?hl=pt-BR&authuser=1&user=vMRqbikAAAAJ
-      target: _blank
-    - icon: instagram
-      text: Instagram
-      href: https://instagram.com/alexsandro_prado  
-    - icon: twitter-x
-      text:  
-      href: https://x.com/alexsandroprado
-      target: _blank
-    - icon: linkedin
-      text: Linkedin
-      href: https://www.linkedin.com/in/alexsandroprado/
-      target: _blank
-    - icon: threads
-      text: Threads
-      href: https://www.threads.net/@alexsandro_prado
-      target: _blank
-    - icon: youtube
-      text: Youtube
-      href: https://www.youtube.com/@profalexsandroprado
-      target: _blank
+    - icon: bank
+      text: SIGAA/UFERSA
+      href: https://sigaa.ufersa.edu.br/sigaa/public/docente/portal.jsf?siape=1987186
     - icon: github
-      text: Github
+      text: GitHub
       href: https://github.com/alexsandroprado
-      target: _blank
-    - icon: fa-kaggle
-      text: Kaggle
-      href: https://www.kaggle.com/alexsandroprado
-    - icon: steam
-      text: Steam
-      href: https://steamcommunity.com/id/lecksan/
-      target: _blank   
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/alexsandroprado/
+    - icon: youtube
+      text: YouTube
+      href: https://www.youtube.com/@profalexsandroprado
 ---
 
-::: {#hero-heading}
-[Professor do magistério superior há 12 anos, ministrando disciplinas nas áreas de Ciências Contábeis, Administração e Tecnologia da Informação e Comunicação.]{.smallcaps}
+::: {.lead-academic}
+Professor Adjunto do Departamento de Ciências Sociais Aplicadas e Humanas (DCSAH) da Universidade Federal Rural do Semi-Árido (UFERSA), com atuação no curso de Ciências Contábeis desde 2013 e no Programa de Pós-Graduação em Administração (PPGA/UFERSA). Doutor em Economia pela Universidade Federal da Paraíba (UFPB), coordena o Grupo de Estudos sobre Contabilidade e Mercado de Trabalho ([GECOMT](https://gecomt.github.io/)) e integra o Conselho de Curadores da UFERSA.
+:::
 
-[Um entusiasta apaixonado por tecnologia que gosta de explorar o vasto mundo dos dados!]{.smallcaps}
-
-
+As pesquisas situam-se na interface entre contabilidade, finanças e economia do trabalho, com ênfase em (i) mercado de trabalho formal a partir de microdados administrativos, sobretudo o Cadastro Geral de Empregados e Desempregados (CAGED) e a Relação Anual de Informações Sociais (RAIS); (ii) sustentabilidade, ESG e governança corporativa em companhias abertas brasileiras; e (iii) remuneração de executivos, gerenciamento de resultados e mercado de capitais. Além disso, desenvolve pacotes em R que facilitam o acesso a dados públicos brasileiros para fins de pesquisa.
 
 ## Formação
 
-[Universidade Federal da Paraíba (UFPB)]{.smallcaps}
+::: {.formacao}
+Doutorado em Economia [2021]{.ano}
+:   Programa de Pós-Graduação em Economia, Universidade Federal da Paraíba (UFPB), com bolsa CAPES. Tese: *Ensaios sobre o uso repetido do seguro-desemprego*. Orientador: Paulo Aguiar do Monte.
 
-^Doutor em Economia, área de concentração Economia Aplicada^
+Mestrado em Ciências Contábeis [2012]{.ano}
+:   Programa Multi-institucional e Inter-regional de Pós-Graduação em Ciências Contábeis (UnB/UFPB/UFRN), com bolsa CAPES. Dissertação: *O impacto da adoção da linguagem XBRL sobre a assimetria informacional: uma análise empírica nas empresas brasileiras listadas na Bolsa de Nova Iorque*. Orientador: Paulo Amilton Maia Leite Filho.
 
-[Universidade de Brasília (UnB)]{.smallcaps}
-
-^Mestre em Ciências Contábeis^
-
-[Universidade Federal da Paraíba (UFPB)]{.smallcaps}
-
-^Bacharel em Ciências Contábeis^
-
-## Experiência
-
--   [Análise e visualização de dados em linguagem R]{.smallcaps}
-
--   [ETL microdados (RAIS, CAGED, PNADc, BGSD, CVM Cias Abertas)]{.smallcaps}
-
--   [SQL (Structured Query Language) para consulta e manipulação de dados]{.smallcaps}
-
--   [Decomposição Oaxaca-Blinder, Modelos de sobrevivência, Estimação em Diff-in-Diff (DID), Propense Score Matching]{.smallcaps}
-
--   [Desenvolvimento de dashboards (Flexdashboard), websites (Posit Quarto) e  mapas interativos (leaflet)]{.smallcaps}
-
--   [Montagem e manutenção de computadores]{.smallcaps}
-
--   [Instalação e configuração de sistemas operacionais Linux e Windows]{.smallcaps}
-
--   [Virtualização (VirtualBox) e gerenciamento de máquinas virtuais]{.smallcaps}
-
--   [Configuração e administração na Amazon Elastic Compute Cloud (AWS EC2) para computação em nuvem.]{.smallcaps}
+Bacharelado em Ciências Contábeis [2008]{.ano}
+:   Universidade Federal da Paraíba (UFPB).
 :::
 
-------------------------------------------------------------------------
+## Áreas de interesse
 
-```{=html}
-<script>
-(function() {
-  function injectBanner() {
-    if (document.getElementById('ap-profile-banner')) return;
-    var target = document.querySelector('.quarto-about-trestles') ||
-                 document.querySelector('.about-entity') ||
-                 document.querySelector('#quarto-content');
-    if (!target) return;
-    var banner = document.createElement('div');
-    banner.id = 'ap-profile-banner';
-    banner.style.background = '#0f2554';
-    banner.style.padding = '2.5rem 2rem 2rem';
-    banner.style.position = 'relative';
-    banner.style.overflow = 'hidden';
-    var grid = document.createElement('div');
-    grid.style.cssText = 'position:absolute;top:0;right:0;bottom:0;left:0;' +
-      'background-image:linear-gradient(rgba(37,99,235,.15) 1px,transparent 1px),' +
-      'linear-gradient(90deg,rgba(37,99,235,.15) 1px,transparent 1px);' +
-      'background-size:32px 32px;pointer-events:none';
-    var inner = document.createElement('div');
-    inner.style.cssText = 'position:relative;z-index:1';
-    inner.innerHTML =
-      '<div style="font-family:JetBrains Mono,monospace;font-size:10px;' +
-        'letter-spacing:.12em;text-transform:uppercase;color:#00b4d8;margin-bottom:.5rem">' +
-        '// perfil</div>' +
-      '<div style="font-size:26px;font-weight:600;color:#fff;letter-spacing:-.02em;line-height:1.2">' +
-        'Alexsandro Prado</div>' +
-      '<div style="font-size:13px;color:rgba(255,255,255,.45);margin-top:.4rem">' +
-        'Professor \u00b7 Dr. Economia Aplicada \u00b7 UFERSA</div>';
-    banner.appendChild(grid);
-    banner.appendChild(inner);
-    var main = document.querySelector('main') || document.getElementById('quarto-content');
-    if (main) main.insertBefore(banner, main.firstChild);
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', injectBanner);
-  } else {
-    setTimeout(injectBanner, 50);
-  }
-})();
-</script>
-```
+- Economia do trabalho e políticas de mercado de trabalho
+- Contabilidade financeira e mercado de capitais
+- Sustentabilidade, ESG e governança corporativa
+- Sistemas de informações contábeis
+- Métodos quantitativos aplicados: decomposição de Oaxaca-Blinder, diferenças em diferenças, pareamento por escore de propensão, análise de sobrevivência e painéis dinâmicos
+
+## Prêmios
+
+::: {.formacao}
+Melhores trabalhos, Divisão de Ciências Contábeis [2023]{.ano}
+:   XIV Congresso Nacional de Administração e Contabilidade (AdCont), Programa de Pós-Graduação em Ciências Contábeis da UFRJ.
+
+Melhor trabalho na área de Contabilidade Financeira [2021]{.ano}
+:   21º USP International Conference in Accounting, FEA/USP.
+
+1º lugar em artigo científico (apresentação oral) [2019]{.ano}
+:   XV Encontro Norte-Rio-Grandense de Ciências Contábeis, CRC/RN.
+:::
+
+## Atuação editorial
+
+- Membro do corpo editorial da *Revista Conhecimento Contábil* (desde 2015).
+- Revisor da *Revista de Educação e Pesquisa em Contabilidade* (REPeC), da *Revista Inovar Contábil* e da *Brazilian Business Review* (BBR), com pareceres também para a *Revista Catarinense da Ciência Contábil* e a *Revista Teoria e Prática em Administração*.
+- Avaliador de teses no XXIII Consórcio Doutoral da ANPAD (2025).
+
+## Ferramentas
+
+::: {.ferramentas}
+[R]{} [tidyverse]{} [DuckDB]{} [SQL]{} [Python]{} [Stata]{} [Quarto]{} [Git]{}
+:::
+
+## Últimas do blog
+
+::: {#ultimos-posts}
+:::
+
+[Ver todos os textos →](blog/index.qmd){.ver-todos}
+
+## Contato
+
+Departamento de Ciências Sociais Aplicadas e Humanas (DCSAH), Universidade Federal Rural do Semi-Árido (UFERSA), Mossoró, RN.\
+E-mail: [alexsandro.prado@ufersa.edu.br](mailto:alexsandro.prado@ufersa.edu.br)
