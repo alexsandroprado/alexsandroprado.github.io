@@ -10,11 +10,9 @@
 <atom:link href="https://alexsandroprado.github.io/novidades/index.xml" rel="self" type="application/rss+xml"/>
 <description>Publicações, eventos, software e outras notícias.</description>
 <image>
-<url>https://alexsandroprado.github.io/images/alexsandro.png</url>
+<url>https://alexsandroprado.github.io/images/og/padrao.png</url>
 <title>Alexsandro Prado</title>
 <link>https://alexsandroprado.github.io/novidades/</link>
-<height>144</height>
-<width>144</width>
 </image>
 <generator>quarto-1.9.37</generator>
 <lastBuildDate>Fri, 27 Nov 2026 03:00:00 GMT</lastBuildDate>

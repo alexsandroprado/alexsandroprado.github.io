@@ -17,6 +17,11 @@ execute:
   error: false
   cache: true
   freeze: true
+description: "Passo a passo em R para identificar, diagnosticar e tratar heterocedasticidade e autocorrelação em modelos de regressão."
+open-graph:
+  image: capa-og.jpg
+twitter-card:
+  image: capa-og.jpg
 ---
 A heterocedasticidade e a autocorrelação são problemas comuns na análise de regressão, especialmente em séries temporais e dados econométricos, que podem afetar a validade das inferências e a análise de causalidade.
 

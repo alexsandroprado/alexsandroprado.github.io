@@ -1,6 +1,7 @@
 ---
 title: "Ensino"
 description: "Disciplinas ministradas e orientação acadêmica."
+image: https://alexsandroprado.github.io/images/og/ensino.png
 ---
 
 ## Graduação {#disciplinas}

@@ -1,0 +1,41 @@
+# Procura mensalmente no ORCID e no Crossref publicações que ainda não estão
+# no site e abre (ou atualiza) uma issue com os itens prontos para revisão.
+# Nada é publicado automaticamente. Também pode ser executado na aba Actions.
+
+name: Publicações ORCID
+
+on:
+  schedule:
+    # Dia 2 de cada mês, 11h UTC (8h em Mossoró)
+    - cron: "23 11 2 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - name: Comparar ORCID com publicacoes.yml
+        run: python3 scripts/verifica_publicacoes_orcid.py
+
+      - name: Abrir ou atualizar a issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TITULO: "Publicações novas no ORCID"
+        run: |
+          numero=$(gh issue list --state open --search "\"$TITULO\" in:title" --json number --jq '.[0].number')
+          if [ -f orcid-novidades.md ]; then
+            if [ -n "$numero" ]; then
+              gh issue edit "$numero" --body-file orcid-novidades.md
+              echo "Issue #$numero atualizada."
+            else
+              gh issue create --title "$TITULO" --body-file orcid-novidades.md
+            fi
+          elif [ -n "$numero" ]; then
+            gh issue close "$numero" --comment "Sem pendências: todas as publicações do ORCID já estão no site ou na lista de ignorados."
+          fi

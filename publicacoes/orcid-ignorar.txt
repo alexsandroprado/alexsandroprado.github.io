@@ -1,0 +1,6 @@
+# Trabalhos do ORCID/Crossref que não devem ser sugeridos para publicacoes.yml.
+# Uma entrada por linha: o DOI ou "titulo: <título>". Comentários após "  #".
+
+10.16930/2237-7662202636412  # versão em inglês de "Disclosure de transformação digital em companhias listadas na B3"
+titulo: AN ANALYSIS OF MEASUREMENT AND DISCLOSURE OF INVESTMENT PROPERTIES FOR BRAZILIAN COMPANIES IN THE SECTOR OF EXPLOITATION OF BUILDINGS  # versão em inglês do artigo da Revista Ambiente Contábil
+titulo: Impacto da adoção da linguagem XBRL sobre a assimetria informacional: uma análise emṕırica nas empresas brasileiras listadas na Bolsa de Valores de Nova Iorque  # dissertação de mestrado (já em Formação)

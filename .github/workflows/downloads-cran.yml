@@ -1,0 +1,35 @@
+# Atualiza semanalmente os downloads dos pacotes no CRAN exibidos na página
+# Produção técnica. Também pode ser executado manualmente na aba Actions.
+
+name: Downloads CRAN
+
+on:
+  schedule:
+    # Segundas-feiras, 10h UTC (7h em Mossoró)
+    - cron: "17 10 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+
+      - name: Atualizar downloads
+        run: python3 scripts/atualiza_downloads_cran.py
+
+      - name: Publicar alterações
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add producao-tecnica/dados/cran_downloads*.csv docs/producao-tecnica/dados/cran_downloads*.csv
+          if git diff --cached --quiet; then
+            echo "Sem alterações."
+          else
+            git commit -m "Atualiza downloads do CRAN"
+            git pull --rebase
+            git push
+          fi

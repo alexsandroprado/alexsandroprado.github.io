@@ -434,6 +434,33 @@ table, .cell-output, pre {
   }
 }
 
+// Downloads no CRAN (cartão do datacaged)
+.downloads-cran {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 1.6rem;
+  margin: 0.2rem 0 0.9rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--ap-border);
+  border-left: 3px solid var(--ap-accent);
+  border-radius: 4px;
+
+  .dl-item { display: flex; align-items: baseline; gap: 0.45rem; }
+  .dl-valor {
+    font-family: var(--ap-mono);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ap-accent);
+  }
+  .dl-rotulo { font-size: 0.88rem; color: var(--ap-muted); }
+  .dl-fonte {
+    flex-basis: 100%;
+    font-size: 0.74rem;
+    color: var(--ap-muted);
+  }
+}
+
 // Tipo de produção técnica (CAPES)
 .tipo-capes {
   display: inline-block;
@@ -883,9 +910,11 @@ main.content > #title-block-header {
   }
 }
 
-// Indicador: sem botões de copiar código
+// Células OJS (indicadores e downloads): sem botões de copiar código
 .indicador .code-copy-button,
-.indicador .code-copy-outer-scaffold > button {
+.indicador .code-copy-outer-scaffold > button,
+.cartao .cell .code-copy-button,
+.cartao .cell .code-copy-outer-scaffold > button {
   display: none !important;
 }
 

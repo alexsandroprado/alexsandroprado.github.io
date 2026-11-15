@@ -3,6 +3,7 @@ title: "Produção técnica e tecnológica"
 description: "Software, registro de programa de computador, bases de dados técnico-científicas e indicadores do emprego formal a partir de dados públicos brasileiros."
 aliases:
   - /software/index.html
+image: https://alexsandroprado.github.io/images/og/producao-tecnica.png
 ---
 
 Os produtos a seguir foram desenvolvidos no âmbito das pesquisas do grupo [GECOMT](https://gecomt.github.io/) e têm por objetivo reduzir o custo de acesso a dados públicos brasileiros, favorecendo a reprodutibilidade dos estudos empíricos. Cada item indica o tipo de produção técnica e tecnológica correspondente, segundo a classificação adotada pela CAPES para a área de Administração Pública e de Empresas, Ciências Contábeis e Turismo.
@@ -15,13 +16,27 @@ Os produtos a seguir foram desenvolvidos no âmbito das pesquisas do grupo [GECO
 [Software/Aplicativo]{.tipo-capes} [Abrangência nacional]{.tipo-capes .tipo-neutro}
 
 ::: {.meta}
-Versão 0.2.3 · disponível no CRAN · licença MIT
+Versão 0.2.3 · disponível no CRAN · licença MIT · DOI [10.32614/CRAN.package.datacaged](https://doi.org/10.32614/CRAN.package.datacaged)
 :::
 
 Ferramentas para baixar, ler e armazenar os microdados do Cadastro Geral de Empregados e Desempregados (CAGED) em um banco local DuckDB, com suporte ao CAGED antigo (1992 a 2019), ao Novo CAGED (2020 em diante) e aos arquivos de ajustes. É o pacote que alimenta os [indicadores do emprego formal](#indicadores) publicados nesta página.
 
 ```r
 install.packages("datacaged")
+```
+
+```{ojs}
+//| echo: false
+cran = FileAttachment("dados/cran_downloads.csv").csv()
+cranDatacaged = cran.find(d => d.pacote === "datacaged")
+fmtInt = new Intl.NumberFormat("pt-BR")
+fmtMes = (s) => ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"][+s.slice(5, 7) - 1] + "/" + s.slice(0, 4)
+fmtDia = (s) => s.split("-").reverse().join("/")
+html`<div class="downloads-cran">
+  <div class="dl-item"><span class="dl-valor">${fmtInt.format(+cranDatacaged.total)}</span><span class="dl-rotulo">downloads desde ${fmtMes(cranDatacaged.primeiro_mes)}</span></div>
+  <div class="dl-item"><span class="dl-valor">${fmtInt.format(+cranDatacaged.ultimos_30_dias)}</span><span class="dl-rotulo">nos últimos 30 dias</span></div>
+  <div class="dl-fonte">Espelho do CRAN mantido pela Posit, via cranlogs · atualizado em ${fmtDia(cranDatacaged.atualizado_em)}</div>
+</div>`
 ```
 
 [Repositório no GitHub](https://github.com/gecomt/datacaged) · [Página no CRAN](https://CRAN.R-project.org/package=datacaged)

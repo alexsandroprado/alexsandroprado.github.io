@@ -1,5 +1,5 @@
 # Atualiza mensalmente o indicador de emprego formal (Novo CAGED)
-# exibido na página Pesquisa. Também pode ser executado manualmente
+# exibido na página Produção técnica. Também pode ser executado manualmente
 # na aba Actions do GitHub ("Run workflow").
 
 name: Indicador CAGED

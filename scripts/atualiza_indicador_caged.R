@@ -1,4 +1,4 @@
-# Atualiza o indicador de emprego formal exibido na página Pesquisa.
+# Atualiza o indicador de emprego formal exibido na página Produção técnica.
 #
 # Lê producao-tecnica/dados/caged_saldo.csv, identifica no repositório do CAGED
 # (Hugging Face) as competências ainda ausentes, agrega admissões,
@@ -22,7 +22,17 @@ arq_site <- "docs/producao-tecnica/dados/caged_saldo.csv"
 atual  <- read.csv(arq, colClasses = "character")
 feitas <- unique(gsub("-", "", substr(atual$competencia, 1, 7)))
 
-disp  <- caged_hf_files(n = 12, verbose = FALSE)
+# A API do Hugging Face às vezes recusa pedidos vindos dos servidores do
+# GitHub Actions; tenta algumas vezes antes de desistir.
+disp <- NULL
+for (tentativa in 1:4) {
+  disp <- tryCatch(caged_hf_files(n = 12, timeout = 60, verbose = FALSE),
+                   error = function(e) { message(conditionMessage(e)); NULL })
+  if (!is.null(disp)) break
+  message("Tentativa ", tentativa, " falhou; nova tentativa em ", 30 * tentativa, " s.")
+  Sys.sleep(30 * tentativa)
+}
+if (is.null(disp)) stop("Não foi possível consultar o repositório do CAGED no Hugging Face.")
 novas <- disp[!as.character(disp$competencia) %in% feitas, ]
 
 if (nrow(novas) == 0) {

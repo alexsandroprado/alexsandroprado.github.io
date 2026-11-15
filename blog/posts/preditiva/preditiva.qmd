@@ -17,6 +17,11 @@ execute:
   error: false
   cache: true
   freeze: true
+description: "Previsão de receita com séries temporais em R: preparação dos dados, análise exploratória e modelo preditivo com o pacote forecast."
+open-graph:
+  image: capa-og.jpg
+twitter-card:
+  image: capa-og.jpg
 ---
 
 ![](capa.webp){fig-alt="Série de receita observada e previsão com intervalos de confiança"}

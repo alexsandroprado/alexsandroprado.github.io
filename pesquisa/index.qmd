@@ -1,6 +1,7 @@
 ---
 title: "Pesquisa"
 description: "Linhas de pesquisa, grupo de pesquisa e dados abertos."
+image: https://alexsandroprado.github.io/images/og/pesquisa.png
 ---
 
 ## Linhas de pesquisa {#linhas}

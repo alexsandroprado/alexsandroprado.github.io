@@ -10,11 +10,9 @@
 <atom:link href="https://alexsandroprado.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Notas sobre econometria aplicada, contabilidade e análise de dados em R.</description>
 <image>
-<url>https://alexsandroprado.github.io/images/alexsandro.png</url>
+<url>https://alexsandroprado.github.io/images/og/blog.png</url>
 <title>Alexsandro Prado</title>
 <link>https://alexsandroprado.github.io/blog/</link>
-<height>144</height>
-<width>144</width>
 </image>
 <generator>quarto-1.9.37</generator>
 <lastBuildDate>Sun, 30 Jun 2024 03:00:00 GMT</lastBuildDate>

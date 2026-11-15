@@ -7,6 +7,7 @@ project:
   resources:
     - "assets/katex/**"
     - "assets/js/**"
+    - "images/og/*.png"
 
 lang: pt-BR
 
@@ -15,7 +16,7 @@ website:
   site-url: "https://alexsandroprado.github.io/"
   description: "Professor Adjunto da UFERSA. Economia do trabalho, contabilidade financeira, ESG e governança corporativa."
   favicon: "images/favicon.ico"
-  image: "images/alexsandro.png"
+  image: "https://alexsandroprado.github.io/images/og/padrao.png"
   open-graph: true
   # Aviso de cookies (LGPD): o Google Tag Manager só carrega após o consentimento
   cookie-consent:
