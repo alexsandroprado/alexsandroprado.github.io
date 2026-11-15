@@ -4,6 +4,8 @@ project:
   render:
     - "*.qmd"
     - "!README.md"
+  resources:
+    - "assets/katex/**"
 
 lang: pt-BR
 
@@ -70,7 +72,10 @@ format:
     toc: true
     toc-depth: 3
     toc-title: "Nesta página"
-    html-math-method: katex
+    # KaTeX 0.19.1 hospedado no próprio site (assets/katex), sem CDN externo
+    html-math-method:
+      method: katex
+      url: "/assets/katex/"
     include-in-header:
       file: header.html
     code-copy: true
