@@ -67,6 +67,7 @@ print(dados)
 Vamos analisar graficamente a evolução da receita e do lucro líquido ao longo dos anos.
 
 ```{r echo = T, warning=FALSE, message=FALSE}
+#| fig-alt: "Gráfico de linhas da receita e do lucro líquido de 2010 a 2023: a receita cresce de 500 para 1.600 mil, e o lucro líquido acompanha em nível bem mais baixo."
 # Visualização dos dados
 ggplot(dados, aes(x = ano)) +
   geom_line(aes(y = receita, color = "Receita")) +
@@ -82,6 +83,7 @@ ggplot(dados, aes(x = ano)) +
 Utilizaremos um modelo de série temporal para prever a receita dos próximos anos.
 
 ```{r echo = T, warning=FALSE, message=FALSE}
+#| fig-alt: "Previsão ARIMA da receita para 2024 a 2028: a série histórica sobe de forma contínua e a projeção mantém o crescimento, com intervalos de confiança de 80% e 95% que se alargam com o tempo."
 # Modelagem de série temporal
 ts_receita <- ts(dados$receita, start = c(2010), frequency = 1)
 

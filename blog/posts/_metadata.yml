@@ -10,8 +10,12 @@ author:
 reading-time: true
 
 # Gera o bloco "Citação" (texto e BibTeX) ao final de cada post
-citation: true
+citation:
+  type: post-weblog
+  container-title: "Blog de Alexsandro Prado"
 appendix-cite-as: display
+# Referência da citação no padrão ABNT (e datas em português)
+csl: ../../../assets/csl/abnt.csl
 
 format:
   html:

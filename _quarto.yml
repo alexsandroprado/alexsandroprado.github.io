@@ -8,6 +8,7 @@ project:
     - "assets/katex/**"
     - "assets/js/**"
     - "images/og/*.png"
+    - "producao-tecnica/dados/*.csv"
 
 lang: pt-BR
 
