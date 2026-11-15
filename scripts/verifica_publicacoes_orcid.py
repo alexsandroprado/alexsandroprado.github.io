@@ -30,7 +30,7 @@ ORCID = "0000-0002-7072-3621"
 ARQ_PUBS = Path("publicacoes/publicacoes.yml")
 ARQ_IGNORAR = Path("publicacoes/orcid-ignorar.txt")
 SAIDA = Path("orcid-novidades.md")
-UA = {"User-Agent": "alexsandroprado.github.io (https://alexsandroprado.github.io)",
+UA = {"User-Agent": "alexsandroprado.site (https://alexsandroprado.site)",
       "Accept": "application/json"}
 TIPOS = {
     "journal-article": "Artigo em periódico",

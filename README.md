@@ -4,7 +4,7 @@
 
 Site pessoal e blog acadêmico construído com [Quarto](https://quarto.org/) e publicado via GitHub Pages.
 
-🌐 **[alexsandroprado.github.io](https://alexsandroprado.github.io/)**
+🌐 **[alexsandroprado.site](https://alexsandroprado.site/)** (também em alexsandroprado.github.io, que redireciona)
 
 ---
 

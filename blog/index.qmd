@@ -15,5 +15,5 @@ listing:
   image-height: "100px"
   date-format: "DD/MM/YYYY"
 page-layout: full
-image: https://alexsandroprado.github.io/images/og/blog.png
+image: https://alexsandroprado.site/images/og/blog.png
 ---

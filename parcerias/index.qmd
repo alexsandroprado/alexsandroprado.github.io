@@ -2,7 +2,7 @@
 title: "Consultoria e parcerias"
 description: "Consultoria, pareceres técnicos e análises sob demanda com dados públicos do mercado de trabalho e de companhias abertas."
 toc: false
-image: https://alexsandroprado.github.io/images/og/parcerias.png
+image: https://alexsandroprado.site/images/og/parcerias.png
 ---
 
 ::: {.cta-faixa}

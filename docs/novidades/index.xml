@@ -6,19 +6,19 @@
       version="2.0">
 <channel>
 <title>Alexsandro Prado</title>
-<link>https://alexsandroprado.github.io/novidades/</link>
-<atom:link href="https://alexsandroprado.github.io/novidades/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://alexsandroprado.site/novidades/</link>
+<atom:link href="https://alexsandroprado.site/novidades/index.xml" rel="self" type="application/rss+xml"/>
 <description>Publicações, eventos, software e outras notícias.</description>
 <image>
-<url>https://alexsandroprado.github.io/images/og/padrao.png</url>
+<url>https://alexsandroprado.site/images/og/padrao.png</url>
 <title>Alexsandro Prado</title>
-<link>https://alexsandroprado.github.io/novidades/</link>
+<link>https://alexsandroprado.site/novidades/</link>
 </image>
 <generator>quarto-1.9.37</generator>
 <lastBuildDate>Fri, 27 Nov 2026 03:00:00 GMT</lastBuildDate>
 <item>
   <title>Apresentação no XX Congresso ANPCONT</title>
-  <link>https://alexsandroprado.github.io/novidades/2026-11-27-anpcont/</link>
+  <link>https://alexsandroprado.site/novidades/2026-11-27-anpcont/</link>
   <description><![CDATA[ 
 
 
@@ -33,12 +33,12 @@
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>Evento</category>
-  <guid>https://alexsandroprado.github.io/novidades/2026-11-27-anpcont/</guid>
+  <guid>https://alexsandroprado.site/novidades/2026-11-27-anpcont/</guid>
   <pubDate>Fri, 27 Nov 2026 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Novo site com indicadores do mercado de trabalho</title>
-  <link>https://alexsandroprado.github.io/novidades/2026-11-15-novo-site/</link>
+  <link>https://alexsandroprado.site/novidades/2026-11-15-novo-site/</link>
   <description><![CDATA[ 
 
 
@@ -53,12 +53,12 @@
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>Site</category>
-  <guid>https://alexsandroprado.github.io/novidades/2026-11-15-novo-site/</guid>
+  <guid>https://alexsandroprado.site/novidades/2026-11-15-novo-site/</guid>
   <pubDate>Sun, 15 Nov 2026 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>datacaged 0.2.3 disponível no CRAN</title>
-  <link>https://alexsandroprado.github.io/novidades/2026-10-13-datacaged-cran/</link>
+  <link>https://alexsandroprado.site/novidades/2026-10-13-datacaged-cran/</link>
   <description><![CDATA[ 
 
 
@@ -78,12 +78,12 @@ font-style: inherit;">"datacaged"</span>)</span></code></pre></div></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>Software</category>
-  <guid>https://alexsandroprado.github.io/novidades/2026-10-13-datacaged-cran/</guid>
+  <guid>https://alexsandroprado.site/novidades/2026-10-13-datacaged-cran/</guid>
   <pubDate>Tue, 13 Oct 2026 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Artigo publicado na Revista Catarinense da Ciência Contábil</title>
-  <link>https://alexsandroprado.github.io/novidades/2026-06-30-rccc/</link>
+  <link>https://alexsandroprado.site/novidades/2026-06-30-rccc/</link>
   <description><![CDATA[ 
 
 
@@ -98,12 +98,12 @@ font-style: inherit;">"datacaged"</span>)</span></code></pre></div></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>Publicação</category>
-  <guid>https://alexsandroprado.github.io/novidades/2026-06-30-rccc/</guid>
+  <guid>https://alexsandroprado.site/novidades/2026-06-30-rccc/</guid>
   <pubDate>Tue, 30 Jun 2026 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Artigo publicado na Business Strategy &amp; Development</title>
-  <link>https://alexsandroprado.github.io/novidades/2026-03-31-bsd/</link>
+  <link>https://alexsandroprado.site/novidades/2026-03-31-bsd/</link>
   <description><![CDATA[ 
 
 
@@ -119,12 +119,12 @@ font-style: inherit;">"datacaged"</span>)</span></code></pre></div></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>Publicação</category>
-  <guid>https://alexsandroprado.github.io/novidades/2026-03-31-bsd/</guid>
+  <guid>https://alexsandroprado.site/novidades/2026-03-31-bsd/</guid>
   <pubDate>Tue, 31 Mar 2026 03:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Artigo publicado na Contabilidade Gestão e Governança</title>
-  <link>https://alexsandroprado.github.io/novidades/2025-03-31-cgg/</link>
+  <link>https://alexsandroprado.site/novidades/2025-03-31-cgg/</link>
   <description><![CDATA[ 
 
 
@@ -139,7 +139,7 @@ font-style: inherit;">"datacaged"</span>)</span></code></pre></div></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
   <category>Publicação</category>
-  <guid>https://alexsandroprado.github.io/novidades/2025-03-31-cgg/</guid>
+  <guid>https://alexsandroprado.site/novidades/2025-03-31-cgg/</guid>
   <pubDate>Mon, 31 Mar 2025 03:00:00 GMT</pubDate>
 </item>
 </channel>

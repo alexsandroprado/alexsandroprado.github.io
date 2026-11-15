@@ -1,7 +1,7 @@
 ---
 title: "Extensão"
 description: "Projetos de extensão, cursos, eventos e divulgação científica junto à comunidade."
-image: https://alexsandroprado.github.io/images/og/extensao.png
+image: https://alexsandroprado.site/images/og/extensao.png
 ---
 
 As ações de extensão aproximam o curso de Ciências Contábeis da UFERSA da comunidade de Mossoró e do Semiárido potiguar, com foco em educação financeira, assessoria contábil a pequenos negócios, preparação para exames profissionais e uso de dados na tomada de decisão.

@@ -8,16 +8,17 @@ project:
     - "assets/katex/**"
     - "assets/js/**"
     - "images/og/*.png"
+    - "CNAME"
     - "producao-tecnica/dados/*.csv"
 
 lang: pt-BR
 
 website:
   title: "Alexsandro Prado"
-  site-url: "https://alexsandroprado.github.io/"
+  site-url: "https://alexsandroprado.site/"
   description: "Professor Adjunto da UFERSA. Economia do trabalho, contabilidade financeira, ESG e governança corporativa."
   favicon: "images/favicon.ico"
-  image: "https://alexsandroprado.github.io/images/og/padrao.png"
+  image: "https://alexsandroprado.site/images/og/padrao.png"
   open-graph: true
   # Aviso de cookies (LGPD): o Google Tag Manager só carrega após o consentimento
   cookie-consent:
@@ -105,7 +106,7 @@ format:
     # Links externos abrem em nova aba
     link-external-newwindow: true
     link-external-icon: false
-    link-external-filter: '^(?:http:|https:)\/\/alexsandroprado\.github\.io'
+    link-external-filter: '^(?:http:|https:)\/\/(?:www\.)?alexsandroprado\.(?:site|github\.io)'
     smooth-scroll: true
 
 # Comentários (opcional): habilite GitHub Discussions no repositório,

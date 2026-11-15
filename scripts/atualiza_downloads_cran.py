@@ -28,7 +28,7 @@ SITE = Path("docs/producao-tecnica/dados")
 
 
 def consulta(caminho):
-    req = urllib.request.Request(f"{API}/{caminho}", headers={"User-Agent": "alexsandroprado.github.io"})
+    req = urllib.request.Request(f"{API}/{caminho}", headers={"User-Agent": "alexsandroprado.site"})
     with urllib.request.urlopen(req, timeout=60) as resp:
         return json.load(resp)
 
