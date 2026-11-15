@@ -52,13 +52,10 @@ website:
         menu:
           - href: pesquisa/index.qmd
             text: Linhas e projetos
-          - href: producao-tecnica/index.qmd#indicadores
-            text: Indicadores do emprego formal
-          - text: "---"
           - href: publicacoes/index.qmd
             text: Publicações
-          - href: producao-tecnica/index.qmd
-            text: Produção técnica
+      - href: producao-tecnica/index.qmd
+        text: Produção técnica
       - href: extensao/index.qmd
         text: Extensão
       - href: parcerias/index.qmd

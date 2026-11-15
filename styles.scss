@@ -552,6 +552,18 @@ table, .cell-output, pre {
   }
 }
 
+// Itens da navbar sem quebra de linha; espaçamento menor em telas médias
+.navbar .navbar-nav .nav-link { white-space: nowrap; }
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar .navbar-nav .nav-link {
+    padding-left: 0.45rem !important;
+    padding-right: 0.45rem !important;
+    font-size: 0.92rem;
+  }
+  .navbar .navbar-title { font-size: 1rem; }
+}
+
 // Destaque discreto do item Parcerias na navbar
 @media (min-width: 992px) {
   .navbar .navbar-nav .nav-link.nav-destaque {
