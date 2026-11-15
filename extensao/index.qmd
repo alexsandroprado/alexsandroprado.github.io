@@ -86,7 +86,7 @@ O custo do seu negócio: teoria e prática [desde 2018]{.ano}
 
 ## Divulgação científica {#divulgacao}
 
-Textos sobre análise de dados, contabilidade e mercado de trabalho são publicados no [blog](../blog/index.qmd), e as notícias sobre artigos, prêmios e produtos aparecem na [página inicial](../index.qmd#novidades), na seção Novidades. Aulas e conteúdos de apoio sobre análise de dados em R estão no canal do [YouTube](https://www.youtube.com/@profalexsandroprado).
+Textos sobre análise de dados, contabilidade e mercado de trabalho são publicados no [blog](../blog/index.qmd). Aulas e conteúdos de apoio sobre análise de dados em R estão no canal do [YouTube](https://www.youtube.com/@profalexsandroprado).
 
 Participações na mídia:
 
