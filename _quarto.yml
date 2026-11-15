@@ -59,14 +59,8 @@ website:
             text: Publicações
           - href: producao-tecnica/index.qmd
             text: Produção técnica
-      - text: Extensão
-        menu:
-          - href: extensao/index.qmd
-            text: Projetos e cursos
-          - text: "---"
-          - text: "Divulgação"
-          - href: novidades/index.qmd
-            text: Novidades
+      - href: extensao/index.qmd
+        text: Extensão
       - href: parcerias/index.qmd
         text: Parcerias
     right:
