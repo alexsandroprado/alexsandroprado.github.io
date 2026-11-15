@@ -7,7 +7,7 @@ toc: false
 title-block-banner: false
 listing:
   id: ultimos-posts
-  contents: "blog/posts/*/*.qmd"
+  contents: "novidades/*/index.qmd"
   sort: "date desc"
   type: table
   max-items: 3
@@ -25,8 +25,8 @@ about:
   image-alt: "Foto de Alexsandro Prado"
   links:
     - icon: envelope
-      text: alexsandro.prado@ufersa.edu.br
-      href: mailto:alexsandro.prado@ufersa.edu.br
+      text: E-mail
+      href: "#contato"
     - icon: ai-lattes
       text: Currículo Lattes
       href: http://lattes.cnpq.br/4254857944224293
@@ -105,14 +105,14 @@ Melhor trabalho na área de Contabilidade Financeira [2021]{.ano}
 [R]{} [tidyverse]{} [DuckDB]{} [SQL]{} [Python]{} [Stata]{} [Quarto]{} [Git]{}
 :::
 
-## Últimas do blog
+## Novidades
 
 ::: {#ultimos-posts}
 :::
 
-[Ver todos os textos →](blog/index.qmd){.ver-todos}
+[Ver todas as novidades →](novidades/index.qmd){.ver-todos} · [Blog →](blog/index.qmd){.ver-todos}
 
-## Contato
+## Contato {#contato}
 
 Departamento de Ciências Sociais Aplicadas e Humanas (DCSAH), Universidade Federal Rural do Semi-Árido (UFERSA), Mossoró, RN.\
 E-mail: [alexsandro.prado@ufersa.edu.br](mailto:alexsandro.prado@ufersa.edu.br)

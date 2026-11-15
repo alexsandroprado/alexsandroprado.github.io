@@ -10,6 +10,13 @@
 #   doi / path: DOI e link (opcionais)
 #   qualis:     estrato Qualis/CAPES 2021-2024 (opcional, só periódicos)
 #   nota:       observação curta, como prêmio ou "no prelo" (opcional)
+#   Botões opcionais (aparecem só quando preenchidos):
+#   pdf:          link do PDF (por exemplo, files/pdf/artigo.pdf)
+#   preprint:     link do preprint (SSRN, OSF, SciELO Preprints...)
+#   codigo:       link do código (GitHub)
+#   dados:        link dos dados (Hugging Face, Zenodo, GitHub)
+#   suplementar:  link do material suplementar
+#   apresentacao: link dos slides
 #   categories: [Artigo em periódico], [Capítulo de livro] ou [Trabalho em evento]
 
 - title: Poison pills e o gerenciamento de resultados por decisões operacionais no mercado acionário brasileiro

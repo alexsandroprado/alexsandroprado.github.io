@@ -1,20 +1,55 @@
 ```{=html}
 <div class="list pub-lista">
-<% for (const item of items) { %>
+<% for (const item of items) {
+  const busca = "https://scholar.google.com/scholar?q=" + encodeURIComponent('"' + item.title + '"');
+  const botoes = [
+    item.doi          ? {url: "https://doi.org/" + item.doi, icone: "bi-link-45deg",            rotulo: "DOI"} : null,
+    item.pdf          ? {url: item.pdf,          icone: "bi-file-earmark-pdf",  rotulo: "PDF"} : null,
+    item.preprint     ? {url: item.preprint,     icone: "bi-file-earmark-text", rotulo: "Preprint"} : null,
+    item.codigo       ? {url: item.codigo,       icone: "bi-code-slash",        rotulo: "Código"} : null,
+    item.dados        ? {url: item.dados,        icone: "bi-database",          rotulo: "Dados"} : null,
+    item.suplementar  ? {url: item.suplementar,  icone: "bi-paperclip",         rotulo: "Material suplementar"} : null,
+    item.apresentacao ? {url: item.apresentacao, icone: "bi-easel",             rotulo: "Slides"} : null
+  ].filter(Boolean);
+%>
 <div class="pub-item" <%= metadataAttrs(item) %>>
   <div class="pub-ano listing-date"><%= item.date ? new Date(item.date).getUTCFullYear() : '' %></div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none"><%= item.author %></span>
-    <%= item.autores %>
+    <span class="pub-citacao"><%= item.autores %>
     <span class="listing-title"><% if (item.path) { %><a href="<%- item.path %>"><%= item.title %></a><% } else { %><%= item.title %><% } %></span>.
-    <%= item.veiculo %>.<% if (item.doi) { %> DOI: <a class="pub-doi" href="https://doi.org/<%- item.doi %>"><%= item.doi %></a>.<% } %>
+    <%= item.veiculo %>.<% if (item.doi) { %> DOI: <a class="pub-doi" href="https://doi.org/<%- item.doi %>"><%= item.doi %></a>.<% } %></span>
     <div class="pub-meta">
       <% if (item.categories) { %><span class="listing-categories"><% for (const cat of item.categories) { %><span class="listing-category"><%= cat %></span><% } %></span><% } %>
       <% if (item.qualis) { %><span class="pub-qualis" title="Estrato Qualis/CAPES 2021-2024">Qualis <%= item.qualis %></span><% } %>
       <% if (item.nota) { %><span class="pub-nota"><%= item.nota %></span><% } %>
     </div>
+    <div class="pub-botoes">
+      <% for (const b of botoes) { %><a class="pub-btn" href="<%- b.url %>" target="_blank" rel="noopener"><i class="bi <%- b.icone %>"></i> <%= b.rotulo %></a><% } %>
+      <button type="button" class="pub-btn pub-copiar" title="Copiar a referência no padrão ABNT"><i class="bi bi-clipboard"></i> <span>Copiar referência</span></button>
+      <a class="pub-btn pub-btn-sec" href="<%- busca %>" target="_blank" rel="noopener" title="Buscar o texto no Google Acadêmico"><i class="bi bi-search"></i> Google Acadêmico</a>
+    </div>
   </div>
 </div>
 <% } %>
 </div>
+
+<script>
+// Copia a referência ABNT (texto simples) do item clicado
+document.addEventListener("click", function (ev) {
+  const btn = ev.target.closest(".pub-copiar");
+  if (!btn) return;
+  const ref = btn.closest(".pub-ref").querySelector(".pub-citacao");
+  const texto = ref.innerText.replace(/\s+/g, " ").trim();
+  const rotulo = btn.querySelector("span");
+  const feito = () => { rotulo.textContent = "Copiado"; btn.classList.add("ok");
+    setTimeout(() => { rotulo.textContent = "Copiar referência"; btn.classList.remove("ok"); }, 1800); };
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(texto).then(feito);
+  } else {
+    const ta = document.createElement("textarea"); ta.value = texto; document.body.appendChild(ta);
+    ta.select(); document.execCommand("copy"); ta.remove(); feito();
+  }
+});
+</script>
 ```

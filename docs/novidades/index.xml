@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Alexsandro Prado</title>
+<link>https://alexsandroprado.github.io/novidades/</link>
+<atom:link href="https://alexsandroprado.github.io/novidades/index.xml" rel="self" type="application/rss+xml"/>
+<description>Publicações, eventos, software e outras notícias.</description>
+<image>
+<url>https://alexsandroprado.github.io/images/alexsandro.png</url>
+<title>Alexsandro Prado</title>
+<link>https://alexsandroprado.github.io/novidades/</link>
+<height>144</height>
+<width>144</width>
+</image>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Fri, 27 Nov 2026 03:00:00 GMT</lastBuildDate>
+<item>
+  <title>Apresentação no XX Congresso ANPCONT</title>
+  <link>https://alexsandroprado.github.io/novidades/2026-11-27-anpcont/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>O artigo <em>Fatores ESG e a legibilidade dos relatórios de sustentabilidade: evidências das empresas brasileiras de capital aberto</em>, elaborado em coautoria com Maria Auxiliadora de Oliveira Morais, será apresentado no XX Congresso da Associação Nacional de Programas de Pós-Graduação em Ciências Contábeis (ANPCONT), em Natal (RN), em 27 de novembro de 2026.</p>
+<p>O estudo investiga a relação entre o desempenho ambiental, social e de governança (ESG) das companhias abertas brasileiras e a legibilidade dos relatórios de sustentabilidade que divulgam, tema alinhado à linha de pesquisa em <a href="../../pesquisa/index.html">sustentabilidade e governança corporativa</a>.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
+  <category>Evento</category>
+  <guid>https://alexsandroprado.github.io/novidades/2026-11-27-anpcont/</guid>
+  <pubDate>Fri, 27 Nov 2026 03:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Novo site com indicadores do mercado de trabalho</title>
+  <link>https://alexsandroprado.github.io/novidades/2026-11-15-novo-site/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>O site foi reformulado e passa a reunir, em um só lugar, (i) as <a href="../../publicacoes/index.html">publicações</a>, com referências no padrão ABNT, estrato Qualis e filtros por tipo; (ii) os <a href="../../software/index.html">pacotes em R e as bases de dados abertas</a> desenvolvidos nas pesquisas; e (iii) <a href="../../pesquisa/index.html">indicadores mensais do emprego formal</a>, calculados a partir dos microdados do Novo CAGED para Brasil, Nordeste, Rio Grande do Norte e Mossoró, incluindo as ocupações contábeis.</p>
+<p>Os indicadores são atualizados automaticamente a cada nova divulgação do Ministério do Trabalho e Emprego.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
+  <category>Site</category>
+  <guid>https://alexsandroprado.github.io/novidades/2026-11-15-novo-site/</guid>
+  <pubDate>Sun, 15 Nov 2026 03:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>datacaged 0.2.3 disponível no CRAN</title>
+  <link>https://alexsandroprado.github.io/novidades/2026-10-13-datacaged-cran/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>A versão 0.2.3 do pacote <strong>datacaged</strong> está disponível no repositório oficial do R (CRAN). O pacote baixa, lê e organiza os microdados do Cadastro Geral de Empregados e Desempregados (CAGED) em um banco local DuckDB, abrangendo o CAGED antigo (1992 a 2019), o Novo CAGED (2020 em diante) e os arquivos de ajustes.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">install.packages</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"datacaged"</span>)</span></code></pre></div></div>
+<p>Mais informações na página <a href="../../software/index.html">Software e dados</a> e no <a href="https://github.com/gecomt/datacaged">repositório do GitHub</a>.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
+  <category>Software</category>
+  <guid>https://alexsandroprado.github.io/novidades/2026-10-13-datacaged-cran/</guid>
+  <pubDate>Tue, 13 Oct 2026 03:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Artigo publicado na Revista Catarinense da Ciência Contábil</title>
+  <link>https://alexsandroprado.github.io/novidades/2026-06-30-rccc/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>O artigo <em>Disclosure de transformação digital em companhias listadas na B3</em>, em coautoria com Michele Nobre do Nascimento, Gianinni Martins Pereira Cirne, Yuri Gomes Paiva Azevedo e Kallyse Priscila Soares de Oliveira Freire, foi publicado na <em>Revista Catarinense da Ciência Contábil</em> (Qualis A3), v. 25, e3641.</p>
+<p>DOI: <a href="https://doi.org/10.16930/2237-766220263641">10.16930/2237-766220263641</a></p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
+  <category>Publicação</category>
+  <guid>https://alexsandroprado.github.io/novidades/2026-06-30-rccc/</guid>
+  <pubDate>Tue, 30 Jun 2026 03:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Artigo publicado na Business Strategy &amp; Development</title>
+  <link>https://alexsandroprado.github.io/novidades/2026-03-31-bsd/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>O artigo <em>Family hands, greener firms? The effects of family management and ownership on ESG performance</em>, em coautoria com Matheus Juan Silva Ribeiro, Yuri Gomes Paiva Azevedo e Alan Bandeira Pinheiro, foi publicado na <em>Business Strategy &amp; Development</em> (Qualis A1), v. 9, n.&nbsp;2.</p>
+<p>O estudo analisa como a gestão e a propriedade familiar se relacionam com o desempenho ambiental, social e de governança (ESG) das companhias.</p>
+<p>DOI: <a href="https://doi.org/10.1002/bsd2.70331">10.1002/bsd2.70331</a></p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
+  <category>Publicação</category>
+  <guid>https://alexsandroprado.github.io/novidades/2026-03-31-bsd/</guid>
+  <pubDate>Tue, 31 Mar 2026 03:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Artigo publicado na Contabilidade Gestão e Governança</title>
+  <link>https://alexsandroprado.github.io/novidades/2025-03-31-cgg/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>O artigo <em>A influência da pandemia do coronavírus SARS-CoV-2 na complexidade da auditoria em companhias abertas brasileiras</em>, em coautoria com Fernanda Mendes de Sousa, Yuri Gomes Paiva Azevedo, Kléber Formiga Miranda e Mariana Câmara Gomes e Silva, foi publicado na <em>Contabilidade Gestão e Governança</em> (Qualis A4), v. 27, n.&nbsp;3, p.&nbsp;410-444.</p>
+<p>DOI: <a href="https://doi.org/10.51341/cgg.v27i3.3274">10.51341/cgg.v27i3.3274</a></p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a> ]]></description>
+  <category>Publicação</category>
+  <guid>https://alexsandroprado.github.io/novidades/2025-03-31-cgg/</guid>
+  <pubDate>Mon, 31 Mar 2025 03:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,10 @@
+---
+title: "Novo site com indicadores do mercado de trabalho"
+date: 2026-11-15
+categories: [Site]
+description: "Site reformulado, com publicações filtráveis e indicadores mensais do Novo CAGED."
+---
+
+O site foi reformulado e passa a reunir, em um só lugar, (i) as [publicações](../../publicacoes/index.qmd), com referências no padrão ABNT, estrato Qualis e filtros por tipo; (ii) os [pacotes em R e as bases de dados abertas](../../software/index.qmd) desenvolvidos nas pesquisas; e (iii) [indicadores mensais do emprego formal](../../pesquisa/index.qmd), calculados a partir dos microdados do Novo CAGED para Brasil, Nordeste, Rio Grande do Norte e Mossoró, incluindo as ocupações contábeis.
+
+Os indicadores são atualizados automaticamente a cada nova divulgação do Ministério do Trabalho e Emprego.

@@ -802,3 +802,51 @@ main.content > #title-block-header {
   width: auto;
   margin-right: 0.5rem;
 }
+
+// Publicações: botões de acesso
+.pub-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.pub-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--ap-mono);
+  font-size: 0.72rem;
+  line-height: 1;
+  padding: 0.32rem 0.55rem;
+  border: 1px solid var(--ap-accent);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--ap-accent);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+
+  &:hover {
+    background: var(--ap-accent);
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  &.pub-btn-sec,
+  &.pub-copiar {
+    border-color: var(--ap-border);
+    color: var(--ap-muted);
+
+    &:hover {
+      border-color: var(--ap-accent);
+      background: var(--ap-accent-soft);
+      color: var(--ap-accent);
+    }
+  }
+
+  &.ok {
+    border-color: #15803d;
+    color: #15803d;
+  }
+}

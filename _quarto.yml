@@ -26,6 +26,9 @@ website:
     prefs-text: "Preferências de cookies"
   twitter-card: true
   back-to-top-navigation: true
+  # Rascunhos: posts com "draft: true" são renderizados, mas não aparecem
+  # em listagens, busca nem menus (acessíveis só pelo endereço direto)
+  draft-mode: unlinked
   reader-mode: false
   search:
     location: navbar
@@ -42,6 +45,8 @@ website:
         text: Software e dados
       - href: ensino/index.qmd
         text: Ensino
+      - href: novidades/index.qmd
+        text: Novidades
       - href: blog/index.qmd
         text: Blog
     right:
@@ -80,6 +85,14 @@ format:
       file: header.html
     code-copy: true
     code-overflow: wrap
+    # Esconde o e-mail de robôs de spam (o link continua funcionando)
+    email-obfuscation: javascript
+    # Notas de rodapé exibidas ao passar o mouse
+    footnotes-hover: true
+    # Links externos abrem em nova aba
+    link-external-newwindow: true
+    link-external-icon: false
+    link-external-filter: '^(?:http:|https:)\/\/alexsandroprado\.github\.io'
     smooth-scroll: true
 
 # Comentários (opcional): habilite GitHub Discussions no repositório,
