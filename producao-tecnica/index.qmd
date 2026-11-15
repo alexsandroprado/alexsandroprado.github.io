@@ -61,7 +61,7 @@ Registro de programa de computador concedido pelo Instituto Nacional da Propried
 ## Bases de dados técnico-científicas
 
 ::: {.cartao}
-### Segmentos de listagem da B3 por companhia (2010 a 2026)
+### Segmentos de listagem da B3 por companhia (2010 a 2026) {#segmentos-b3}
 
 [Base de dados técnico-científica]{.tipo-capes} [Abrangência nacional]{.tipo-capes .tipo-neutro}
 

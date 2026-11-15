@@ -67,6 +67,8 @@ website:
           - text: "Divulgação"
           - href: novidades/index.qmd
             text: Novidades
+      - href: parcerias/index.qmd
+        text: Parcerias
     right:
       - icon: github
         href: https://github.com/alexsandroprado

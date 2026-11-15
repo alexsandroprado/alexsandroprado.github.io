@@ -21,4 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
       a.setAttribute("aria-current", "page");
     }
   });
+
+  // Item Parcerias com contorno (estilo em styles.scss)
+  document.querySelectorAll(".navbar .navbar-nav > .nav-item > a.nav-link:not(.dropdown-toggle)").forEach(function (a) {
+    if (new URL(a.href, window.location.href).pathname.indexOf("/parcerias/") !== -1) {
+      a.classList.add("nav-destaque");
+    }
+  });
 });

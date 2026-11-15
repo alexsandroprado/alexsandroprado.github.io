@@ -426,6 +426,106 @@ table, .cell-output, pre {
   text-transform: uppercase;
 }
 
+// ── Parcerias ───────────────────────────────────────────────
+.cta-faixa {
+  border-left: 3px solid var(--ap-accent);
+  background: var(--ap-accent-soft);
+  border-radius: 0 6px 6px 0;
+  padding: 1.1rem 1.35rem 0.6rem;
+  margin-bottom: 2rem;
+
+  p:last-child { margin-top: 0.9rem; }
+}
+
+.cta-botao.btn-outline-secondary {
+  color: var(--ap-ink);
+  border-color: var(--ap-border);
+  background: var(--ap-card);
+
+  &:hover, &:focus {
+    color: var(--ap-accent);
+    border-color: var(--ap-accent);
+    background: var(--ap-card);
+  }
+}
+
+.cta-botao.btn {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.45rem 1rem;
+  margin: 0 0.4rem 0.5rem 0;
+  text-decoration: none;
+}
+
+.servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  .cartao {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    p { font-size: 0.92rem; }
+
+    // último cartão ocupa a linha inteira quando sobra sozinho
+    &:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+    .meta {
+      margin-top: auto;
+      padding-top: 0.6rem;
+      border-top: 1px dashed var(--ap-border);
+    }
+  }
+}
+
+.etapas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.etapa {
+  border: 1px solid var(--ap-border);
+  border-radius: 6px;
+  background: var(--ap-card);
+  padding: 0.9rem 1.1rem 0.3rem;
+
+  p { font-size: 0.92rem; }
+
+  .etapa-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    font-family: var(--ap-mono);
+    font-weight: 600;
+    color: var(--ap-accent);
+    background: var(--ap-accent-soft);
+  }
+}
+
+// Destaque discreto do item Parcerias na navbar
+@media (min-width: 992px) {
+  .navbar .navbar-nav .nav-link.nav-destaque {
+    border: 1px solid rgba(94, 196, 220, 0.55);
+    border-radius: 999px;
+    padding: 0.3rem 0.85rem !important;
+    margin-left: 0.4rem;
+  }
+}
+
 // ── Blog ─────────────────────────────────────────────────────
 div.quarto-post {
   border-bottom: 1px solid var(--ap-border);

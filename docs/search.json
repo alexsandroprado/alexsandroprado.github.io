@@ -35,186 +35,60 @@
     "text": "Contato\nDúvidas sobre o tratamento de dados podem ser enviadas para alexsandro.prado at ufersa dot edu dot br."
   },
   {
-    "objectID": "novidades/index.html",
-    "href": "novidades/index.html",
-    "title": "Novidades",
+    "objectID": "parcerias/index.html",
+    "href": "parcerias/index.html",
+    "title": "Parcerias e análises de dados",
     "section": "",
-    "text": "Apresentação no XX Congresso ANPCONT\n\n\n\nEvento\n\n\n\nArtigo sobre fatores ESG e legibilidade dos relatórios de sustentabilidade, apresentado em Natal (RN).\n\n\n\n\n\n27/11/2026\n\n\n\n\n\n\n\nNovo site com indicadores do mercado de trabalho\n\n\n\nSite\n\n\n\nSite reformulado, com publicações filtráveis e indicadores mensais do Novo CAGED.\n\n\n\n\n\n15/11/2026\n\n\n\n\n\n\n\ndatacaged 0.2.3 disponível no CRAN\n\n\n\nSoftware\n\n\n\nNova versão do pacote em R para os microdados do CAGED.\n\n\n\n\n\n13/10/2026\n\n\n\n\n\n\n\nArtigo publicado na Revista Catarinense da Ciência Contábil\n\n\n\nPublicação\n\n\n\nEstudo sobre a divulgação de transformação digital em companhias listadas na B3.\n\n\n\n\n\n30/06/2026\n\n\n\n\n\n\n\nArtigo publicado na Business Strategy & Development\n\n\n\nPublicação\n\n\n\nOs efeitos da gestão e da propriedade familiar sobre o desempenho ESG.\n\n\n\n\n\n31/03/2026\n\n\n\n\n\n\n\nArtigo publicado na Contabilidade Gestão e Governança\n\n\n\nPublicação\n\n\n\nA influência da pandemia de COVID-19 na complexidade da auditoria em companhias abertas.\n\n\n\n\n\n31/03/2025\n\n\n\n\n\nSem itens correspondentes\n De volta ao topo"
+    "text": "Prefeituras, empresas, entidades de classe, escritórios contábeis e equipes de recursos humanos frequentemente precisam responder perguntas que os dados públicos brasileiros já permitem responder: quanto se paga por uma ocupação na região, onde o emprego formal está crescendo, como um setor se compara ao restante do estado. As parcerias descritas nesta página transformam essas bases em informação aplicada, com método transparente e resultados reprodutíveis.\nConversar sobre um projeto Ver exemplos de entregas"
   },
   {
-    "objectID": "novidades/2026-11-15-novo-site/index.html",
-    "href": "novidades/2026-11-15-novo-site/index.html",
-    "title": "Novo site com indicadores do mercado de trabalho",
+    "objectID": "parcerias/index.html#servicos",
+    "href": "parcerias/index.html#servicos",
+    "title": "Parcerias e análises de dados",
+    "section": "O que pode ser feito",
+    "text": "O que pode ser feito\n\n\nDiagnóstico do mercado de trabalho\nRetrato do emprego formal de um município, região ou setor: admissões, desligamentos, saldo, rotatividade, perfil dos trabalhadores e evolução ao longo do tempo, a partir do CAGED e da RAIS.\n\nPara gestão pública, planejamento e estudos setoriais\n\n\n\nReferência salarial por ocupação\nSalários de admissão e remuneração média por ocupação (CBO), região, porte de empresa, escolaridade e tempo de vínculo, com comparação entre recortes e acompanhamento periódico.\n\nPara recursos humanos, planos de cargos e subsídio técnico\n\n\n\nPainéis e indicadores automatizados\nIndicadores mensais calculados e publicados automaticamente a cada nova divulgação oficial, em página web ou relatório, sem retrabalho manual.\n\nPara acompanhamento contínuo e comunicação de resultados\n\n\n\nDados contábeis e de mercado de capitais\nColeta e organização de demonstrações financeiras, formulários e documentos de companhias abertas (CVM e B3), com bases prontas para análise de desempenho, governança e informações ESG.\n\nPara análise setorial, pesquisa aplicada e due diligence\n\n\n\nCapacitação em análise de dados\nCursos e oficinas para equipes sobre análise de dados com R, uso de microdados públicos e construção de relatórios reprodutíveis, ajustados ao nível e às necessidades do grupo.\n\nPara equipes técnicas, escritórios e órgãos públicos"
+  },
+  {
+    "objectID": "parcerias/index.html#exemplos",
+    "href": "parcerias/index.html#exemplos",
+    "title": "Parcerias e análises de dados",
+    "section": "Exemplos de entregas",
+    "text": "Exemplos de entregas\nOs materiais a seguir estão publicados neste site e mostram, em pequena escala, o tipo de resultado de uma parceria:\n\nIndicadores do emprego formal: painel mensal de admissões, desligamentos e saldo para Brasil, Rio Grande do Norte e Mossoró, atualizado automaticamente.\nMercado de trabalho contábil: recorte por ocupação (contador, auditor, perito, técnico e auxiliar de contabilidade), com salário médio de admissão por ano.\nSegmentos de listagem da B3: base de dados de 602 companhias abertas, construída e conferida documento a documento.\nBlog: textos sobre análise de dados aplicada à contabilidade, como previsão de receita e tratamento de problemas econométricos."
+  },
+  {
+    "objectID": "parcerias/index.html#como-funciona",
+    "href": "parcerias/index.html#como-funciona",
+    "title": "Parcerias e análises de dados",
+    "section": "Como funciona",
+    "text": "Como funciona\n\n\n1\nConversa inicial. Definição da pergunta, do recorte e do uso que será feito do resultado.\n\n\n2\nProposta. Fontes de dados, método, formato da entrega e prazo, descritos em um plano curto.\n\n\n3\nEntrega. Relatório, painel ou base de dados, acompanhados da documentação do método.\n\n\nAs parcerias são formalizadas por meio de projetos institucionais da Universidade Federal Rural do Semi-Árido (UFERSA), como ações de extensão e de prestação de serviços, ou como colaboração técnica eventual, sempre conforme as normas da universidade. Os estudantes do grupo GECOMT podem participar das atividades, o que aproxima a formação acadêmica dos problemas reais das organizações.\n\n\n\n\n\n\nNotaSobre os dados\n\n\n\nAs análises utilizam bases públicas e desidentificadas, como o CAGED, a RAIS e os dados abertos da CVM. Quando a organização fornece dados próprios, o tratamento segue a Lei Geral de Proteção de Dados (LGPD), com uso restrito à finalidade acordada."
+  },
+  {
+    "objectID": "parcerias/index.html#contato",
+    "href": "parcerias/index.html#contato",
+    "title": "Parcerias e análises de dados",
+    "section": "Contato",
+    "text": "Contato\nPara apresentar uma demanda ou agendar uma conversa inicial, escreva para alexsandro.prado at ufersa dot edu dot br ou envie uma mensagem pelo LinkedIn."
+  },
+  {
+    "objectID": "novidades/2026-11-27-anpcont/index.html",
+    "href": "novidades/2026-11-27-anpcont/index.html",
+    "title": "Apresentação no XX Congresso ANPCONT",
     "section": "",
-    "text": "O site foi reformulado e passa a reunir, em um só lugar, (i) as publicações, com referências no padrão ABNT, estrato Qualis e filtros por tipo; (ii) os pacotes em R e as bases de dados abertas desenvolvidos nas pesquisas; e (iii) indicadores mensais do emprego formal, calculados a partir dos microdados do Novo CAGED para Brasil, Nordeste, Rio Grande do Norte e Mossoró, incluindo as ocupações contábeis.\nOs indicadores são atualizados automaticamente a cada nova divulgação do Ministério do Trabalho e Emprego.\n\n\n\n De volta ao topo"
+    "text": "O artigo Fatores ESG e a legibilidade dos relatórios de sustentabilidade: evidências das empresas brasileiras de capital aberto, elaborado em coautoria com Maria Auxiliadora de Oliveira Morais, será apresentado no XX Congresso da Associação Nacional de Programas de Pós-Graduação em Ciências Contábeis (ANPCONT), em Natal (RN), em 27 de novembro de 2026.\nO estudo investiga a relação entre o desempenho ambiental, social e de governança (ESG) das companhias abertas brasileiras e a legibilidade dos relatórios de sustentabilidade que divulgam, tema alinhado à linha de pesquisa em sustentabilidade e governança corporativa.\n\n\n\n De volta ao topo"
   },
   {
-    "objectID": "novidades/2026-06-30-rccc/index.html",
-    "href": "novidades/2026-06-30-rccc/index.html",
-    "title": "Artigo publicado na Revista Catarinense da Ciência Contábil",
+    "objectID": "novidades/2026-10-13-datacaged-cran/index.html",
+    "href": "novidades/2026-10-13-datacaged-cran/index.html",
+    "title": "datacaged 0.2.3 disponível no CRAN",
     "section": "",
-    "text": "O artigo Disclosure de transformação digital em companhias listadas na B3, em coautoria com Michele Nobre do Nascimento, Gianinni Martins Pereira Cirne, Yuri Gomes Paiva Azevedo e Kallyse Priscila Soares de Oliveira Freire, foi publicado na Revista Catarinense da Ciência Contábil (Qualis A3), v. 25, e3641.\nDOI: 10.16930/2237-766220263641\n\n\n\n De volta ao topo"
+    "text": "A versão 0.2.3 do pacote datacaged está disponível no repositório oficial do R (CRAN). O pacote baixa, lê e organiza os microdados do Cadastro Geral de Empregados e Desempregados (CAGED) em um banco local DuckDB, abrangendo o CAGED antigo (1992 a 2019), o Novo CAGED (2020 em diante) e os arquivos de ajustes.\ninstall.packages(\"datacaged\")\nMais informações na página Produção técnica e no repositório do GitHub.\n\n\n\n De volta ao topo"
   },
   {
-    "objectID": "novidades/2025-03-31-cgg/index.html",
-    "href": "novidades/2025-03-31-cgg/index.html",
-    "title": "Artigo publicado na Contabilidade Gestão e Governança",
+    "objectID": "novidades/2026-03-31-bsd/index.html",
+    "href": "novidades/2026-03-31-bsd/index.html",
+    "title": "Artigo publicado na Business Strategy & Development",
     "section": "",
-    "text": "O artigo A influência da pandemia do coronavírus SARS-CoV-2 na complexidade da auditoria em companhias abertas brasileiras, em coautoria com Fernanda Mendes de Sousa, Yuri Gomes Paiva Azevedo, Kléber Formiga Miranda e Mariana Câmara Gomes e Silva, foi publicado na Contabilidade Gestão e Governança (Qualis A4), v. 27, n. 3, p. 410-444.\nDOI: 10.51341/cgg.v27i3.3274\n\n\n\n De volta ao topo"
-  },
-  {
-    "objectID": "extensao/index.html",
-    "href": "extensao/index.html",
-    "title": "Extensão",
-    "section": "",
-    "text": "As ações de extensão aproximam o curso de Ciências Contábeis da UFERSA da comunidade de Mossoró e do Semiárido potiguar, com foco em educação financeira, assessoria contábil a pequenos negócios, preparação para exames profissionais e uso de dados na tomada de decisão."
-  },
-  {
-    "objectID": "extensao/index.html#em-andamento",
-    "href": "extensao/index.html#em-andamento",
-    "title": "Extensão",
-    "section": "Projetos em andamento",
-    "text": "Projetos em andamento\n\n\nOlimpíada Brasileira de Educação Financeira (OBEF) desde 2022\n\nCoordenação. Programa de extensão voltado a estudantes do ensino fundamental e médio, que trata a educação financeira como forma de inclusão social a partir de três eixos: estrutura familiar, ambiente escolar e vida profissional. É realizado por professores e estudantes de graduação da UFERSA em parceria com universidades de outros estados.\n\nRegulariza: assessoria contábil e gerencial para micro e pequenas empresas do Semiárido Potiguar desde 2021\n\nCoordenação. Assessoria a micro e pequenas empresas de Mossoró e região com pendências fiscais, afetadas pela pandemia, por meio de análise documental e fiscal e de entrevistas periódicas com os empresários. O objetivo é regularizar as empresas perante o fisco, organizar suas demonstrações contábeis e apoiar a gestão, contribuindo para a geração de emprego e renda na economia local.\n\nO custo do seu negócio: teoria e prática desde 2018\n\nParticipação, sob coordenação de Luciana Batista Sales. Integra estudantes das disciplinas de Contabilidade de Custos e Análise de Custos a empresas associadas à Associação Comercial e Industrial de Mossoró, por meio de cursos, oficinas, palestras, visitas e feiras de negócio."
-  },
-  {
-    "objectID": "extensao/index.html#concluidos",
-    "href": "extensao/index.html#concluidos",
-    "title": "Extensão",
-    "section": "Projetos concluídos",
-    "text": "Projetos concluídos\n\nSob coordenação\n\nRevisão ENADE 2022: Ciências Contábeis (2022). Revisão dos conteúdos do componente específico da prova para os estudantes do curso.\nA importância do ERP na gestão do agronegócio (2022). Uso de sistemas integrados de gestão para controle de custos, rotinas fiscais e logística no setor rural.\nPAAC: Programa de Acompanhamento do Aprendizado em Contabilidade (2014 a 2016 e 2017). Simulados periódicos on-line para o Exame de Suficiência do CFC e o ENADE, com identificação dos conteúdos de menor desempenho.\nI Curso Preparatório para o Exame de Suficiência do CFC (2016).\nII Fórum da Profissão Contábil (2016).\nI Workshop para Concursos Públicos (2014).\n\n\n\nParticipação\n\nApoio à escrita científica com Mendeley e CopySpider (2022).\nAnálise de dados com Economatica e R (2022).\nUFERSA3: Liga de Mercado Financeiro da UFERSA (2020 a 2022).\nRecepção aos ingressantes (2018).\nII Curso Preparatório para o Exame de Suficiência do CFC (2017).\nContabilidade e a Comunidade Empresarial (2017).\nEstudos sobre Imposto de Renda Pessoa Física 2016 (2016).\nFolha de Pagamento: Teoria e Prática (2016).\nV Jornada Norte-rio-grandense sobre Educação Fiscal: sensibilização acadêmica (2016).\nAuditoria das Demonstrações Contábeis da Fundação Guimarães Duque (2015).\nObservatório Social de Cabedelo (2012), projeto da Universidade Federal da Paraíba para estimular a cidadania fiscal e o monitoramento das receitas e dos gastos públicos municipais.\nEspaço Contábil: um novo portal para o curso de Ciências Contábeis na Internet (2011 a 2012)."
-  },
-  {
-    "objectID": "extensao/index.html#cursos",
-    "href": "extensao/index.html#cursos",
-    "title": "Extensão",
-    "section": "Cursos ministrados",
-    "text": "Cursos ministrados\n\nA tecnologia XBRL como instrumento da Contabilidade, minicurso (2016).\nConstrução de Blogs Educativos (2012).\nCriação e estruturação de página na internet para o Observatório Social de Cabedelo, oficina (2012).\nA utilização de blogs educativos no processo de ensino (2011)."
-  },
-  {
-    "objectID": "extensao/index.html#eventos",
-    "href": "extensao/index.html#eventos",
-    "title": "Extensão",
-    "section": "Organização de eventos",
-    "text": "Organização de eventos\n\nOlimpíada Brasileira de Educação Financeira (OBEF) (2025).\nWorkshop: Coleta de Dados no Economatica (2025).\nII Fórum da Profissão Contábil (2016).\nSimpósio de Novas Tecnologias na Comunicação e na Estratégia dos Negócios (2013)."
-  },
-  {
-    "objectID": "extensao/index.html#divulgacao",
-    "href": "extensao/index.html#divulgacao",
-    "title": "Extensão",
-    "section": "Divulgação científica",
-    "text": "Divulgação científica\nTextos sobre análise de dados, contabilidade e mercado de trabalho são publicados no blog, e as notícias sobre artigos, prêmios e produtos aparecem em Novidades. Aulas e conteúdos de apoio sobre análise de dados em R estão no canal do YouTube.\nParticipações na mídia:\n\nFinanças em Foco, edição 10, programa de entrevistas (2017).\nUERN TV Notícias, edição 62, sobre a Exposição de Gestão e Custos do curso de Ciências Contábeis da UFERSA (2017)."
-  },
-  {
-    "objectID": "blog/posts/preditiva/preditiva.html#objetivo",
-    "href": "blog/posts/preditiva/preditiva.html#objetivo",
-    "title": "Previsão de receita",
-    "section": "Objetivo",
-    "text": "Objetivo\nNosso objetivo é demonstrar, por meio de um exemplo prático, como a análise de demonstrações financeiras pode prever o desempenho futuro de uma empresa. Utilizaremos dados fictícios para simplificação."
-  },
-  {
-    "objectID": "blog/posts/preditiva/preditiva.html#passo-a-passo-em-r",
-    "href": "blog/posts/preditiva/preditiva.html#passo-a-passo-em-r",
-    "title": "Previsão de receita",
-    "section": "Passo a Passo em R",
-    "text": "Passo a Passo em R\n\nColeta e Preparação dos Dados\nPrimeiramente, vamos criar um conjunto de dados fictícios representando as demonstrações financeiras de uma empresa ao longo dos anos.\n\n# Carregar pacotes necessários\n# (instale antes, uma única vez: install.packages(c(\"dplyr\", \"ggplot2\", \"forecast\")))\n\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(forecast)\n\n# Criar dados fictícios\nset.seed(123)\nanos &lt;- 2010:2023\nreceita &lt;- c(500, 550, 600, 660, 720, 780, 850, 920, 1000, 1100, 1210, 1330, 1460, 1600)\nlucro_liquido &lt;- receita * runif(14, 0.08, 0.12)\n\ndados &lt;- data.frame(ano = anos, receita = receita, lucro_liquido = lucro_liquido)\n\n# Visualizar os dados\nprint(dados)\n\n    ano receita lucro_liquido\n1  2010     500      45.75155\n2  2011     550      61.34271\n3  2012     600      57.81545\n4  2013     660      76.11166\n5  2014     720      84.68546\n6  2015     780      63.82136\n7  2016     850      85.95559\n8  2017     920     106.44102\n9  2018    1000     102.05740\n10 2019    1100     108.09105\n11 2020    1210     143.11073\n12 2021    1330     130.51738\n13 2022    1460     156.37013\n14 2023    1600     164.64854\n\n\n\n\nAnálise Exploratória dos Dados\nVamos analisar graficamente a evolução da receita e do lucro líquido ao longo dos anos.\n\n# Visualização dos dados\nggplot(dados, aes(x = ano)) +\n  geom_line(aes(y = receita, color = \"Receita\")) +\n  geom_line(aes(y = lucro_liquido, color = \"Lucro Líquido\")) +\n  labs(title = \"Evolução da Receita e do Lucro Líquido\",\n       x = \"Ano\",\n       y = \"Valores (em milhares)\") +\n  scale_color_manual(name = \"Legenda\", values = c(\"Receita\" = \"blue\", \"Lucro Líquido\" = \"green\"))\n\n\n\n\n\n\n\n\n\n\nModelo Preditivo\nUtilizaremos um modelo de série temporal para prever a receita dos próximos anos.\n\n# Modelagem de série temporal\nts_receita &lt;- ts(dados$receita, start = c(2010), frequency = 1)\n\n# Ajustar um modelo ARIMA\nmodelo_arima &lt;- auto.arima(ts_receita)\n\n# Previsão para os próximos 5 anos\nprevisao &lt;- forecast(modelo_arima, h = 5)\n\n# Visualização da previsão\nautoplot(previsao) +\n  labs(title = \"Previsão da Receita para os Próximos 5 Anos\",\n       x = \"Ano\",\n       y = \"Receita (em milhares)\")\n\n\n\n\n\n\n\n\nO gráfico de previsão de receita para os próximos cinco anos mostra uma tendência de crescimento contínuo, com a linha preta indicando a projeção central e áreas sombreadas em azul representando os intervalos de confiança de 80% e 95%. A receita histórica desde 2010 revela um aumento consistente, e a projeção sugere que esse crescimento continuará até 2028, com a incerteza aumentando ao longo do tempo, conforme evidenciado pela ampliação dos intervalos de confiança. Esses intervalos são essenciais para o planejamento estratégico e a análise de risco, fornecendo uma faixa de valores esperados em vez de um único valor fixo.\nA falha na linha do gráfico ocorre na transição entre os dados históricos e as previsões futuras, destacando o ponto onde terminam as observações reais e começam as estimativas geradas pelo modelo. Esta descontinuidade é intencional para diferenciar claramente os dados observados das projeções, ajudando a evitar confusão ao visualizar a tendência histórica e a previsão de crescimento futuro da receita.\n\n\nInterpretação dos Resultados\nA partir do modelo preditivo, podemos analisar a tendência futura da receita da empresa, possibilitando uma melhor tomada de decisão.\n\n# Exibir previsões\nprint(previsao)\n\n     Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95\n2024       1746.438 1736.867 1756.009 1731.801 1761.076\n2025       1897.021 1869.968 1924.075 1855.647 1938.396\n2026       2050.273 1997.764 2102.782 1969.967 2130.579\n2027       2205.243 2119.915 2290.571 2074.745 2335.740\n2028       2361.319 2236.458 2486.180 2170.360 2552.277\n\n\nA previsão de receita para os anos de 2024 a 2028 mostra um crescimento contínuo, começando em R$ 1746.44 em 2024 e alcançando R$ 2361,32 em 2028. Os intervalos de confiança de 80% e 95% indicam as faixas nas quais a receita provavelmente se situará, refletindo diferentes níveis de certeza. Em 2024, por exemplo, a receita deve estar entre R$ 1736,87 e R$ 1756,01 com 80% de confiança e entre R$ 1731,80 e R$ 1761,08 com 95% de confiança. Esses intervalos ajudam a quantificar a incerteza nas previsões, essenciais para o planejamento financeiro e análise de risco."
-  },
-  {
-    "objectID": "blog/posts/preditiva/preditiva.html#conclusão",
-    "href": "blog/posts/preditiva/preditiva.html#conclusão",
-    "title": "Previsão de receita",
-    "section": "Conclusão",
-    "text": "Conclusão\nAtravés desse exemplo simples com dados fictícios, observamos como a informação contábil, quando analisada e modelada adequadamente, pode fornecer previsões valiosas para o planejamento estratégico das organizações. As demonstrações financeiras, alinhadas às normas contábeis do CPC 00 R2, são essenciais para garantir que essas previsões sejam baseadas em dados relevantes e fidedignos.\nUtilizar a linguagem R para a análise preditiva permite explorar diversos modelos e técnicas estatísticas, facilitando a extração de insights que podem direcionar o crescimento sustentável da empresa.\nEste post ilustra a importância de uma contabilidade bem estruturada e da análise de dados para antecipar e responder às dinâmicas do mercado, reforçando o poder preditivo da informação contábil conforme as diretrizes do CPC 00 R2."
-  },
-  {
-    "objectID": "blog/posts/contabdata/contabdata.html",
-    "href": "blog/posts/contabdata/contabdata.html",
-    "title": "A Importância da Análise de Dados na Contabilidade",
-    "section": "",
-    "text": "Introdução\nA análise de dados tem se tornado uma ferramenta crucial em diversos setores, incluindo a contabilidade. Com a crescente quantidade de dados gerados diariamente, a capacidade de analisar e interpretar essas informações é essencial para tomar decisões informadas e estratégicas. Este artigo explora a importância da análise de dados na contabilidade, destacando como ela transforma a prática contábil e oferece benefícios significativos para as organizações.\n\n\nTransformação Digital na Contabilidade\nA contabilidade tradicional tem evoluído significativamente com a introdução de tecnologias avançadas. A transformação digital permite que contadores acessem grandes volumes de dados e utilizem ferramentas analíticas para extrair insights valiosos. Esta evolução digital é fundamental para a modernização da contabilidade, tornando os processos mais eficientes e precisos.\n\n\nBenefícios da Análise de Dados na Contabilidade\n\n1. Precisão e Confiabilidade\nA análise de dados melhora a precisão das informações financeiras. Ao utilizar técnicas analíticas avançadas, os contadores podem detectar erros e inconsistências nos dados, garantindo que os relatórios financeiros sejam mais confiáveis. Isso reduz o risco de fraudes e equívocos, proporcionando uma base sólida para a tomada de decisões.\n\n\n2. Tomada de Decisões Informadas\nA capacidade de analisar grandes volumes de dados permite que os contadores forneçam insights estratégicos para a gestão. Com dados precisos e análises detalhadas, as empresas podem tomar decisões informadas que impactam diretamente seu desempenho financeiro e operacional. Isso inclui desde a alocação de recursos até a identificação de oportunidades de crescimento.\n\n\n3. Previsão e Planejamento Financeiro\nFerramentas de análise de dados possibilitam a criação de modelos preditivos que ajudam na previsão de tendências financeiras. Essas previsões são essenciais para o planejamento financeiro de longo prazo, permitindo que as empresas se preparem para cenários futuros e ajustem suas estratégias conforme necessário.\n\n\n4. Eficiência Operacional\nAutomatizar processos contábeis através da análise de dados aumenta a eficiência operacional. A integração de software de análise de dados reduz o tempo gasto em tarefas repetitivas e permite que os contadores se concentrem em atividades de maior valor agregado, como a análise estratégica e consultoria.\n\n\n\nDesafios da Implementação da Análise de Dados na Contabilidade\nEmbora os benefícios sejam significativos, a implementação da análise de dados na contabilidade enfrenta alguns desafios. Estes incluem a necessidade de investimento em tecnologia, a capacitação dos profissionais e a adaptação a novas metodologias. Superar esses desafios é crucial para maximizar o potencial da análise de dados na contabilidade.\n\n\nConclusão\nA análise de dados está revolucionando a contabilidade, oferecendo precisão, insights estratégicos e eficiência operacional. À medida que a tecnologia continua a evoluir, a capacidade de analisar e interpretar dados se tornará ainda mais essencial para a prática contábil. Investir em análise de dados não é apenas uma vantagem competitiva, mas uma necessidade para as empresas que desejam prosperar em um ambiente de negócios cada vez mais complexo e dinâmico.\n\n\nReferências\nBHARDWAJ, G.; HARVEY, D. Big data in financial statement analysis. Journal of Financial Reporting, v. 32, n. 2, p. 213-230, 2018.\nCHEN, H.; CHIANG, R. H. L.; STOREY, V. C. Business intelligence and analytics: From big data to big impact. MIS Quarterly, v. 36, n. 4, p. 1165-1188, 2012.\nDAVENPORT, T. H.; HARRIS, J. G. Competing on analytics: The new science of winning. Harvard Business Review, v. 84, n. 1, p. 98-107, 2006.\nMOLL, J.; YIGITBEYAZ, D. The role of big data in modern accounting systems. The British Accounting Review, v. 52, n. 4, p. 1-15, 2020.\nWILLIS, J. Data analysis in accounting: A practical approach. Journal of Accountancy, v. 21, n. 3, p. 45-58, 2019.\n\n\n\n\n De volta ao topoCitaçãoPor favor, cite este trabalho como:\nPrado, Alexsandro. 2024. “A Importância da Análise de Dados na\nContabilidade.” June 30. https://alexsandroprado.github.io/blog/posts/contabdata/contabdata.html."
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "A Importância da Análise de Dados na Contabilidade\n\n\n\ncontabilidade\n\ndatascience\n\n\n\n\n\n\n\n\n\n30/06/2024\n\n\n\n\n\n\n\n\n\n\n\n\nPrevisão de receita\n\n\n\neconometria\n\nR\n\n\n\n\n\n\n\n\n\n07/06/2024\n\n\n\n\n\n\n\n\n\n\n\n\nHeterocedasticidade e Autocorrelação: como resolver na prática?\n\n\n\neconometria\n\n\n\n\n\n\n\n\n\n22/05/2024\n\n\n\n\n\nSem itens correspondentes\n De volta ao topo"
-  },
-  {
-    "objectID": "blog/posts/heterocedasticidade/heterocedasticidade.html",
-    "href": "blog/posts/heterocedasticidade/heterocedasticidade.html",
-    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
-    "section": "",
-    "text": "A heterocedasticidade e a autocorrelação são problemas comuns na análise de regressão, especialmente em séries temporais e dados econométricos, que podem afetar a validade das inferências e a análise de causalidade.\nHeterocedasticidade refere-se à condição em que a variância dos erros (ou resíduos) de um modelo de regressão não é constante ao longo das observações. Em outras palavras, os erros variam em intensidade dependendo do nível da variável independente. Esse problema pode levar a estimativas ineficientes dos coeficientes da regressão, fazendo com que os testes estatísticos, como o teste t e o teste F, se tornem não confiáveis. Isso significa que as inferências sobre a significância das variáveis podem ser incorretas, resultando em um erro na identificação das relações causais.\nAutocorrelação, por outro lado, ocorre quando os erros do modelo de regressão não são independentes uns dos outros, mas sim correlacionados ao longo do tempo ou das observações. Esse problema é particularmente prevalente em dados de séries temporais. A presença de autocorrelação indica que há padrões não capturados pelo modelo, o que pode levar a subestimação ou superestimação da variabilidade dos coeficientes de regressão. Assim como a heterocedasticidade, a autocorrelação torna os testes estatísticos tradicionais inapropriados, resultando em inferências enganosas e dificultando a análise de causalidade correta."
-  },
-  {
-    "objectID": "blog/posts/heterocedasticidade/heterocedasticidade.html#transformações-de-variáveis",
-    "href": "blog/posts/heterocedasticidade/heterocedasticidade.html#transformações-de-variáveis",
-    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
-    "section": "1. Transformações de Variáveis",
-    "text": "1. Transformações de Variáveis\nTransformar a variável dependente ou independente pode ajudar a estabilizar a variância dos erros. Transformações comuns incluem:\nLogarítmica: Aplicar o logaritmo na variável dependente pode ser eficaz quando a variância dos erros aumenta com o valor da variável dependente.\n\n\n\nCall:\nlm(formula = log(salary) ~ experience + education, data = data)\n\nResiduals:\n      Min        1Q    Median        3Q       Max \n-0.071087 -0.021134 -0.000469  0.018983  0.091538 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 8.906897   0.029442  302.52   &lt;2e-16 ***\nexperience  0.067282   0.001827   36.84   &lt;2e-16 ***\neducation   0.022101   0.001724   12.82   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.03314 on 97 degrees of freedom\nMultiple R-squared:  0.9384,    Adjusted R-squared:  0.9371 \nF-statistic:   739 on 2 and 97 DF,  p-value: &lt; 2.2e-16\n\n\nRaiz Quadrada: Usar a raiz quadrada da variável dependente pode ser útil em alguns casos.\n\n\n\nCall:\nlm(formula = sqrt(salary) ~ experience + education, data = data)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-4.2463 -1.2381 -0.2119  1.1691  5.9950 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  79.9427     1.8098   44.17   &lt;2e-16 ***\nexperience    4.0817     0.1123   36.35   &lt;2e-16 ***\neducation     1.3270     0.1060   12.52   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.037 on 97 degrees of freedom\nMultiple R-squared:  0.9368,    Adjusted R-squared:  0.9354 \nF-statistic: 718.3 on 2 and 97 DF,  p-value: &lt; 2.2e-16"
-  },
-  {
-    "objectID": "blog/posts/heterocedasticidade/heterocedasticidade.html#modelos-de-regressão-ponderada-wls",
-    "href": "blog/posts/heterocedasticidade/heterocedasticidade.html#modelos-de-regressão-ponderada-wls",
-    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
-    "section": "2. Modelos de Regressão Ponderada (WLS)",
-    "text": "2. Modelos de Regressão Ponderada (WLS)\nSe a heterocedasticidade é sistemática, ponderar as observações pelo inverso da variância estimada dos erros pode melhorar a eficiência dos estimadores:\n\n\n\nCall:\nlm(formula = salary ~ experience + education, data = data, weights = weights)\n\nWeighted Residuals:\n    Min      1Q  Median      3Q     Max \n-2.6267 -0.8224 -0.1781  0.7972  3.0487 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  5057.32     348.80   14.50   &lt;2e-16 ***\nexperience    993.10      18.41   53.94   &lt;2e-16 ***\neducation     301.39      22.46   13.42   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.295 on 97 degrees of freedom\nMultiple R-squared:   0.97, Adjusted R-squared:  0.9694 \nF-statistic:  1569 on 2 and 97 DF,  p-value: &lt; 2.2e-16"
-  },
-  {
-    "objectID": "blog/posts/heterocedasticidade/heterocedasticidade.html#modelos-generalizados-glm",
-    "href": "blog/posts/heterocedasticidade/heterocedasticidade.html#modelos-generalizados-glm",
-    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
-    "section": "3. Modelos Generalizados (GLM)",
-    "text": "3. Modelos Generalizados (GLM)\nUsar um modelo de regressão mais flexível, como os modelos lineares generalizados (GLM), pode ser apropriado. Por exemplo, a família de distribuições Gamma pode ser adequada para dados positivos com variância crescente:\n\n\n\nCall:\nglm(formula = salary ~ experience + education, family = Gamma(link = \"log\"), \n    data = data)\n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 8.907700   0.029539  301.56   &lt;2e-16 ***\nexperience  0.067364   0.001833   36.76   &lt;2e-16 ***\neducation   0.022057   0.001730   12.75   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for Gamma family taken to be 0.001105443)\n\n    Null deviance: 1.71347  on 99  degrees of freedom\nResidual deviance: 0.10675  on 97  degrees of freedom\nAIC: 1528.4\n\nNumber of Fisher Scoring iterations: 3"
-  },
-  {
-    "objectID": "blog/posts/heterocedasticidade/heterocedasticidade.html#substituir-variáveis-com-novas-variáveis",
-    "href": "blog/posts/heterocedasticidade/heterocedasticidade.html#substituir-variáveis-com-novas-variáveis",
-    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
-    "section": "4. Substituir Variáveis com Novas Variáveis",
-    "text": "4. Substituir Variáveis com Novas Variáveis\nÀs vezes, a heterocedasticidade pode ser causada pela omissão de variáveis relevantes. Incluir novas variáveis que capturem a fonte da heterocedasticidade pode ajudar a corrigir o problema.\n\nPasso 1: Preparação dos Dados\nPrimeiro, vamos criar um conjunto de dados fictício que contém algumas variáveis correlacionadas e uma variável dependente.\n\n\nPasso 2: Ajustar o Modelo de Regressão Inicial\nVamos ajustar um modelo de regressão linear inicial com as variáveis originais.\n\n\n\nCall:\nlm(formula = salary ~ experience + education + age, data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-2491.38  -653.92    56.64   670.33  2532.10 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  4979.10    1050.34   4.740 7.39e-06 ***\nexperience    972.27      58.44  16.638  &lt; 2e-16 ***\neducation     323.11      54.73   5.904 5.35e-08 ***\nage           144.26      11.22  12.854  &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1052 on 96 degrees of freedom\nMultiple R-squared:  0.8153,    Adjusted R-squared:  0.8095 \nF-statistic: 141.3 on 3 and 96 DF,  p-value: &lt; 2.2e-16\n\n\n\n    studentized Breusch-Pagan test\n\ndata:  model_initial\nBP = 1.9213, df = 3, p-value = 0.5889\n\n\n\n\nPasso 3: Criar Novas Variáveis\nSuponhamos que a relação entre salary e as variáveis experience, education e age pode ser melhor capturada por variáveis transformadas ou interações entre elas. Vamos criar algumas novas variáveis:\n\n\nPasso 4: Ajustar o Modelo de Regressão com Novas Variáveis\nAjustamos o modelo de regressão linear novamente, agora incluindo as novas variáveis.\n\n\n\nCall:\nlm(formula = salary ~ experience + education + age + experience_sq + \n    education_sq + age_sq + exp_edu_interaction + exp_age_interaction + \n    edu_age_interaction, data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-2447.43  -575.88     6.46   637.16  2491.77 \n\nCoefficients:\n                      Estimate Std. Error t value Pr(&gt;|t|)  \n(Intercept)         13725.6033  8177.1699   1.679   0.0967 .\nexperience           1188.9324   638.5934   1.862   0.0659 .\neducation            -532.1790   807.9010  -0.659   0.5118  \nage                    19.3482   134.7004   0.144   0.8861  \nexperience_sq         -10.1395    24.4353  -0.415   0.6792  \neducation_sq           14.9166    21.6304   0.690   0.4922  \nage_sq                  0.1987     1.0295   0.193   0.8474  \nexp_edu_interaction     5.2872    37.1765   0.142   0.8872  \nexp_age_interaction    -4.6483     6.1003  -0.762   0.4481  \nedu_age_interaction     8.4608     6.0194   1.406   0.1633  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1063 on 90 degrees of freedom\nMultiple R-squared:  0.823, Adjusted R-squared:  0.8053 \nF-statistic: 46.49 on 9 and 90 DF,  p-value: &lt; 2.2e-16\n\n\n\n    studentized Breusch-Pagan test\n\ndata:  model_new\nBP = 8.5597, df = 9, p-value = 0.4789"
-  },
-  {
-    "objectID": "blog/posts/heterocedasticidade/heterocedasticidade.html#análise-de-componentes-principais-pca",
-    "href": "blog/posts/heterocedasticidade/heterocedasticidade.html#análise-de-componentes-principais-pca",
-    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
-    "section": "5. Análise de Componentes Principais (PCA)",
-    "text": "5. Análise de Componentes Principais (PCA)\nSe as variáveis independentes são altamente correlacionadas, o uso de PCA para reduzir a dimensionalidade pode ajudar a mitigar a heterocedasticidade.\n\nPasso 1: Preparação dos Dados\nVamos criar um conjunto de dados fictício com variáveis correlacionadas:\n\n\nPasso 2: Análise de Componentes Principais (PCA)\nVamos aplicar a PCA às variáveis independentes:\n\n\nImportance of components:\n                          PC1    PC2    PC3\nStandard deviation     1.0726 0.9900 0.9324\nProportion of Variance 0.3835 0.3267 0.2898\nCumulative Proportion  0.3835 0.7102 1.0000\n\n\n\n\nPasso 3: Seleção de Componentes Principais\nVamos escolher quantos componentes principais (PCs) utilizar com base na proporção da variância explicada:\n\n\n    salary        PC1        PC2\n1 22273.57 -1.6807281  1.4217451\n2 22120.70 -1.1845614  0.1235709\n3 22609.83  1.3975878 -0.2722631\n4 21006.18 -0.2159818  0.3810757\n5 19636.21  0.7027710  0.6176000\n6 23767.93  1.5835543 -0.5682535\n\n\n\n\nPasso 4: Ajuste do Modelo de Regressão Linear Usando Componentes Principais\n\n\n\nCall:\nlm(formula = salary ~ PC1 + PC2, data = data_pca)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-5497.9 -1321.4  -106.2  1311.4  6532.0 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 21069.94     222.54  94.677   &lt;2e-16 ***\nPC1            96.68     208.52   0.464   0.6439    \nPC2          -394.22     225.92  -1.745   0.0842 .  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2225 on 97 degrees of freedom\nMultiple R-squared:  0.03251,   Adjusted R-squared:  0.01256 \nF-statistic:  1.63 on 2 and 97 DF,  p-value: 0.2013\n\n\n\n    studentized Breusch-Pagan test\n\ndata:  model_pca\nBP = 0.050589, df = 2, p-value = 0.975\n\n\n\nt test of coefficients:\n\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 21069.939    222.545 94.6773  &lt; 2e-16 ***\nPC1            96.679    180.262  0.5363  0.59296    \nPC2          -394.219    203.820 -1.9342  0.05601 .  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nExplicação do Código:\nPreparação dos Dados: Criamos um conjunto de dados fictício com variáveis correlacionadas (experience, education, age) e uma variável dependente (salary).\nPadronização: Padronizamos as variáveis independentes para que todas tenham média 0 e desvio padrão 1.\nAplicação da PCA: Aplicamos PCA às variáveis padronizadas para obter componentes principais não correlacionados.\nSeleção de PCs: Escolhemos os componentes principais que explicam uma proporção significativa da variância (neste exemplo, usamos os dois primeiros PCs).\nAjuste do Modelo: Ajustamos o modelo de regressão linear utilizando os componentes principais selecionados.\nDiagnóstico e Ajuste Robusto: Realizamos o teste de Breusch-Pagan para verificar a presença de heterocedasticidade e ajustamos o modelo com erros padrão robustos, se necessário."
-  },
-  {
-    "objectID": "ensino/index.html",
-    "href": "ensino/index.html",
-    "title": "Ensino",
-    "section": "",
-    "text": "Curso de Ciências Contábeis, Universidade Federal Rural do Semi-Árido (UFERSA).\n\nTeoria da Contabilidade\nContabilidade Ambiental e Responsabilidade Social (ACS1220)\nSistemas de Informações Contábeis\n\nMembro do colegiado do curso de Ciências Contábeis, do qual foi vice-coordenador entre 2020 e 2022.\nProjeto de monitoria da disciplina Teoria da Contabilidade, sob coordenação, desde 2022."
-  },
-  {
-    "objectID": "ensino/index.html#disciplinas",
-    "href": "ensino/index.html#disciplinas",
-    "title": "Ensino",
-    "section": "",
-    "text": "Curso de Ciências Contábeis, Universidade Federal Rural do Semi-Árido (UFERSA).\n\nTeoria da Contabilidade\nContabilidade Ambiental e Responsabilidade Social (ACS1220)\nSistemas de Informações Contábeis\n\nMembro do colegiado do curso de Ciências Contábeis, do qual foi vice-coordenador entre 2020 e 2022.\nProjeto de monitoria da disciplina Teoria da Contabilidade, sob coordenação, desde 2022."
-  },
-  {
-    "objectID": "ensino/index.html#pós-graduação",
-    "href": "ensino/index.html#pós-graduação",
-    "title": "Ensino",
-    "section": "Pós-graduação",
-    "text": "Pós-graduação\n\nGestão Financeira Baseada em Dados: Programa de Pós-Graduação em Administração (PPGA/UFERSA).\nComportamento Organizacional: Especialização em Gestão Pública (UFERSA)."
-  },
-  {
-    "objectID": "ensino/index.html#orientacao",
-    "href": "ensino/index.html#orientacao",
-    "title": "Ensino",
-    "section": "Orientação",
-    "text": "Orientação\nOrientação de dissertações no Programa de Pós-Graduação em Administração (PPGA/UFERSA) e de Trabalhos de Conclusão de Curso (TCC) em Ciências Contábeis, preferencialmente nas linhas de pesquisa descritas neste site.\n\n\nDissertações em andamento\n2\nPPGA/UFERSA\n\n\nTCC concluídos\n54\nCiências Contábeis\n\n\nOutras orientações\n10\ncoorientação de mestrado, especialização e outras\n\n\nDissertações em andamento no PPGA/UFERSA:\n\nA relação entre governança corporativa e discriminação salarial por gênero: uma análise empírica nas empresas brasileiras, de Rydja Mirelly de Moura Chaves (início em 2025).\nText mining como instrumento de avaliação da transparência ESG: estudo com empresas de capital aberto, de Lucas Davi Santiago Reis (início em 2025).\n\nEstudantes interessados em orientação ou em participar das atividades do grupo GECOMT podem entrar em contato pelo e-mail alexsandro.prado at ufersa dot edu dot br."
-  },
-  {
-    "objectID": "ensino/index.html#materiais",
-    "href": "ensino/index.html#materiais",
-    "title": "Ensino",
-    "section": "Materiais",
-    "text": "Materiais\nAulas e conteúdos de apoio sobre análise de dados em R são publicados no canal do YouTube e no blog."
+    "text": "O artigo Family hands, greener firms? The effects of family management and ownership on ESG performance, em coautoria com Matheus Juan Silva Ribeiro, Yuri Gomes Paiva Azevedo e Alan Bandeira Pinheiro, foi publicado na Business Strategy & Development (Qualis A1), v. 9, n. 2.\nO estudo analisa como a gestão e a propriedade familiar se relacionam com o desempenho ambiental, social e de governança (ESG) das companhias.\nDOI: 10.1002/bsd2.70331\n\n\n\n De volta ao topo"
   },
   {
     "objectID": "index.html",
@@ -270,28 +144,189 @@
     "href": "index.html#contato",
     "title": "Alexsandro Prado",
     "section": "Contato",
-    "text": "Contato\nDepartamento de Ciências Sociais Aplicadas e Humanas (DCSAH), Universidade Federal Rural do Semi-Árido (UFERSA), Mossoró, RN.\nE-mail: alexsandro.prado at ufersa dot edu dot br"
+    "text": "Contato\nDepartamento de Ciências Sociais Aplicadas e Humanas (DCSAH), Universidade Federal Rural do Semi-Árido (UFERSA), Mossoró, RN.\nE-mail: alexsandro.prado at ufersa dot edu dot br\nPara projetos com organizações e análises de dados sob demanda, veja a página de Parcerias."
   },
   {
-    "objectID": "novidades/2026-03-31-bsd/index.html",
-    "href": "novidades/2026-03-31-bsd/index.html",
-    "title": "Artigo publicado na Business Strategy & Development",
+    "objectID": "ensino/index.html",
+    "href": "ensino/index.html",
+    "title": "Ensino",
     "section": "",
-    "text": "O artigo Family hands, greener firms? The effects of family management and ownership on ESG performance, em coautoria com Matheus Juan Silva Ribeiro, Yuri Gomes Paiva Azevedo e Alan Bandeira Pinheiro, foi publicado na Business Strategy & Development (Qualis A1), v. 9, n. 2.\nO estudo analisa como a gestão e a propriedade familiar se relacionam com o desempenho ambiental, social e de governança (ESG) das companhias.\nDOI: 10.1002/bsd2.70331\n\n\n\n De volta ao topo"
+    "text": "Curso de Ciências Contábeis, Universidade Federal Rural do Semi-Árido (UFERSA).\n\nTeoria da Contabilidade\nContabilidade Ambiental e Responsabilidade Social (ACS1220)\nSistemas de Informações Contábeis\n\nMembro do colegiado do curso de Ciências Contábeis, do qual foi vice-coordenador entre 2020 e 2022.\nProjeto de monitoria da disciplina Teoria da Contabilidade, sob coordenação, desde 2022."
   },
   {
-    "objectID": "novidades/2026-10-13-datacaged-cran/index.html",
-    "href": "novidades/2026-10-13-datacaged-cran/index.html",
-    "title": "datacaged 0.2.3 disponível no CRAN",
+    "objectID": "ensino/index.html#disciplinas",
+    "href": "ensino/index.html#disciplinas",
+    "title": "Ensino",
     "section": "",
-    "text": "A versão 0.2.3 do pacote datacaged está disponível no repositório oficial do R (CRAN). O pacote baixa, lê e organiza os microdados do Cadastro Geral de Empregados e Desempregados (CAGED) em um banco local DuckDB, abrangendo o CAGED antigo (1992 a 2019), o Novo CAGED (2020 em diante) e os arquivos de ajustes.\ninstall.packages(\"datacaged\")\nMais informações na página Produção técnica e no repositório do GitHub.\n\n\n\n De volta ao topo"
+    "text": "Curso de Ciências Contábeis, Universidade Federal Rural do Semi-Árido (UFERSA).\n\nTeoria da Contabilidade\nContabilidade Ambiental e Responsabilidade Social (ACS1220)\nSistemas de Informações Contábeis\n\nMembro do colegiado do curso de Ciências Contábeis, do qual foi vice-coordenador entre 2020 e 2022.\nProjeto de monitoria da disciplina Teoria da Contabilidade, sob coordenação, desde 2022."
   },
   {
-    "objectID": "novidades/2026-11-27-anpcont/index.html",
-    "href": "novidades/2026-11-27-anpcont/index.html",
-    "title": "Apresentação no XX Congresso ANPCONT",
+    "objectID": "ensino/index.html#pós-graduação",
+    "href": "ensino/index.html#pós-graduação",
+    "title": "Ensino",
+    "section": "Pós-graduação",
+    "text": "Pós-graduação\n\nGestão Financeira Baseada em Dados: Programa de Pós-Graduação em Administração (PPGA/UFERSA).\nComportamento Organizacional: Especialização em Gestão Pública (UFERSA)."
+  },
+  {
+    "objectID": "ensino/index.html#orientacao",
+    "href": "ensino/index.html#orientacao",
+    "title": "Ensino",
+    "section": "Orientação",
+    "text": "Orientação\nOrientação de dissertações no Programa de Pós-Graduação em Administração (PPGA/UFERSA) e de Trabalhos de Conclusão de Curso (TCC) em Ciências Contábeis, preferencialmente nas linhas de pesquisa descritas neste site.\n\n\nDissertações em andamento\n2\nPPGA/UFERSA\n\n\nTCC concluídos\n54\nCiências Contábeis\n\n\nOutras orientações\n10\ncoorientação de mestrado, especialização e outras\n\n\nDissertações em andamento no PPGA/UFERSA:\n\nA relação entre governança corporativa e discriminação salarial por gênero: uma análise empírica nas empresas brasileiras, de Rydja Mirelly de Moura Chaves (início em 2025).\nText mining como instrumento de avaliação da transparência ESG: estudo com empresas de capital aberto, de Lucas Davi Santiago Reis (início em 2025).\n\nEstudantes interessados em orientação ou em participar das atividades do grupo GECOMT podem entrar em contato pelo e-mail alexsandro.prado at ufersa dot edu dot br."
+  },
+  {
+    "objectID": "ensino/index.html#materiais",
+    "href": "ensino/index.html#materiais",
+    "title": "Ensino",
+    "section": "Materiais",
+    "text": "Materiais\nAulas e conteúdos de apoio sobre análise de dados em R são publicados no canal do YouTube e no blog."
+  },
+  {
+    "objectID": "blog/posts/heterocedasticidade/heterocedasticidade.html",
+    "href": "blog/posts/heterocedasticidade/heterocedasticidade.html",
+    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
     "section": "",
-    "text": "O artigo Fatores ESG e a legibilidade dos relatórios de sustentabilidade: evidências das empresas brasileiras de capital aberto, elaborado em coautoria com Maria Auxiliadora de Oliveira Morais, será apresentado no XX Congresso da Associação Nacional de Programas de Pós-Graduação em Ciências Contábeis (ANPCONT), em Natal (RN), em 27 de novembro de 2026.\nO estudo investiga a relação entre o desempenho ambiental, social e de governança (ESG) das companhias abertas brasileiras e a legibilidade dos relatórios de sustentabilidade que divulgam, tema alinhado à linha de pesquisa em sustentabilidade e governança corporativa.\n\n\n\n De volta ao topo"
+    "text": "A heterocedasticidade e a autocorrelação são problemas comuns na análise de regressão, especialmente em séries temporais e dados econométricos, que podem afetar a validade das inferências e a análise de causalidade.\nHeterocedasticidade refere-se à condição em que a variância dos erros (ou resíduos) de um modelo de regressão não é constante ao longo das observações. Em outras palavras, os erros variam em intensidade dependendo do nível da variável independente. Esse problema pode levar a estimativas ineficientes dos coeficientes da regressão, fazendo com que os testes estatísticos, como o teste t e o teste F, se tornem não confiáveis. Isso significa que as inferências sobre a significância das variáveis podem ser incorretas, resultando em um erro na identificação das relações causais.\nAutocorrelação, por outro lado, ocorre quando os erros do modelo de regressão não são independentes uns dos outros, mas sim correlacionados ao longo do tempo ou das observações. Esse problema é particularmente prevalente em dados de séries temporais. A presença de autocorrelação indica que há padrões não capturados pelo modelo, o que pode levar a subestimação ou superestimação da variabilidade dos coeficientes de regressão. Assim como a heterocedasticidade, a autocorrelação torna os testes estatísticos tradicionais inapropriados, resultando em inferências enganosas e dificultando a análise de causalidade correta."
+  },
+  {
+    "objectID": "blog/posts/heterocedasticidade/heterocedasticidade.html#transformações-de-variáveis",
+    "href": "blog/posts/heterocedasticidade/heterocedasticidade.html#transformações-de-variáveis",
+    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
+    "section": "1. Transformações de Variáveis",
+    "text": "1. Transformações de Variáveis\nTransformar a variável dependente ou independente pode ajudar a estabilizar a variância dos erros. Transformações comuns incluem:\nLogarítmica: Aplicar o logaritmo na variável dependente pode ser eficaz quando a variância dos erros aumenta com o valor da variável dependente.\n\n\n\nCall:\nlm(formula = log(salary) ~ experience + education, data = data)\n\nResiduals:\n      Min        1Q    Median        3Q       Max \n-0.071087 -0.021134 -0.000469  0.018983  0.091538 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 8.906897   0.029442  302.52   &lt;2e-16 ***\nexperience  0.067282   0.001827   36.84   &lt;2e-16 ***\neducation   0.022101   0.001724   12.82   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.03314 on 97 degrees of freedom\nMultiple R-squared:  0.9384,    Adjusted R-squared:  0.9371 \nF-statistic:   739 on 2 and 97 DF,  p-value: &lt; 2.2e-16\n\n\nRaiz Quadrada: Usar a raiz quadrada da variável dependente pode ser útil em alguns casos.\n\n\n\nCall:\nlm(formula = sqrt(salary) ~ experience + education, data = data)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-4.2463 -1.2381 -0.2119  1.1691  5.9950 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  79.9427     1.8098   44.17   &lt;2e-16 ***\nexperience    4.0817     0.1123   36.35   &lt;2e-16 ***\neducation     1.3270     0.1060   12.52   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2.037 on 97 degrees of freedom\nMultiple R-squared:  0.9368,    Adjusted R-squared:  0.9354 \nF-statistic: 718.3 on 2 and 97 DF,  p-value: &lt; 2.2e-16"
+  },
+  {
+    "objectID": "blog/posts/heterocedasticidade/heterocedasticidade.html#modelos-de-regressão-ponderada-wls",
+    "href": "blog/posts/heterocedasticidade/heterocedasticidade.html#modelos-de-regressão-ponderada-wls",
+    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
+    "section": "2. Modelos de Regressão Ponderada (WLS)",
+    "text": "2. Modelos de Regressão Ponderada (WLS)\nSe a heterocedasticidade é sistemática, ponderar as observações pelo inverso da variância estimada dos erros pode melhorar a eficiência dos estimadores:\n\n\n\nCall:\nlm(formula = salary ~ experience + education, data = data, weights = weights)\n\nWeighted Residuals:\n    Min      1Q  Median      3Q     Max \n-2.6267 -0.8224 -0.1781  0.7972  3.0487 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  5057.32     348.80   14.50   &lt;2e-16 ***\nexperience    993.10      18.41   53.94   &lt;2e-16 ***\neducation     301.39      22.46   13.42   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.295 on 97 degrees of freedom\nMultiple R-squared:   0.97, Adjusted R-squared:  0.9694 \nF-statistic:  1569 on 2 and 97 DF,  p-value: &lt; 2.2e-16"
+  },
+  {
+    "objectID": "blog/posts/heterocedasticidade/heterocedasticidade.html#modelos-generalizados-glm",
+    "href": "blog/posts/heterocedasticidade/heterocedasticidade.html#modelos-generalizados-glm",
+    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
+    "section": "3. Modelos Generalizados (GLM)",
+    "text": "3. Modelos Generalizados (GLM)\nUsar um modelo de regressão mais flexível, como os modelos lineares generalizados (GLM), pode ser apropriado. Por exemplo, a família de distribuições Gamma pode ser adequada para dados positivos com variância crescente:\n\n\n\nCall:\nglm(formula = salary ~ experience + education, family = Gamma(link = \"log\"), \n    data = data)\n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 8.907700   0.029539  301.56   &lt;2e-16 ***\nexperience  0.067364   0.001833   36.76   &lt;2e-16 ***\neducation   0.022057   0.001730   12.75   &lt;2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n(Dispersion parameter for Gamma family taken to be 0.001105443)\n\n    Null deviance: 1.71347  on 99  degrees of freedom\nResidual deviance: 0.10675  on 97  degrees of freedom\nAIC: 1528.4\n\nNumber of Fisher Scoring iterations: 3"
+  },
+  {
+    "objectID": "blog/posts/heterocedasticidade/heterocedasticidade.html#substituir-variáveis-com-novas-variáveis",
+    "href": "blog/posts/heterocedasticidade/heterocedasticidade.html#substituir-variáveis-com-novas-variáveis",
+    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
+    "section": "4. Substituir Variáveis com Novas Variáveis",
+    "text": "4. Substituir Variáveis com Novas Variáveis\nÀs vezes, a heterocedasticidade pode ser causada pela omissão de variáveis relevantes. Incluir novas variáveis que capturem a fonte da heterocedasticidade pode ajudar a corrigir o problema.\n\nPasso 1: Preparação dos Dados\nPrimeiro, vamos criar um conjunto de dados fictício que contém algumas variáveis correlacionadas e uma variável dependente.\n\n\nPasso 2: Ajustar o Modelo de Regressão Inicial\nVamos ajustar um modelo de regressão linear inicial com as variáveis originais.\n\n\n\nCall:\nlm(formula = salary ~ experience + education + age, data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-2491.38  -653.92    56.64   670.33  2532.10 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  4979.10    1050.34   4.740 7.39e-06 ***\nexperience    972.27      58.44  16.638  &lt; 2e-16 ***\neducation     323.11      54.73   5.904 5.35e-08 ***\nage           144.26      11.22  12.854  &lt; 2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1052 on 96 degrees of freedom\nMultiple R-squared:  0.8153,    Adjusted R-squared:  0.8095 \nF-statistic: 141.3 on 3 and 96 DF,  p-value: &lt; 2.2e-16\n\n\n\n    studentized Breusch-Pagan test\n\ndata:  model_initial\nBP = 1.9213, df = 3, p-value = 0.5889\n\n\n\n\nPasso 3: Criar Novas Variáveis\nSuponhamos que a relação entre salary e as variáveis experience, education e age pode ser melhor capturada por variáveis transformadas ou interações entre elas. Vamos criar algumas novas variáveis:\n\n\nPasso 4: Ajustar o Modelo de Regressão com Novas Variáveis\nAjustamos o modelo de regressão linear novamente, agora incluindo as novas variáveis.\n\n\n\nCall:\nlm(formula = salary ~ experience + education + age + experience_sq + \n    education_sq + age_sq + exp_edu_interaction + exp_age_interaction + \n    edu_age_interaction, data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-2447.43  -575.88     6.46   637.16  2491.77 \n\nCoefficients:\n                      Estimate Std. Error t value Pr(&gt;|t|)  \n(Intercept)         13725.6033  8177.1699   1.679   0.0967 .\nexperience           1188.9324   638.5934   1.862   0.0659 .\neducation            -532.1790   807.9010  -0.659   0.5118  \nage                    19.3482   134.7004   0.144   0.8861  \nexperience_sq         -10.1395    24.4353  -0.415   0.6792  \neducation_sq           14.9166    21.6304   0.690   0.4922  \nage_sq                  0.1987     1.0295   0.193   0.8474  \nexp_edu_interaction     5.2872    37.1765   0.142   0.8872  \nexp_age_interaction    -4.6483     6.1003  -0.762   0.4481  \nedu_age_interaction     8.4608     6.0194   1.406   0.1633  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1063 on 90 degrees of freedom\nMultiple R-squared:  0.823, Adjusted R-squared:  0.8053 \nF-statistic: 46.49 on 9 and 90 DF,  p-value: &lt; 2.2e-16\n\n\n\n    studentized Breusch-Pagan test\n\ndata:  model_new\nBP = 8.5597, df = 9, p-value = 0.4789"
+  },
+  {
+    "objectID": "blog/posts/heterocedasticidade/heterocedasticidade.html#análise-de-componentes-principais-pca",
+    "href": "blog/posts/heterocedasticidade/heterocedasticidade.html#análise-de-componentes-principais-pca",
+    "title": "Heterocedasticidade e Autocorrelação: como resolver na prática?",
+    "section": "5. Análise de Componentes Principais (PCA)",
+    "text": "5. Análise de Componentes Principais (PCA)\nSe as variáveis independentes são altamente correlacionadas, o uso de PCA para reduzir a dimensionalidade pode ajudar a mitigar a heterocedasticidade.\n\nPasso 1: Preparação dos Dados\nVamos criar um conjunto de dados fictício com variáveis correlacionadas:\n\n\nPasso 2: Análise de Componentes Principais (PCA)\nVamos aplicar a PCA às variáveis independentes:\n\n\nImportance of components:\n                          PC1    PC2    PC3\nStandard deviation     1.0726 0.9900 0.9324\nProportion of Variance 0.3835 0.3267 0.2898\nCumulative Proportion  0.3835 0.7102 1.0000\n\n\n\n\nPasso 3: Seleção de Componentes Principais\nVamos escolher quantos componentes principais (PCs) utilizar com base na proporção da variância explicada:\n\n\n    salary        PC1        PC2\n1 22273.57 -1.6807281  1.4217451\n2 22120.70 -1.1845614  0.1235709\n3 22609.83  1.3975878 -0.2722631\n4 21006.18 -0.2159818  0.3810757\n5 19636.21  0.7027710  0.6176000\n6 23767.93  1.5835543 -0.5682535\n\n\n\n\nPasso 4: Ajuste do Modelo de Regressão Linear Usando Componentes Principais\n\n\n\nCall:\nlm(formula = salary ~ PC1 + PC2, data = data_pca)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-5497.9 -1321.4  -106.2  1311.4  6532.0 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 21069.94     222.54  94.677   &lt;2e-16 ***\nPC1            96.68     208.52   0.464   0.6439    \nPC2          -394.22     225.92  -1.745   0.0842 .  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 2225 on 97 degrees of freedom\nMultiple R-squared:  0.03251,   Adjusted R-squared:  0.01256 \nF-statistic:  1.63 on 2 and 97 DF,  p-value: 0.2013\n\n\n\n    studentized Breusch-Pagan test\n\ndata:  model_pca\nBP = 0.050589, df = 2, p-value = 0.975\n\n\n\nt test of coefficients:\n\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) 21069.939    222.545 94.6773  &lt; 2e-16 ***\nPC1            96.679    180.262  0.5363  0.59296    \nPC2          -394.219    203.820 -1.9342  0.05601 .  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\n\nExplicação do Código:\nPreparação dos Dados: Criamos um conjunto de dados fictício com variáveis correlacionadas (experience, education, age) e uma variável dependente (salary).\nPadronização: Padronizamos as variáveis independentes para que todas tenham média 0 e desvio padrão 1.\nAplicação da PCA: Aplicamos PCA às variáveis padronizadas para obter componentes principais não correlacionados.\nSeleção de PCs: Escolhemos os componentes principais que explicam uma proporção significativa da variância (neste exemplo, usamos os dois primeiros PCs).\nAjuste do Modelo: Ajustamos o modelo de regressão linear utilizando os componentes principais selecionados.\nDiagnóstico e Ajuste Robusto: Realizamos o teste de Breusch-Pagan para verificar a presença de heterocedasticidade e ajustamos o modelo com erros padrão robustos, se necessário."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "A Importância da Análise de Dados na Contabilidade\n\n\n\ncontabilidade\n\ndatascience\n\n\n\n\n\n\n\n\n\n30/06/2024\n\n\n\n\n\n\n\n\n\n\n\n\nPrevisão de receita\n\n\n\neconometria\n\nR\n\n\n\n\n\n\n\n\n\n07/06/2024\n\n\n\n\n\n\n\n\n\n\n\n\nHeterocedasticidade e Autocorrelação: como resolver na prática?\n\n\n\neconometria\n\n\n\n\n\n\n\n\n\n22/05/2024\n\n\n\n\n\nSem itens correspondentes\n De volta ao topo"
+  },
+  {
+    "objectID": "blog/posts/contabdata/contabdata.html",
+    "href": "blog/posts/contabdata/contabdata.html",
+    "title": "A Importância da Análise de Dados na Contabilidade",
+    "section": "",
+    "text": "Introdução\nA análise de dados tem se tornado uma ferramenta crucial em diversos setores, incluindo a contabilidade. Com a crescente quantidade de dados gerados diariamente, a capacidade de analisar e interpretar essas informações é essencial para tomar decisões informadas e estratégicas. Este artigo explora a importância da análise de dados na contabilidade, destacando como ela transforma a prática contábil e oferece benefícios significativos para as organizações.\n\n\nTransformação Digital na Contabilidade\nA contabilidade tradicional tem evoluído significativamente com a introdução de tecnologias avançadas. A transformação digital permite que contadores acessem grandes volumes de dados e utilizem ferramentas analíticas para extrair insights valiosos. Esta evolução digital é fundamental para a modernização da contabilidade, tornando os processos mais eficientes e precisos.\n\n\nBenefícios da Análise de Dados na Contabilidade\n\n1. Precisão e Confiabilidade\nA análise de dados melhora a precisão das informações financeiras. Ao utilizar técnicas analíticas avançadas, os contadores podem detectar erros e inconsistências nos dados, garantindo que os relatórios financeiros sejam mais confiáveis. Isso reduz o risco de fraudes e equívocos, proporcionando uma base sólida para a tomada de decisões.\n\n\n2. Tomada de Decisões Informadas\nA capacidade de analisar grandes volumes de dados permite que os contadores forneçam insights estratégicos para a gestão. Com dados precisos e análises detalhadas, as empresas podem tomar decisões informadas que impactam diretamente seu desempenho financeiro e operacional. Isso inclui desde a alocação de recursos até a identificação de oportunidades de crescimento.\n\n\n3. Previsão e Planejamento Financeiro\nFerramentas de análise de dados possibilitam a criação de modelos preditivos que ajudam na previsão de tendências financeiras. Essas previsões são essenciais para o planejamento financeiro de longo prazo, permitindo que as empresas se preparem para cenários futuros e ajustem suas estratégias conforme necessário.\n\n\n4. Eficiência Operacional\nAutomatizar processos contábeis através da análise de dados aumenta a eficiência operacional. A integração de software de análise de dados reduz o tempo gasto em tarefas repetitivas e permite que os contadores se concentrem em atividades de maior valor agregado, como a análise estratégica e consultoria.\n\n\n\nDesafios da Implementação da Análise de Dados na Contabilidade\nEmbora os benefícios sejam significativos, a implementação da análise de dados na contabilidade enfrenta alguns desafios. Estes incluem a necessidade de investimento em tecnologia, a capacitação dos profissionais e a adaptação a novas metodologias. Superar esses desafios é crucial para maximizar o potencial da análise de dados na contabilidade.\n\n\nConclusão\nA análise de dados está revolucionando a contabilidade, oferecendo precisão, insights estratégicos e eficiência operacional. À medida que a tecnologia continua a evoluir, a capacidade de analisar e interpretar dados se tornará ainda mais essencial para a prática contábil. Investir em análise de dados não é apenas uma vantagem competitiva, mas uma necessidade para as empresas que desejam prosperar em um ambiente de negócios cada vez mais complexo e dinâmico.\n\n\nReferências\nBHARDWAJ, G.; HARVEY, D. Big data in financial statement analysis. Journal of Financial Reporting, v. 32, n. 2, p. 213-230, 2018.\nCHEN, H.; CHIANG, R. H. L.; STOREY, V. C. Business intelligence and analytics: From big data to big impact. MIS Quarterly, v. 36, n. 4, p. 1165-1188, 2012.\nDAVENPORT, T. H.; HARRIS, J. G. Competing on analytics: The new science of winning. Harvard Business Review, v. 84, n. 1, p. 98-107, 2006.\nMOLL, J.; YIGITBEYAZ, D. The role of big data in modern accounting systems. The British Accounting Review, v. 52, n. 4, p. 1-15, 2020.\nWILLIS, J. Data analysis in accounting: A practical approach. Journal of Accountancy, v. 21, n. 3, p. 45-58, 2019.\n\n\n\n\n De volta ao topoCitaçãoPor favor, cite este trabalho como:\nPrado, Alexsandro. 2024. “A Importância da Análise de Dados na\nContabilidade.” June 30. https://alexsandroprado.github.io/blog/posts/contabdata/contabdata.html."
+  },
+  {
+    "objectID": "blog/posts/preditiva/preditiva.html#objetivo",
+    "href": "blog/posts/preditiva/preditiva.html#objetivo",
+    "title": "Previsão de receita",
+    "section": "Objetivo",
+    "text": "Objetivo\nNosso objetivo é demonstrar, por meio de um exemplo prático, como a análise de demonstrações financeiras pode prever o desempenho futuro de uma empresa. Utilizaremos dados fictícios para simplificação."
+  },
+  {
+    "objectID": "blog/posts/preditiva/preditiva.html#passo-a-passo-em-r",
+    "href": "blog/posts/preditiva/preditiva.html#passo-a-passo-em-r",
+    "title": "Previsão de receita",
+    "section": "Passo a Passo em R",
+    "text": "Passo a Passo em R\n\nColeta e Preparação dos Dados\nPrimeiramente, vamos criar um conjunto de dados fictícios representando as demonstrações financeiras de uma empresa ao longo dos anos.\n\n# Carregar pacotes necessários\n# (instale antes, uma única vez: install.packages(c(\"dplyr\", \"ggplot2\", \"forecast\")))\n\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(forecast)\n\n# Criar dados fictícios\nset.seed(123)\nanos &lt;- 2010:2023\nreceita &lt;- c(500, 550, 600, 660, 720, 780, 850, 920, 1000, 1100, 1210, 1330, 1460, 1600)\nlucro_liquido &lt;- receita * runif(14, 0.08, 0.12)\n\ndados &lt;- data.frame(ano = anos, receita = receita, lucro_liquido = lucro_liquido)\n\n# Visualizar os dados\nprint(dados)\n\n    ano receita lucro_liquido\n1  2010     500      45.75155\n2  2011     550      61.34271\n3  2012     600      57.81545\n4  2013     660      76.11166\n5  2014     720      84.68546\n6  2015     780      63.82136\n7  2016     850      85.95559\n8  2017     920     106.44102\n9  2018    1000     102.05740\n10 2019    1100     108.09105\n11 2020    1210     143.11073\n12 2021    1330     130.51738\n13 2022    1460     156.37013\n14 2023    1600     164.64854\n\n\n\n\nAnálise Exploratória dos Dados\nVamos analisar graficamente a evolução da receita e do lucro líquido ao longo dos anos.\n\n# Visualização dos dados\nggplot(dados, aes(x = ano)) +\n  geom_line(aes(y = receita, color = \"Receita\")) +\n  geom_line(aes(y = lucro_liquido, color = \"Lucro Líquido\")) +\n  labs(title = \"Evolução da Receita e do Lucro Líquido\",\n       x = \"Ano\",\n       y = \"Valores (em milhares)\") +\n  scale_color_manual(name = \"Legenda\", values = c(\"Receita\" = \"blue\", \"Lucro Líquido\" = \"green\"))\n\n\n\n\n\n\n\n\n\n\nModelo Preditivo\nUtilizaremos um modelo de série temporal para prever a receita dos próximos anos.\n\n# Modelagem de série temporal\nts_receita &lt;- ts(dados$receita, start = c(2010), frequency = 1)\n\n# Ajustar um modelo ARIMA\nmodelo_arima &lt;- auto.arima(ts_receita)\n\n# Previsão para os próximos 5 anos\nprevisao &lt;- forecast(modelo_arima, h = 5)\n\n# Visualização da previsão\nautoplot(previsao) +\n  labs(title = \"Previsão da Receita para os Próximos 5 Anos\",\n       x = \"Ano\",\n       y = \"Receita (em milhares)\")\n\n\n\n\n\n\n\n\nO gráfico de previsão de receita para os próximos cinco anos mostra uma tendência de crescimento contínuo, com a linha preta indicando a projeção central e áreas sombreadas em azul representando os intervalos de confiança de 80% e 95%. A receita histórica desde 2010 revela um aumento consistente, e a projeção sugere que esse crescimento continuará até 2028, com a incerteza aumentando ao longo do tempo, conforme evidenciado pela ampliação dos intervalos de confiança. Esses intervalos são essenciais para o planejamento estratégico e a análise de risco, fornecendo uma faixa de valores esperados em vez de um único valor fixo.\nA falha na linha do gráfico ocorre na transição entre os dados históricos e as previsões futuras, destacando o ponto onde terminam as observações reais e começam as estimativas geradas pelo modelo. Esta descontinuidade é intencional para diferenciar claramente os dados observados das projeções, ajudando a evitar confusão ao visualizar a tendência histórica e a previsão de crescimento futuro da receita.\n\n\nInterpretação dos Resultados\nA partir do modelo preditivo, podemos analisar a tendência futura da receita da empresa, possibilitando uma melhor tomada de decisão.\n\n# Exibir previsões\nprint(previsao)\n\n     Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95\n2024       1746.438 1736.867 1756.009 1731.801 1761.076\n2025       1897.021 1869.968 1924.075 1855.647 1938.396\n2026       2050.273 1997.764 2102.782 1969.967 2130.579\n2027       2205.243 2119.915 2290.571 2074.745 2335.740\n2028       2361.319 2236.458 2486.180 2170.360 2552.277\n\n\nA previsão de receita para os anos de 2024 a 2028 mostra um crescimento contínuo, começando em R$ 1746.44 em 2024 e alcançando R$ 2361,32 em 2028. Os intervalos de confiança de 80% e 95% indicam as faixas nas quais a receita provavelmente se situará, refletindo diferentes níveis de certeza. Em 2024, por exemplo, a receita deve estar entre R$ 1736,87 e R$ 1756,01 com 80% de confiança e entre R$ 1731,80 e R$ 1761,08 com 95% de confiança. Esses intervalos ajudam a quantificar a incerteza nas previsões, essenciais para o planejamento financeiro e análise de risco."
+  },
+  {
+    "objectID": "blog/posts/preditiva/preditiva.html#conclusão",
+    "href": "blog/posts/preditiva/preditiva.html#conclusão",
+    "title": "Previsão de receita",
+    "section": "Conclusão",
+    "text": "Conclusão\nAtravés desse exemplo simples com dados fictícios, observamos como a informação contábil, quando analisada e modelada adequadamente, pode fornecer previsões valiosas para o planejamento estratégico das organizações. As demonstrações financeiras, alinhadas às normas contábeis do CPC 00 R2, são essenciais para garantir que essas previsões sejam baseadas em dados relevantes e fidedignos.\nUtilizar a linguagem R para a análise preditiva permite explorar diversos modelos e técnicas estatísticas, facilitando a extração de insights que podem direcionar o crescimento sustentável da empresa.\nEste post ilustra a importância de uma contabilidade bem estruturada e da análise de dados para antecipar e responder às dinâmicas do mercado, reforçando o poder preditivo da informação contábil conforme as diretrizes do CPC 00 R2."
+  },
+  {
+    "objectID": "extensao/index.html",
+    "href": "extensao/index.html",
+    "title": "Extensão",
+    "section": "",
+    "text": "As ações de extensão aproximam o curso de Ciências Contábeis da UFERSA da comunidade de Mossoró e do Semiárido potiguar, com foco em educação financeira, assessoria contábil a pequenos negócios, preparação para exames profissionais e uso de dados na tomada de decisão."
+  },
+  {
+    "objectID": "extensao/index.html#em-andamento",
+    "href": "extensao/index.html#em-andamento",
+    "title": "Extensão",
+    "section": "Projetos em andamento",
+    "text": "Projetos em andamento\n\n\nOlimpíada Brasileira de Educação Financeira (OBEF) desde 2022\n\nCoordenação. Programa de extensão voltado a estudantes do ensino fundamental e médio, que trata a educação financeira como forma de inclusão social a partir de três eixos: estrutura familiar, ambiente escolar e vida profissional. É realizado por professores e estudantes de graduação da UFERSA em parceria com universidades de outros estados.\n\nRegulariza: assessoria contábil e gerencial para micro e pequenas empresas do Semiárido Potiguar desde 2021\n\nCoordenação. Assessoria a micro e pequenas empresas de Mossoró e região com pendências fiscais, afetadas pela pandemia, por meio de análise documental e fiscal e de entrevistas periódicas com os empresários. O objetivo é regularizar as empresas perante o fisco, organizar suas demonstrações contábeis e apoiar a gestão, contribuindo para a geração de emprego e renda na economia local.\n\nO custo do seu negócio: teoria e prática desde 2018\n\nParticipação, sob coordenação de Luciana Batista Sales. Integra estudantes das disciplinas de Contabilidade de Custos e Análise de Custos a empresas associadas à Associação Comercial e Industrial de Mossoró, por meio de cursos, oficinas, palestras, visitas e feiras de negócio."
+  },
+  {
+    "objectID": "extensao/index.html#concluidos",
+    "href": "extensao/index.html#concluidos",
+    "title": "Extensão",
+    "section": "Projetos concluídos",
+    "text": "Projetos concluídos\n\nSob coordenação\n\nRevisão ENADE 2022: Ciências Contábeis (2022). Revisão dos conteúdos do componente específico da prova para os estudantes do curso.\nA importância do ERP na gestão do agronegócio (2022). Uso de sistemas integrados de gestão para controle de custos, rotinas fiscais e logística no setor rural.\nPAAC: Programa de Acompanhamento do Aprendizado em Contabilidade (2014 a 2016 e 2017). Simulados periódicos on-line para o Exame de Suficiência do CFC e o ENADE, com identificação dos conteúdos de menor desempenho.\nI Curso Preparatório para o Exame de Suficiência do CFC (2016).\nII Fórum da Profissão Contábil (2016).\nI Workshop para Concursos Públicos (2014).\n\n\n\nParticipação\n\nApoio à escrita científica com Mendeley e CopySpider (2022).\nAnálise de dados com Economatica e R (2022).\nUFERSA3: Liga de Mercado Financeiro da UFERSA (2020 a 2022).\nRecepção aos ingressantes (2018).\nII Curso Preparatório para o Exame de Suficiência do CFC (2017).\nContabilidade e a Comunidade Empresarial (2017).\nEstudos sobre Imposto de Renda Pessoa Física 2016 (2016).\nFolha de Pagamento: Teoria e Prática (2016).\nV Jornada Norte-rio-grandense sobre Educação Fiscal: sensibilização acadêmica (2016).\nAuditoria das Demonstrações Contábeis da Fundação Guimarães Duque (2015).\nObservatório Social de Cabedelo (2012), projeto da Universidade Federal da Paraíba para estimular a cidadania fiscal e o monitoramento das receitas e dos gastos públicos municipais.\nEspaço Contábil: um novo portal para o curso de Ciências Contábeis na Internet (2011 a 2012)."
+  },
+  {
+    "objectID": "extensao/index.html#cursos",
+    "href": "extensao/index.html#cursos",
+    "title": "Extensão",
+    "section": "Cursos ministrados",
+    "text": "Cursos ministrados\n\nA tecnologia XBRL como instrumento da Contabilidade, minicurso (2016).\nConstrução de Blogs Educativos (2012).\nCriação e estruturação de página na internet para o Observatório Social de Cabedelo, oficina (2012).\nA utilização de blogs educativos no processo de ensino (2011)."
+  },
+  {
+    "objectID": "extensao/index.html#eventos",
+    "href": "extensao/index.html#eventos",
+    "title": "Extensão",
+    "section": "Organização de eventos",
+    "text": "Organização de eventos\n\nOlimpíada Brasileira de Educação Financeira (OBEF) (2025).\nWorkshop: Coleta de Dados no Economatica (2025).\nII Fórum da Profissão Contábil (2016).\nSimpósio de Novas Tecnologias na Comunicação e na Estratégia dos Negócios (2013)."
+  },
+  {
+    "objectID": "extensao/index.html#divulgacao",
+    "href": "extensao/index.html#divulgacao",
+    "title": "Extensão",
+    "section": "Divulgação científica",
+    "text": "Divulgação científica\nTextos sobre análise de dados, contabilidade e mercado de trabalho são publicados no blog, e as notícias sobre artigos, prêmios e produtos aparecem em Novidades. Aulas e conteúdos de apoio sobre análise de dados em R estão no canal do YouTube.\nParticipações na mídia:\n\nFinanças em Foco, edição 10, programa de entrevistas (2017).\nUERN TV Notícias, edição 62, sobre a Exposição de Gestão e Custos do curso de Ciências Contábeis da UFERSA (2017)."
+  },
+  {
+    "objectID": "novidades/2025-03-31-cgg/index.html",
+    "href": "novidades/2025-03-31-cgg/index.html",
+    "title": "Artigo publicado na Contabilidade Gestão e Governança",
+    "section": "",
+    "text": "O artigo A influência da pandemia do coronavírus SARS-CoV-2 na complexidade da auditoria em companhias abertas brasileiras, em coautoria com Fernanda Mendes de Sousa, Yuri Gomes Paiva Azevedo, Kléber Formiga Miranda e Mariana Câmara Gomes e Silva, foi publicado na Contabilidade Gestão e Governança (Qualis A4), v. 27, n. 3, p. 410-444.\nDOI: 10.51341/cgg.v27i3.3274\n\n\n\n De volta ao topo"
+  },
+  {
+    "objectID": "novidades/2026-06-30-rccc/index.html",
+    "href": "novidades/2026-06-30-rccc/index.html",
+    "title": "Artigo publicado na Revista Catarinense da Ciência Contábil",
+    "section": "",
+    "text": "O artigo Disclosure de transformação digital em companhias listadas na B3, em coautoria com Michele Nobre do Nascimento, Gianinni Martins Pereira Cirne, Yuri Gomes Paiva Azevedo e Kallyse Priscila Soares de Oliveira Freire, foi publicado na Revista Catarinense da Ciência Contábil (Qualis A3), v. 25, e3641.\nDOI: 10.16930/2237-766220263641\n\n\n\n De volta ao topo"
+  },
+  {
+    "objectID": "novidades/2026-11-15-novo-site/index.html",
+    "href": "novidades/2026-11-15-novo-site/index.html",
+    "title": "Novo site com indicadores do mercado de trabalho",
+    "section": "",
+    "text": "O site foi reformulado e passa a reunir, em um só lugar, (i) as publicações, com referências no padrão ABNT, estrato Qualis e filtros por tipo; (ii) os pacotes em R e as bases de dados abertas desenvolvidos nas pesquisas; e (iii) indicadores mensais do emprego formal, calculados a partir dos microdados do Novo CAGED para Brasil, Nordeste, Rio Grande do Norte e Mossoró, incluindo as ocupações contábeis.\nOs indicadores são atualizados automaticamente a cada nova divulgação do Ministério do Trabalho e Emprego.\n\n\n\n De volta ao topo"
+  },
+  {
+    "objectID": "novidades/index.html",
+    "href": "novidades/index.html",
+    "title": "Novidades",
+    "section": "",
+    "text": "Apresentação no XX Congresso ANPCONT\n\n\n\nEvento\n\n\n\nArtigo sobre fatores ESG e legibilidade dos relatórios de sustentabilidade, apresentado em Natal (RN).\n\n\n\n\n\n27/11/2026\n\n\n\n\n\n\n\nNovo site com indicadores do mercado de trabalho\n\n\n\nSite\n\n\n\nSite reformulado, com publicações filtráveis e indicadores mensais do Novo CAGED.\n\n\n\n\n\n15/11/2026\n\n\n\n\n\n\n\ndatacaged 0.2.3 disponível no CRAN\n\n\n\nSoftware\n\n\n\nNova versão do pacote em R para os microdados do CAGED.\n\n\n\n\n\n13/10/2026\n\n\n\n\n\n\n\nArtigo publicado na Revista Catarinense da Ciência Contábil\n\n\n\nPublicação\n\n\n\nEstudo sobre a divulgação de transformação digital em companhias listadas na B3.\n\n\n\n\n\n30/06/2026\n\n\n\n\n\n\n\nArtigo publicado na Business Strategy & Development\n\n\n\nPublicação\n\n\n\nOs efeitos da gestão e da propriedade familiar sobre o desempenho ESG.\n\n\n\n\n\n31/03/2026\n\n\n\n\n\n\n\nArtigo publicado na Contabilidade Gestão e Governança\n\n\n\nPublicação\n\n\n\nA influência da pandemia de COVID-19 na complexidade da auditoria em companhias abertas.\n\n\n\n\n\n31/03/2025\n\n\n\n\n\nSem itens correspondentes\n De volta ao topo"
   },
   {
     "objectID": "pesquisa/index.html",
