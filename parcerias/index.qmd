@@ -1,11 +1,11 @@
 ---
 title: "Consultoria e parcerias"
-description: "Consultoria, pareceres técnicos e análises sob demanda com dados públicos do mercado de trabalho, da contabilidade e do mercado de capitais."
+description: "Consultoria, pareceres técnicos e análises sob demanda com dados públicos do mercado de trabalho e de companhias abertas."
 toc: false
 ---
 
 ::: {.cta-faixa}
-Prefeituras, empresas, entidades de classe, escritórios contábeis e equipes de recursos humanos frequentemente precisam responder perguntas que os dados públicos brasileiros já permitem responder: quanto se paga por uma ocupação na região, onde o emprego formal está crescendo, como um setor se compara ao restante do estado. A consultoria e as parcerias descritas nesta página transformam essas bases em informação aplicada, com método transparente e resultados reprodutíveis, nas áreas de especialidade do docente: economia do trabalho, contabilidade financeira e governança corporativa.
+Prefeituras, empresas, entidades de classe, escritórios contábeis e equipes de recursos humanos frequentemente precisam responder perguntas que os dados públicos brasileiros já permitem responder: quanto se paga por uma ocupação na região, onde o emprego formal está crescendo, como um setor se compara ao restante do estado. A consultoria e as parcerias descritas nesta página transformam essas bases em informação aplicada, com método transparente e resultados reprodutíveis, nas áreas de especialidade do docente: economia do trabalho e análise de microdados públicos.
 
 [Conversar sobre um projeto](#contato){.btn .btn-primary .cta-botao} [Ver exemplos de entregas](#exemplos){.btn .btn-outline-secondary .cta-botao}
 :::
@@ -44,12 +44,12 @@ Para acompanhamento contínuo e comunicação de resultados
 :::
 
 ::: {.cartao}
-### Dados contábeis e de mercado de capitais
+### Bases de dados de companhias abertas
 
-Coleta e organização de demonstrações financeiras, formulários e documentos de companhias abertas (CVM e B3), com bases prontas para análise de desempenho, governança e informações ESG.
+Coleta automatizada e organização de dados públicos de companhias abertas (CVM e B3) em bases estruturadas, documentadas e prontas para análise.
 
 ::: {.meta}
-Para análise setorial, pesquisa aplicada e due diligence
+Para pesquisa aplicada e análise setorial
 :::
 :::
 
