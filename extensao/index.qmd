@@ -9,9 +9,9 @@ As ações de extensão aproximam o curso de Ciências Contábeis da UFERSA da c
 ::: {.kpi}
 [Projetos em andamento]{.kpi-rotulo}
 
-[3]{.kpi-valor}
+[2]{.kpi-valor}
 
-[dois sob coordenação]{.kpi-nota}
+[ambos sob coordenação]{.kpi-nota}
 :::
 
 ::: {.kpi}
@@ -39,9 +39,6 @@ Olimpíada Brasileira de Educação Financeira (OBEF) [desde 2022]{.ano}
 
 Regulariza: assessoria contábil e gerencial para micro e pequenas empresas do Semiárido Potiguar [desde 2021]{.ano}
 :   Coordenação. Assessoria a micro e pequenas empresas de Mossoró e região com pendências fiscais, afetadas pela pandemia, por meio de análise documental e fiscal e de entrevistas periódicas com os empresários. O objetivo é regularizar as empresas perante o fisco, organizar suas demonstrações contábeis e apoiar a gestão, contribuindo para a geração de emprego e renda na economia local.
-
-O custo do seu negócio: teoria e prática [desde 2018]{.ano}
-:   Participação, sob coordenação de Luciana Batista Sales. Integra estudantes das disciplinas de Contabilidade de Custos e Análise de Custos a empresas associadas à Associação Comercial e Industrial de Mossoró, por meio de cursos, oficinas, palestras, visitas e feiras de negócio.
 :::
 
 ## Projetos concluídos {#concluidos}
