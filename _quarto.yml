@@ -11,7 +11,7 @@ website:
   title: "Alexsandro Prado"
   site-url: "https://alexsandroprado.github.io/"
   description: "Professor Adjunto da UFERSA. Economia do trabalho, contabilidade financeira, ESG e governança corporativa."
-  favicon: "images/logo.ico"
+  favicon: "images/favicon.ico"
   image: "images/alexsandro.png"
   open-graph: true
   # Aviso de cookies (LGPD): o Google Tag Manager só carrega após o consentimento
@@ -29,6 +29,8 @@ website:
     location: navbar
     type: overlay
   navbar:
+    logo: images/logo-ap-icone.svg
+    logo-alt: "Logo AP"
     left:
       - href: pesquisa/index.qmd
         text: Pesquisa

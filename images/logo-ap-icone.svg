@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 600" width="520" height="600">
+  <title>Alexsandro Prado</title>
+  <defs>
+    <clipPath id="hex"><polygon points="260.0,18.0 504.2,159.0 504.2,441.0 260.0,582.0 15.8,441.0 15.8,159.0"/></clipPath>
+    <radialGradient id="fundo" cx="50%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#1b2a44"/>
+      <stop offset="100%" stop-color="#0b1220"/>
+    </radialGradient>
+    <pattern id="pontos" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="9" r="1.4" fill="#475569"/>
+    </pattern>
+    <linearGradient id="esmaece" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#fff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="mascara"><rect width="520" height="600" fill="url(#esmaece)"/></mask>
+  </defs>
+  <polygon points="260.0,18.0 504.2,159.0 504.2,441.0 260.0,582.0 15.8,441.0 15.8,159.0" fill="url(#fundo)"/>
+  <g clip-path="url(#hex)">
+    <rect width="520" height="600" fill="url(#pontos)" mask="url(#mascara)"/>
+    
+  </g>
+  <path d="M90.56396484375 385.0H138.41552734375L150.25634765625 346.3037109375H210.80322265625L223.13232421875 385.0H271.47216796875L208.97216796875 203.115234375H151.23291015625ZM160.38818359375 313.3447265625 162.82958984375 305.5322265625C168.81103515625 284.90234375 174.18212890625 261.953125 179.67529296875 237.4169921875C185.53466796875 261.8310546875 191.51611328125 284.7802734375 197.86376953125 305.5322265625L200.30517578125 313.3447265625Z M286.36962890625 385.0H329.46044921875V328.2373046875H359.61181640625C401.35986328125 328.2373046875 427.11669921875 303.45703125 427.11669921875 265.9814453125C427.11669921875 228.75 401.84814453125 203.115234375 360.83251953125 203.115234375H286.36962890625ZM329.46044921875 294.1796875V238.02734375H351.67724609375C371.94091796875 238.02734375 382.43896484375 248.8916015625 382.43896484375 265.9814453125C382.43896484375 282.8271484375 371.94091796875 294.1796875 351.79931640625 294.1796875Z" fill="#ffffff"/>
+  
+  <polygon points="260.0,18.0 504.2,159.0 504.2,441.0 260.0,582.0 15.8,441.0 15.8,159.0" fill="none" stroke="#1f8fae" stroke-width="18" stroke-linejoin="round"/>
+</svg>
