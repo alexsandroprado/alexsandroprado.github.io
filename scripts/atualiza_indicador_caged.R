@@ -1,6 +1,6 @@
 # Atualiza o indicador de emprego formal exibido na página Pesquisa.
 #
-# Lê pesquisa/dados/caged_saldo.csv, identifica no repositório do CAGED
+# Lê producao-tecnica/dados/caged_saldo.csv, identifica no repositório do CAGED
 # (Hugging Face) as competências ainda ausentes, agrega admissões,
 # desligamentos e saldo (Novo CAGED, arquivo de movimentações no prazo)
 # para Brasil, Rio Grande do Norte e Mossoró e acrescenta as linhas novas.
@@ -16,8 +16,8 @@ suppressPackageStartupMessages({
   library(dplyr)
 })
 
-arq      <- "pesquisa/dados/caged_saldo.csv"
-arq_site <- "docs/pesquisa/dados/caged_saldo.csv"
+arq      <- "producao-tecnica/dados/caged_saldo.csv"
+arq_site <- "docs/producao-tecnica/dados/caged_saldo.csv"
 
 atual  <- read.csv(arq, colClasses = "character")
 feitas <- unique(gsub("-", "", substr(atual$competencia, 1, 7)))
@@ -84,8 +84,8 @@ if (dir.exists(dirname(arq_site))) invisible(file.copy(arq, arq_site, overwrite 
 # Salário médio de admissão: admissões não intermitentes com salário
 # entre R$ 500 e R$ 60.000 (soma e contagem, para médias exatas em
 # qualquer período).
-arq_cont      <- "pesquisa/dados/caged_contabil.csv"
-arq_cont_site <- "docs/pesquisa/dados/caged_contabil.csv"
+arq_cont      <- "producao-tecnica/dados/caged_contabil.csv"
+arq_cont_site <- "docs/producao-tecnica/dados/caged_contabil.csv"
 
 cbos <- c("252210" = "Contador", "252205" = "Auditor",
           "252215" = "Perito contábil", "351105" = "Técnico de contabilidade",

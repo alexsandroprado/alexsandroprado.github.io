@@ -1,6 +1,6 @@
 ---
 title: "Produção técnica e tecnológica"
-description: "Software, registro de programa de computador e bases de dados técnico-científicas para pesquisa com dados públicos brasileiros."
+description: "Software, registro de programa de computador, bases de dados técnico-científicas e indicadores do emprego formal a partir de dados públicos brasileiros."
 aliases:
   - /software/index.html
 ---
@@ -18,7 +18,7 @@ Os produtos a seguir foram desenvolvidos no âmbito das pesquisas do grupo [GECO
 Versão 0.2.3 · disponível no CRAN · licença MIT
 :::
 
-Ferramentas para baixar, ler e armazenar os microdados do Cadastro Geral de Empregados e Desempregados (CAGED) em um banco local DuckDB, com suporte ao CAGED antigo (1992 a 2019), ao Novo CAGED (2020 em diante) e aos arquivos de ajustes. É o pacote que alimenta os [indicadores do emprego formal](../pesquisa/index.qmd#indicadores) publicados neste site.
+Ferramentas para baixar, ler e armazenar os microdados do Cadastro Geral de Empregados e Desempregados (CAGED) em um banco local DuckDB, com suporte ao CAGED antigo (1992 a 2019), ao Novo CAGED (2020 em diante) e aos arquivos de ajustes. É o pacote que alimenta os [indicadores do emprego formal](#indicadores) publicados nesta página.
 
 ```r
 install.packages("datacaged")
@@ -86,6 +86,181 @@ Fonte: Ministério do Trabalho e Emprego (MTE)
 Espelhos dos arquivos públicos do CAGED e da RAIS, organizados por período, que servem de fonte para os pacotes `datacaged` e `datarais`.
 
 [CAGED](https://huggingface.co/datasets/alexsandroprado/caged) · [RAIS](https://huggingface.co/datasets/alexsandroprado/rais)
+:::
+
+## Emprego formal em números {#indicadores}
+
+Indicador mensal do mercado de trabalho formal, calculado a partir dos microdados do Novo Cadastro Geral de Empregados e Desempregados (Novo CAGED) com o pacote [datacaged](#datacaged) e atualizado automaticamente a cada nova divulgação.
+
+::: {.indicador}
+
+```{ojs}
+//| echo: false
+dados = FileAttachment("dados/caged_saldo.csv").csv({typed: true})
+  .then(ds => ds.map(d => ({...d, data: new Date(d.competencia)})))
+
+viewof recorte = Inputs.radio(
+  ["Brasil", "Rio Grande do Norte", "Mossoró"],
+  {value: "Rio Grande do Norte"}
+)
+
+viewof janela = Inputs.radio(
+  new Map([["Últimos 24 meses", 24], ["Desde 2020", 1000]]),
+  {value: 24}
+)
+```
+
+```{ojs}
+//| echo: false
+serie = dados
+  .filter(d => d.recorte === recorte)
+  .sort((a, b) => a.data - b.data)
+
+recorteJanela = serie.slice(-janela)
+ultimo = serie[serie.length - 1]
+anoUltimo = ultimo.data.getUTCFullYear()
+acumAno = d3.sum(serie.filter(d => d.data.getUTCFullYear() === anoUltimo), d => d.saldo)
+acum12 = d3.sum(serie.slice(-12), d => d.saldo)
+
+fmt = v => (v > 0 ? "+" : "") + v.toLocaleString("pt-BR")
+mesAno = d => d.toLocaleDateString("pt-BR", {month: "long", year: "numeric", timeZone: "UTC"})
+mesCurto = d => d.toLocaleDateString("pt-BR", {month: "short", year: "2-digit", timeZone: "UTC"}).replace(". de ", "/").replace(" de ", "/")
+
+html`<div class="kpis">
+  <div class="kpi"><div class="kpi-rotulo">Saldo do mês</div>
+    <div class="kpi-valor">${fmt(ultimo.saldo)}</div>
+    <div class="kpi-nota">${mesAno(ultimo.data)}</div></div>
+  <div class="kpi"><div class="kpi-rotulo">Acumulado no ano</div>
+    <div class="kpi-valor">${fmt(acumAno)}</div>
+    <div class="kpi-nota">janeiro a ${ultimo.data.toLocaleDateString("pt-BR", {month: "long", timeZone: "UTC"})} de ${anoUltimo}</div></div>
+  <div class="kpi"><div class="kpi-rotulo">Últimos 12 meses</div>
+    <div class="kpi-valor">${fmt(acum12)}</div>
+    <div class="kpi-nota">soma dos saldos mensais</div></div>
+  <div class="kpi"><div class="kpi-rotulo">Admissões no mês</div>
+    <div class="kpi-valor">${ultimo.admissoes.toLocaleString("pt-BR")}</div>
+    <div class="kpi-nota">${ultimo.desligamentos.toLocaleString("pt-BR")} desligamentos</div></div>
+</div>`
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  height: 260,
+  marginLeft: 64,
+  style: {fontFamily: "IBM Plex Mono, monospace", fontSize: "11px", background: "transparent"},
+  x: {type: "band", label: null, tickFormat: d => mesCurto(new Date(d)),
+      ticks: recorteJanela.filter((d, i) => i % (janela > 24 ? 6 : 3) === 0).map(d => d.data.getTime())},
+  y: {label: "Saldo (admissões menos desligamentos)", grid: true,
+      tickFormat: v => v.toLocaleString("pt-BR")},
+  color: {domain: [true, false], range: ["#1f8fae", "#d97706"]},
+  marks: [
+    Plot.ruleY([0], {stroke: "#94a3b8"}),
+    Plot.barY(recorteJanela, {
+      x: d => d.data.getTime(), y: "saldo", fill: d => d.saldo >= 0,
+      inset: 0.5,
+      title: d => `${mesAno(d.data)}\nSaldo: ${fmt(d.saldo)}\nAdmissões: ${d.admissoes.toLocaleString("pt-BR")}\nDesligamentos: ${d.desligamentos.toLocaleString("pt-BR")}`,
+      tip: true
+    })
+  ]
+})
+```
+
+::: {.fonte-dados}
+Fonte: Ministério do Trabalho e Emprego, Novo CAGED (movimentações declaradas no prazo, sem ajustes). Elaboração própria com o pacote datacaged. Valores mensais por competência.
+:::
+
+:::
+
+## Mercado de trabalho contábil {#contabil}
+
+Admissões, desligamentos e salário de admissão das ocupações contábeis no emprego formal, segundo a Classificação Brasileira de Ocupações (CBO): Contador (2522-10), Auditor (2522-05), Perito contábil (2522-15), Técnico de contabilidade (3511-05) e Auxiliar de contabilidade (4131-10).
+
+::: {.indicador}
+
+```{ojs}
+//| echo: false
+contabil = FileAttachment("dados/caged_contabil.csv").csv({typed: true})
+  .then(ds => ds.map(d => ({...d, data: new Date(d.competencia), ano: new Date(d.competencia).getUTCFullYear()})))
+
+ocupacoesTodas = ["Contador", "Auditor", "Perito contábil", "Técnico de contabilidade", "Auxiliar de contabilidade"]
+
+viewof recorteCont = Inputs.radio(
+  ["Brasil", "Nordeste", "Rio Grande do Norte"],
+  {value: "Rio Grande do Norte"}
+)
+
+viewof ocupSel = Inputs.checkbox(ocupacoesTodas, {value: ocupacoesTodas})
+```
+
+```{ojs}
+//| echo: false
+contR = contabil.filter(d => d.recorte === recorteCont && ocupSel.includes(d.ocupacao))
+compsCont = [...new Set(contabil.map(d => d.data.getTime()))].sort((a, b) => a - b)
+ult12 = new Set(compsCont.slice(-12))
+ultimaCont = new Date(compsCont[compsCont.length - 1])
+inicio12 = new Date(compsCont[compsCont.length - 12])
+c12 = contR.filter(d => ult12.has(d.data.getTime()))
+somaC = (arr, k) => d3.sum(arr, d => d[k])
+salMedio = arr => somaC(arr, "salario_soma") / Math.max(1, somaC(arr, "salario_n"))
+brl = v => v.toLocaleString("pt-BR", {style: "currency", currency: "BRL", maximumFractionDigits: 0})
+periodo12 = `${mesCurto(inicio12)} a ${mesCurto(ultimaCont)}`
+
+html`<div class="kpis">
+  <div class="kpi"><div class="kpi-rotulo">Admissões (12 meses)</div>
+    <div class="kpi-valor">${somaC(c12, "admissoes").toLocaleString("pt-BR")}</div>
+    <div class="kpi-nota">${periodo12}</div></div>
+  <div class="kpi"><div class="kpi-rotulo">Saldo (12 meses)</div>
+    <div class="kpi-valor">${fmt(somaC(c12, "admissoes") - somaC(c12, "desligamentos"))}</div>
+    <div class="kpi-nota">admissões menos desligamentos</div></div>
+  <div class="kpi"><div class="kpi-rotulo">Salário médio de admissão</div>
+    <div class="kpi-valor">${brl(salMedio(c12))}</div>
+    <div class="kpi-nota">últimos 12 meses, valor nominal</div></div>
+</div>`
+```
+
+```{ojs}
+//| echo: false
+tabela12 = ocupSel.map(o => {
+  const r = c12.filter(d => d.ocupacao === o)
+  return {o, adm: somaC(r, "admissoes"), desl: somaC(r, "desligamentos"), sal: salMedio(r), n: somaC(r, "salario_n")}
+})
+
+html`<table class="table table-sm tabela-contabil">
+  <thead><tr><th>Ocupação</th><th>Admissões</th><th>Desligamentos</th><th>Saldo</th><th>Salário médio de admissão</th></tr></thead>
+  <tbody>${tabela12.map(r => html`<tr>
+    <td>${r.o}</td>
+    <td>${r.adm.toLocaleString("pt-BR")}</td>
+    <td>${r.desl.toLocaleString("pt-BR")}</td>
+    <td class="${r.adm - r.desl < 0 ? "neg" : ""}">${fmt(r.adm - r.desl)}</td>
+    <td>${r.n >= 10 ? brl(r.sal) : "—"}</td></tr>`)}</tbody>
+</table>`
+```
+
+```{ojs}
+//| echo: false
+salAnual = d3.flatRollup(contR, v => ({sal: salMedio(v), n: somaC(v, "salario_n")}), d => d.ano, d => d.ocupacao)
+  .map(([ano, ocupacao, v]) => ({ano, ocupacao, ...v, sal: v.n >= 10 ? v.sal : NaN}))
+  .sort((a, b) => a.ano - b.ano)
+
+Plot.plot({
+  height: 280,
+  marginLeft: 70,
+  style: {fontFamily: "IBM Plex Mono, monospace", fontSize: "11px", background: "transparent"},
+  x: {label: null, tickFormat: d => String(d), ticks: [...new Set(salAnual.map(d => d.ano))]},
+  y: {label: "Salário médio de admissão (R$, nominal)", grid: true, tickFormat: v => v.toLocaleString("pt-BR")},
+  color: {domain: ocupacoesTodas, range: ["#0e7490", "#7c3aed", "#d97706", "#64748b", "#94a3b8"], legend: true},
+  marks: [
+    Plot.line(salAnual, {x: "ano", y: "sal", stroke: "ocupacao", strokeWidth: 2}),
+    Plot.dot(salAnual.filter(d => d.n >= 10), {x: "ano", y: "sal", fill: "ocupacao", r: 3,
+      title: d => `${d.ocupacao}, ${d.ano}\n${brl(d.sal)} (${d.n.toLocaleString("pt-BR")} admissões)`, tip: true})
+  ]
+})
+```
+
+::: {.fonte-dados}
+Fonte: Ministério do Trabalho e Emprego, Novo CAGED (movimentações declaradas no prazo). Elaboração própria com o pacote datacaged. O salário médio de admissão considera apenas admissões não intermitentes com salário contratual entre R$ 500 e R$ 60.000, em valores nominais; médias com menos de 10 admissões não são exibidas. O ano corrente reúne apenas os meses já divulgados.
+:::
+
 :::
 
 ## Cursos e eventos

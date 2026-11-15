@@ -48,9 +48,9 @@ website:
             text: Materiais
       - text: Pesquisa
         menu:
-          - href: pesquisa/index.qmd#linhas
+          - href: pesquisa/index.qmd
             text: Linhas e projetos
-          - href: pesquisa/index.qmd#indicadores
+          - href: producao-tecnica/index.qmd#indicadores
             text: Indicadores do emprego formal
           - text: "---"
           - href: publicacoes/index.qmd

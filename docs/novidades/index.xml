@@ -48,7 +48,7 @@
 
 
 
-<p>O site foi reformulado e passa a reunir, em um só lugar, (i) as <a href="../../publicacoes/index.html">publicações</a>, com referências no padrão ABNT, estrato Qualis e filtros por tipo; (ii) os <a href="../../producao-tecnica/index.html">pacotes em R e as bases de dados abertas</a> desenvolvidos nas pesquisas; e (iii) <a href="../../pesquisa/index.html">indicadores mensais do emprego formal</a>, calculados a partir dos microdados do Novo CAGED para Brasil, Nordeste, Rio Grande do Norte e Mossoró, incluindo as ocupações contábeis.</p>
+<p>O site foi reformulado e passa a reunir, em um só lugar, (i) as <a href="../../publicacoes/index.html">publicações</a>, com referências no padrão ABNT, estrato Qualis e filtros por tipo; (ii) os <a href="../../producao-tecnica/index.html">pacotes em R e as bases de dados abertas</a> desenvolvidos nas pesquisas; e (iii) <a href="../../producao-tecnica/index.html#indicadores">indicadores mensais do emprego formal</a>, calculados a partir dos microdados do Novo CAGED para Brasil, Nordeste, Rio Grande do Norte e Mossoró, incluindo as ocupações contábeis.</p>
 <p>Os indicadores são atualizados automaticamente a cada nova divulgação do Ministério do Trabalho e Emprego.</p>
 
 
