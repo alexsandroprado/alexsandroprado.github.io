@@ -5,6 +5,7 @@ pagetitle: "Alexsandro Prado · UFERSA"
 description: "Professor Adjunto da UFERSA. Economia do trabalho, contabilidade financeira, ESG e governança corporativa."
 toc: false
 title-block-banner: false
+page-layout: full
 listing:
   id: ultimos-posts
   contents: "novidades/*/index.qmd"

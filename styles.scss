@@ -773,6 +773,32 @@ main.content > #title-block-header {
   }
 }
 
+// Página inicial: área total mais larga e texto um pouco menor
+.quarto-about-trestles {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 992px) {
+  div.quarto-about-trestles .about-entity {
+    flex: 0 0 340px;
+  }
+  div.quarto-about-trestles .about-contents {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+.quarto-about-trestles .about-contents {
+  font-size: 0.95rem;
+
+  .lead-academic {
+    font-size: 1.04em;
+    line-height: 1.7;
+  }
+}
+
 // ── Publicações (listagem com busca e filtro) ────────────────
 .pub-lista {
   margin-top: 0.5rem;
