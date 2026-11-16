@@ -4,7 +4,8 @@ description: "Notas sobre econometria aplicada, contabilidade e análise de dado
 toc: false
 listing:
   contents: "posts/**/*.qmd"
-  feed: true
+  feed:
+    title: "Blog de Alexsandro Prado"
   sort: "date desc"
   type: default
   image-placeholder: ../images/logo.png

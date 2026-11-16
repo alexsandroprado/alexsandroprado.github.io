@@ -1,0 +1,5 @@
+::: {.callout-note appearance="simple" icon="false" .chamada-blog}
+## Dados e análises sob demanda
+
+Os exemplos deste blog utilizam ferramentas abertas desenvolvidas no grupo GECOMT, como o pacote [datacaged](/producao-tecnica/index.qmd#datacaged), que dá acesso aos microdados do emprego formal. Para análises aplicadas à realidade de uma organização, como diagnósticos do mercado de trabalho, referências salariais ou previsões, veja a página de [Consultoria e parcerias](/parcerias/index.qmd).
+:::

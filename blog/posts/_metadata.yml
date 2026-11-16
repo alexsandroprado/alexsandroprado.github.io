@@ -14,6 +14,10 @@ citation:
   type: post-weblog
   container-title: "Blog de Alexsandro Prado"
 appendix-cite-as: display
+
+# Legendas no padrão ABNT: "Figura 1 - Título"
+crossref:
+  title-delim: "\u00A0-"
 # Referência da citação no padrão ABNT (e datas em português)
 csl: ../../../assets/csl/abnt.csl
 
@@ -24,6 +28,13 @@ format:
     toc-title: "Nesta página"
     code-copy: true
     code-overflow: wrap
+    # Funções do R nos blocos de código viram links para a documentação
+    code-link: true
+
+# Gráficos carregados sob demanda (só quando chegam à tela)
+knitr:
+  opts_chunk:
+    out.extra: 'loading="lazy"'
 
 execute:
   echo: false

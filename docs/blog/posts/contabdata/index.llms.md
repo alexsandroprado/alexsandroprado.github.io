@@ -32,6 +32,10 @@ Embora os benefícios sejam significativos, a implementação da análise de dad
 
 A análise de dados está revolucionando a contabilidade, oferecendo precisão, insights estratégicos e eficiência operacional. À medida que a tecnologia continua a evoluir, a capacidade de analisar e interpretar dados se tornará ainda mais essencial para a prática contábil. Investir em análise de dados não é apenas uma vantagem competitiva, mas uma necessidade para as empresas que desejam prosperar em um ambiente de negócios cada vez mais complexo e dinâmico.
 
+> **NOTE:**
+>
+> Os exemplos deste blog utilizam ferramentas abertas desenvolvidas no grupo GECOMT, como o pacote [datacaged](../../../producao-tecnica/index.llms.md#datacaged), que dá acesso aos microdados do emprego formal. Para análises aplicadas à realidade de uma organização, como diagnósticos do mercado de trabalho, referências salariais ou previsões, veja a página de [Consultoria e parcerias](../../../parcerias/index.llms.md).
+
 ### Referências
 
 BHARDWAJ, G.; HARVEY, D. Big data in financial statement analysis. **Journal of Financial Reporting**, v. 32, n. 2, p. 213-230, 2018.
@@ -50,4 +54,4 @@ De volta ao topo
 
 Por favor, cite este trabalho como:
 
-PRADO, Alexsandro. **A Importância da Análise de Dados na Contabilidade**. **Blog de Alexsandro Prado**, 30 jun. 2024. Disponível em: \<<https://alexsandroprado.site/blog/posts/contabdata/contabdata.html>\>
+PRADO, Alexsandro. **A importância da análise de dados na contabilidade**. **Blog de Alexsandro Prado**, 30 jun. 2024. Disponível em: \<<https://alexsandroprado.site/blog/posts/contabdata/>\>

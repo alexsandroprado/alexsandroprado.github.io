@@ -5,70 +5,57 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>Alexsandro Prado</title>
+<title>Blog de Alexsandro Prado</title>
 <link>https://alexsandroprado.site/blog/</link>
 <atom:link href="https://alexsandroprado.site/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Notas sobre econometria aplicada, contabilidade e análise de dados em R.</description>
 <image>
 <url>https://alexsandroprado.site/images/og/blog.png</url>
-<title>Alexsandro Prado</title>
+<title>Blog de Alexsandro Prado</title>
 <link>https://alexsandroprado.site/blog/</link>
 </image>
 <generator>quarto-1.9.37</generator>
 <lastBuildDate>Sun, 30 Jun 2024 03:00:00 GMT</lastBuildDate>
 <item>
-  <title>A Importância da Análise de Dados na Contabilidade</title>
+  <title>A importância da análise de dados na contabilidade</title>
   <dc:creator>Alexsandro Prado</dc:creator>
-  <link>https://alexsandroprado.site/blog/posts/contabdata/contabdata.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-<style>
+  <link>https://alexsandroprado.site/blog/posts/contabdata/</link>
+  <description><![CDATA[ <style>
   .left-aligned {
     text-align: left;
   }
 </style>
-<section id="introdução" class="level3">
-<h3 class="anchored" data-anchor-id="introdução">Introdução</h3>
+<section id="introdução" class="level3"><h3 class="anchored" data-anchor-id="introdução">Introdução</h3>
 <p>A análise de dados tem se tornado uma ferramenta crucial em diversos setores, incluindo a contabilidade. Com a crescente quantidade de dados gerados diariamente, a capacidade de analisar e interpretar essas informações é essencial para tomar decisões informadas e estratégicas. Este artigo explora a importância da análise de dados na contabilidade, destacando como ela transforma a prática contábil e oferece benefícios significativos para as organizações.</p>
-</section>
-<section id="transformação-digital-na-contabilidade" class="level3">
-<h3 class="anchored" data-anchor-id="transformação-digital-na-contabilidade">Transformação Digital na Contabilidade</h3>
+</section><section id="transformação-digital-na-contabilidade" class="level3"><h3 class="anchored" data-anchor-id="transformação-digital-na-contabilidade">Transformação Digital na Contabilidade</h3>
 <p>A contabilidade tradicional tem evoluído significativamente com a introdução de tecnologias avançadas. A transformação digital permite que contadores acessem grandes volumes de dados e utilizem ferramentas analíticas para extrair insights valiosos. Esta evolução digital é fundamental para a modernização da contabilidade, tornando os processos mais eficientes e precisos.</p>
-</section>
-<section id="benefícios-da-análise-de-dados-na-contabilidade" class="level3">
-<h3 class="anchored" data-anchor-id="benefícios-da-análise-de-dados-na-contabilidade">Benefícios da Análise de Dados na Contabilidade</h3>
-<section id="precisão-e-confiabilidade" class="level4">
-<h4 class="anchored" data-anchor-id="precisão-e-confiabilidade">1. Precisão e Confiabilidade</h4>
+</section><section id="benefícios-da-análise-de-dados-na-contabilidade" class="level3"><h3 class="anchored" data-anchor-id="benefícios-da-análise-de-dados-na-contabilidade">Benefícios da Análise de Dados na Contabilidade</h3>
+<section id="precisão-e-confiabilidade" class="level4"><h4 class="anchored" data-anchor-id="precisão-e-confiabilidade">1. Precisão e Confiabilidade</h4>
 <p>A análise de dados melhora a precisão das informações financeiras. Ao utilizar técnicas analíticas avançadas, os contadores podem detectar erros e inconsistências nos dados, garantindo que os relatórios financeiros sejam mais confiáveis. Isso reduz o risco de fraudes e equívocos, proporcionando uma base sólida para a tomada de decisões.</p>
-</section>
-<section id="tomada-de-decisões-informadas" class="level4">
-<h4 class="anchored" data-anchor-id="tomada-de-decisões-informadas">2. Tomada de Decisões Informadas</h4>
+</section><section id="tomada-de-decisões-informadas" class="level4"><h4 class="anchored" data-anchor-id="tomada-de-decisões-informadas">2. Tomada de Decisões Informadas</h4>
 <p>A capacidade de analisar grandes volumes de dados permite que os contadores forneçam insights estratégicos para a gestão. Com dados precisos e análises detalhadas, as empresas podem tomar decisões informadas que impactam diretamente seu desempenho financeiro e operacional. Isso inclui desde a alocação de recursos até a identificação de oportunidades de crescimento.</p>
-</section>
-<section id="previsão-e-planejamento-financeiro" class="level4">
-<h4 class="anchored" data-anchor-id="previsão-e-planejamento-financeiro">3. Previsão e Planejamento Financeiro</h4>
+</section><section id="previsão-e-planejamento-financeiro" class="level4"><h4 class="anchored" data-anchor-id="previsão-e-planejamento-financeiro">3. Previsão e Planejamento Financeiro</h4>
 <p>Ferramentas de análise de dados possibilitam a criação de modelos preditivos que ajudam na previsão de tendências financeiras. Essas previsões são essenciais para o planejamento financeiro de longo prazo, permitindo que as empresas se preparem para cenários futuros e ajustem suas estratégias conforme necessário.</p>
-</section>
-<section id="eficiência-operacional" class="level4">
-<h4 class="anchored" data-anchor-id="eficiência-operacional">4. Eficiência Operacional</h4>
+</section><section id="eficiência-operacional" class="level4"><h4 class="anchored" data-anchor-id="eficiência-operacional">4. Eficiência Operacional</h4>
 <p>Automatizar processos contábeis através da análise de dados aumenta a eficiência operacional. A integração de software de análise de dados reduz o tempo gasto em tarefas repetitivas e permite que os contadores se concentrem em atividades de maior valor agregado, como a análise estratégica e consultoria.</p>
-</section>
-</section>
-<section id="desafios-da-implementação-da-análise-de-dados-na-contabilidade" class="level3">
-<h3 class="anchored" data-anchor-id="desafios-da-implementação-da-análise-de-dados-na-contabilidade">Desafios da Implementação da Análise de Dados na Contabilidade</h3>
+</section></section><section id="desafios-da-implementação-da-análise-de-dados-na-contabilidade" class="level3"><h3 class="anchored" data-anchor-id="desafios-da-implementação-da-análise-de-dados-na-contabilidade">Desafios da Implementação da Análise de Dados na Contabilidade</h3>
 <p>Embora os benefícios sejam significativos, a implementação da análise de dados na contabilidade enfrenta alguns desafios. Estes incluem a necessidade de investimento em tecnologia, a capacitação dos profissionais e a adaptação a novas metodologias. Superar esses desafios é crucial para maximizar o potencial da análise de dados na contabilidade.</p>
-</section>
-<section id="conclusão" class="level3">
-<h3 class="anchored" data-anchor-id="conclusão">Conclusão</h3>
+</section><section id="conclusão" class="level3"><h3 class="anchored" data-anchor-id="conclusão">Conclusão</h3>
 <p>A análise de dados está revolucionando a contabilidade, oferecendo precisão, insights estratégicos e eficiência operacional. À medida que a tecnologia continua a evoluir, a capacidade de analisar e interpretar dados se tornará ainda mais essencial para a prática contábil. Investir em análise de dados não é apenas uma vantagem competitiva, mas uma necessidade para as empresas que desejam prosperar em um ambiente de negócios cada vez mais complexo e dinâmico.</p>
-</section>
-<section id="referências" class="level3">
-<h3 class="anchored" data-anchor-id="referências">Referências</h3>
+<div class="chamada-blog callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Dados e análises sob demanda
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Os exemplos deste blog utilizam ferramentas abertas desenvolvidas no grupo GECOMT, como o pacote <a href="../../../producao-tecnica/index.html#datacaged">datacaged</a>, que dá acesso aos microdados do emprego formal. Para análises aplicadas à realidade de uma organização, como diagnósticos do mercado de trabalho, referências salariais ou previsões, veja a página de <a href="../../../parcerias/index.html">Consultoria e parcerias</a>.</p>
+</div>
+</div>
+</section><section id="referências" class="level3"><h3 class="anchored" data-anchor-id="referências">Referências</h3>
 <p>BHARDWAJ, G.; HARVEY, D. Big data in financial statement analysis. <strong>Journal of Financial Reporting</strong>, v. 32, n.&nbsp;2, p.&nbsp;213-230, 2018.</p>
 <p>CHEN, H.; CHIANG, R. H. L.; STOREY, V. C. Business intelligence and analytics: From big data to big impact. <strong>MIS Quarterly</strong>, v. 36, n.&nbsp;4, p.&nbsp;1165-1188, 2012.</p>
 <p>DAVENPORT, T. H.; HARRIS, J. G. Competing on analytics: The new science of winning. <strong>Harvard Business Review</strong>, v. 84, n.&nbsp;1, p.&nbsp;98-107, 2006.</p>
@@ -76,144 +63,189 @@
 <p>WILLIS, J. Data analysis in accounting: A practical approach. <strong>Journal of Accountancy</strong>, v. 21, n.&nbsp;3, p.&nbsp;45-58, 2019.</p>
 
 
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citação</h2><div><div class="quarto-appendix-secondary-label">Por favor, cite este trabalho como:</div><div id="ref-prado2024" class="csl-entry quarto-appendix-citeas">
-PRADO, Alexsandro. <strong>A Importância da Análise de Dados na
-Contabilidade</strong>. <strong>Blog de Alexsandro Prado</strong>, 30
-jun. 2024. Disponível em: &lt;<a href="https://alexsandroprado.site/blog/posts/contabdata/contabdata.html">https://alexsandroprado.site/blog/posts/contabdata/contabdata.html</a>&gt;
+</section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citação</h2><div><div class="quarto-appendix-secondary-label">Por favor, cite este trabalho como:</div><div id="ref-prado2024" class="csl-entry quarto-appendix-citeas">
+PRADO, Alexsandro. <strong>A importância da análise de dados na
+contabilidade</strong>. <strong>Blog de Alexsandro Prado</strong>, 30
+jun. 2024. Disponível em: &lt;<a href="https://alexsandroprado.site/blog/posts/contabdata/">https://alexsandroprado.site/blog/posts/contabdata/</a>&gt;
 </div></div></section></div> ]]></description>
-  <category>contabilidade</category>
-  <category>datascience</category>
-  <guid>https://alexsandroprado.site/blog/posts/contabdata/contabdata.html</guid>
+  <category>Contabilidade</category>
+  <category>Ciência de dados</category>
+  <guid>https://alexsandroprado.site/blog/posts/contabdata/</guid>
   <pubDate>Sun, 30 Jun 2024 03:00:00 GMT</pubDate>
   <media:content url="https://alexsandroprado.site/blog/posts/contabdata/capa.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>Previsão de receita</title>
   <dc:creator>Alexsandro Prado</dc:creator>
-  <link>https://alexsandroprado.site/blog/posts/preditiva/preditiva.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-<p><img src="https://alexsandroprado.site/blog/posts/preditiva/capa.webp" class="img-fluid" alt="Série de receita observada e previsão com intervalos de confiança"></p>
-<section id="introdução" class="level1">
-<h1>Introdução</h1>
+  <link>https://alexsandroprado.site/blog/posts/preditiva/</link>
+  <description><![CDATA[ <p><img src="https://alexsandroprado.site/blog/posts/preditiva/capa.webp" class="img-fluid" alt="Série de receita observada e previsão com intervalos de confiança"></p>
+<section id="introdução" class="level1"><h1>Introdução</h1>
 <p>A informação contábil é uma ferramenta poderosa para previsão e tomada de decisões estratégicas nas organizações. Segundo o CPC 00 (Estrutura Conceitual para Elaboração e Divulgação de Relatório Contábil-Financeiro), a informação contábil deve possuir características qualitativas fundamentais como relevância e representação fidedigna, e características qualitativas de melhoria como comparabilidade, verificabilidade, tempestividade e compreensibilidade.</p>
 <p>Neste post, vamos explorar como essas características se traduzem no poder preditivo da informação contábil usando dados fictícios e a linguagem R.</p>
-<section id="objetivo" class="level2">
-<h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
+<section id="objetivo" class="level2"><h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
 <p>Nosso objetivo é demonstrar, por meio de um exemplo prático, como a análise de demonstrações financeiras pode prever o desempenho futuro de uma empresa. Utilizaremos dados fictícios para simplificação.</p>
-</section>
-<section id="passo-a-passo-em-r" class="level2">
-<h2 class="anchored" data-anchor-id="passo-a-passo-em-r">Passo a Passo em R</h2>
-<section id="coleta-e-preparação-dos-dados" class="level3">
-<h3 class="anchored" data-anchor-id="coleta-e-preparação-dos-dados">Coleta e Preparação dos Dados</h3>
+</section><section id="passo-a-passo-em-r" class="level2"><h2 class="anchored" data-anchor-id="passo-a-passo-em-r">Passo a Passo em R</h2>
+<section id="coleta-e-preparação-dos-dados" class="level3"><h3 class="anchored" data-anchor-id="coleta-e-preparação-dos-dados">Coleta e Preparação dos Dados</h3>
 <p>Primeiramente, vamos criar um conjunto de dados fictícios representando as demonstrações financeiras de uma empresa ao longo dos anos.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Carregar pacotes necessários</span></span>
-<span id="cb1-2"><span class="co" style="color: #5E5E5E;
+<span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># (instale antes, uma única vez: install.packages(c("dplyr", "ggplot2", "forecast")))</span></span>
-<span id="cb1-3"></span>
-<span id="cb1-4"><span class="fu" style="color: #4758AB;
+<span></span>
+<span><span class="kw" style="color: #003B4F;
 background-color: null;
-font-style: inherit;">library</span>(dplyr)</span>
-<span id="cb1-5"><span class="fu" style="color: #4758AB;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">library</span>(ggplot2)</span>
-<span id="cb1-6"><span class="fu" style="color: #4758AB;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">library</span>(forecast)</span>
-<span id="cb1-7"></span>
-<span id="cb1-8"><span class="co" style="color: #5E5E5E;
+font-style: inherit;"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://pkg.robjhyndman.com/forecast/">forecast</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Criar dados fictícios</span></span>
-<span id="cb1-9"><span class="fu" style="color: #4758AB;
+<span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+font-style: inherit;"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">123</span>)</span>
-<span id="cb1-10">anos <span class="ot" style="color: #003B4F;
+font-style: inherit;">(</span><span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+font-style: inherit;">123</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">2010</span><span class="sc" style="color: #5E5E5E;
+font-style: inherit;">)</span></span>
+<span><span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+font-style: inherit;">anos</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2010</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2023</span></span>
-<span id="cb1-11">receita <span class="ot" style="color: #003B4F;
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">receita</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+font-style: inherit;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">500</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">(</span><span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">550</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">500</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">600</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">550</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">660</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">600</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">720</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">660</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">780</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">720</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">850</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">780</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">920</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">850</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">1000</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">920</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">1100</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">1000</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">1210</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">1100</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">1330</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">1210</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">1460</span>, <span class="dv" style="color: #AD0000;
+font-style: inherit;">1330</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">1600</span>)</span>
-<span id="cb1-12">lucro_liquido <span class="ot" style="color: #003B4F;
+font-style: inherit;">1460</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">&lt;-</span> receita <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">1600</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">lucro_liquido</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">receita</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">*</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">runif</span>(<span class="dv" style="color: #AD0000;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">14</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">0.08</span>, <span class="fl" style="color: #AD0000;
 background-color: null;
-font-style: inherit;">0.12</span>)</span>
-<span id="cb1-13"></span>
-<span id="cb1-14">dados <span class="ot" style="color: #003B4F;
+font-style: inherit;">0.12</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">dados</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">data.frame</span>(<span class="at" style="color: #657422;
+font-style: inherit;"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">ano =</span> anos, <span class="at" style="color: #657422;
+font-style: inherit;">(</span>ano <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">receita =</span> receita, <span class="at" style="color: #657422;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">lucro_liquido =</span> lucro_liquido)</span>
-<span id="cb1-15"></span>
-<span id="cb1-16"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">anos</span>, receita <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">receita</span>, lucro_liquido <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">lucro_liquido</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Visualizar os dados</span></span>
-<span id="cb1-17"><span class="fu" style="color: #4758AB;
+<span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">print</span>(dados)</span></code></pre></div></div>
+font-style: inherit;"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">dados</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    ano receita lucro_liquido
 1  2010     500      45.75155
@@ -232,193 +264,283 @@ font-style: inherit;">print</span>(dados)</span></code></pre></div></div>
 14 2023    1600     164.64854</code></pre>
 </div>
 </div>
-</section>
-<section id="análise-exploratória-dos-dados" class="level3">
-<h3 class="anchored" data-anchor-id="análise-exploratória-dos-dados">Análise Exploratória dos Dados</h3>
+</section><section id="análise-exploratória-dos-dados" class="level3"><h3 class="anchored" data-anchor-id="análise-exploratória-dos-dados">Análise Exploratória dos Dados</h3>
 <p>Vamos analisar graficamente a evolução da receita e do lucro líquido ao longo dos anos.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Visualização dos dados</span></span>
-<span id="cb3-2"><span class="fu" style="color: #4758AB;
+<span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">ggplot</span>(dados, <span class="fu" style="color: #4758AB;
+font-style: inherit;"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">x =</span> ano)) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">dados</span>, <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-3">  <span class="fu" style="color: #4758AB;
+font-style: inherit;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">geom_line</span>(<span class="fu" style="color: #4758AB;
+font-style: inherit;">(</span>x <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">y =</span> receita, <span class="at" style="color: #657422;
+font-style: inherit;">ano</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">"Receita"</span>)) <span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span></span>
-<span id="cb3-4">  <span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">geom_line</span>(<span class="fu" style="color: #4758AB;
-background-color: null;
-font-style: inherit;">aes</span>(<span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">y =</span> lucro_liquido, <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">color =</span> <span class="st" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"Lucro Líquido"</span>)) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb3-5">  <span class="fu" style="color: #4758AB;
+<span>  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
+font-style: inherit;"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">(</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">receita</span>, color <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Receita"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>y <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">lucro_liquido</span>, color <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Lucro Líquido"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span>  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>title <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Evolução da Receita e do Lucro Líquido"</span>,</span>
-<span id="cb3-6">       <span class="at" style="color: #657422;
+<span>       x <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Ano"</span>,</span>
-<span id="cb3-7">       <span class="at" style="color: #657422;
+<span>       y <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Valores (em milhares)"</span>) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;">"Valores (em milhares)"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb3-8">  <span class="fu" style="color: #4758AB;
+<span>  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">scale_color_manual</span>(<span class="at" style="color: #657422;
+font-style: inherit;"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_color_manual</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">name =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">(</span>name <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">"Legenda"</span>, <span class="at" style="color: #657422;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">values =</span> <span class="fu" style="color: #4758AB;
+font-style: inherit;">"Legenda"</span>, values <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">"Receita"</span> <span class="ot" style="color: #003B4F;
+font-style: inherit;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Receita"</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"blue"</span>, <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Lucro Líquido"</span> <span class="ot" style="color: #003B4F;
+font-style: inherit;">"Lucro Líquido"</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"green"</span>))</span></code></pre></div></div>
+font-style: inherit;">"green"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="https://alexsandroprado.site/blog/posts/preditiva/preditiva_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" alt="Gráfico de linhas da receita e do lucro líquido de 2010 a 2023: a receita cresce de 500 para 1.600 mil, e o lucro líquido acompanha em nível bem mais baixo." width="672"></p>
-</figure>
+<div id="fig-historico" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de linhas da receita e do lucro líquido de 2010 a 2023: a receita cresce de 500 para 1.600 mil, e o lucro líquido acompanha em nível bem mais baixo.">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-historico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://alexsandroprado.site/blog/posts/preditiva/index_files/figure-html/fig-historico-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de linhas da receita e do lucro líquido de 2010 a 2023: a receita cresce de 500 para 1.600 mil, e o lucro líquido acompanha em nível bem mais baixo." width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-historico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1&nbsp;- Receita e lucro líquido anuais da empresa fictícia (2010 a 2023)
+</figcaption></figure>
 </div>
 </div>
 </div>
-</section>
-<section id="modelo-preditivo" class="level3">
-<h3 class="anchored" data-anchor-id="modelo-preditivo">Modelo Preditivo</h3>
+</section><section id="modelo-preditivo" class="level3"><h3 class="anchored" data-anchor-id="modelo-preditivo">Modelo Preditivo</h3>
 <p>Utilizaremos um modelo de série temporal para prever a receita dos próximos anos.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Modelagem de série temporal</span></span>
-<span id="cb4-2">ts_receita <span class="ot" style="color: #003B4F;
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">ts_receita</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">ts</span>(dados<span class="sc" style="color: #5E5E5E;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/ts.html">ts</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">$</span>receita, <span class="at" style="color: #657422;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">start =</span> <span class="fu" style="color: #4758AB;
+font-style: inherit;">dados</span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+font-style: inherit;">$</span><span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">2010</span>), <span class="at" style="color: #657422;
+font-style: inherit;">receita</span>, start <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">frequency =</span> <span class="dv" style="color: #AD0000;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">1</span>)</span>
-<span id="cb4-3"></span>
-<span id="cb4-4"><span class="co" style="color: #5E5E5E;
+font-style: inherit;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2010</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>, frequency <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Ajustar um modelo ARIMA</span></span>
-<span id="cb4-5">modelo_arima <span class="ot" style="color: #003B4F;
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">modelo_arima</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">auto.arima</span>(ts_receita)</span>
-<span id="cb4-6"></span>
-<span id="cb4-7"><span class="co" style="color: #5E5E5E;
+font-style: inherit;"><a href="https://pkg.robjhyndman.com/forecast/reference/auto.arima.html">auto.arima</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">ts_receita</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Previsão para os próximos 5 anos</span></span>
-<span id="cb4-8">previsao <span class="ot" style="color: #003B4F;
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">previsao</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">forecast</span>(modelo_arima, <span class="at" style="color: #657422;
+font-style: inherit;"><a href="https://generics.r-lib.org/reference/forecast.html">forecast</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">h =</span> <span class="dv" style="color: #AD0000;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
 background-color: null;
-font-style: inherit;">5</span>)</span>
-<span id="cb4-9"></span>
-<span id="cb4-10"><span class="co" style="color: #5E5E5E;
+font-style: inherit;">modelo_arima</span>, h <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Visualização da previsão</span></span>
-<span id="cb4-11"><span class="fu" style="color: #4758AB;
+<span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">autoplot</span>(previsao) <span class="sc" style="color: #5E5E5E;
+font-style: inherit;"><a href="https://ggplot2.tidyverse.org/reference/autoplot.html">autoplot</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">previsao</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">+</span></span>
-<span id="cb4-12">  <span class="fu" style="color: #4758AB;
+<span>  <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
+font-style: inherit;"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">(</span>title <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Previsão da Receita para os Próximos 5 Anos"</span>,</span>
-<span id="cb4-13">       <span class="at" style="color: #657422;
+<span>       x <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"Ano"</span>,</span>
-<span id="cb4-14">       <span class="at" style="color: #657422;
+<span>       y <span class="op" style="color: #5E5E5E;
 background-color: null;
-font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Receita (em milhares)"</span>)</span></code></pre></div></div>
+font-style: inherit;">"Receita (em milhares)"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="https://alexsandroprado.site/blog/posts/preditiva/preditiva_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" alt="Previsão ARIMA da receita para 2024 a 2028: a série histórica sobe de forma contínua e a projeção mantém o crescimento, com intervalos de confiança de 80% e 95% que se alargam com o tempo." width="672"></p>
-</figure>
+<div id="fig-previsao" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Previsão ARIMA da receita para 2024 a 2028: a série histórica sobe de forma contínua e a projeção mantém o crescimento, com intervalos de confiança de 80% e 95% que se alargam com o tempo.">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-previsao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://alexsandroprado.site/blog/posts/preditiva/index_files/figure-html/fig-previsao-1.png" class="img-fluid figure-img" loading="lazy" alt="Previsão ARIMA da receita para 2024 a 2028: a série histórica sobe de forma contínua e a projeção mantém o crescimento, com intervalos de confiança de 80% e 95% que se alargam com o tempo." width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-previsao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2&nbsp;- Previsão da receita para 2024 a 2028 pelo modelo ARIMA, com intervalos de confiança de 80% e 95%
+</figcaption></figure>
 </div>
 </div>
 </div>
 <p>O gráfico de previsão de receita para os próximos cinco anos mostra uma tendência de crescimento contínuo, com a linha preta indicando a projeção central e áreas sombreadas em azul representando os intervalos de confiança de 80% e 95%. A receita histórica desde 2010 revela um aumento consistente, e a projeção sugere que esse crescimento continuará até 2028, com a incerteza aumentando ao longo do tempo, conforme evidenciado pela ampliação dos intervalos de confiança. Esses intervalos são essenciais para o planejamento estratégico e a análise de risco, fornecendo uma faixa de valores esperados em vez de um único valor fixo.</p>
 <p>A falha na linha do gráfico ocorre na transição entre os dados históricos e as previsões futuras, destacando o ponto onde terminam as observações reais e começam as estimativas geradas pelo modelo. Esta descontinuidade é intencional para diferenciar claramente os dados observados das projeções, ajudando a evitar confusão ao visualizar a tendência histórica e a previsão de crescimento futuro da receita.</p>
-</section>
-<section id="interpretação-dos-resultados" class="level3">
-<h3 class="anchored" data-anchor-id="interpretação-dos-resultados">Interpretação dos Resultados</h3>
+</section><section id="interpretação-dos-resultados" class="level3"><h3 class="anchored" data-anchor-id="interpretação-dos-resultados">Interpretação dos Resultados</h3>
 <p>A partir do modelo preditivo, podemos analisar a tendência futura da receita da empresa, possibilitando uma melhor tomada de decisão.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;"># Exibir previsões</span></span>
-<span id="cb5-2"><span class="fu" style="color: #4758AB;
+<span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">print</span>(previsao)</span></code></pre></div></div>
+font-style: inherit;"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">previsao</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     Point Forecast    Lo 80    Hi 80    Lo 95    Hi 95
 2024       1746.438 1736.867 1756.009 1731.801 1761.076
@@ -429,52 +551,253 @@ font-style: inherit;">print</span>(previsao)</span></code></pre></div></div>
 </div>
 </div>
 <p>A previsão de receita para os anos de 2024 a 2028 mostra um crescimento contínuo, começando em R$ 1746.44 em 2024 e alcançando R$ 2361,32 em 2028. Os intervalos de confiança de 80% e 95% indicam as faixas nas quais a receita provavelmente se situará, refletindo diferentes níveis de certeza. Em 2024, por exemplo, a receita deve estar entre R$ 1736,87 e R$ 1756,01 com 80% de confiança e entre R$ 1731,80 e R$ 1761,08 com 95% de confiança. Esses intervalos ajudam a quantificar a incerteza nas previsões, essenciais para o planejamento financeiro e análise de risco.</p>
-</section>
-</section>
-<section id="conclusão" class="level2">
-<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+</section></section><section id="conclusão" class="level2"><h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
 <p>Através desse exemplo simples com dados fictícios, observamos como a informação contábil, quando analisada e modelada adequadamente, pode fornecer previsões valiosas para o planejamento estratégico das organizações. As demonstrações financeiras, alinhadas às normas contábeis do CPC 00 R2, são essenciais para garantir que essas previsões sejam baseadas em dados relevantes e fidedignos.</p>
 <p>Utilizar a linguagem R para a análise preditiva permite explorar diversos modelos e técnicas estatísticas, facilitando a extração de <em>insights</em> que podem direcionar o crescimento sustentável da empresa.</p>
 <p>Este post ilustra a importância de uma contabilidade bem estruturada e da análise de dados para antecipar e responder às dinâmicas do mercado, reforçando o poder preditivo da informação contábil conforme as diretrizes do CPC 00 R2.</p>
+<div class="chamada-blog callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Dados e análises sob demanda
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Os exemplos deste blog utilizam ferramentas abertas desenvolvidas no grupo GECOMT, como o pacote <a href="../../../producao-tecnica/index.html#datacaged">datacaged</a>, que dá acesso aos microdados do emprego formal. Para análises aplicadas à realidade de uma organização, como diagnósticos do mercado de trabalho, referências salariais ou previsões, veja a página de <a href="../../../parcerias/index.html">Consultoria e parcerias</a>.</p>
+</div>
+</div>
 
 
-</section>
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citação</h2><div><div class="quarto-appendix-secondary-label">Por favor, cite este trabalho como:</div><div id="ref-prado2024" class="csl-entry quarto-appendix-citeas">
+</section></section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citação</h2><div><div class="quarto-appendix-secondary-label">Por favor, cite este trabalho como:</div><div id="ref-prado2024" class="csl-entry quarto-appendix-citeas">
 PRADO, Alexsandro. <strong>Previsão de receita</strong>. <strong>Blog de
-Alexsandro Prado</strong>, 7 jun. 2024. Disponível em: &lt;<a href="https://alexsandroprado.site/blog/posts/preditiva/preditiva.html">https://alexsandroprado.site/blog/posts/preditiva/preditiva.html</a>&gt;
+Alexsandro Prado</strong>, 7 jun. 2024. Disponível em: &lt;<a href="https://alexsandroprado.site/blog/posts/preditiva/">https://alexsandroprado.site/blog/posts/preditiva/</a>&gt;
 </div></div></section></div> ]]></description>
-  <category>econometria</category>
+  <category>Econometria</category>
   <category>R</category>
-  <guid>https://alexsandroprado.site/blog/posts/preditiva/preditiva.html</guid>
+  <guid>https://alexsandroprado.site/blog/posts/preditiva/</guid>
   <pubDate>Fri, 07 Jun 2024 03:00:00 GMT</pubDate>
   <media:content url="https://alexsandroprado.site/blog/posts/preditiva/capa.webp" medium="image" type="image/webp"/>
 </item>
 <item>
-  <title>Heterocedasticidade e Autocorrelação: como resolver na prática?</title>
+  <title>Heterocedasticidade e autocorrelação: como resolver na prática?</title>
   <dc:creator>Alexsandro Prado</dc:creator>
-  <link>https://alexsandroprado.site/blog/posts/heterocedasticidade/heterocedasticidade.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-
-<p>A heterocedasticidade e a autocorrelação são problemas comuns na análise de regressão, especialmente em séries temporais e dados econométricos, que podem afetar a validade das inferências e a análise de causalidade.</p>
+  <link>https://alexsandroprado.site/blog/posts/heterocedasticidade/</link>
+  <description><![CDATA[ <p>A heterocedasticidade e a autocorrelação são problemas comuns na análise de regressão, especialmente em séries temporais e dados econométricos, que podem afetar a validade das inferências e a análise de causalidade.</p>
 <p>Heterocedasticidade refere-se à condição em que a variância dos erros (ou resíduos) de um modelo de regressão não é constante ao longo das observações. Em outras palavras, os erros variam em intensidade dependendo do nível da variável independente. Esse problema pode levar a estimativas ineficientes dos coeficientes da regressão, fazendo com que os testes estatísticos, como o teste t e o teste F, se tornem não confiáveis. Isso significa que as inferências sobre a significância das variáveis podem ser incorretas, resultando em um erro na identificação das relações causais.</p>
 <p>Autocorrelação, por outro lado, ocorre quando os erros do modelo de regressão não são independentes uns dos outros, mas sim correlacionados ao longo do tempo ou das observações. Esse problema é particularmente prevalente em dados de séries temporais. A presença de autocorrelação indica que há padrões não capturados pelo modelo, o que pode levar a subestimação ou superestimação da variabilidade dos coeficientes de regressão. Assim como a heterocedasticidade, a autocorrelação torna os testes estatísticos tradicionais inapropriados, resultando em inferências enganosas e dificultando a análise de causalidade correta.</p>
 <p>Ambos os problemas prejudicam a capacidade de um modelo de fornecer estimativas confiáveis e podem levar à formulação de políticas ou decisões baseadas em conclusões erradas. Para mitigar esses problemas, podem ser utilizadas técnicas como a transformação dos dados, o uso de modelos robustos a heterocedasticidade e autocorrelação, ou a aplicação de modelos que explicitamente modelam a estrutura dos erros, como modelos GARCH para heterocedasticidade e modelos ARIMA para autocorrelação.</p>
-<section id="passo-1-identificar-a-heterocedasticidade" class="level1">
-<h1>Passo 1: Identificar a Heterocedasticidade</h1>
+<section id="passo-1-identificar-a-heterocedasticidade" class="level1"><h1>Passo 1: Identificar a Heterocedasticidade</h1>
 <p>Primeiro, vamos carregar alguns pacotes necessários e criar um conjunto de dados fictício:</p>
-</section>
-<section id="passo-2-ajustar-o-modelo-de-regressão-linear" class="level1">
-<h1>Passo 2: Ajustar o Modelo de Regressão Linear</h1>
+<div class="cell">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Carregar pacotes necessários</span></span>
+<span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> </span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">lmtest</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> </span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://sandwich.R-Forge.R-project.org/">sandwich</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Criar dados fictícios</span></span>
+<span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> </span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span> </span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span>, mean <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, sd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span>, mean <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, sd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> </span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5000</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">300</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span>, mean <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, sd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details>
+</div>
+</section><section id="passo-2-ajustar-o-modelo-de-regressão-linear" class="level1"><h1>Passo 2: Ajustar o Modelo de Regressão Linear</h1>
 <p>Vamos ajustar um modelo de regressão linear simples:</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar o modelo de regressão linear</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span>, data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Resumo do modelo</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
 lm(formula = salary ~ experience + education, data = data)
@@ -496,12 +819,22 @@ Multiple R-squared:  0.9299,    Adjusted R-squared:  0.9285
 F-statistic: 643.8 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
-</section>
-<section id="passo-3-diagnosticar-heterocedasticidade" class="level1">
-<h1>Passo 3: Diagnosticar Heterocedasticidade</h1>
+</section><section id="passo-3-diagnosticar-heterocedasticidade" class="level1"><h1>Passo 3: Diagnosticar Heterocedasticidade</h1>
 <p>Podemos usar o teste de Breusch-Pagan para diagnosticar a presença de heterocedasticidade</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Teste de Breusch-Pagan</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/pkg/lmtest/man/bptest.html">bptest</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
     studentized Breusch-Pagan test
 
@@ -510,12 +843,36 @@ BP = 17.285, df = 2, p-value = 0.0001764</code></pre>
 </div>
 </div>
 <p>Se o p-valor do teste for menor que 0.05, isso indica a presença de heterocedasticidade.</p>
-</section>
-<section id="passo-4-tratar-heterocedasticidade" class="level1">
-<h1>Passo 4: Tratar Heterocedasticidade</h1>
+</section><section id="passo-4-tratar-heterocedasticidade" class="level1"><h1>Passo 4: Tratar Heterocedasticidade</h1>
 <p>Uma maneira comum de tratar a heterocedasticidade é usar estimadores robustos de erro padrão. Vamos ajustar o modelo novamente com erros robustos:</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar o modelo com erros padrão robustos</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/pkg/lmtest/man/coeftest.html">coeftest</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model</span>, vcov <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://sandwich.R-Forge.R-project.org/reference/vcovHC.html">vcovHC</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model</span>, type <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HC1"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
 t test of coefficients:
 
@@ -527,16 +884,53 @@ education    320.022     26.539  12.059 &lt; 2.2e-16 ***
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
-</section>
-<section id="outras-técnicas" class="level1">
-<h1>Outras técnicas</h1>
+</section><section id="outras-técnicas" class="level1"><h1>Outras técnicas</h1>
 <p>Além do uso de estimadores robustos, existem várias outras medidas para tratar a heterocedasticidade em um modelo de regressão linear. A escolha da técnica pode depender da natureza dos dados e da estrutura da heterocedasticidade. Aqui estão algumas abordagens adicionais:</p>
-<section id="transformações-de-variáveis" class="level2">
-<h2 class="anchored" data-anchor-id="transformações-de-variáveis">1. Transformações de Variáveis</h2>
+<section id="transformações-de-variáveis" class="level2"><h2 class="anchored" data-anchor-id="transformações-de-variáveis">1. Transformações de Variáveis</h2>
 <p>Transformar a variável dependente ou independente pode ajudar a estabilizar a variância dos erros. Transformações comuns incluem:</p>
 <p>Logarítmica: Aplicar o logaritmo na variável dependente pode ser eficaz quando a variância dos erros aumenta com o valor da variável dependente.</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_log</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/Log.html">log</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span>, data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_log</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
 lm(formula = log(salary) ~ experience + education, data = data)
@@ -560,7 +954,47 @@ F-statistic:   739 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <p>Raiz Quadrada: Usar a raiz quadrada da variável dependente pode ser útil em alguns casos.</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_sqrt</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/MathFun.html">sqrt</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span>, data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_sqrt</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
 lm(formula = sqrt(salary) ~ experience + education, data = data)
@@ -582,12 +1016,102 @@ Multiple R-squared:  0.9368,    Adjusted R-squared:  0.9354
 F-statistic: 718.3 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
-</section>
-<section id="modelos-de-regressão-ponderada-wls" class="level2">
-<h2 class="anchored" data-anchor-id="modelos-de-regressão-ponderada-wls">2. Modelos de Regressão Ponderada (WLS)</h2>
+</section><section id="modelos-de-regressão-ponderada-wls" class="level2"><h2 class="anchored" data-anchor-id="modelos-de-regressão-ponderada-wls">2. Modelos de Regressão Ponderada (WLS)</h2>
 <p>Se a heterocedasticidade é sistemática, ponderar as observações pelo inverso da variância estimada dos erros pode melhorar a eficiência dos estimadores:</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Estimar pesos inversamente proporcionais à variância dos resíduos</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">weights</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/MathFun.html">abs</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/residuals.html">residuals</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/fitted.values.html">fitted</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">fitted.values</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar o modelo ponderado</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_wls</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span>, data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data</span>, weights <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">weights</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_wls</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
 lm(formula = salary ~ experience + education, data = data, weights = weights)
@@ -609,12 +1133,59 @@ Multiple R-squared:   0.97, Adjusted R-squared:  0.9694
 F-statistic:  1569 on 2 and 97 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
-</section>
-<section id="modelos-generalizados-glm" class="level2">
-<h2 class="anchored" data-anchor-id="modelos-generalizados-glm">3. Modelos Generalizados (GLM)</h2>
+</section><section id="modelos-generalizados-glm" class="level2"><h2 class="anchored" data-anchor-id="modelos-generalizados-glm">3. Modelos Generalizados (GLM)</h2>
 <p>Usar um modelo de regressão mais flexível, como os modelos lineares generalizados (GLM), pode ser apropriado. Por exemplo, a família de distribuições Gamma pode ser adequada para dados positivos com variância crescente:</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar um modelo GLM com família Gamma</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_glm</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/glm.html">glm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span>, data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data</span>, family <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/family.html">Gamma</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>link <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"log"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_glm</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
 glm(formula = salary ~ experience + education, family = Gamma(link = "log"), 
@@ -637,19 +1208,257 @@ AIC: 1528.4
 Number of Fisher Scoring iterations: 3</code></pre>
 </div>
 </div>
-</section>
-<section id="substituir-variáveis-com-novas-variáveis" class="level2">
-<h2 class="anchored" data-anchor-id="substituir-variáveis-com-novas-variáveis">4. Substituir Variáveis com Novas Variáveis</h2>
+</section><section id="substituir-variáveis-com-novas-variáveis" class="level2"><h2 class="anchored" data-anchor-id="substituir-variáveis-com-novas-variáveis">4. Substituir Variáveis com Novas Variáveis</h2>
 <p>Às vezes, a heterocedasticidade pode ser causada pela omissão de variáveis relevantes. Incluir novas variáveis que capturem a fonte da heterocedasticidade pode ajudar a corrigir o problema.</p>
-<section id="passo-1-preparação-dos-dados" class="level3">
-<h3 class="anchored" data-anchor-id="passo-1-preparação-dos-dados">Passo 1: Preparação dos Dados</h3>
+<section id="passo-1-preparação-dos-dados" class="level3"><h3 class="anchored" data-anchor-id="passo-1-preparação-dos-dados">Passo 1: Preparação dos Dados</h3>
 <p>Primeiro, vamos criar um conjunto de dados fictício que contém algumas variáveis correlacionadas e uma variável dependente.</p>
-</section>
-<section id="passo-2-ajustar-o-modelo-de-regressão-inicial" class="level3">
-<h3 class="anchored" data-anchor-id="passo-2-ajustar-o-modelo-de-regressão-inicial">Passo 2: Ajustar o Modelo de Regressão Inicial</h3>
+<div class="cell">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Carregar pacotes necessários</span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">lmtest</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://sandwich.R-Forge.R-project.org/">sandwich</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Criar dados fictícios</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span>, mean <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, sd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span>, mean <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, sd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">age</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span>, mean <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40</span>, sd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5000</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">300</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">150</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">age</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span>, mean <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, sd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">age</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details>
+</div>
+</section><section id="passo-2-ajustar-o-modelo-de-regressão-inicial" class="level3"><h3 class="anchored" data-anchor-id="passo-2-ajustar-o-modelo-de-regressão-inicial">Passo 2: Ajustar o Modelo de Regressão Inicial</h3>
 <p>Vamos ajustar um modelo de regressão linear inicial com as variáveis originais.</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar o modelo de regressão linear</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_initial</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">age</span>, data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Resumo do modelo inicial</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_initial</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
 lm(formula = salary ~ experience + education + age, data = data)
@@ -671,7 +1480,32 @@ Residual standard error: 1052 on 96 degrees of freedom
 Multiple R-squared:  0.8153,    Adjusted R-squared:  0.8095 
 F-statistic: 141.3 on 3 and 96 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Teste de Breusch-Pagan para heterocedasticidade</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">bp_test_initial</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/pkg/lmtest/man/bptest.html">bptest</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_initial</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">bp_test_initial</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
     studentized Breusch-Pagan test
 
@@ -679,16 +1513,158 @@ data:  model_initial
 BP = 1.9213, df = 3, p-value = 0.5889</code></pre>
 </div>
 </div>
-</section>
-<section id="passo-3-criar-novas-variáveis" class="level3">
-<h3 class="anchored" data-anchor-id="passo-3-criar-novas-variáveis">Passo 3: Criar Novas Variáveis</h3>
+</section><section id="passo-3-criar-novas-variáveis" class="level3"><h3 class="anchored" data-anchor-id="passo-3-criar-novas-variáveis">Passo 3: Criar Novas Variáveis</h3>
 <p>Suponhamos que a relação entre salary e as variáveis experience, education e age pode ser melhor capturada por variáveis transformadas ou interações entre elas. Vamos criar algumas novas variáveis:</p>
-</section>
-<section id="passo-4-ajustar-o-modelo-de-regressão-com-novas-variáveis" class="level3">
-<h3 class="anchored" data-anchor-id="passo-4-ajustar-o-modelo-de-regressão-com-novas-variáveis">Passo 4: Ajustar o Modelo de Regressão com Novas Variáveis</h3>
+<div class="cell">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Criar novas variáveis transformadas e de interação</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>experience_sq <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>,</span>
+<span>         education_sq <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>,</span>
+<span>         age_sq <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">age</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>,</span>
+<span>         exp_edu_interaction <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span>,</span>
+<span>         exp_age_interaction <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">age</span>,</span>
+<span>         edu_age_interaction <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">age</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details>
+</div>
+</section><section id="passo-4-ajustar-o-modelo-de-regressão-com-novas-variáveis" class="level3"><h3 class="anchored" data-anchor-id="passo-4-ajustar-o-modelo-de-regressão-com-novas-variáveis">Passo 4: Ajustar o Modelo de Regressão com Novas Variáveis</h3>
 <p>Ajustamos o modelo de regressão linear novamente, agora incluindo as novas variáveis.</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar o modelo de regressão linear com novas variáveis</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_new</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">age</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> </span>
+<span>                  <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience_sq</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education_sq</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">age_sq</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> </span>
+<span>                  <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">exp_edu_interaction</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">exp_age_interaction</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">edu_age_interaction</span>, data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Resumo do modelo novo</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_new</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
 lm(formula = salary ~ experience + education + age + experience_sq + 
@@ -718,7 +1694,32 @@ Residual standard error: 1063 on 90 degrees of freedom
 Multiple R-squared:  0.823, Adjusted R-squared:  0.8053 
 F-statistic: 46.49 on 9 and 90 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Teste de Breusch-Pagan para heterocedasticidade</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">bp_test_new</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/pkg/lmtest/man/bptest.html">bptest</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_new</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">bp_test_new</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
     studentized Breusch-Pagan test
 
@@ -726,20 +1727,296 @@ data:  model_new
 BP = 8.5597, df = 9, p-value = 0.4789</code></pre>
 </div>
 </div>
-</section>
-</section>
-<section id="análise-de-componentes-principais-pca" class="level2">
-<h2 class="anchored" data-anchor-id="análise-de-componentes-principais-pca">5. Análise de Componentes Principais (PCA)</h2>
+</section></section><section id="análise-de-componentes-principais-pca" class="level2"><h2 class="anchored" data-anchor-id="análise-de-componentes-principais-pca">5. Análise de Componentes Principais (PCA)</h2>
 <p>Se as variáveis independentes são altamente correlacionadas, o uso de PCA para reduzir a dimensionalidade pode ajudar a mitigar a heterocedasticidade.</p>
-<section id="passo-1-preparação-dos-dados-1" class="level3">
-<h3 class="anchored" data-anchor-id="passo-1-preparação-dos-dados-1">Passo 1: Preparação dos Dados</h3>
+<section id="passo-1-preparação-dos-dados-1" class="level3"><h3 class="anchored" data-anchor-id="passo-1-preparação-dos-dados-1">Passo 1: Preparação dos Dados</h3>
 <p>Vamos criar um conjunto de dados fictício com variáveis correlacionadas:</p>
-</section>
-<section id="passo-2-análise-de-componentes-principais-pca" class="level3">
-<h3 class="anchored" data-anchor-id="passo-2-análise-de-componentes-principais-pca">Passo 2: Análise de Componentes Principais (PCA)</h3>
+<div class="cell">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Carregar pacotes necessários</span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">lmtest</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://sandwich.R-Forge.R-project.org/">sandwich</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="http://www.stats.ox.ac.uk/pub/MASS4/">MASS</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Criar dados fictícios</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">123</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span>, mean <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, sd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span>, mean <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>, sd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">age</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span>, mean <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40</span>, sd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5000</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">300</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">150</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">age</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">n</span>, mean <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, sd <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">experience</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">education</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">age</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details>
+</div>
+</section><section id="passo-2-análise-de-componentes-principais-pca" class="level3"><h3 class="anchored" data-anchor-id="passo-2-análise-de-componentes-principais-pca">Passo 2: Análise de Componentes Principais (PCA)</h3>
 <p>Vamos aplicar a PCA às variáveis independentes:</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Padronizar as variáveis independentes</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data_standardized</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/scale.html">scale</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"experience"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"education"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"age"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Aplicar PCA</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">pca</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/prcomp.html">prcomp</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data_standardized</span>, center <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>, scale. <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Visualizar a proporção da variância explicada por cada componente</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">pca</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>Importance of components:
                           PC1    PC2    PC3
 Standard deviation     1.0726 0.9900 0.9324
@@ -747,12 +2024,63 @@ Proportion of Variance 0.3835 0.3267 0.2898
 Cumulative Proportion  0.3835 0.7102 1.0000</code></pre>
 </div>
 </div>
-</section>
-<section id="passo-3-seleção-de-componentes-principais" class="level3">
-<h3 class="anchored" data-anchor-id="passo-3-seleção-de-componentes-principais">Passo 3: Seleção de Componentes Principais</h3>
+</section><section id="passo-3-seleção-de-componentes-principais" class="level3"><h3 class="anchored" data-anchor-id="passo-3-seleção-de-componentes-principais">Passo 3: Seleção de Componentes Principais</h3>
 <p>Vamos escolher quantos componentes principais (PCs) utilizar com base na proporção da variância explicada:</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Adicionar os componentes principais ao dataframe original</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data_pca</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span>salary <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span>, <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">pca</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">x</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span>  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Escolhendo os 2 primeiros PCs</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ver os dados com os componentes principais</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data_pca</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>    salary        PC1        PC2
 1 22273.57 -1.6807281  1.4217451
 2 22120.70 -1.1845614  0.1235709
@@ -762,11 +2090,50 @@ Cumulative Proportion  0.3835 0.7102 1.0000</code></pre>
 6 23767.93  1.5835543 -0.5682535</code></pre>
 </div>
 </div>
-</section>
-<section id="passo-4-ajuste-do-modelo-de-regressão-linear-usando-componentes-principais" class="level3">
-<h3 class="anchored" data-anchor-id="passo-4-ajuste-do-modelo-de-regressão-linear-usando-componentes-principais">Passo 4: Ajuste do Modelo de Regressão Linear Usando Componentes Principais</h3>
+</section><section id="passo-4-ajuste-do-modelo-de-regressão-linear-usando-componentes-principais" class="level3"><h3 class="anchored" data-anchor-id="passo-4-ajuste-do-modelo-de-regressão-linear-usando-componentes-principais">Passo 4: Ajuste do Modelo de Regressão Linear Usando Componentes Principais</h3>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar o modelo de regressão linear com os componentes principais</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_pca</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">salary</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">PC1</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">PC2</span>, data <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">data_pca</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span></span>
+<span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Resumo do modelo</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_pca</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
 lm(formula = salary ~ PC1 + PC2, data = data_pca)
@@ -787,14 +2154,78 @@ Residual standard error: 2225 on 97 degrees of freedom
 Multiple R-squared:  0.03251,   Adjusted R-squared:  0.01256 
 F-statistic:  1.63 on 2 and 97 DF,  p-value: 0.2013</code></pre>
 </div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Teste de Breusch-Pagan</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">bp_test_pca</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/pkg/lmtest/man/bptest.html">bptest</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_pca</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">bp_test_pca</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
     studentized Breusch-Pagan test
 
 data:  model_pca
 BP = 0.050589, df = 2, p-value = 0.975</code></pre>
 </div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Mostrar o código em R</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Ajustar o modelo com erros padrão robustos</span></span>
+<span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">robust_se_pca</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/pkg/lmtest/man/coeftest.html">coeftest</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_pca</span>, vcov <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://sandwich.R-Forge.R-project.org/reference/vcovHC.html">vcovHC</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">model_pca</span>, type <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HC1"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">(</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">robust_se_pca</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
 t test of coefficients:
 
@@ -813,19 +2244,28 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <p>Seleção de PCs: Escolhemos os componentes principais que explicam uma proporção significativa da variância (neste exemplo, usamos os dois primeiros PCs).</p>
 <p>Ajuste do Modelo: Ajustamos o modelo de regressão linear utilizando os componentes principais selecionados.</p>
 <p>Diagnóstico e Ajuste Robusto: Realizamos o teste de Breusch-Pagan para verificar a presença de heterocedasticidade e ajustamos o modelo com erros padrão robustos, se necessário.</p>
+<div class="chamada-blog callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Dados e análises sob demanda
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Os exemplos deste blog utilizam ferramentas abertas desenvolvidas no grupo GECOMT, como o pacote <a href="../../../producao-tecnica/index.html#datacaged">datacaged</a>, que dá acesso aos microdados do emprego formal. Para análises aplicadas à realidade de uma organização, como diagnósticos do mercado de trabalho, referências salariais ou previsões, veja a página de <a href="../../../parcerias/index.html">Consultoria e parcerias</a>.</p>
+</div>
+</div>
 
 
-</section>
-</section>
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citação</h2><div><div class="quarto-appendix-secondary-label">Por favor, cite este trabalho como:</div><div id="ref-prado2024" class="csl-entry quarto-appendix-citeas">
-PRADO, Alexsandro. <strong>Heterocedasticidade e Autocorrelação: como
+</section></section></section><a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citação</h2><div><div class="quarto-appendix-secondary-label">Por favor, cite este trabalho como:</div><div id="ref-prado2024" class="csl-entry quarto-appendix-citeas">
+PRADO, Alexsandro. <strong>Heterocedasticidade e autocorrelação: como
 resolver na prática?</strong> <strong>Blog de Alexsandro Prado</strong>,
-22 maio 2024. Disponível em: &lt;<a href="https://alexsandroprado.site/blog/posts/heterocedasticidade/heterocedasticidade.html">https://alexsandroprado.site/blog/posts/heterocedasticidade/heterocedasticidade.html</a>&gt;
+22 maio 2024. Disponível em: &lt;<a href="https://alexsandroprado.site/blog/posts/heterocedasticidade/">https://alexsandroprado.site/blog/posts/heterocedasticidade/</a>&gt;
 </div></div></section></div> ]]></description>
-  <category>econometria</category>
-  <guid>https://alexsandroprado.site/blog/posts/heterocedasticidade/heterocedasticidade.html</guid>
+  <category>Econometria</category>
+  <guid>https://alexsandroprado.site/blog/posts/heterocedasticidade/</guid>
   <pubDate>Wed, 22 May 2024 03:00:00 GMT</pubDate>
   <media:content url="https://alexsandroprado.site/blog/posts/heterocedasticidade/capa.webp" medium="image" type="image/webp"/>
 </item>

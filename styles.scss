@@ -1081,3 +1081,9 @@ main.content > #title-block-header {
     color: #15803d;
   }
 }
+
+// Chamada ao fim dos posts do blog
+.chamada-blog.callout {
+  margin-top: 2.5rem;
+  border-left-color: var(--ap-accent) !important;
+}

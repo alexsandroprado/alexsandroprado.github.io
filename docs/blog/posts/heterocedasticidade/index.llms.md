@@ -10,9 +10,39 @@ Ambos os problemas prejudicam a capacidade de um modelo de fornecer estimativas 
 
 Primeiro, vamos carregar alguns pacotes necessários e criar um conjunto de dados fictício:
 
+Mostrar o código em R
+
+``` downlit
+# Carregar pacotes necessários
+
+library(ggplot2) 
+library(lmtest) 
+library(sandwich)
+
+# Criar dados fictícios
+
+set.seed(123) 
+n <- 100 
+experience <- rnorm(n, mean = 5, sd = 2)
+education <- rnorm(n, mean = 16, sd = 2) 
+salary <- 5000 + 1000 * experience + 300 * education + rnorm(n, mean = 0, sd = experience *100)
+
+data <- data.frame(salary, experience, education)
+```
+
 # Passo 2: Ajustar o Modelo de Regressão Linear
 
 Vamos ajustar um modelo de regressão linear simples:
+
+Mostrar o código em R
+
+``` downlit
+# Ajustar o modelo de regressão linear
+model <- lm(salary ~ experience + education, data = data)
+
+# Resumo do modelo
+summary(model)
+```
 
     Call:
     lm(formula = salary ~ experience + education, data = data)
@@ -37,6 +67,13 @@ Vamos ajustar um modelo de regressão linear simples:
 
 Podemos usar o teste de Breusch-Pagan para diagnosticar a presença de heterocedasticidade
 
+Mostrar o código em R
+
+``` downlit
+# Teste de Breusch-Pagan
+bptest(model)
+```
+
         studentized Breusch-Pagan test
 
     data:  model
@@ -47,6 +84,13 @@ Se o p-valor do teste for menor que 0.05, isso indica a presença de heterocedas
 # Passo 4: Tratar Heterocedasticidade
 
 Uma maneira comum de tratar a heterocedasticidade é usar estimadores robustos de erro padrão. Vamos ajustar o modelo novamente com erros robustos:
+
+Mostrar o código em R
+
+``` downlit
+# Ajustar o modelo com erros padrão robustos
+coeftest(model, vcov = vcovHC(model, type = "HC1"))
+```
 
     t test of coefficients:
 
@@ -66,6 +110,13 @@ Além do uso de estimadores robustos, existem várias outras medidas para tratar
 Transformar a variável dependente ou independente pode ajudar a estabilizar a variância dos erros. Transformações comuns incluem:
 
 Logarítmica: Aplicar o logaritmo na variável dependente pode ser eficaz quando a variância dos erros aumenta com o valor da variável dependente.
+
+Mostrar o código em R
+
+``` downlit
+model_log <- lm(log(salary) ~ experience + education, data = data)
+summary(model_log)
+```
 
     Call:
     lm(formula = log(salary) ~ experience + education, data = data)
@@ -87,6 +138,13 @@ Logarítmica: Aplicar o logaritmo na variável dependente pode ser eficaz quando
     F-statistic:   739 on 2 and 97 DF,  p-value: < 2.2e-16
 
 Raiz Quadrada: Usar a raiz quadrada da variável dependente pode ser útil em alguns casos.
+
+Mostrar o código em R
+
+``` downlit
+model_sqrt <- lm(sqrt(salary) ~ experience + education, data = data)
+summary(model_sqrt)
+```
 
     Call:
     lm(formula = sqrt(salary) ~ experience + education, data = data)
@@ -111,6 +169,17 @@ Raiz Quadrada: Usar a raiz quadrada da variável dependente pode ser útil em al
 
 Se a heterocedasticidade é sistemática, ponderar as observações pelo inverso da variância estimada dos erros pode melhorar a eficiência dos estimadores:
 
+Mostrar o código em R
+
+``` downlit
+# Estimar pesos inversamente proporcionais à variância dos resíduos
+weights <- 1 / lm(abs(residuals(model)) ~ fitted(model))$fitted.values^2
+
+# Ajustar o modelo ponderado
+model_wls <- lm(salary ~ experience + education, data = data, weights = weights)
+summary(model_wls)
+```
+
     Call:
     lm(formula = salary ~ experience + education, data = data, weights = weights)
 
@@ -133,6 +202,14 @@ Se a heterocedasticidade é sistemática, ponderar as observações pelo inverso
 ## 3. Modelos Generalizados (GLM)
 
 Usar um modelo de regressão mais flexível, como os modelos lineares generalizados (GLM), pode ser apropriado. Por exemplo, a família de distribuições Gamma pode ser adequada para dados positivos com variância crescente:
+
+Mostrar o código em R
+
+``` downlit
+# Ajustar um modelo GLM com família Gamma
+model_glm <- glm(salary ~ experience + education, data = data, family = Gamma(link = "log"))
+summary(model_glm)
+```
 
     Call:
     glm(formula = salary ~ experience + education, family = Gamma(link = "log"), 
@@ -162,9 +239,39 @@ Usar um modelo de regressão mais flexível, como os modelos lineares generaliza
 
 Primeiro, vamos criar um conjunto de dados fictício que contém algumas variáveis correlacionadas e uma variável dependente.
 
+Mostrar o código em R
+
+``` downlit
+# Carregar pacotes necessários
+library(ggplot2)
+library(lmtest)
+library(sandwich)
+library(dplyr)
+
+# Criar dados fictícios
+set.seed(123)
+n <- 100
+experience <- rnorm(n, mean = 5, sd = 2)
+education <- rnorm(n, mean = 16, sd = 2)
+age <- rnorm(n, mean = 40, sd = 10)
+salary <- 5000 + 1000 * experience + 300 * education + 150 * age + rnorm(n, mean = 0, sd = 1000)
+
+data <- data.frame(salary, experience, education, age)
+```
+
 ### Passo 2: Ajustar o Modelo de Regressão Inicial
 
 Vamos ajustar um modelo de regressão linear inicial com as variáveis originais.
+
+Mostrar o código em R
+
+``` downlit
+# Ajustar o modelo de regressão linear
+model_initial <- lm(salary ~ experience + education + age, data = data)
+
+# Resumo do modelo inicial
+summary(model_initial)
+```
 
     Call:
     lm(formula = salary ~ experience + education + age, data = data)
@@ -186,6 +293,14 @@ Vamos ajustar um modelo de regressão linear inicial com as variáveis originais
     Multiple R-squared:  0.8153,    Adjusted R-squared:  0.8095 
     F-statistic: 141.3 on 3 and 96 DF,  p-value: < 2.2e-16
 
+Mostrar o código em R
+
+``` downlit
+# Teste de Breusch-Pagan para heterocedasticidade
+bp_test_initial <- bptest(model_initial)
+print(bp_test_initial)
+```
+
         studentized Breusch-Pagan test
 
     data:  model_initial
@@ -195,9 +310,34 @@ Vamos ajustar um modelo de regressão linear inicial com as variáveis originais
 
 Suponhamos que a relação entre salary e as variáveis experience, education e age pode ser melhor capturada por variáveis transformadas ou interações entre elas. Vamos criar algumas novas variáveis:
 
+Mostrar o código em R
+
+``` downlit
+# Criar novas variáveis transformadas e de interação
+data <- data %>%
+  mutate(experience_sq = experience^2,
+         education_sq = education^2,
+         age_sq = age^2,
+         exp_edu_interaction = experience * education,
+         exp_age_interaction = experience * age,
+         edu_age_interaction = education * age)
+```
+
 ### Passo 4: Ajustar o Modelo de Regressão com Novas Variáveis
 
 Ajustamos o modelo de regressão linear novamente, agora incluindo as novas variáveis.
+
+Mostrar o código em R
+
+``` downlit
+# Ajustar o modelo de regressão linear com novas variáveis
+model_new <- lm(salary ~ experience + education + age + 
+                  experience_sq + education_sq + age_sq + 
+                  exp_edu_interaction + exp_age_interaction + edu_age_interaction, data = data)
+
+# Resumo do modelo novo
+summary(model_new)
+```
 
     Call:
     lm(formula = salary ~ experience + education + age + experience_sq + 
@@ -227,6 +367,14 @@ Ajustamos o modelo de regressão linear novamente, agora incluindo as novas vari
     Multiple R-squared:  0.823, Adjusted R-squared:  0.8053 
     F-statistic: 46.49 on 9 and 90 DF,  p-value: < 2.2e-16
 
+Mostrar o código em R
+
+``` downlit
+# Teste de Breusch-Pagan para heterocedasticidade
+bp_test_new <- bptest(model_new)
+print(bp_test_new)
+```
+
         studentized Breusch-Pagan test
 
     data:  model_new
@@ -240,9 +388,43 @@ Se as variáveis independentes são altamente correlacionadas, o uso de PCA para
 
 Vamos criar um conjunto de dados fictício com variáveis correlacionadas:
 
+Mostrar o código em R
+
+``` downlit
+# Carregar pacotes necessários
+library(ggplot2)
+library(lmtest)
+library(sandwich)
+library(MASS)
+library(dplyr)
+
+# Criar dados fictícios
+set.seed(123)
+n <- 100
+experience <- rnorm(n, mean = 5, sd = 2)
+education <- rnorm(n, mean = 16, sd = 2)
+age <- rnorm(n, mean = 40, sd = 10)
+salary <- 5000 + 1000 * experience + 300 * education + 150 * age + rnorm(n, mean = 0, sd = experience * 100)
+
+data <- data.frame(salary, experience, education, age)
+```
+
 ### Passo 2: Análise de Componentes Principais (PCA)
 
 Vamos aplicar a PCA às variáveis independentes:
+
+Mostrar o código em R
+
+``` downlit
+# Padronizar as variáveis independentes
+data_standardized <- scale(data[, c("experience", "education", "age")])
+
+# Aplicar PCA
+pca <- prcomp(data_standardized, center = TRUE, scale. = TRUE)
+
+# Visualizar a proporção da variância explicada por cada componente
+summary(pca)
+```
 
     Importance of components:
                               PC1    PC2    PC3
@@ -254,6 +436,16 @@ Vamos aplicar a PCA às variáveis independentes:
 
 Vamos escolher quantos componentes principais (PCs) utilizar com base na proporção da variância explicada:
 
+Mostrar o código em R
+
+``` downlit
+# Adicionar os componentes principais ao dataframe original
+data_pca <- data.frame(salary = data$salary, pca$x[, 1:2])  # Escolhendo os 2 primeiros PCs
+
+# Ver os dados com os componentes principais
+head(data_pca)
+```
+
         salary        PC1        PC2
     1 22273.57 -1.6807281  1.4217451
     2 22120.70 -1.1845614  0.1235709
@@ -263,6 +455,16 @@ Vamos escolher quantos componentes principais (PCs) utilizar com base na propor�
     6 23767.93  1.5835543 -0.5682535
 
 ### Passo 4: Ajuste do Modelo de Regressão Linear Usando Componentes Principais
+
+Mostrar o código em R
+
+``` downlit
+# Ajustar o modelo de regressão linear com os componentes principais
+model_pca <- lm(salary ~ PC1 + PC2, data = data_pca)
+
+# Resumo do modelo
+summary(model_pca)
+```
 
     Call:
     lm(formula = salary ~ PC1 + PC2, data = data_pca)
@@ -283,10 +485,26 @@ Vamos escolher quantos componentes principais (PCs) utilizar com base na propor�
     Multiple R-squared:  0.03251,   Adjusted R-squared:  0.01256 
     F-statistic:  1.63 on 2 and 97 DF,  p-value: 0.2013
 
+Mostrar o código em R
+
+``` downlit
+# Teste de Breusch-Pagan
+bp_test_pca <- bptest(model_pca)
+print(bp_test_pca)
+```
+
         studentized Breusch-Pagan test
 
     data:  model_pca
     BP = 0.050589, df = 2, p-value = 0.975
+
+Mostrar o código em R
+
+``` downlit
+# Ajustar o modelo com erros padrão robustos
+robust_se_pca <- coeftest(model_pca, vcov = vcovHC(model_pca, type = "HC1"))
+print(robust_se_pca)
+```
 
     t test of coefficients:
 
@@ -311,10 +529,14 @@ Ajuste do Modelo: Ajustamos o modelo de regressão linear utilizando os componen
 
 Diagnóstico e Ajuste Robusto: Realizamos o teste de Breusch-Pagan para verificar a presença de heterocedasticidade e ajustamos o modelo com erros padrão robustos, se necessário.
 
+> **NOTE:**
+>
+> Os exemplos deste blog utilizam ferramentas abertas desenvolvidas no grupo GECOMT, como o pacote [datacaged](../../../producao-tecnica/index.llms.md#datacaged), que dá acesso aos microdados do emprego formal. Para análises aplicadas à realidade de uma organização, como diagnósticos do mercado de trabalho, referências salariais ou previsões, veja a página de [Consultoria e parcerias](../../../parcerias/index.llms.md).
+
 De volta ao topo
 
 ## Citação
 
 Por favor, cite este trabalho como:
 
-PRADO, Alexsandro. **Heterocedasticidade e Autocorrelação: como resolver na prática?** **Blog de Alexsandro Prado**, 22 maio 2024. Disponível em: \<<https://alexsandroprado.site/blog/posts/heterocedasticidade/heterocedasticidade.html>\>
+PRADO, Alexsandro. **Heterocedasticidade e autocorrelação: como resolver na prática?** **Blog de Alexsandro Prado**, 22 maio 2024. Disponível em: \<<https://alexsandroprado.site/blog/posts/heterocedasticidade/>\>

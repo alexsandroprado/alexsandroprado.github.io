@@ -17,9 +17,9 @@
   {
     "listing": "/blog/index.html",
     "items": [
-      "/blog/posts/contabdata/contabdata.html",
-      "/blog/posts/preditiva/preditiva.html",
-      "/blog/posts/heterocedasticidade/heterocedasticidade.html"
+      "/blog/posts/contabdata/index.html",
+      "/blog/posts/preditiva/index.html",
+      "/blog/posts/heterocedasticidade/index.html"
     ]
   },
   {
