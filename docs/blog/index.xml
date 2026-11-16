@@ -24,8 +24,8 @@
 <p>Dessa forma, este texto é ele próprio um notebook: os blocos marcados com <code>{r}</code> são executados em R, os marcados com <code>{python}</code>, em Python, e ambos consultam o mesmo <code>caged.duckdb</code>, com as competências de julho a setembro de 2026 do Novo CAGED.</p>
 <div class="download-notebook">
 <p><span class="dn-cabecalho"><span class="dn-rotulo">Notebook para download</span></span></p>
-<p><strong>caged-r-python.qmd</strong>: o código completo deste texto em um único arquivo, com blocos em R e em Python, pronto para abrir no RStudio, no Positron ou no VS Code.</p>
-<p><a href="caged-r-python.qmd" class="btn btn-primary dn-botao" download="caged-r-python.qmd"> Baixar o notebook (.qmd)</a></p>
+<p><strong>caged-r-python.ipynb</strong>: este roteiro em formato Jupyter, já executado e com os resultados, para abrir no Jupyter, no VS Code ou no Google Colab. O <em>kernel</em> é o Python, e as células em R são executadas pelo comando mágico <code>%%R</code> do pacote <code>rpy2</code>, que também faz a troca de tabelas entre as linguagens (<code>-i</code> e <code>-o</code>), no lugar do <code>reticulate</code>.</p>
+<p><a href="caged-r-python.ipynb" class="btn btn-primary dn-botao" download="caged-r-python.ipynb"> Baixar o notebook (.ipynb)</a> <a href="https://colab.research.google.com/github/alexsandroprado/alexsandroprado.github.io/blob/master/blog/posts/datacaged-python/caged-r-python.ipynb" class="btn btn-outline-primary dn-botao"> Abrir no Google Colab</a></p>
 </div>
 <section id="requisitos" class="level2"><h2 class="anchored" data-anchor-id="requisitos">Requisitos</h2>
 <p>Em R, são necessários o <code>datacaged</code>, o <code>duckdb</code>, o <code>dplyr</code>, o <code>tidyr</code>, o <code>ggplot2</code> e o <code>reticulate</code>; em Python, o <code>duckdb</code>, o <code>pandas</code>, o <code>polars</code> e o <code>matplotlib</code>:</p>
@@ -554,7 +554,7 @@ font-style: inherit;">"Saldo (admissões menos desligamentos)"</span>)</span>
 <span id="cb13-8">plt.tight_layout()</span>
 <span id="cb13-9">plt.show()</span></code></pre></div></div>
 <div class="cell-output-display">
-<div id="fig-regioes" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil.">
+<div id="fig-regioes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil." loading="lazy">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-regioes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/datacaged-python/index_files/figure-html/fig-regioes-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil." width="672">
 </div>
@@ -904,7 +904,7 @@ font-style: inherit;">"top"</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
-<div id="fig-contadores" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais.">
+<div id="fig-contadores" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais." loading="lazy">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-contadores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/datacaged-python/index_files/figure-html/fig-contadores-3.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais." width="672">
 </div>
@@ -936,7 +936,7 @@ font-style: inherit;">"""</span>)</span></code></pre></div></div>
 </div>
 </section><section id="considerações" class="level2"><h2 class="anchored" data-anchor-id="considerações">Considerações</h2>
 <p>Em suma, o <code>caged.duckdb</code> funciona como um ponto de encontro entre linguagens: o <code>datacaged</code> cuida do download, da padronização e da atualização dos microdados, e R e Python realizam a análise sobre o mesmo arquivo, sem duplicação de dados. Em um único notebook, cada etapa pode ser escrita na linguagem mais conveniente, seja o <code>dplyr</code> e o <code>ggplot2</code> no R, seja o <code>pandas</code>, o <code>Polars</code> e o <code>matplotlib</code> no Python, com os resultados circulando entre elas por meio do <code>reticulate</code>.</p>
-<p><a href="caged-r-python.qmd" class="btn btn-outline-primary dn-botao" download="caged-r-python.qmd"> Baixar o notebook completo (caged-r-python.qmd)</a></p>
+<p><a href="caged-r-python.ipynb" class="btn btn-outline-primary dn-botao" download="caged-r-python.ipynb"> Baixar o notebook completo (caged-r-python.ipynb)</a></p>
 <div class="chamada-blog callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1231,7 +1231,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 <p>A Figura&nbsp;1 apresenta o saldo mensal de empregos formais no Rio Grande do Norte calculado exatamente com esse procedimento. Os mesmos dados alimentam os <a href="../../../producao-tecnica/index.html#indicadores">indicadores do emprego formal</a> publicados neste site, atualizados automaticamente a cada nova divulgação do MTE.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-saldo-rn" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de barras do saldo mensal de empregos formais no Rio Grande do Norte de janeiro de 2024 a setembro de 2026, com saldos positivos na maior parte dos meses, picos entre julho e setembro e saldos negativos em dezembro e em alguns meses do início do ano.">
+<div id="fig-saldo-rn" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras do saldo mensal de empregos formais no Rio Grande do Norte de janeiro de 2024 a setembro de 2026, com saldos positivos na maior parte dos meses, picos entre julho e setembro e saldos negativos em dezembro e em alguns meses do início do ano." loading="lazy">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-saldo-rn-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/datacaged-tutorial/index_files/figure-html/fig-saldo-rn-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de barras do saldo mensal de empregos formais no Rio Grande do Norte de janeiro de 2024 a setembro de 2026, com saldos positivos na maior parte dos meses, picos entre julho e setembro e saldos negativos em dezembro e em alguns meses do início do ano." width="672">
 </div>
@@ -1359,7 +1359,7 @@ Tabela&nbsp;1&nbsp;- Admissões, saldo e salário médio de admissão das ocupa�
 <p>No entanto, o saldo (admissões menos desligamentos) revela trajetórias distintas. Enquanto os auxiliares de contabilidade mantêm saldo positivo (7.178 vínculos no período), os contadores registram saldo negativo (-2.598), resultado que se repete desde 2023, conforme a Figura&nbsp;1. Em outras palavras, as empresas contratam contadores com frequência crescente, mas os desligamentos crescem ainda mais rapidamente.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-saldo" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de barras do saldo anual de 2020 a 2026: os auxiliares de contabilidade têm saldo positivo em todos os anos, entre cerca de 3 mil e 12,5 mil vínculos, enquanto os contadores alternam saldos positivos em 2021 e 2022 e negativos nos demais anos, entre -2,2 mil e -3,6 mil vínculos.">
+<div id="fig-saldo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras do saldo anual de 2020 a 2026: os auxiliares de contabilidade têm saldo positivo em todos os anos, entre cerca de 3 mil e 12,5 mil vínculos, enquanto os contadores alternam saldos positivos em 2021 e 2022 e negativos nos demais anos, entre -2,2 mil e -3,6 mil vínculos." loading="lazy">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-saldo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/mercado-contabil-2026/index_files/figure-html/fig-saldo-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de barras do saldo anual de 2020 a 2026: os auxiliares de contabilidade têm saldo positivo em todos os anos, entre cerca de 3 mil e 12,5 mil vínculos, enquanto os contadores alternam saldos positivos em 2021 e 2022 e negativos nos demais anos, entre -2,2 mil e -3,6 mil vínculos." width="672">
 </div>
@@ -1375,7 +1375,7 @@ Figura&nbsp;1&nbsp;- Saldo anual de empregos formais de contadores e de auxiliar
 <p>Quanto à remuneração, o salário médio de admissão dos contadores alcançou R$ 5.403 em 2026, valor 5,0% superior ao do mesmo período de 2025. Entre 2020 e 2025, considerando os anos completos, o salário de admissão da ocupação passou de R$ 4.085 para R$ 5.227, crescimento nominal de 28,0% (Figura&nbsp;2). Ressalta-se que os valores não foram deflacionados, de modo que parte desse aumento reflete a inflação do período.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-salario" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de linhas do salário médio de admissão de 2020 a 2026: auditores e contadores no patamar mais alto, entre 4 mil e 5,8 mil reais; técnicos de contabilidade entre 2,8 mil e 4,1 mil reais; auxiliares de contabilidade no patamar mais baixo, de 1,8 mil a 2,6 mil reais. Todas as linhas crescem, exceto a dos auditores, que cai em 2026.">
+<div id="fig-salario" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de linhas do salário médio de admissão de 2020 a 2026: auditores e contadores no patamar mais alto, entre 4 mil e 5,8 mil reais; técnicos de contabilidade entre 2,8 mil e 4,1 mil reais; auxiliares de contabilidade no patamar mais baixo, de 1,8 mil a 2,6 mil reais. Todas as linhas crescem, exceto a dos auditores, que cai em 2026." loading="lazy">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-salario-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/mercado-contabil-2026/index_files/figure-html/fig-salario-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de linhas do salário médio de admissão de 2020 a 2026: auditores e contadores no patamar mais alto, entre 4 mil e 5,8 mil reais; técnicos de contabilidade entre 2,8 mil e 4,1 mil reais; auxiliares de contabilidade no patamar mais baixo, de 1,8 mil a 2,6 mil reais. Todas as linhas crescem, exceto a dos auditores, que cai em 2026." width="672">
 </div>

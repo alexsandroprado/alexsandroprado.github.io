@@ -6,7 +6,7 @@ project:
   render:
     - "*.qmd"
     - "!README.md"
-    - "!blog/posts/*/caged-r-python.qmd"
+    - "!blog/posts/*/*.ipynb"
   resources:
     - "assets/katex/**"
     - "assets/js/**"

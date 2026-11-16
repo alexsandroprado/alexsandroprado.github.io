@@ -15,7 +15,7 @@ twitter-card:
 execute:
   echo: true
 resources:
-  - caged-r-python.qmd
+  - caged-r-python.ipynb
 ---
 
 ```{r}
@@ -31,9 +31,9 @@ Dessa forma, este texto é ele próprio um notebook: os blocos marcados com `{r}
 ::: {.download-notebook}
 [[Notebook para download]{.dn-rotulo}]{.dn-cabecalho}
 
-**caged-r-python.qmd**: o código completo deste texto em um único arquivo, com blocos em R e em Python, pronto para abrir no RStudio, no Positron ou no VS Code.
+**caged-r-python.ipynb**: este roteiro em formato Jupyter, já executado e com os resultados, para abrir no Jupyter, no VS Code ou no Google Colab. O *kernel* é o Python, e as células em R são executadas pelo comando mágico `%%R` do pacote `rpy2`, que também faz a troca de tabelas entre as linguagens (`-i` e `-o`), no lugar do `reticulate`.
 
-[<i class="bi bi-download" aria-hidden="true"></i> Baixar o notebook (.qmd)](caged-r-python.qmd){.btn .btn-primary .dn-botao download="caged-r-python.qmd"}
+[<i class="bi bi-download" aria-hidden="true"></i> Baixar o notebook (.ipynb)](caged-r-python.ipynb){.btn .btn-primary .dn-botao download="caged-r-python.ipynb"} [<i class="bi bi-google" aria-hidden="true"></i> Abrir no Google Colab](https://colab.research.google.com/github/alexsandroprado/alexsandroprado.github.io/blob/master/blog/posts/datacaged-python/caged-r-python.ipynb){.btn .btn-outline-primary .dn-botao}
 :::
 
 ## Requisitos
@@ -221,6 +221,6 @@ con.close()
 
 Em suma, o `caged.duckdb` funciona como um ponto de encontro entre linguagens: o `datacaged` cuida do download, da padronização e da atualização dos microdados, e R e Python realizam a análise sobre o mesmo arquivo, sem duplicação de dados. Em um único notebook, cada etapa pode ser escrita na linguagem mais conveniente, seja o `dplyr` e o `ggplot2` no R, seja o `pandas`, o `Polars` e o `matplotlib` no Python, com os resultados circulando entre elas por meio do `reticulate`.
 
-[<i class="bi bi-download" aria-hidden="true"></i> Baixar o notebook completo (caged-r-python.qmd)](caged-r-python.qmd){.btn .btn-outline-primary .dn-botao download="caged-r-python.qmd"}
+[<i class="bi bi-download" aria-hidden="true"></i> Baixar o notebook completo (caged-r-python.ipynb)](caged-r-python.ipynb){.btn .btn-outline-primary .dn-botao download="caged-r-python.ipynb"}
 
 {{< include ../_chamada.qmd >}}
