@@ -1,7 +1,6 @@
 ---
 title: "Segmentos de listagem da B3: um painel verificado de 2010 a 2026"
 date: "2026-11-16"
-draft: true
 categories:
   - Mercado de capitais
   - Dados abertos

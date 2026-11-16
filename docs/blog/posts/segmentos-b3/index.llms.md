@@ -1,0 +1,50 @@
+Os segmentos especiais de listagem da B3 (Nível 1, Nível 2, Novo Mercado e, até 2026, Bovespa Mais) são amplamente utilizados na pesquisa em contabilidade e finanças como indicadores de governança corporativa, tendo em vista que a adesão a eles implica compromissos adicionais com os acionistas minoritários e com a divulgação de informações. No entanto, observa-se uma carência de bases públicas que informem o segmento de cada companhia ao longo do tempo, o que leva os pesquisadores a recorrer a listas atuais da bolsa, que não registram as migrações passadas, ou a coletas manuais, de difícil reprodução.
+
+Nesse sentido, o [painel de segmentos de listagem da B3](../../../producao-tecnica/index.llms.md#segmentos-b3) disponibiliza o segmento vigente em 31 de dezembro de cada ano para 602 companhias abertas brasileiras entre 2010 e 2026, totalizando 5.904 observações. A base é aberta (licença CC BY 4.0) e está disponível em formatos para R, Stata, CSV e Excel.
+
+## Como a base foi construída
+
+A única fonte pública que registra o segmento de cada companhia ano a ano é o Formulário Cadastral (FCA), disponível no Portal de Dados Abertos da Comissão de Valores Mobiliários (CVM). Contudo, o uso direto desse formulário apresenta dois problemas: (i) nos formulários anteriores a 2018, os rótulos de segmento aparecem deslocados em relação à nomenclatura atual (o rótulo “Nível 1”, por exemplo, corresponde ao Novo Mercado); e (ii) em anos posteriores há preenchimentos desatualizados ou incorretos.
+
+Para isso, o processamento seguiu quatro etapas: 1) leitura dos formulários de 2010 a 2026, mantendo ações, *units* e certificados de depósito com segmento informado; 2) recodificação dos rótulos antigos, validada com companhias de segmento conhecido; 3) identificação de períodos e mudanças de segmento, com detecção de anomalias; e 4) conferência de cada mudança em fatos relevantes, comunicados e atas do sistema de Informações Periódicas e Eventuais (IPE) da CVM. Das 79 mudanças de segmento identificadas, 64 foram confirmadas por documento da CVM, e 41 companhias tiveram o painel corrigido quando a fonte oficial contradisse o formulário. A metodologia completa, com cada decisão documentada, encontra-se no [repositório da base](https://github.com/alexsandroprado/segmentos-b3).
+
+## O que os dados mostram
+
+Conforme a [Figura 1](#fig-participacao), a participação do Novo Mercado no total de companhias com segmento informado passou de 33,4% em 2010 para 49,4% em 2025, e a dos segmentos diferenciados em conjunto, de 49,3% para 64,8%. Nota-se que o avanço ocorreu sobretudo entre 2019 e 2021, quando o número de companhias no Novo Mercado passou de 149 para 201, período que coincide com a concentração de ofertas públicas iniciais na bolsa brasileira.
+
+![Gráfico de áreas empilhadas de 2010 a 2025: o Novo Mercado cresce de cerca de um terço para metade das companhias, o segmento Básico encolhe de cerca de metade para pouco mais de um terço, e Nível 1, Nível 2 e Bovespa Mais ocupam faixas estreitas.](index_files/figure-html/fig-participacao-1.png)
+
+Figura 1 - Participação dos segmentos de listagem da B3 no total de companhias abertas, 2010 a 2025
+
+Fonte: elaborado pelo autor com dados do painel de segmentos de listagem da B3, a partir do FCA/CVM (2026). Nota: antes de 2018 não é possível distinguir o Bovespa Mais do segmento Básico.
+
+Por outro lado, as migrações entre segmentos são relativamente raras. Ao longo de todo o período, 29 mudanças tiveram o Novo Mercado como destino e 14 tiveram origem nele, das quais 13 em direção ao segmento Básico. Dessa forma, o crescimento do Novo Mercado decorre principalmente da entrada de novas companhias, e não da migração das já listadas. Ressalta-se, ainda, a extinção do Bovespa Mais pela B3 em março de 2026, que levou as companhias remanescentes a migrar para outros segmentos.
+
+## Como utilizar
+
+Em R, o painel pode ser lido diretamente do repositório:
+
+``` downlit
+url <- "https://raw.githubusercontent.com/alexsandroprado/segmentos-b3/main/dados/painel_segmentos_b3.csv"
+painel <- readr::read_csv2(url)
+
+table(painel$ano, painel$segmento)
+```
+
+Para estudos empíricos, recomenda-se utilizar as variáveis binárias `novo_mercado` e `nivel_diferenciado`, ou o segmento como fator, em vez do código numérico `seg_cod`, cuja ordem não deve ser interpretada como escala de governança. Além disso, em estudos de evento, as datas oficiais de cada migração encontram-se no arquivo `transicoes.csv`, com o link para o documento correspondente na CVM.
+
+## Considerações
+
+Em linhas gerais, a base reduz o custo de construção de uma variável recorrente na literatura de governança corporativa e, sobretudo, torna a escolha auditável, uma vez que cada correção está documentada com a respectiva fonte. Entre as limitações, destacam-se a ausência de dados anteriores a 2010, o menor número de formulários disponíveis entre 2011 e 2013 e o tratamento de reorganizações com troca de CNPJ como companhias distintas. Sugestões e correções podem ser enviadas por meio do repositório no GitHub.
+
+> **NOTE:**
+>
+> Os exemplos deste blog utilizam ferramentas abertas desenvolvidas no grupo GECOMT, como o pacote [datacaged](../../../producao-tecnica/index.llms.md#datacaged), que dá acesso aos microdados do emprego formal. Para análises aplicadas à realidade de uma organização, como diagnósticos do mercado de trabalho, referências salariais ou previsões, veja a página de [Consultoria e parcerias](../../../parcerias/index.llms.md).
+
+De volta ao topo
+
+## Citação
+
+Por favor, cite este trabalho como:
+
+PRADO, Alexsandro. **Segmentos de listagem da B3: um painel verificado de 2010 a 2026**. **Blog de Alexsandro Prado**, 16 nov. 2026. Disponível em: \<<https://alexsandroprado.site/blog/posts/segmentos-b3/>\>
