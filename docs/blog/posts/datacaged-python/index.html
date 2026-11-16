@@ -80,9 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-3e64db84d37dea41f36a9f8c79e61bb0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-1a5a1301f95bb4b16d7240ae25c84662.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-600cc3afc6f83a59d799c596c3935ed2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/bootstrap/bootstrap-dark-6422df623a12f4e78606cfff81464e4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-1a5a1301f95bb4b16d7240ae25c84662.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/bootstrap/bootstrap-600cc3afc6f83a59d799c596c3935ed2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -458,7 +458,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content"><p>O pacote <a href="../../../producao-tecnica/index.html#datacaged">datacaged</a>, escrito em R, grava os microdados do Cadastro Geral de Empregados e Desempregados (CAGED) em um arquivo DuckDB, por padrão chamado <code>caged.duckdb</code>. No entanto, esse arquivo não pertence ao R: o DuckDB é um banco analítico embutido, com bibliotecas para diversas linguagens, de modo que a mesma base pode ser lida em Python sem qualquer conversão. Além disso, um notebook Quarto (arquivo <code>.qmd</code>) admite blocos de código das duas linguagens no mesmo documento, e o pacote <code>reticulate</code> permite que os objetos criados em uma delas sejam utilizados na outra.</p>
-<p>Dessa forma, este texto é ele próprio um notebook: os blocos marcados com <code>{r}</code> são executados em R, os marcados com <code>{python}</code>, em Python, e ambos consultam o mesmo <code>caged.duckdb</code>, com as competências de julho a setembro de 2026 do Novo CAGED. O arquivo pode ser baixado em <a href="caged-r-python.qmd">caged-r-python.qmd</a> e executado no RStudio, no Positron ou no VS Code.</p>
+<p>Dessa forma, este texto é ele próprio um notebook: os blocos marcados com <code>{r}</code> são executados em R, os marcados com <code>{python}</code>, em Python, e ambos consultam o mesmo <code>caged.duckdb</code>, com as competências de julho a setembro de 2026 do Novo CAGED.</p>
+<div class="download-notebook">
+<p><span class="dn-cabecalho"><span class="dn-rotulo">Notebook para download</span></span></p>
+<p><strong>caged-r-python.qmd</strong>: o código completo deste texto em um único arquivo, com blocos em R e em Python, pronto para abrir no RStudio, no Positron ou no VS Code.</p>
+<p><a href="caged-r-python.qmd" class="btn btn-primary dn-botao" download="caged-r-python.qmd"><i class="bi bi-download" aria-hidden="true"></i> Baixar o notebook (.qmd)</a></p>
+</div>
 <section id="requisitos" class="level2"><h2 class="anchored" data-anchor-id="requisitos">Requisitos</h2>
 <p>Em R, são necessários o <code>datacaged</code>, o <code>duckdb</code>, o <code>dplyr</code>, o <code>tidyr</code>, o <code>ggplot2</code> e o <code>reticulate</code>; em Python, o <code>duckdb</code>, o <code>pandas</code>, o <code>polars</code> e o <code>matplotlib</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># R</span></span>
@@ -472,14 +477,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gecomt/datacaged">datacaged</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">caged_load</span><span class="op">(</span>years <span class="op">=</span> <span class="fl">2026</span>, months <span class="op">=</span> <span class="fl">7</span><span class="op">:</span><span class="fl">9</span>, db_path <span class="op">=</span> <span class="st">"caged.duckdb"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
+<span><span class="fu"><a href="https://rdrr.io/pkg/datacaged/man/caged_load.html">caged_load</a></span><span class="op">(</span>years <span class="op">=</span> <span class="fl">2026</span>, months <span class="op">=</span> <span class="fl">7</span><span class="op">:</span><span class="fl">9</span>, db_path <span class="op">=</span> <span class="st">"caged.duckdb"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Com o banco criado, a conexão em R é feita por <code>caged_connect()</code>. O argumento <code>read_only = TRUE</code> é recomendável, tendo em vista que o DuckDB admite apenas um processo com permissão de escrita por vez:</p>
+<p>Com o banco criado, a conexão em R é feita por <code><a href="https://rdrr.io/pkg/datacaged/man/caged_connect.html">caged_connect()</a></code>. O argumento <code>read_only = TRUE</code> é recomendável, tendo em vista que o DuckDB admite apenas um processo com permissão de escrita por vez:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gecomt/datacaged">datacaged</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">con_r</span> <span class="op">&lt;-</span> <span class="fu">caged_connect</span><span class="op">(</span><span class="st">"caged.duckdb"</span>, read_only <span class="op">=</span> <span class="cn">TRUE</span>, quiet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="va">con_r</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/datacaged/man/caged_connect.html">caged_connect</a></span><span class="op">(</span><span class="st">"caged.duckdb"</span>, read_only <span class="op">=</span> <span class="cn">TRUE</span>, quiet <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="fu">DBI</span><span class="fu">::</span><span class="fu"><a href="https://dbi.r-dbi.org/reference/dbListTables.html">dbListTables</a></span><span class="op">(</span><span class="va">con_r</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "caged_exc" "caged_for" "caged_mov"</code></pre>
@@ -634,7 +639,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-regioes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil." loading="lazy">
+<div id="fig-regioes" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil.">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-regioes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="index_files/figure-html/fig-regioes-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil." width="672">
 </div>
@@ -666,7 +671,7 @@ Figura&nbsp;1&nbsp;- Saldo de empregos formais por região, julho a setembro de 
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>panel.grid.minor <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>, panel.grid.major.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
 <span>        legend.position <span class="op">=</span> <span class="st">"top"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-contadores" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais." loading="lazy">
+<div id="fig-contadores" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais.">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-contadores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="index_files/figure-html/fig-contadores-3.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais." width="672">
 </div>
@@ -690,6 +695,7 @@ Figura&nbsp;2&nbsp;- Salário mediano e médio de admissão de contadores por se
 </div>
 </section><section id="considerações" class="level2"><h2 class="anchored" data-anchor-id="considerações">Considerações</h2>
 <p>Em suma, o <code>caged.duckdb</code> funciona como um ponto de encontro entre linguagens: o <code>datacaged</code> cuida do download, da padronização e da atualização dos microdados, e R e Python realizam a análise sobre o mesmo arquivo, sem duplicação de dados. Em um único notebook, cada etapa pode ser escrita na linguagem mais conveniente, seja o <code>dplyr</code> e o <code>ggplot2</code> no R, seja o <code>pandas</code>, o <code>Polars</code> e o <code>matplotlib</code> no Python, com os resultados circulando entre elas por meio do <code>reticulate</code>.</p>
+<p><a href="caged-r-python.qmd" class="btn btn-outline-primary dn-botao" download="caged-r-python.qmd"><i class="bi bi-download" aria-hidden="true"></i> Baixar o notebook completo (caged-r-python.qmd)</a></p>
 <div class="chamada-blog callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

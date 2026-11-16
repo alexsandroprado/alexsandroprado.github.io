@@ -1,6 +1,12 @@
 O pacote [datacaged](../../../producao-tecnica/index.llms.md#datacaged), escrito em R, grava os microdados do Cadastro Geral de Empregados e Desempregados (CAGED) em um arquivo DuckDB, por padrão chamado `caged.duckdb`. No entanto, esse arquivo não pertence ao R: o DuckDB é um banco analítico embutido, com bibliotecas para diversas linguagens, de modo que a mesma base pode ser lida em Python sem qualquer conversão. Além disso, um notebook Quarto (arquivo `.qmd`) admite blocos de código das duas linguagens no mesmo documento, e o pacote `reticulate` permite que os objetos criados em uma delas sejam utilizados na outra.
 
-Dessa forma, este texto é ele próprio um notebook: os blocos marcados com `{r}` são executados em R, os marcados com `{python}`, em Python, e ambos consultam o mesmo `caged.duckdb`, com as competências de julho a setembro de 2026 do Novo CAGED. O arquivo pode ser baixado em [caged-r-python.qmd](caged-r-python.qmd) e executado no RStudio, no Positron ou no VS Code.
+Dessa forma, este texto é ele próprio um notebook: os blocos marcados com `{r}` são executados em R, os marcados com `{python}`, em Python, e ambos consultam o mesmo `caged.duckdb`, com as competências de julho a setembro de 2026 do Novo CAGED.
+
+Notebook para download
+
+**caged-r-python.qmd**: o código completo deste texto em um único arquivo, com blocos em R e em Python, pronto para abrir no RStudio, no Positron ou no VS Code.
+
+[ Baixar o notebook (.qmd)](caged-r-python.qmd)
 
 ## Requisitos
 
@@ -26,7 +32,7 @@ library(datacaged)
 caged_load(years = 2026, months = 7:9, db_path = "caged.duckdb")
 ```
 
-Com o banco criado, a conexão em R é feita por `caged_connect()`. O argumento `read_only = TRUE` é recomendável, tendo em vista que o DuckDB admite apenas um processo com permissão de escrita por vez:
+Com o banco criado, a conexão em R é feita por [`caged_connect()`](https://rdrr.io/pkg/datacaged/man/caged_connect.html). O argumento `read_only = TRUE` é recomendável, tendo em vista que o DuckDB admite apenas um processo com permissão de escrita por vez:
 
 ``` downlit
 library(datacaged)
@@ -217,6 +223,8 @@ con.close()
 ## Considerações
 
 Em suma, o `caged.duckdb` funciona como um ponto de encontro entre linguagens: o `datacaged` cuida do download, da padronização e da atualização dos microdados, e R e Python realizam a análise sobre o mesmo arquivo, sem duplicação de dados. Em um único notebook, cada etapa pode ser escrita na linguagem mais conveniente, seja o `dplyr` e o `ggplot2` no R, seja o `pandas`, o `Polars` e o `matplotlib` no Python, com os resultados circulando entre elas por meio do `reticulate`.
+
+[ Baixar o notebook completo (caged-r-python.qmd)](caged-r-python.qmd)
 
 > **NOTE:**
 >

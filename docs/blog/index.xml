@@ -21,7 +21,12 @@
   <dc:creator>Alexsandro Prado</dc:creator>
   <link>https://alexsandroprado.site/blog/posts/datacaged-python/</link>
   <description><![CDATA[ <p>O pacote <a href="../../../producao-tecnica/index.html#datacaged">datacaged</a>, escrito em R, grava os microdados do Cadastro Geral de Empregados e Desempregados (CAGED) em um arquivo DuckDB, por padrão chamado <code>caged.duckdb</code>. No entanto, esse arquivo não pertence ao R: o DuckDB é um banco analítico embutido, com bibliotecas para diversas linguagens, de modo que a mesma base pode ser lida em Python sem qualquer conversão. Além disso, um notebook Quarto (arquivo <code>.qmd</code>) admite blocos de código das duas linguagens no mesmo documento, e o pacote <code>reticulate</code> permite que os objetos criados em uma delas sejam utilizados na outra.</p>
-<p>Dessa forma, este texto é ele próprio um notebook: os blocos marcados com <code>{r}</code> são executados em R, os marcados com <code>{python}</code>, em Python, e ambos consultam o mesmo <code>caged.duckdb</code>, com as competências de julho a setembro de 2026 do Novo CAGED. O arquivo pode ser baixado em <a href="caged-r-python.qmd">caged-r-python.qmd</a> e executado no RStudio, no Positron ou no VS Code.</p>
+<p>Dessa forma, este texto é ele próprio um notebook: os blocos marcados com <code>{r}</code> são executados em R, os marcados com <code>{python}</code>, em Python, e ambos consultam o mesmo <code>caged.duckdb</code>, com as competências de julho a setembro de 2026 do Novo CAGED.</p>
+<div class="download-notebook">
+<p><span class="dn-cabecalho"><span class="dn-rotulo">Notebook para download</span></span></p>
+<p><strong>caged-r-python.qmd</strong>: o código completo deste texto em um único arquivo, com blocos em R e em Python, pronto para abrir no RStudio, no Positron ou no VS Code.</p>
+<p><a href="caged-r-python.qmd" class="btn btn-primary dn-botao" download="caged-r-python.qmd"> Baixar o notebook (.qmd)</a></p>
+</div>
 <section id="requisitos" class="level2"><h2 class="anchored" data-anchor-id="requisitos">Requisitos</h2>
 <p>Em R, são necessários o <code>datacaged</code>, o <code>duckdb</code>, o <code>dplyr</code>, o <code>tidyr</code>, o <code>ggplot2</code> e o <code>reticulate</code>; em Python, o <code>duckdb</code>, o <code>pandas</code>, o <code>polars</code> e o <code>matplotlib</code>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
@@ -58,7 +63,7 @@ font-style: inherit;">)</span></span>
 <span></span>
 <span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">caged_load</span><span class="op" style="color: #5E5E5E;
+font-style: inherit;"><a href="https://rdrr.io/pkg/datacaged/man/caged_load.html">caged_load</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span>years <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -80,7 +85,7 @@ font-style: inherit;">"caged.duckdb"</span><span class="op" style="color: #5E5E5
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 </div>
-<p>Com o banco criado, a conexão em R é feita por <code>caged_connect()</code>. O argumento <code>read_only = TRUE</code> é recomendável, tendo em vista que o DuckDB admite apenas um processo com permissão de escrita por vez:</p>
+<p>Com o banco criado, a conexão em R é feita por <code><a href="https://rdrr.io/pkg/datacaged/man/caged_connect.html">caged_connect()</a></code>. O argumento <code>read_only = TRUE</code> é recomendável, tendo em vista que o DuckDB admite apenas um processo com permissão de escrita por vez:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -109,7 +114,7 @@ font-style: inherit;">con_r</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">caged_connect</span><span class="op" style="color: #5E5E5E;
+font-style: inherit;"><a href="https://rdrr.io/pkg/datacaged/man/caged_connect.html">caged_connect</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="st" style="color: #20794D;
 background-color: null;
@@ -549,7 +554,7 @@ font-style: inherit;">"Saldo (admissões menos desligamentos)"</span>)</span>
 <span id="cb13-8">plt.tight_layout()</span>
 <span id="cb13-9">plt.show()</span></code></pre></div></div>
 <div class="cell-output-display">
-<div id="fig-regioes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil." loading="lazy">
+<div id="fig-regioes" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil.">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-regioes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/datacaged-python/index_files/figure-html/fig-regioes-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil." width="672">
 </div>
@@ -899,7 +904,7 @@ font-style: inherit;">"top"</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
-<div id="fig-contadores" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais." loading="lazy">
+<div id="fig-contadores" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais.">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-contadores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/datacaged-python/index_files/figure-html/fig-contadores-3.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais." width="672">
 </div>
@@ -931,6 +936,7 @@ font-style: inherit;">"""</span>)</span></code></pre></div></div>
 </div>
 </section><section id="considerações" class="level2"><h2 class="anchored" data-anchor-id="considerações">Considerações</h2>
 <p>Em suma, o <code>caged.duckdb</code> funciona como um ponto de encontro entre linguagens: o <code>datacaged</code> cuida do download, da padronização e da atualização dos microdados, e R e Python realizam a análise sobre o mesmo arquivo, sem duplicação de dados. Em um único notebook, cada etapa pode ser escrita na linguagem mais conveniente, seja o <code>dplyr</code> e o <code>ggplot2</code> no R, seja o <code>pandas</code>, o <code>Polars</code> e o <code>matplotlib</code> no Python, com os resultados circulando entre elas por meio do <code>reticulate</code>.</p>
+<p><a href="caged-r-python.qmd" class="btn btn-outline-primary dn-botao" download="caged-r-python.qmd"> Baixar o notebook completo (caged-r-python.qmd)</a></p>
 <div class="chamada-blog callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -978,7 +984,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 </div>
 <p>O Novo CAGED (2020 em diante) funciona sem configuração adicional no Windows, no macOS e no Linux. Para a série antiga (até 2019), que utiliza compressão PPMd, é necessário ter o 7-Zip instalado no computador.</p>
 </section><section id="carregamento-dos-dados" class="level2"><h2 class="anchored" data-anchor-id="carregamento-dos-dados">Carregamento dos dados</h2>
-<p>A função <code>caged_load()</code> executa todo o processo em um único comando: baixa os arquivos das competências solicitadas, extrai, padroniza e grava no banco indicado em <code>db_path</code>.</p>
+<p>A função <code><a href="https://rdrr.io/pkg/datacaged/man/caged_load.html">caged_load()</a></code> executa todo o processo em um único comando: baixa os arquivos das competências solicitadas, extrai, padroniza e grava no banco indicado em <code>db_path</code>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -993,7 +999,7 @@ font-style: inherit;">)</span></span>
 <span></span>
 <span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">caged_load</span><span class="op" style="color: #5E5E5E;
+font-style: inherit;"><a href="https://rdrr.io/pkg/datacaged/man/caged_load.html">caged_load</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span></span>
 <span>  years   <span class="op" style="color: #5E5E5E;
@@ -1019,9 +1025,9 @@ font-style: inherit;">"caged.duckdb"</span></span>
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 </div>
-<p>Ressalta-se que o Novo CAGED é distribuído em arquivos nacionais, de modo que cada competência traz todas as unidades da federação; o recorte geográfico é feito depois, na consulta. Quando novas competências forem divulgadas, a função <code>caged_update()</code> acrescenta ao banco apenas os meses que ainda não foram carregados.</p>
+<p>Ressalta-se que o Novo CAGED é distribuído em arquivos nacionais, de modo que cada competência traz todas as unidades da federação; o recorte geográfico é feito depois, na consulta. Quando novas competências forem divulgadas, a função <code><a href="https://rdrr.io/pkg/datacaged/man/caged_update.html">caged_update()</a></code> acrescenta ao banco apenas os meses que ainda não foram carregados.</p>
 </section><section id="consulta-com-dplyr" class="level2"><h2 class="anchored" data-anchor-id="consulta-com-dplyr">Consulta com dplyr</h2>
-<p>Com o banco populado, a conexão é feita por <code>caged_connect()</code>, e as tabelas podem ser consultadas com <code>dplyr</code> como se fossem <em>data frames</em>. A tabela <code>caged_mov</code> contém as movimentações do mês, em que a variável <code>saldomovimentacao</code> assume o valor 1 para admissões e -1 para desligamentos.</p>
+<p>Com o banco populado, a conexão é feita por <code><a href="https://rdrr.io/pkg/datacaged/man/caged_connect.html">caged_connect()</a></code>, e as tabelas podem ser consultadas com <code>dplyr</code> como se fossem <em>data frames</em>. A tabela <code>caged_mov</code> contém as movimentações do mês, em que a variável <code>saldomovimentacao</code> assume o valor 1 para admissões e -1 para desligamentos.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -1040,7 +1046,7 @@ font-style: inherit;">con</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;">caged_connect</span><span class="op" style="color: #5E5E5E;
+font-style: inherit;"><a href="https://rdrr.io/pkg/datacaged/man/caged_connect.html">caged_connect</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="st" style="color: #20794D;
 background-color: null;
@@ -1424,7 +1430,7 @@ Disponível em: &lt;<a href="https://alexsandroprado.site/blog/posts/mercado-con
 <p>Conforme a Figura&nbsp;1, a participação do Novo Mercado no total de companhias com segmento informado passou de 33,4% em 2010 para 49,4% em 2025, e a dos segmentos diferenciados em conjunto, de 49,3% para 64,8%. Nota-se que o avanço ocorreu sobretudo entre 2019 e 2021, quando o número de companhias no Novo Mercado passou de 149 para 201, período que coincide com a concentração de ofertas públicas iniciais na bolsa brasileira.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-participacao" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de áreas empilhadas de 2010 a 2025: o Novo Mercado cresce de cerca de um terço para metade das companhias, o segmento Básico encolhe de cerca de metade para pouco mais de um terço, e Nível 1, Nível 2 e Bovespa Mais ocupam faixas estreitas.">
+<div id="fig-participacao" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de áreas empilhadas de 2010 a 2025: o Novo Mercado cresce de cerca de um terço para metade das companhias, o segmento Básico encolhe de cerca de metade para pouco mais de um terço, e Nível 1, Nível 2 e Bovespa Mais ocupam faixas estreitas." loading="lazy">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-participacao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/segmentos-b3/index_files/figure-html/fig-participacao-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de áreas empilhadas de 2010 a 2025: o Novo Mercado cresce de cerca de um terço para metade das companhias, o segmento Básico encolhe de cerca de metade para pouco mais de um terço, e Nível 1, Nível 2 e Bovespa Mais ocupam faixas estreitas." width="672">
 </div>
@@ -1889,7 +1895,7 @@ font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
-<div id="fig-historico" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de linhas da receita e do lucro líquido de 2010 a 2023: a receita cresce de 500 para 1.600 mil, e o lucro líquido acompanha em nível bem mais baixo.">
+<div id="fig-historico" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de linhas da receita e do lucro líquido de 2010 a 2023: a receita cresce de 500 para 1.600 mil, e o lucro líquido acompanha em nível bem mais baixo." loading="lazy">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-historico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/preditiva/index_files/figure-html/fig-historico-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de linhas da receita e do lucro líquido de 2010 a 2023: a receita cresce de 500 para 1.600 mil, e o lucro líquido acompanha em nível bem mais baixo." width="672">
 </div>
@@ -2011,7 +2017,7 @@ font-style: inherit;">"Receita (em milhares)"</span><span class="op" style="colo
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
-<div id="fig-previsao" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Previsão ARIMA da receita para 2024 a 2028: a série histórica sobe de forma contínua e a projeção mantém o crescimento, com intervalos de confiança de 80% e 95% que se alargam com o tempo.">
+<div id="fig-previsao" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Previsão ARIMA da receita para 2024 a 2028: a série histórica sobe de forma contínua e a projeção mantém o crescimento, com intervalos de confiança de 80% e 95% que se alargam com o tempo." loading="lazy">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-previsao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/preditiva/index_files/figure-html/fig-previsao-1.png" class="img-fluid figure-img" loading="lazy" alt="Previsão ARIMA da receita para 2024 a 2028: a série histórica sobe de forma contínua e a projeção mantém o crescimento, com intervalos de confiança de 80% e 95% que se alargam com o tempo." width="672">
 </div>

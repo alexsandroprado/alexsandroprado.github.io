@@ -1087,3 +1087,29 @@ main.content > #title-block-header {
   margin-top: 2.5rem;
   border-left-color: var(--ap-accent) !important;
 }
+
+// Caixa de download do notebook (post R + Python)
+.download-notebook {
+  border: 1px solid var(--ap-border);
+  border-left: 4px solid var(--ap-accent);
+  border-radius: 6px;
+  background: var(--ap-accent-soft);
+  padding: 1rem 1.25rem 0.6rem;
+  margin: 1.25rem 0 1.75rem;
+
+  .dn-rotulo {
+    font-family: var(--ap-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ap-accent);
+  }
+  p { margin-bottom: 0.6rem; }
+}
+
+.btn.dn-botao {
+  font-weight: 500;
+  padding: 0.5rem 1.1rem;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
