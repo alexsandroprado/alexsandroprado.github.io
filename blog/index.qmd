@@ -3,7 +3,7 @@ title: "Blog"
 description: "Notas sobre econometria aplicada, contabilidade e análise de dados em R."
 toc: false
 listing:
-  contents: "posts/**/*.qmd"
+  contents: "posts/*/index.qmd"
   feed:
     title: "Blog de Alexsandro Prado"
   sort: "date desc"

@@ -14,7 +14,7 @@
 - [Ensino](https://alexsandroprado.site/ensino/index.llms.md)
 - [Previsão de receita](https://alexsandroprado.site/blog/posts/preditiva/index.llms.md)
 - [Heterocedasticidade e autocorrelação: como resolver na prática?](https://alexsandroprado.site/blog/posts/heterocedasticidade/index.llms.md)
-- [Dados do datacaged em Python: consultando o caged.duckdb](https://alexsandroprado.site/blog/posts/datacaged-python/index.llms.md)
+- [R e Python no mesmo notebook: o caged.duckdb do datacaged](https://alexsandroprado.site/blog/posts/datacaged-python/index.llms.md)
 - [Blog](https://alexsandroprado.site/blog/index.llms.md)
 - [A importância da análise de dados na contabilidade](https://alexsandroprado.site/blog/posts/contabdata/index.llms.md)
 - [Microdados do CAGED no R com o pacote datacaged](https://alexsandroprado.site/blog/posts/datacaged-tutorial/index.llms.md)

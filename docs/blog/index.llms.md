@@ -1,8 +1,8 @@
-[![Trecho de código em Python com duckdb.connect e barras do saldo de empregos por região](../blog/posts/datacaged-python/capa.webp)](../blog/posts/datacaged-python/index.llms.md)
+[![Blocos de código em R e em Python de um notebook Quarto e barras do saldo de empregos por região](../blog/posts/datacaged-python/capa.webp)](../blog/posts/datacaged-python/index.llms.md)
 
-### [Dados do datacaged em Python: consultando o caged.duckdb](../blog/posts/datacaged-python/index.llms.md)
+### [R e Python no mesmo notebook: o caged.duckdb do datacaged](../blog/posts/datacaged-python/index.llms.md)
 
-Como abrir em Python o banco caged.duckdb criado pelo pacote datacaged e consultar os microdados do Novo CAGED com DuckDB, pandas e Polars.
+Um notebook Quarto (.qmd) que combina R e Python sobre o mesmo banco caged.duckdb: o datacaged carrega os microdados do Novo CAGED, e as duas linguagens consultam, trocam resultados e produzem gráficos.
 
 16/11/2026
 
