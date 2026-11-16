@@ -17,6 +17,583 @@
 <generator>quarto-1.9.37</generator>
 <lastBuildDate>Mon, 16 Nov 2026 03:00:00 GMT</lastBuildDate>
 <item>
+  <title>Dados do datacaged em Python: consultando o caged.duckdb</title>
+  <dc:creator>Alexsandro Prado</dc:creator>
+  <link>https://alexsandroprado.site/blog/posts/datacaged-python/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>O pacote <a href="../../../producao-tecnica/index.html#datacaged">datacaged</a>, escrito em R, grava os microdados do Cadastro Geral de Empregados e Desempregados (CAGED) em um arquivo DuckDB, por padrão chamado <code>caged.duckdb</code>. No entanto, esse arquivo não pertence ao R: o DuckDB é um banco de dados analítico embutido, com bibliotecas para diversas linguagens, de modo que a mesma base pode ser lida em Python sem qualquer conversão. Dessa forma, uma equipe pode utilizar o R apenas para baixar e atualizar os dados e realizar as análises em Python, ou alternar entre as duas linguagens conforme a tarefa.</p>
+<p>Este texto apresenta como abrir o <code>caged.duckdb</code> em Python e consultá-lo com SQL, com <code>pandas</code> e com <code>Polars</code>. Os exemplos utilizam um banco com as competências de julho a setembro de 2026 do Novo CAGED, carregadas previamente no R, conforme descrito no <a href="../../../blog/posts/datacaged-tutorial/index.html">tutorial do datacaged</a>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1">datacaged<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">caged_load</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">years =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2026</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">months =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">9</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">db_path =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"caged.duckdb"</span>)</span></code></pre></div></div>
+<section id="instalação" class="level2">
+<h2 class="anchored" data-anchor-id="instalação">Instalação</h2>
+<p>Em Python, basta a biblioteca <code>duckdb</code>; o <code>pandas</code> e o <code>Polars</code> são opcionais, para quem prefere trabalhar com <em>data frames</em>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">pip</span> install duckdb pandas polars</span></code></pre></div></div>
+<p>Ressalta-se que, a partir da versão 0.10, as versões mais novas do DuckDB leem arquivos criados por versões anteriores, mas o contrário nem sempre ocorre. Assim, recomenda-se que a versão do <code>duckdb</code> em Python seja igual ou superior à do pacote <code>duckdb</code> instalado no R que criou o banco.</p>
+</section>
+<section id="conexão-e-estrutura-do-banco" class="level2">
+<h2 class="anchored" data-anchor-id="conexão-e-estrutura-do-banco">Conexão e estrutura do banco</h2>
+<p>A conexão é aberta com <code>duckdb.connect()</code>. O argumento <code>read_only=True</code> é recomendável, tendo em vista que o DuckDB admite apenas um processo com permissão de escrita por vez: em modo de leitura, o banco pode ser consultado em Python ao mesmo tempo em que está aberto em outra sessão.</p>
+<div id="53c61a60" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> duckdb</span>
+<span id="cb3-2"></span>
+<span id="cb3-3">con <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> duckdb.<span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">connect</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"caged.duckdb"</span>, read_only<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb3-4">con.sql(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SHOW TABLES"</span>)</span></code></pre></div></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<table class="dataframe caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">name<br>
+<span class="small">VARCHAR</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>caged_mov</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>As movimentações declaradas no prazo ficam na tabela <code>caged_mov</code> (as declarações fora do prazo e as exclusões, quando carregadas, ficam em <code>caged_for</code> e <code>caged_exc</code>). Os nomes das colunas já chegam padronizados pelo <code>datacaged</code>, em letras minúsculas e sem acentos:</p>
+<div id="87ef76c5" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">con.sql(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"DESCRIBE caged_mov"</span>).df()[[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"column_name"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"column_type"</span>]].head(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>)</span></code></pre></div></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">column_name</th>
+<th data-quarto-table-cell-role="th">column_type</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>competenciamov</td>
+<td>DOUBLE</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>regiao</td>
+<td>DOUBLE</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>uf</td>
+<td>DOUBLE</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>municipio</td>
+<td>DOUBLE</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>secao</td>
+<td>VARCHAR</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">5</th>
+<td>subclasse</td>
+<td>DOUBLE</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">6</th>
+<td>saldomovimentacao</td>
+<td>DOUBLE</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">7</th>
+<td>cbo2002ocupacao</td>
+<td>DOUBLE</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">8</th>
+<td>categoria</td>
+<td>DOUBLE</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">9</th>
+<td>graudeinstrucao</td>
+<td>DOUBLE</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">10</th>
+<td>idade</td>
+<td>DOUBLE</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">11</th>
+<td>horascontratuais</td>
+<td>DOUBLE</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="consultas-com-sql" class="level2">
+<h2 class="anchored" data-anchor-id="consultas-com-sql">Consultas com SQL</h2>
+<p>A forma mais direta de consulta é o SQL do próprio DuckDB, executado sobre o arquivo sem carregar a tabela inteira na memória. A variável <code>saldomovimentacao</code> assume o valor 1 para admissões e -1 para desligamentos, de modo que sua soma corresponde ao saldo de empregos formais:</p>
+<div id="47708a38" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1">saldo <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> con.sql(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"""</span></span>
+<span id="cb5-2"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    SELECT</span></span>
+<span id="cb5-3"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">        competenciamov::INT                           AS competencia,</span></span>
+<span id="cb5-4"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">        SUM(CASE WHEN saldomovimentacao =  1 THEN 1 ELSE 0 END)::INT AS admissoes,</span></span>
+<span id="cb5-5"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">        SUM(CASE WHEN saldomovimentacao = -1 THEN 1 ELSE 0 END)::INT AS desligamentos,</span></span>
+<span id="cb5-6"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">        SUM(saldomovimentacao)::INT                    AS saldo</span></span>
+<span id="cb5-7"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    FROM caged_mov</span></span>
+<span id="cb5-8"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    GROUP BY competencia</span></span>
+<span id="cb5-9"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    ORDER BY competencia</span></span>
+<span id="cb5-10"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"""</span>).df()</span>
+<span id="cb5-11">saldo</span></code></pre></div></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">competencia</th>
+<th data-quarto-table-cell-role="th">admissoes</th>
+<th data-quarto-table-cell-role="th">desligamentos</th>
+<th data-quarto-table-cell-role="th">saldo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>202607</td>
+<td>2262888</td>
+<td>2204320</td>
+<td>58568</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>202608</td>
+<td>2294563</td>
+<td>2128736</td>
+<td>165827</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>202609</td>
+<td>2214437</td>
+<td>2093132</td>
+<td>121305</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Os valores coincidem com o saldo divulgado mensalmente pelo Ministério do Trabalho e Emprego (MTE) e são os mesmos dos <a href="../../../producao-tecnica/index.html#indicadores">indicadores do emprego formal</a> publicados neste site.</p>
+</section>
+<section id="um-recorte-por-ocupação" class="level2">
+<h2 class="anchored" data-anchor-id="um-recorte-por-ocupação">Um recorte por ocupação</h2>
+<p>Os recortes seguem a mesma lógica. A consulta a seguir calcula o salário de admissão de contadores (código 252210 da Classificação Brasileira de Ocupações, CBO) por sexo, considerando apenas vínculos não intermitentes com salário entre R$ 500 e R$ 60.000, critério que reduz a influência de valores registrados com erro. No Novo CAGED, a variável <code>sexo</code> assume o valor 1 para homens e 3 para mulheres.</p>
+<div id="ae8c612d" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1">con.sql(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"""</span></span>
+<span id="cb6-2"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    SELECT</span></span>
+<span id="cb6-3"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">        CASE sexo WHEN 1 THEN 'Homens' WHEN 3 THEN 'Mulheres' END AS sexo,</span></span>
+<span id="cb6-4"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">        COUNT(*)                      AS admissoes,</span></span>
+<span id="cb6-5"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">        ROUND(MEDIAN(salario))        AS salario_mediano,</span></span>
+<span id="cb6-6"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">        ROUND(AVG(salario))           AS salario_medio</span></span>
+<span id="cb6-7"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    FROM caged_mov</span></span>
+<span id="cb6-8"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    WHERE cbo2002ocupacao = 252210</span></span>
+<span id="cb6-9"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">      AND saldomovimentacao = 1</span></span>
+<span id="cb6-10"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">      AND indtrabintermitente = 0</span></span>
+<span id="cb6-11"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">      AND salario BETWEEN 500 AND 60000</span></span>
+<span id="cb6-12"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    GROUP BY 1</span></span>
+<span id="cb6-13"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    ORDER BY 1</span></span>
+<span id="cb6-14"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"""</span>).df()</span></code></pre></div></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">sexo</th>
+<th data-quarto-table-cell-role="th">admissoes</th>
+<th data-quarto-table-cell-role="th">salario_mediano</th>
+<th data-quarto-table-cell-role="th">salario_medio</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>Homens</td>
+<td>4173</td>
+<td>4680.0</td>
+<td>6100.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>Mulheres</td>
+<td>6344</td>
+<td>4500.0</td>
+<td>5269.0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Nota-se que as mulheres responderam pela maior parte das admissões de contadores no período, porém com salário de admissão inferior ao dos homens, tanto na mediana quanto na média. A diferença entre as duas medidas, por sua vez, indica que a distribuição dos salários masculinos é mais assimétrica, com maior presença de remunerações elevadas.</p>
+</section>
+<section id="pandas-e-polars" class="level2">
+<h2 class="anchored" data-anchor-id="pandas-e-polars">pandas e Polars</h2>
+<p>O método <code>.df()</code> devolve o resultado como um <em>data frame</em> do <code>pandas</code>, e o método <code>.pl()</code>, como um <em>data frame</em> do <code>Polars</code>. Dessa forma, a filtragem e a agregação pesadas ficam a cargo do DuckDB, e apenas o resultado, já reduzido, é trazido para a memória:</p>
+<div id="4cef3f1d" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> polars <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pl</span>
+<span id="cb7-2"></span>
+<span id="cb7-3">regioes <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Norte"</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Nordeste"</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Sudeste"</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Sul"</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Centro-Oeste"</span>}</span>
+<span id="cb7-4"></span>
+<span id="cb7-5">por_regiao <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> (</span>
+<span id="cb7-6">    con.sql(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"""</span></span>
+<span id="cb7-7"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">        SELECT regiao::INT AS regiao, SUM(saldomovimentacao)::INT AS saldo</span></span>
+<span id="cb7-8"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">        FROM caged_mov</span></span>
+<span id="cb7-9"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">        WHERE regiao BETWEEN 1 AND 5</span></span>
+<span id="cb7-10"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">        GROUP BY regiao</span></span>
+<span id="cb7-11"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    """</span>)</span>
+<span id="cb7-12">    .pl()</span>
+<span id="cb7-13">    .with_columns(pl.col(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"regiao"</span>).replace_strict(regioes).alias(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"regiao"</span>))</span>
+<span id="cb7-14">    .sort(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"saldo"</span>, descending<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span>
+<span id="cb7-15">)</span>
+<span id="cb7-16">por_regiao</span></code></pre></div></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (5, 2)</small>
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">regiao</th>
+<th data-quarto-table-cell-role="th">saldo</th>
+</tr>
+<tr class="even">
+<td>str</td>
+<td>i32</td>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"Sudeste"</td>
+<td>134239</td>
+</tr>
+<tr class="even">
+<td>"Nordeste"</td>
+<td>127471</td>
+</tr>
+<tr class="odd">
+<td>"Norte"</td>
+<td>36726</td>
+</tr>
+<tr class="even">
+<td>"Centro-Oeste"</td>
+<td>26536</td>
+</tr>
+<tr class="odd">
+<td>"Sul"</td>
+<td>20171</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>A partir daí, a visualização segue o fluxo habitual do Python, como na Figura&nbsp;1.</p>
+<div id="cell-fig-regioes" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb8-2"></span>
+<span id="cb8-3">dados <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> por_regiao.sort(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"saldo"</span>)</span>
+<span id="cb8-4">fig, ax <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> plt.subplots(figsize<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">7</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3.2</span>))</span>
+<span id="cb8-5">ax.barh(dados[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"regiao"</span>], dados[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"saldo"</span>], color<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"#0e7490"</span>)</span>
+<span id="cb8-6">ax.xaxis.set_major_formatter(<span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">lambda</span> x, p: <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:.0f}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> mil"</span>)</span>
+<span id="cb8-7">ax.spines[[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"top"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"right"</span>]].set_visible(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">False</span>)</span>
+<span id="cb8-8">ax.set_xlabel(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Saldo (admissões menos desligamentos)"</span>)</span>
+<span id="cb8-9">plt.tight_layout()</span>
+<span id="cb8-10">plt.show()</span></code></pre></div></div>
+<div class="cell-output cell-output-display">
+<div id="fig-regioes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-regioes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://alexsandroprado.site/blog/posts/datacaged-python/index_files/figure-html/fig-regioes-output-1.png" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil." width="662" height="298" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-regioes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1&nbsp;- Saldo de empregos formais por região, julho a setembro de 2026
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Fonte: elaborado pelo autor com dados do Novo CAGED/MTE (2026).</p>
+</section>
+<section id="exportação-para-outros-formatos" class="level2">
+<h2 class="anchored" data-anchor-id="exportação-para-outros-formatos">Exportação para outros formatos</h2>
+<p>Por fim, o DuckDB permite exportar qualquer consulta diretamente para Parquet ou CSV, o que facilita o compartilhamento de recortes com quem não utiliza o banco:</p>
+<div id="56c44f95" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1">con.sql(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"""</span></span>
+<span id="cb9-2"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    COPY (SELECT * FROM caged_mov WHERE uf = 24)</span></span>
+<span id="cb9-3"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    TO 'caged_rn_2026t3.parquet' (FORMAT parquet)</span></span>
+<span id="cb9-4"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"""</span>)</span></code></pre></div></div>
+</div>
+<div id="81cc4cda" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1">con.close()</span></code></pre></div></div>
+</div>
+<p>Em suma, o <code>caged.duckdb</code> funciona como um ponto de encontro entre linguagens: o <code>datacaged</code> cuida do download, da padronização e da atualização dos microdados, e o Python, ou qualquer outra ferramenta compatível com DuckDB, realiza a análise sobre o mesmo arquivo, sem duplicação de dados.</p>
+<div class="chamada-blog callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Nota</span>Dados e análises sob demanda
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Os exemplos deste blog utilizam ferramentas abertas desenvolvidas no grupo GECOMT, como o pacote <a href="../../../producao-tecnica/index.html#datacaged">datacaged</a>, que dá acesso aos microdados do emprego formal. Para análises aplicadas à realidade de uma organização, como diagnósticos do mercado de trabalho, referências salariais ou previsões, veja a página de <a href="../../../parcerias/index.html">Consultoria e parcerias</a>.</p>
+</div>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citação</h2><div><div class="quarto-appendix-secondary-label">Por favor, cite este trabalho como:</div><div id="ref-prado2026" class="csl-entry quarto-appendix-citeas">
+PRADO, Alexsandro. <strong>Dados do datacaged em Python: consultando o
+caged.duckdb</strong>. <strong>Blog de Alexsandro Prado</strong>, 16
+nov. 2026. Disponível em: &lt;<a href="https://alexsandroprado.site/blog/posts/datacaged-python/">https://alexsandroprado.site/blog/posts/datacaged-python/</a>&gt;
+</div></div></section></div> ]]></description>
+  <category>Python</category>
+  <category>Mercado de trabalho</category>
+  <guid>https://alexsandroprado.site/blog/posts/datacaged-python/</guid>
+  <pubDate>Mon, 16 Nov 2026 03:00:00 GMT</pubDate>
+  <media:content url="https://alexsandroprado.site/blog/posts/datacaged-python/capa.webp" medium="image" type="image/webp"/>
+</item>
+<item>
   <title>Microdados do CAGED no R com o pacote datacaged</title>
   <dc:creator>Alexsandro Prado</dc:creator>
   <link>https://alexsandroprado.site/blog/posts/datacaged-tutorial/</link>
@@ -947,7 +1524,7 @@ font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
-<div id="fig-historico" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de linhas da receita e do lucro líquido de 2010 a 2023: a receita cresce de 500 para 1.600 mil, e o lucro líquido acompanha em nível bem mais baixo." loading="lazy">
+<div id="fig-historico" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de linhas da receita e do lucro líquido de 2010 a 2023: a receita cresce de 500 para 1.600 mil, e o lucro líquido acompanha em nível bem mais baixo.">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-historico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/preditiva/index_files/figure-html/fig-historico-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de linhas da receita e do lucro líquido de 2010 a 2023: a receita cresce de 500 para 1.600 mil, e o lucro líquido acompanha em nível bem mais baixo." width="672">
 </div>
@@ -1069,7 +1646,7 @@ font-style: inherit;">"Receita (em milhares)"</span><span class="op" style="colo
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
-<div id="fig-previsao" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Previsão ARIMA da receita para 2024 a 2028: a série histórica sobe de forma contínua e a projeção mantém o crescimento, com intervalos de confiança de 80% e 95% que se alargam com o tempo." loading="lazy">
+<div id="fig-previsao" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Previsão ARIMA da receita para 2024 a 2028: a série histórica sobe de forma contínua e a projeção mantém o crescimento, com intervalos de confiança de 80% e 95% que se alargam com o tempo.">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-previsao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/preditiva/index_files/figure-html/fig-previsao-1.png" class="img-fluid figure-img" loading="lazy" alt="Previsão ARIMA da receita para 2024 a 2028: a série histórica sobe de forma contínua e a projeção mantém o crescimento, com intervalos de confiança de 80% e 95% que se alargam com o tempo." width="672">
 </div>

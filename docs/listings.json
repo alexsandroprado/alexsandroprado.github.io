@@ -17,6 +17,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/posts/datacaged-python/index.html",
       "/blog/posts/datacaged-tutorial/index.html",
       "/blog/posts/mercado-contabil-2026/index.html",
       "/blog/posts/segmentos-b3/index.html",

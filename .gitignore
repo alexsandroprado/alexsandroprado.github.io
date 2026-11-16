@@ -9,3 +9,5 @@ alexsandroprado.github.io.Rproj
 
 **/*.quarto_ipynb
 orcid-novidades.md
+*.duckdb
+*.duckdb.wal

@@ -1,3 +1,11 @@
+[![Trecho de código em Python com duckdb.connect e barras do saldo de empregos por região](../blog/posts/datacaged-python/capa.webp)](../blog/posts/datacaged-python/index.llms.md)
+
+### [Dados do datacaged em Python: consultando o caged.duckdb](../blog/posts/datacaged-python/index.llms.md)
+
+Como abrir em Python o banco caged.duckdb criado pelo pacote datacaged e consultar os microdados do Novo CAGED com DuckDB, pandas e Polars.
+
+16/11/2026
+
 [![Barras do saldo mensal de empregos formais e trecho de código em R com o pacote datacaged](../blog/posts/datacaged-tutorial/capa.webp)](../blog/posts/datacaged-tutorial/index.llms.md)
 
 ### [Microdados do CAGED no R com o pacote datacaged](../blog/posts/datacaged-tutorial/index.llms.md)
