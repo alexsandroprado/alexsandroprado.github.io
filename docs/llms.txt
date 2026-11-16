@@ -1,0 +1,25 @@
+# Alexsandro Prado
+
+> Professor Adjunto da UFERSA. Economia do trabalho, contabilidade financeira, ESG e governança corporativa.
+
+## Pages
+
+- [Publicações](https://alexsandroprado.site/publicacoes/index.llms.md)
+- [Privacidade e cookies](https://alexsandroprado.site/privacidade.llms.md)
+- [Consultoria e parcerias](https://alexsandroprado.site/parcerias/index.llms.md)
+- [Apresentação no XX Congresso ANPCONT](https://alexsandroprado.site/novidades/2026-11-27-anpcont/index.llms.md)
+- [datacaged 0.2.3 disponível no CRAN](https://alexsandroprado.site/novidades/2026-10-13-datacaged-cran/index.llms.md)
+- [Artigo publicado na Business Strategy & Development](https://alexsandroprado.site/novidades/2026-03-31-bsd/index.llms.md)
+- [Alexsandro Prado](https://alexsandroprado.site/index.llms.md)
+- [Ensino](https://alexsandroprado.site/ensino/index.llms.md)
+- [Heterocedasticidade e Autocorrelação: como resolver na prática?](https://alexsandroprado.site/blog/posts/heterocedasticidade/heterocedasticidade.llms.md)
+- [Blog](https://alexsandroprado.site/blog/index.llms.md)
+- [A Importância da Análise de Dados na Contabilidade](https://alexsandroprado.site/blog/posts/contabdata/contabdata.llms.md)
+- [Previsão de receita](https://alexsandroprado.site/blog/posts/preditiva/preditiva.llms.md)
+- [Extensão](https://alexsandroprado.site/extensao/index.llms.md)
+- [Artigo publicado na Contabilidade Gestão e Governança](https://alexsandroprado.site/novidades/2025-03-31-cgg/index.llms.md)
+- [Artigo publicado na Revista Catarinense da Ciência Contábil](https://alexsandroprado.site/novidades/2026-06-30-rccc/index.llms.md)
+- [Novo site com indicadores do mercado de trabalho](https://alexsandroprado.site/novidades/2026-11-15-novo-site/index.llms.md)
+- [Novidades](https://alexsandroprado.site/novidades/index.llms.md)
+- [Pesquisa](https://alexsandroprado.site/pesquisa/index.llms.md)
+- [Produção técnica e tecnológica](https://alexsandroprado.site/producao-tecnica/index.llms.md)

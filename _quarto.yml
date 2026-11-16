@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  # Limpa os arquivos .llms.md (código OJS, rótulos de botões, duplicações)
+  post-render: scripts/limpa_llms.py
   render:
     - "*.qmd"
     - "!README.md"
@@ -16,6 +18,8 @@ lang: pt-BR
 website:
   title: "Alexsandro Prado"
   site-url: "https://alexsandroprado.site/"
+  # Versão em texto para modelos de linguagem (llms.txt e .llms.md por página)
+  llms-txt: true
   description: "Professor Adjunto da UFERSA. Economia do trabalho, contabilidade financeira, ESG e governança corporativa."
   favicon: "images/favicon.ico"
   image: "https://alexsandroprado.site/images/og/padrao.png"

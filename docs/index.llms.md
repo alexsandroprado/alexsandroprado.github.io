@@ -1,0 +1,62 @@
+Professor Adjunto do Departamento de Ciências Sociais Aplicadas e Humanas (DCSAH) da Universidade Federal Rural do Semi-Árido (UFERSA), com atuação no curso de Ciências Contábeis desde 2013 e no Programa de Pós-Graduação em Administração (PPGA/UFERSA). Doutor em Economia pela Universidade Federal da Paraíba (UFPB), coordena o Grupo de Estudos sobre Contabilidade e Mercado de Trabalho ([GECOMT](https://gecomt.github.io/)) e integra o Conselho de Curadores da UFERSA.
+
+As pesquisas situam-se na interface entre contabilidade, finanças e economia do trabalho, com ênfase em (i) mercado de trabalho formal a partir de microdados administrativos, sobretudo o Cadastro Geral de Empregados e Desempregados (CAGED) e a Relação Anual de Informações Sociais (RAIS); (ii) sustentabilidade, ESG e governança corporativa em companhias abertas brasileiras; e (iii) remuneração de executivos, gerenciamento de resultados e mercado de capitais. Além disso, desenvolve pacotes em R que facilitam o acesso a dados públicos brasileiros para fins de pesquisa.
+
+## Formação
+
+Doutorado em Economia 2021  
+Programa de Pós-Graduação em Economia, Universidade Federal da Paraíba (UFPB), com bolsa CAPES. Tese: *Ensaios sobre o uso repetido do seguro-desemprego*. Orientador: Paulo Aguiar do Monte.
+
+Mestrado em Ciências Contábeis 2012  
+Programa Multi-institucional e Inter-regional de Pós-Graduação em Ciências Contábeis (UnB/UFPB/UFRN), com bolsa CAPES. Dissertação: *O impacto da adoção da linguagem XBRL sobre a assimetria informacional: uma análise empírica nas empresas brasileiras listadas na Bolsa de Nova Iorque*. Orientador: Paulo Amilton Maia Leite Filho.
+
+Bacharelado em Ciências Contábeis 2008  
+Universidade Federal da Paraíba (UFPB).
+
+## Áreas de interesse
+
+- Economia do trabalho e políticas de mercado de trabalho
+- Contabilidade financeira e mercado de capitais
+- Sustentabilidade, ESG e governança corporativa
+- Sistemas de informações contábeis
+- Métodos quantitativos aplicados: decomposição de Oaxaca-Blinder, diferenças em diferenças, pareamento por escore de propensão, análise de sobrevivência e painéis dinâmicos
+
+## Prêmios
+
+Melhores trabalhos, Divisão de Ciências Contábeis 2023  
+XIV Congresso Nacional de Administração e Contabilidade (AdCont), Programa de Pós-Graduação em Ciências Contábeis da UFRJ.
+
+Melhor trabalho na área de Contabilidade Financeira 2021  
+21º USP International Conference in Accounting, FEA/USP.
+
+1º lugar em artigo científico (apresentação oral) 2019  
+XV Encontro Norte-Rio-Grandense de Ciências Contábeis, CRC/RN.
+
+## Atuação editorial
+
+- Membro do corpo editorial da *Revista Conhecimento Contábil* (desde 2015).
+- Revisor da *Revista de Educação e Pesquisa em Contabilidade* (REPeC), da *Revista Inovar Contábil* e da *Brazilian Business Review* (BBR), com pareceres também para a *Revista Catarinense da Ciência Contábil* e a *Revista Teoria e Prática em Administração*.
+- Avaliador de teses no XXIII Consórcio Doutoral da ANPAD (2025).
+
+## Ferramentas
+
+R tidyverse DuckDB SQL Python Stata Quarto Git
+
+## Novidades
+
+| Data | Título |
+|----|----|
+| 27/11/2026 | [Apresentação no XX Congresso ANPCONT](novidades/2026-11-27-anpcont/index.llms.md) |
+| 15/11/2026 | [Novo site com indicadores do mercado de trabalho](novidades/2026-11-15-novo-site/index.llms.md) |
+| 13/10/2026 | [datacaged 0.2.3 disponível no CRAN](novidades/2026-10-13-datacaged-cran/index.llms.md) |
+
+[Ver todas as novidades →](novidades/index.llms.md) · [Blog →](blog/index.llms.md)
+
+## Contato
+
+Departamento de Ciências Sociais Aplicadas e Humanas (DCSAH), Universidade Federal Rural do Semi-Árido (UFERSA), Mossoró, RN.  
+E-mail:
+
+Para consultoria, pareceres técnicos e análises de dados sob demanda, veja a página de [Consultoria e parcerias](parcerias/index.llms.md).
+
+De volta ao topo
