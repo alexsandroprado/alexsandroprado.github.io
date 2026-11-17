@@ -13,8 +13,6 @@ project:
     - "images/og/*.png"
     - "CNAME"
     - "producao-tecnica/dados/*.csv"
-    # App estático "Links DFs CVM" (Contabilidados), copiado sem renderização
-    - "cntdd_linksDFS/**"
 
 lang: pt-BR
 
