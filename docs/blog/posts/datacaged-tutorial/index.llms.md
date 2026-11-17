@@ -12,7 +12,7 @@ O Novo CAGED (2020 em diante) funciona sem configuração adicional no Windows, 
 
 ## Carregamento dos dados
 
-A função [`caged_load()`](https://rdrr.io/pkg/datacaged/man/caged_load.html) executa todo o processo em um único comando: baixa os arquivos das competências solicitadas, extrai, padroniza e grava no banco indicado em `db_path`.
+A função `caged_load()` executa todo o processo em um único comando: baixa os arquivos das competências solicitadas, extrai, padroniza e grava no banco indicado em `db_path`.
 
 ``` downlit
 library(datacaged)
@@ -24,11 +24,11 @@ caged_load(
 )
 ```
 
-Ressalta-se que o Novo CAGED é distribuído em arquivos nacionais, de modo que cada competência traz todas as unidades da federação; o recorte geográfico é feito depois, na consulta. Quando novas competências forem divulgadas, a função [`caged_update()`](https://rdrr.io/pkg/datacaged/man/caged_update.html) acrescenta ao banco apenas os meses que ainda não foram carregados.
+Ressalta-se que o Novo CAGED é distribuído em arquivos nacionais, de modo que cada competência traz todas as unidades da federação; o recorte geográfico é feito depois, na consulta. Quando novas competências forem divulgadas, a função `caged_update()` acrescenta ao banco apenas os meses que ainda não foram carregados.
 
 ## Consulta com dplyr
 
-Com o banco populado, a conexão é feita por [`caged_connect()`](https://rdrr.io/pkg/datacaged/man/caged_connect.html), e as tabelas podem ser consultadas com `dplyr` como se fossem *data frames*. A tabela `caged_mov` contém as movimentações do mês, em que a variável `saldomovimentacao` assume o valor 1 para admissões e -1 para desligamentos.
+Com o banco populado, a conexão é feita por `caged_connect()`, e as tabelas podem ser consultadas com `dplyr` como se fossem *data frames*. A tabela `caged_mov` contém as movimentações do mês, em que a variável `saldomovimentacao` assume o valor 1 para admissões e -1 para desligamentos.
 
 ``` downlit
 library(dplyr)

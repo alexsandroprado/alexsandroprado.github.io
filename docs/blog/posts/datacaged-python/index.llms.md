@@ -32,7 +32,7 @@ library(datacaged)
 caged_load(years = 2026, months = 7:9, db_path = "caged.duckdb")
 ```
 
-Com o banco criado, a conexão em R é feita por [`caged_connect()`](https://rdrr.io/pkg/datacaged/man/caged_connect.html). O argumento `read_only = TRUE` é recomendável, tendo em vista que o DuckDB admite apenas um processo com permissão de escrita por vez:
+Com o banco criado, a conexão em R é feita por `caged_connect()`. O argumento `read_only = TRUE` é recomendável, tendo em vista que o DuckDB admite apenas um processo com permissão de escrita por vez:
 
 ``` downlit
 library(datacaged)

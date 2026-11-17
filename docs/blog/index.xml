@@ -63,7 +63,7 @@ font-style: inherit;">)</span></span>
 <span></span>
 <span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;"><a href="https://rdrr.io/pkg/datacaged/man/caged_load.html">caged_load</a></span><span class="op" style="color: #5E5E5E;
+font-style: inherit;">caged_load</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span>years <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -85,7 +85,7 @@ font-style: inherit;">"caged.duckdb"</span><span class="op" style="color: #5E5E5
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 </div>
-<p>Com o banco criado, a conexão em R é feita por <code><a href="https://rdrr.io/pkg/datacaged/man/caged_connect.html">caged_connect()</a></code>. O argumento <code>read_only = TRUE</code> é recomendável, tendo em vista que o DuckDB admite apenas um processo com permissão de escrita por vez:</p>
+<p>Com o banco criado, a conexão em R é feita por <code>caged_connect()</code>. O argumento <code>read_only = TRUE</code> é recomendável, tendo em vista que o DuckDB admite apenas um processo com permissão de escrita por vez:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -114,7 +114,7 @@ font-style: inherit;">con_r</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;"><a href="https://rdrr.io/pkg/datacaged/man/caged_connect.html">caged_connect</a></span><span class="op" style="color: #5E5E5E;
+font-style: inherit;">caged_connect</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="st" style="color: #20794D;
 background-color: null;
@@ -554,7 +554,7 @@ font-style: inherit;">"Saldo (admissões menos desligamentos)"</span>)</span>
 <span id="cb13-8">plt.tight_layout()</span>
 <span id="cb13-9">plt.show()</span></code></pre></div></div>
 <div class="cell-output-display">
-<div id="fig-regioes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil." loading="lazy">
+<div id="fig-regioes" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil.">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-regioes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/datacaged-python/index_files/figure-html/fig-regioes-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil." width="672">
 </div>
@@ -904,7 +904,7 @@ font-style: inherit;">"top"</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
-<div id="fig-contadores" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais." loading="lazy">
+<div id="fig-contadores" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais.">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-contadores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/datacaged-python/index_files/figure-html/fig-contadores-3.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais." width="672">
 </div>
@@ -984,7 +984,7 @@ font-style: inherit;">)</span></span></code></pre></div></div>
 </div>
 <p>O Novo CAGED (2020 em diante) funciona sem configuração adicional no Windows, no macOS e no Linux. Para a série antiga (até 2019), que utiliza compressão PPMd, é necessário ter o 7-Zip instalado no computador.</p>
 </section><section id="carregamento-dos-dados" class="level2"><h2 class="anchored" data-anchor-id="carregamento-dos-dados">Carregamento dos dados</h2>
-<p>A função <code><a href="https://rdrr.io/pkg/datacaged/man/caged_load.html">caged_load()</a></code> executa todo o processo em um único comando: baixa os arquivos das competências solicitadas, extrai, padroniza e grava no banco indicado em <code>db_path</code>.</p>
+<p>A função <code>caged_load()</code> executa todo o processo em um único comando: baixa os arquivos das competências solicitadas, extrai, padroniza e grava no banco indicado em <code>db_path</code>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -999,7 +999,7 @@ font-style: inherit;">)</span></span>
 <span></span>
 <span><span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;"><a href="https://rdrr.io/pkg/datacaged/man/caged_load.html">caged_load</a></span><span class="op" style="color: #5E5E5E;
+font-style: inherit;">caged_load</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span></span>
 <span>  years   <span class="op" style="color: #5E5E5E;
@@ -1025,9 +1025,9 @@ font-style: inherit;">"caged.duckdb"</span></span>
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 </div>
-<p>Ressalta-se que o Novo CAGED é distribuído em arquivos nacionais, de modo que cada competência traz todas as unidades da federação; o recorte geográfico é feito depois, na consulta. Quando novas competências forem divulgadas, a função <code><a href="https://rdrr.io/pkg/datacaged/man/caged_update.html">caged_update()</a></code> acrescenta ao banco apenas os meses que ainda não foram carregados.</p>
+<p>Ressalta-se que o Novo CAGED é distribuído em arquivos nacionais, de modo que cada competência traz todas as unidades da federação; o recorte geográfico é feito depois, na consulta. Quando novas competências forem divulgadas, a função <code>caged_update()</code> acrescenta ao banco apenas os meses que ainda não foram carregados.</p>
 </section><section id="consulta-com-dplyr" class="level2"><h2 class="anchored" data-anchor-id="consulta-com-dplyr">Consulta com dplyr</h2>
-<p>Com o banco populado, a conexão é feita por <code><a href="https://rdrr.io/pkg/datacaged/man/caged_connect.html">caged_connect()</a></code>, e as tabelas podem ser consultadas com <code>dplyr</code> como se fossem <em>data frames</em>. A tabela <code>caged_mov</code> contém as movimentações do mês, em que a variável <code>saldomovimentacao</code> assume o valor 1 para admissões e -1 para desligamentos.</p>
+<p>Com o banco populado, a conexão é feita por <code>caged_connect()</code>, e as tabelas podem ser consultadas com <code>dplyr</code> como se fossem <em>data frames</em>. A tabela <code>caged_mov</code> contém as movimentações do mês, em que a variável <code>saldomovimentacao</code> assume o valor 1 para admissões e -1 para desligamentos.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -1046,7 +1046,7 @@ font-style: inherit;">con</span> <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;"><a href="https://rdrr.io/pkg/datacaged/man/caged_connect.html">caged_connect</a></span><span class="op" style="color: #5E5E5E;
+font-style: inherit;">caged_connect</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="st" style="color: #20794D;
 background-color: null;
@@ -1359,7 +1359,7 @@ Tabela&nbsp;1&nbsp;- Admissões, saldo e salário médio de admissão das ocupa�
 <p>No entanto, o saldo (admissões menos desligamentos) revela trajetórias distintas. Enquanto os auxiliares de contabilidade mantêm saldo positivo (7.178 vínculos no período), os contadores registram saldo negativo (-2.598), resultado que se repete desde 2023, conforme a Figura&nbsp;1. Em outras palavras, as empresas contratam contadores com frequência crescente, mas os desligamentos crescem ainda mais rapidamente.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-saldo" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras do saldo anual de 2020 a 2026: os auxiliares de contabilidade têm saldo positivo em todos os anos, entre cerca de 3 mil e 12,5 mil vínculos, enquanto os contadores alternam saldos positivos em 2021 e 2022 e negativos nos demais anos, entre -2,2 mil e -3,6 mil vínculos." loading="lazy">
+<div id="fig-saldo" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de barras do saldo anual de 2020 a 2026: os auxiliares de contabilidade têm saldo positivo em todos os anos, entre cerca de 3 mil e 12,5 mil vínculos, enquanto os contadores alternam saldos positivos em 2021 e 2022 e negativos nos demais anos, entre -2,2 mil e -3,6 mil vínculos.">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-saldo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/mercado-contabil-2026/index_files/figure-html/fig-saldo-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de barras do saldo anual de 2020 a 2026: os auxiliares de contabilidade têm saldo positivo em todos os anos, entre cerca de 3 mil e 12,5 mil vínculos, enquanto os contadores alternam saldos positivos em 2021 e 2022 e negativos nos demais anos, entre -2,2 mil e -3,6 mil vínculos." width="672">
 </div>
@@ -1375,7 +1375,7 @@ Figura&nbsp;1&nbsp;- Saldo anual de empregos formais de contadores e de auxiliar
 <p>Quanto à remuneração, o salário médio de admissão dos contadores alcançou R$ 5.403 em 2026, valor 5,0% superior ao do mesmo período de 2025. Entre 2020 e 2025, considerando os anos completos, o salário de admissão da ocupação passou de R$ 4.085 para R$ 5.227, crescimento nominal de 28,0% (Figura&nbsp;2). Ressalta-se que os valores não foram deflacionados, de modo que parte desse aumento reflete a inflação do período.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-salario" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de linhas do salário médio de admissão de 2020 a 2026: auditores e contadores no patamar mais alto, entre 4 mil e 5,8 mil reais; técnicos de contabilidade entre 2,8 mil e 4,1 mil reais; auxiliares de contabilidade no patamar mais baixo, de 1,8 mil a 2,6 mil reais. Todas as linhas crescem, exceto a dos auditores, que cai em 2026." loading="lazy">
+<div id="fig-salario" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de linhas do salário médio de admissão de 2020 a 2026: auditores e contadores no patamar mais alto, entre 4 mil e 5,8 mil reais; técnicos de contabilidade entre 2,8 mil e 4,1 mil reais; auxiliares de contabilidade no patamar mais baixo, de 1,8 mil a 2,6 mil reais. Todas as linhas crescem, exceto a dos auditores, que cai em 2026.">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-salario-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/mercado-contabil-2026/index_files/figure-html/fig-salario-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de linhas do salário médio de admissão de 2020 a 2026: auditores e contadores no patamar mais alto, entre 4 mil e 5,8 mil reais; técnicos de contabilidade entre 2,8 mil e 4,1 mil reais; auxiliares de contabilidade no patamar mais baixo, de 1,8 mil a 2,6 mil reais. Todas as linhas crescem, exceto a dos auditores, que cai em 2026." width="672">
 </div>
@@ -2362,7 +2362,7 @@ font-style: inherit;">model</span>, vcov <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;"><a href="https://sandwich.R-Forge.R-project.org/reference/vcovHC.html">vcovHC</a></span><span class="op" style="color: #5E5E5E;
+font-style: inherit;"><a href="https://rdrr.io/pkg/sandwich/man/vcovHC.html">vcovHC</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
 background-color: null;
@@ -3706,7 +3706,7 @@ font-style: inherit;">model_pca</span>, vcov <span class="op" style="color: #5E5
 background-color: null;
 font-style: inherit;">=</span> <span class="fu" style="color: #4758AB;
 background-color: null;
-font-style: inherit;"><a href="https://sandwich.R-Forge.R-project.org/reference/vcovHC.html">vcovHC</a></span><span class="op" style="color: #5E5E5E;
+font-style: inherit;"><a href="https://rdrr.io/pkg/sandwich/man/vcovHC.html">vcovHC</a></span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">(</span><span class="va" style="color: #111111;
 background-color: null;

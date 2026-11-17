@@ -463,23 +463,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <p>O Novo CAGED (2020 em diante) funciona sem configuração adicional no Windows, no macOS e no Linux. Para a série antiga (até 2019), que utiliza compressão PPMd, é necessário ter o 7-Zip instalado no computador.</p>
 </section><section id="carregamento-dos-dados" class="level2"><h2 class="anchored" data-anchor-id="carregamento-dos-dados">Carregamento dos dados</h2>
-<p>A função <code><a href="https://rdrr.io/pkg/datacaged/man/caged_load.html">caged_load()</a></code> executa todo o processo em um único comando: baixa os arquivos das competências solicitadas, extrai, padroniza e grava no banco indicado em <code>db_path</code>.</p>
+<p>A função <code>caged_load()</code> executa todo o processo em um único comando: baixa os arquivos das competências solicitadas, extrai, padroniza e grava no banco indicado em <code>db_path</code>.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/gecomt/datacaged">datacaged</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="https://rdrr.io/pkg/datacaged/man/caged_load.html">caged_load</a></span><span class="op">(</span></span>
+<span><span class="fu">caged_load</span><span class="op">(</span></span>
 <span>  years   <span class="op">=</span> <span class="fl">2026</span>,</span>
 <span>  months  <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">9</span>,</span>
 <span>  db_path <span class="op">=</span> <span class="st">"caged.duckdb"</span></span>
 <span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Ressalta-se que o Novo CAGED é distribuído em arquivos nacionais, de modo que cada competência traz todas as unidades da federação; o recorte geográfico é feito depois, na consulta. Quando novas competências forem divulgadas, a função <code><a href="https://rdrr.io/pkg/datacaged/man/caged_update.html">caged_update()</a></code> acrescenta ao banco apenas os meses que ainda não foram carregados.</p>
+<p>Ressalta-se que o Novo CAGED é distribuído em arquivos nacionais, de modo que cada competência traz todas as unidades da federação; o recorte geográfico é feito depois, na consulta. Quando novas competências forem divulgadas, a função <code>caged_update()</code> acrescenta ao banco apenas os meses que ainda não foram carregados.</p>
 </section><section id="consulta-com-dplyr" class="level2"><h2 class="anchored" data-anchor-id="consulta-com-dplyr">Consulta com dplyr</h2>
-<p>Com o banco populado, a conexão é feita por <code><a href="https://rdrr.io/pkg/datacaged/man/caged_connect.html">caged_connect()</a></code>, e as tabelas podem ser consultadas com <code>dplyr</code> como se fossem <em>data frames</em>. A tabela <code>caged_mov</code> contém as movimentações do mês, em que a variável <code>saldomovimentacao</code> assume o valor 1 para admissões e -1 para desligamentos.</p>
+<p>Com o banco populado, a conexão é feita por <code>caged_connect()</code>, e as tabelas podem ser consultadas com <code>dplyr</code> como se fossem <em>data frames</em>. A tabela <code>caged_mov</code> contém as movimentações do mês, em que a variável <code>saldomovimentacao</code> assume o valor 1 para admissões e -1 para desligamentos.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">con</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/datacaged/man/caged_connect.html">caged_connect</a></span><span class="op">(</span><span class="st">"caged.duckdb"</span><span class="op">)</span></span>
+<span><span class="va">con</span> <span class="op">&lt;-</span> <span class="fu">caged_connect</span><span class="op">(</span><span class="st">"caged.duckdb"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">saldo_rn</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/tbl.html">tbl</a></span><span class="op">(</span><span class="va">con</span>, <span class="st">"caged_mov"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">uf</span> <span class="op">==</span> <span class="fl">24</span><span class="op">)</span> <span class="op">|&gt;</span>                       <span class="co"># Rio Grande do Norte</span></span>
