@@ -48,9 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-3e64db84d37dea41f36a9f8c79e61bb0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9a54db543b4ac127edfcb27742dff1ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-6422df623a12f4e78606cfff81464e4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-9a54db543b4ac127edfcb27742dff1ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d82b8d93834374020ce7dba87c1b4a0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-3e5cd96c88e643e24e976f79ec9a4bed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d82b8d93834374020ce7dba87c1b4a0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -97,12 +97,15 @@ cookieconsent.run({
 </script> 
   
 <style>html{ scroll-behavior: smooth; }</style>
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#0f172a">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
-<!-- Fontes: Inter (texto e títulos), IBM Plex Mono (rótulos, datas e código) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Fontes hospedadas no próprio site: Inter (texto), Space Grotesk (menu e títulos),
+     IBM Plex Mono (rótulos, datas e código). Nenhuma requisição a serviços externos. -->
+<link rel="preload" href="../assets/fonts/web/inter-latin-567244.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="../assets/fonts/web/space-grotesk-latin-ecea81.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="stylesheet" href="../assets/fonts/web/fonts.css">
 
 <!-- Google Tag Manager (carregado apenas após o consentimento de cookies) -->
 <script type="text/plain" cookie-consent="tracking">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -112,6 +115,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-T9KC9QL7');</script>
 <!-- End Google Tag Manager -->
 <script src="../assets/js/menu-ativo.js" defer=""></script>
+<script src="../assets/js/post-extras.js" defer=""></script>
+<script src="../assets/js/pwa.js" defer=""></script>
 
 
 <meta property="og:title" content="Ensino – Alexsandro Prado">
@@ -267,7 +272,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -280,6 +286,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -414,6 +428,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <ul>
   <li><a href="#disciplinas" id="toc-disciplinas" class="nav-link active" data-scroll-target="#disciplinas">Graduação</a></li>
   <li><a href="#pós-graduação" id="toc-pós-graduação" class="nav-link" data-scroll-target="#pós-graduação">Pós-graduação</a></li>
+  <li><a href="#trajetoria" id="toc-trajetoria" class="nav-link" data-scroll-target="#trajetoria">Trajetória docente</a></li>
   <li><a href="#orientacao" id="toc-orientacao" class="nav-link" data-scroll-target="#orientacao">Orientação</a></li>
   <li><a href="#materiais" id="toc-materiais" class="nav-link" data-scroll-target="#materiais">Materiais</a></li>
   </ul>
@@ -435,8 +450,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><strong>Contabilidade Ambiental e Responsabilidade Social</strong> (ACS1220)</li>
 <li><strong>Sistemas de Informações Contábeis</strong></li>
 </ul>
-<p>Membro do colegiado do curso de Ciências Contábeis, do qual foi vice-coordenador entre 2020 e 2022.</p>
-<p>Projeto de monitoria da disciplina Teoria da Contabilidade, sob coordenação, desde 2022.</p>
+<p>Membro do colegiado do curso de Ciências Contábeis.</p>
 </section>
 <section id="pós-graduação" class="level2">
 <h2 class="anchored" data-anchor-id="pós-graduação">Pós-graduação</h2>
@@ -444,6 +458,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><strong>Gestão Financeira Baseada em Dados</strong>: Programa de Pós-Graduação em Administração (PPGA/UFERSA).</li>
 <li><strong>Comportamento Organizacional</strong>: Especialização em Gestão Pública (UFERSA).</li>
 </ul>
+</section>
+<section id="trajetoria" class="level2">
+<h2 class="anchored" data-anchor-id="trajetoria">Trajetória docente</h2>
+<div class="linha-tempo">
+<div class="lt-item lt-atual">
+<p><span class="lt-ano">desde 2025</span></p>
+<p><strong>Orientação de dissertações</strong> no Programa de Pós-Graduação em Administração (PPGA/UFERSA).</p>
+</div>
+<div class="lt-item lt-atual">
+<p><span class="lt-ano">desde 2022</span></p>
+<p><strong>Coordenação do projeto de monitoria</strong> da disciplina Teoria da Contabilidade.</p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2020 a 2022</span></p>
+<p><strong>Vice-coordenação</strong> do curso de Ciências Contábeis da UFERSA.</p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2013</span></p>
+<p><strong>Ingresso na UFERSA</strong> como docente do curso de Ciências Contábeis.</p>
+</div>
+</div>
 </section>
 <section id="orientacao" class="level2">
 <h2 class="anchored" data-anchor-id="orientacao">Orientação</h2>

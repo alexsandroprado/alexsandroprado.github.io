@@ -1,4 +1,63 @@
 ```{=html}
+<%
+  // ── Painel: produção por ano e filtros por tipo e estrato Qualis ──
+  const ano = (it) => it.date ? new Date(it.date).getUTCFullYear() : null;
+  const tipos = [
+    {nome: "Artigo em periódico", curto: "Artigos", cls: "t-artigo"},
+    {nome: "Capítulo de livro",   curto: "Capítulos", cls: "t-capitulo"},
+    {nome: "Trabalho em evento",  curto: "Eventos", cls: "t-evento"}
+  ];
+  const tipoDe = (it) => (it.categories || [])[0] || "";
+  const anos = items.map(ano).filter(Boolean);
+  const a0 = Math.min(...anos), a1 = Math.max(...anos);
+  const porAno = {};
+  for (let a = a0; a <= a1; a++) porAno[a] = {total: 0};
+  for (const it of items) { const a = ano(it); if (!a) continue; porAno[a].total++; porAno[a][tipoDe(it)] = (porAno[a][tipoDe(it)] || 0) + 1; }
+  const maxAno = Math.max(...Object.values(porAno).map((v) => v.total));
+  const nAnos = a1 - a0 + 1, W = 760, H = 150, base = 120, larg = W / nAnos;
+  const contaTipo = {}; for (const it of items) contaTipo[tipoDe(it)] = (contaTipo[tipoDe(it)] || 0) + 1;
+  const ordemQ = ["A1", "A2", "A3", "A4", "B1", "B2", "B3", "B4", "C"];
+  const contaQ = {}; for (const it of items) if (it.qualis) contaQ[it.qualis] = (contaQ[it.qualis] || 0) + 1;
+%>
+<div class="pub-painel">
+  <figure class="pub-grafico" aria-label="Número de publicações por ano e por tipo, de <%= a0 %> a <%= a1 %>">
+    <svg viewBox="0 0 <%= W %> <%= H %>" role="img">
+      <% for (let a = a0; a <= a1; a++) {
+           const x = (a - a0) * larg + larg * 0.18, w = larg * 0.64;
+           let y = base;
+           for (const t of tipos) {
+             const n = porAno[a][t.nome] || 0; if (!n) continue;
+             const h = n / maxAno * (base - 12); y -= h; %>
+      <rect class="<%= t.cls %>" x="<%= x.toFixed(1) %>" y="<%= y.toFixed(1) %>" width="<%= w.toFixed(1) %>" height="<%= h.toFixed(1) %>" rx="2"><title><%= a %>: <%= n %> <%= t.curto.toLowerCase() %></title></rect>
+      <% } if (porAno[a].total) { %>
+      <text class="pub-g-n" x="<%= (x + w / 2).toFixed(1) %>" y="<%= (y - 4).toFixed(1) %>"><%= porAno[a].total %></text>
+      <% } if ((a - a0) % 2 === 0 || a === a1) { %>
+      <text class="pub-g-ano" x="<%= (x + w / 2).toFixed(1) %>" y="<%= base + 18 %>"><%= a %></text>
+      <% } } %>
+      <line class="pub-g-base" x1="0" x2="<%= W %>" y1="<%= base %>" y2="<%= base %>"></line>
+    </svg>
+    <figcaption class="pub-legenda">
+      <% for (const t of tipos) { %><span><i class="<%= t.cls %>"></i><%= t.curto %> (<%= contaTipo[t.nome] || 0 %>)</span><% } %>
+    </figcaption>
+  </figure>
+
+  <div class="pub-filtros" role="group" aria-label="Filtrar por tipo">
+    <span class="pub-filtro-rot">Tipo</span>
+    <button type="button" class="blog-chip active" data-filtro="tipo" data-valor="">Todos <span class="blog-chip-n"><%= items.length %></span></button>
+    <% for (const t of tipos) { if (!contaTipo[t.nome]) continue; %>
+    <button type="button" class="blog-chip" data-filtro="tipo" data-valor="<%= t.nome %>"><%= t.curto %> <span class="blog-chip-n"><%= contaTipo[t.nome] %></span></button>
+    <% } %>
+  </div>
+  <div class="pub-filtros" role="group" aria-label="Filtrar por estrato Qualis">
+    <span class="pub-filtro-rot">Qualis</span>
+    <button type="button" class="blog-chip active" data-filtro="qualis" data-valor="">Todos</button>
+    <% for (const q of ordemQ) { if (!contaQ[q]) continue; %>
+    <button type="button" class="blog-chip" data-filtro="qualis" data-valor="<%= q %>"><%= q %> <span class="blog-chip-n"><%= contaQ[q] %></span></button>
+    <% } %>
+  </div>
+  <p class="pub-contagem" aria-live="polite"><span id="pub-n"><%= items.length %></span> publicações</p>
+</div>
+
 <div class="list pub-lista">
 <% for (const item of items) {
   const busca = "https://scholar.google.com/scholar?q=" + encodeURIComponent('"' + item.title + '"');
@@ -12,7 +71,7 @@
     item.apresentacao ? {url: item.apresentacao, icone: "bi-easel",             rotulo: "Slides"} : null
   ].filter(Boolean);
 %>
-<div class="pub-item" <%= metadataAttrs(item) %>>
+<div class="pub-item" data-tipo="<%= (item.categories || [])[0] || '' %>" data-qualis="<%= item.qualis || '' %>" <%= metadataAttrs(item) %>>
   <div class="pub-ano listing-date"><%= item.date ? new Date(item.date).getUTCFullYear() : '' %></div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none"><%= item.author %></span>
@@ -35,6 +94,32 @@
 </div>
 
 <script>
+// Filtros por tipo e estrato Qualis (combinados com a busca da página)
+(function () {
+  const estado = {tipo: "", qualis: ""};
+  const listas = () => Object.values(window["quarto-listings"] || {}).filter(Boolean);
+  const aplica = () => {
+    for (const lista of listas()) {
+      if (!estado.tipo && !estado.qualis) lista.filter();
+      else lista.filter((it) => (!estado.tipo || it.elm.dataset.tipo === estado.tipo) &&
+                                (!estado.qualis || it.elm.dataset.qualis === estado.qualis));
+      const n = document.getElementById("pub-n");
+      if (n) n.textContent = lista.matchingItems.length;
+    }
+  };
+  document.addEventListener("click", (ev) => {
+    const b = ev.target.closest(".pub-filtros .blog-chip");
+    if (!b) return;
+    estado[b.dataset.filtro] = b.dataset.valor;
+    b.parentElement.querySelectorAll(".blog-chip").forEach((c) => c.classList.toggle("active", c === b));
+    aplica();
+  });
+  // Mantém a contagem certa também durante a busca por texto
+  window.addEventListener("load", () => listas().forEach((l) => l.on("updated", () => {
+    const n = document.getElementById("pub-n"); if (n) n.textContent = l.matchingItems.length;
+  })));
+})();
+
 // Copia a referência ABNT (texto simples) do item clicado
 document.addEventListener("click", function (ev) {
   const btn = ev.target.closest(".pub-copiar");

@@ -10,14 +10,20 @@ Os produtos a seguir foram desenvolvidos no âmbito das pesquisas do grupo [GECO
 
 ## Software e aplicativos
 
-::: {.cartao}
+:::: {.pt-grade}
+
+::: {.pt-card .pt-card-largo}
+```{=html}
+<div class="pt-cab">
+  <img class="pt-hex" src="../images/hex/datacaged.png" alt="Logo hexagonal do pacote datacaged" width="96" height="110">
+  <div class="pt-cab-txt">
+    <div class="pt-selos"><span class="pt-selo selo-cran"><span>CRAN</span><span>v0.2.3</span></span><span class="pt-selo "><span>licença</span><span>MIT</span></span><a href="https://doi.org/10.32614/CRAN.package.datacaged" class="pt-selo-link"><span class="pt-selo selo-doi"><span>DOI</span><span>10.32614/CRAN.package.datacaged</span></span></a></div>
+    <div class="pt-tipos"><span class="tipo-capes">Software/Aplicativo</span><span class="tipo-capes tipo-neutro">Abrangência nacional</span></div>
+  </div>
+</div>
+```
+
 ### datacaged
-
-[Software/Aplicativo]{.tipo-capes} [Abrangência nacional]{.tipo-capes .tipo-neutro}
-
-::: {.meta}
-Versão 0.2.3 · disponível no CRAN · licença MIT · DOI [10.32614/CRAN.package.datacaged](https://doi.org/10.32614/CRAN.package.datacaged)
-:::
 
 Ferramentas para baixar, ler e armazenar os microdados do Cadastro Geral de Empregados e Desempregados (CAGED) em um banco local DuckDB, com suporte ao CAGED antigo (1992 a 2019), ao Novo CAGED (2020 em diante) e aos arquivos de ajustes. É o pacote que alimenta os [indicadores do emprego formal](#indicadores) publicados nesta página.
 
@@ -39,17 +45,21 @@ html`<div class="downloads-cran">
 </div>`
 ```
 
-[Repositório no GitHub](https://github.com/gecomt/datacaged) · [Página no CRAN](https://CRAN.R-project.org/package=datacaged)
+[<i class="bi bi-github"></i> Repositório](https://github.com/gecomt/datacaged){.pt-btn} [<i class="bi bi-box-seam"></i> Página no CRAN](https://CRAN.R-project.org/package=datacaged){.pt-btn} [<i class="bi bi-journal-code"></i> Tutorial no blog](/blog/posts/datacaged-tutorial/index.qmd){.pt-btn}
 :::
 
-::: {.cartao}
+::: {.pt-card}
+```{=html}
+<div class="pt-cab">
+  <img class="pt-hex" src="../images/hex/datarais.png" alt="Logo hexagonal do pacote datarais" width="96" height="112">
+  <div class="pt-cab-txt">
+    <div class="pt-selos"><span class="pt-selo selo-dev"><span>GitHub</span><span>v0.1.0</span></span><span class="pt-selo selo-dev"><span>status</span><span>em desenvolvimento</span></span><span class="pt-selo "><span>licença</span><span>MIT</span></span></div>
+    <div class="pt-tipos"><span class="tipo-capes">Software/Aplicativo</span><span class="tipo-capes tipo-neutro">Abrangência nacional</span></div>
+  </div>
+</div>
+```
+
 ### datarais
-
-[Software/Aplicativo]{.tipo-capes} [Abrangência nacional]{.tipo-capes .tipo-neutro}
-
-::: {.meta}
-Versão 0.1.0 · em desenvolvimento · licença MIT
-:::
 
 Acesso aos microdados da Relação Anual de Informações Sociais (RAIS), com vínculos de emprego e estabelecimentos de 1985 a 2025, armazenados em DuckDB. Os nomes de colunas são padronizados entre os diferentes leiautes históricos.
 
@@ -58,50 +68,68 @@ Acesso aos microdados da Relação Anual de Informações Sociais (RAIS), com v�
 pak::pak("gecomt/datarais")
 ```
 
-[Repositório no GitHub](https://github.com/gecomt/datarais)
+[<i class="bi bi-github"></i> Repositório](https://github.com/gecomt/datarais){.pt-btn}
 :::
 
-::: {.cartao}
+::: {.pt-card}
+```{=html}
+<div class="pt-cab">
+  <span class="pt-hex pt-hex-icone" aria-hidden="true"><i class="bi bi-shield-check"></i></span>
+  <div class="pt-cab-txt">
+    <div class="pt-selos"><span class="pt-selo selo-inpi"><span>INPI</span><span>BR512024004498-1</span></span><span class="pt-selo "><span>registro</span><span>23/09/2024</span></span></div>
+    <div class="pt-tipos"><span class="tipo-capes">Software/Aplicativo</span><span class="tipo-capes tipo-neutro">Registro no INPI</span></div>
+  </div>
+</div>
+```
+
 ### cntdd
 
-[Software/Aplicativo]{.tipo-capes} [Registro no INPI]{.tipo-capes .tipo-neutro}
-
-::: {.meta}
-Programa de computador registrado no INPI · BR512024004498-1 · 23/09/2024
+Programa de computador com registro concedido pelo Instituto Nacional da Propriedade Industrial (INPI).
 :::
 
-Registro de programa de computador concedido pelo Instituto Nacional da Propriedade Industrial (INPI).
-:::
+::::
 
 ## Bases de dados técnico-científicas
 
-::: {.cartao}
+:::: {.pt-grade}
+
+::: {.pt-card}
+```{=html}
+<div class="pt-cab">
+  <span class="pt-hex pt-hex-icone" aria-hidden="true"><i class="bi bi-buildings"></i></span>
+  <div class="pt-cab-txt">
+    <div class="pt-selos"><span class="pt-selo "><span>dados</span><span>CC BY 4.0</span></span><span class="pt-selo "><span>código</span><span>MIT</span></span><span class="pt-selo selo-cran"><span>cobertura</span><span>2010 a 2026</span></span></div>
+    <div class="pt-tipos"><span class="tipo-capes">Base de dados técnico-científica</span><span class="tipo-capes tipo-neutro">Abrangência nacional</span></div>
+  </div>
+</div>
+```
+
 ### Segmentos de listagem da B3 por companhia (2010 a 2026) {#segmentos-b3}
-
-[Base de dados técnico-científica]{.tipo-capes} [Abrangência nacional]{.tipo-capes .tipo-neutro}
-
-::: {.meta}
-Dados sob licença CC BY 4.0 · código sob licença MIT
-:::
 
 Painel anual do segmento de listagem (Básico/Tradicional, Nível 1, Nível 2, Novo Mercado, Bovespa Mais e Bovespa Mais Nível 2) de cada companhia aberta brasileira, construído a partir do Formulário Cadastral (FCA) da Comissão de Valores Mobiliários (CVM) e conferido com documentos do sistema IPE. São 5.904 observações de 602 companhias, com arquivos para R, Stata, CSV e Excel e a metodologia detalhada.
 
-[Repositório no GitHub](https://github.com/alexsandroprado/segmentos-b3)
+[<i class="bi bi-github"></i> Repositório](https://github.com/alexsandroprado/segmentos-b3){.pt-btn} [<i class="bi bi-journal-text"></i> Apresentação no blog](/blog/posts/segmentos-b3/index.qmd){.pt-btn}
 :::
 
-::: {.cartao}
+::: {.pt-card}
+```{=html}
+<div class="pt-cab">
+  <span class="pt-hex pt-hex-icone" aria-hidden="true"><i class="bi bi-database"></i></span>
+  <div class="pt-cab-txt">
+    <div class="pt-selos"><span class="pt-selo "><span>fonte</span><span>MTE</span></span><span class="pt-selo "><span>formato</span><span>7z por competência</span></span></div>
+    <div class="pt-tipos"><span class="tipo-capes">Base de dados técnico-científica</span><span class="tipo-capes tipo-neutro">Abrangência nacional</span></div>
+  </div>
+</div>
+```
+
 ### Microdados do CAGED e da RAIS no Hugging Face
-
-[Base de dados técnico-científica]{.tipo-capes} [Abrangência nacional]{.tipo-capes .tipo-neutro}
-
-::: {.meta}
-Fonte: Ministério do Trabalho e Emprego (MTE)
-:::
 
 Espelhos dos arquivos públicos do CAGED e da RAIS, organizados por período, que servem de fonte para os pacotes `datacaged` e `datarais`.
 
-[CAGED](https://huggingface.co/datasets/alexsandroprado/caged) · [RAIS](https://huggingface.co/datasets/alexsandroprado/rais)
+[<i class="bi bi-database"></i> CAGED](https://huggingface.co/datasets/alexsandroprado/caged){.pt-btn} [<i class="bi bi-database"></i> RAIS](https://huggingface.co/datasets/alexsandroprado/rais){.pt-btn}
 :::
+
+::::
 
 ## Emprego formal em números {#indicadores}
 

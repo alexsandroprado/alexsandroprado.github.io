@@ -49,6 +49,8 @@ def main():
         novo = BLOCO_JS.sub("\n", txt)
         novo = ROTULOS.sub("", novo)
         if arq.parent.name == "publicacoes":
+            # Painel interativo (gráfico SVG e botões de filtro) não interessa a LLMs
+            novo = re.sub(r"!\[\]\(data:image/svg\+xml;base64,[^)]*\)\n.*?\n\d+ publicações\n", "", novo, flags=re.S)
             linhas = []
             for linha in novo.split("\n"):
                 for a in autores:

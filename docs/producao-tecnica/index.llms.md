@@ -2,11 +2,13 @@ Os produtos a seguir foram desenvolvidos no âmbito das pesquisas do grupo [GECO
 
 ## Software e aplicativos
 
+![Logo hexagonal do pacote datacaged](../images/hex/datacaged.png)
+
+CRANv0.2.3licençaMIT[DOI10.32614/CRAN.package.datacaged](https://doi.org/10.32614/CRAN.package.datacaged)
+
+Software/AplicativoAbrangência nacional
+
 ### datacaged
-
-Software/Aplicativo Abrangência nacional
-
-Versão 0.2.3 · disponível no CRAN · licença MIT · DOI [10.32614/CRAN.package.datacaged](https://doi.org/10.32614/CRAN.package.datacaged)
 
 Ferramentas para baixar, ler e armazenar os microdados do Cadastro Geral de Empregados e Desempregados (CAGED) em um banco local DuckDB, com suporte ao CAGED antigo (1992 a 2019), ao Novo CAGED (2020 em diante) e aos arquivos de ajustes. É o pacote que alimenta os [indicadores do emprego formal](#indicadores) publicados nesta página.
 
@@ -14,13 +16,15 @@ Ferramentas para baixar, ler e armazenar os microdados do Cadastro Geral de Empr
 install.packages("datacaged")
 ```
 
-[Repositório no GitHub](https://github.com/gecomt/datacaged) · [Página no CRAN](https://CRAN.R-project.org/package=datacaged)
+[ Repositório](https://github.com/gecomt/datacaged) [ Página no CRAN](https://CRAN.R-project.org/package=datacaged) [ Tutorial no blog](../blog/posts/datacaged-tutorial/index.llms.md)
+
+![Logo hexagonal do pacote datarais](../images/hex/datarais.png)
+
+GitHubv0.1.0statusem desenvolvimentolicençaMIT
+
+Software/AplicativoAbrangência nacional
 
 ### datarais
-
-Software/Aplicativo Abrangência nacional
-
-Versão 0.1.0 · em desenvolvimento · licença MIT
 
 Acesso aos microdados da Relação Anual de Informações Sociais (RAIS), com vínculos de emprego e estabelecimentos de 1985 a 2025, armazenados em DuckDB. Os nomes de colunas são padronizados entre os diferentes leiautes históricos.
 
@@ -29,37 +33,37 @@ Acesso aos microdados da Relação Anual de Informações Sociais (RAIS), com v�
 pak::pak("gecomt/datarais")
 ```
 
-[Repositório no GitHub](https://github.com/gecomt/datarais)
+[ Repositório](https://github.com/gecomt/datarais)
+
+INPIBR512024004498-1registro23/09/2024
+
+Software/AplicativoRegistro no INPI
 
 ### cntdd
 
-Software/Aplicativo Registro no INPI
-
-Programa de computador registrado no INPI · BR512024004498-1 · 23/09/2024
-
-Registro de programa de computador concedido pelo Instituto Nacional da Propriedade Industrial (INPI).
+Programa de computador com registro concedido pelo Instituto Nacional da Propriedade Industrial (INPI).
 
 ## Bases de dados técnico-científicas
 
+dadosCC BY 4.0códigoMITcobertura2010 a 2026
+
+Base de dados técnico-científicaAbrangência nacional
+
 ### Segmentos de listagem da B3 por companhia (2010 a 2026)
-
-Base de dados técnico-científica Abrangência nacional
-
-Dados sob licença CC BY 4.0 · código sob licença MIT
 
 Painel anual do segmento de listagem (Básico/Tradicional, Nível 1, Nível 2, Novo Mercado, Bovespa Mais e Bovespa Mais Nível 2) de cada companhia aberta brasileira, construído a partir do Formulário Cadastral (FCA) da Comissão de Valores Mobiliários (CVM) e conferido com documentos do sistema IPE. São 5.904 observações de 602 companhias, com arquivos para R, Stata, CSV e Excel e a metodologia detalhada.
 
-[Repositório no GitHub](https://github.com/alexsandroprado/segmentos-b3)
+[ Repositório](https://github.com/alexsandroprado/segmentos-b3) [ Apresentação no blog](../blog/posts/segmentos-b3/index.llms.md)
+
+fonteMTEformato7z por competência
+
+Base de dados técnico-científicaAbrangência nacional
 
 ### Microdados do CAGED e da RAIS no Hugging Face
 
-Base de dados técnico-científica Abrangência nacional
-
-Fonte: Ministério do Trabalho e Emprego (MTE)
-
 Espelhos dos arquivos públicos do CAGED e da RAIS, organizados por período, que servem de fonte para os pacotes `datacaged` e `datarais`.
 
-[CAGED](https://huggingface.co/datasets/alexsandroprado/caged) · [RAIS](https://huggingface.co/datasets/alexsandroprado/rais)
+[ CAGED](https://huggingface.co/datasets/alexsandroprado/caged) [ RAIS](https://huggingface.co/datasets/alexsandroprado/rais)
 
 ## Emprego formal em números
 

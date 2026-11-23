@@ -12,14 +12,40 @@ Curso de Ciências Contábeis, Universidade Federal Rural do Semi-Árido (UFERSA
 - **Contabilidade Ambiental e Responsabilidade Social** (ACS1220)
 - **Sistemas de Informações Contábeis**
 
-Membro do colegiado do curso de Ciências Contábeis, do qual foi vice-coordenador entre 2020 e 2022.
-
-Projeto de monitoria da disciplina Teoria da Contabilidade, sob coordenação, desde 2022.
+Membro do colegiado do curso de Ciências Contábeis.
 
 ## Pós-graduação
 
 - **Gestão Financeira Baseada em Dados**: Programa de Pós-Graduação em Administração (PPGA/UFERSA).
 - **Comportamento Organizacional**: Especialização em Gestão Pública (UFERSA).
+
+## Trajetória docente {#trajetoria}
+
+:::: {.linha-tempo}
+::: {.lt-item .lt-atual}
+[desde 2025]{.lt-ano}
+
+**Orientação de dissertações** no Programa de Pós-Graduação em Administração (PPGA/UFERSA).
+:::
+
+::: {.lt-item .lt-atual}
+[desde 2022]{.lt-ano}
+
+**Coordenação do projeto de monitoria** da disciplina Teoria da Contabilidade.
+:::
+
+::: {.lt-item}
+[2020 a 2022]{.lt-ano}
+
+**Vice-coordenação** do curso de Ciências Contábeis da UFERSA.
+:::
+
+::: {.lt-item}
+[2013]{.lt-ano}
+
+**Ingresso na UFERSA** como docente do curso de Ciências Contábeis.
+:::
+::::
 
 ## Orientação {#orientacao}
 

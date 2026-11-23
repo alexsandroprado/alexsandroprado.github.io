@@ -48,9 +48,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-3e64db84d37dea41f36a9f8c79e61bb0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9a54db543b4ac127edfcb27742dff1ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-6422df623a12f4e78606cfff81464e4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-9a54db543b4ac127edfcb27742dff1ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-d82b8d93834374020ce7dba87c1b4a0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-3e5cd96c88e643e24e976f79ec9a4bed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-d82b8d93834374020ce7dba87c1b4a0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -97,12 +97,15 @@ cookieconsent.run({
 </script> 
   
 <style>html{ scroll-behavior: smooth; }</style>
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#0f172a">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
-<!-- Fontes: Inter (texto e títulos), IBM Plex Mono (rótulos, datas e código) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Fontes hospedadas no próprio site: Inter (texto), Space Grotesk (menu e títulos),
+     IBM Plex Mono (rótulos, datas e código). Nenhuma requisição a serviços externos. -->
+<link rel="preload" href="../assets/fonts/web/inter-latin-567244.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="../assets/fonts/web/space-grotesk-latin-ecea81.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="stylesheet" href="../assets/fonts/web/fonts.css">
 
 <!-- Google Tag Manager (carregado apenas após o consentimento de cookies) -->
 <script type="text/plain" cookie-consent="tracking">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -112,6 +115,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-T9KC9QL7');</script>
 <!-- End Google Tag Manager -->
 <script src="../assets/js/menu-ativo.js" defer=""></script>
+<script src="../assets/js/post-extras.js" defer=""></script>
+<script src="../assets/js/pwa.js" defer=""></script>
 
 
 <meta property="og:title" content="Extensão – Alexsandro Prado">
@@ -267,7 +272,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -280,6 +286,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -413,11 +427,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    
   <ul>
   <li><a href="#em-andamento" id="toc-em-andamento" class="nav-link active" data-scroll-target="#em-andamento">Projetos em andamento</a></li>
-  <li><a href="#concluidos" id="toc-concluidos" class="nav-link" data-scroll-target="#concluidos">Projetos concluídos</a>
-  <ul class="collapse">
-  <li><a href="#sob-coordenação" id="toc-sob-coordenação" class="nav-link" data-scroll-target="#sob-coordenação">Sob coordenação</a></li>
-  <li><a href="#participação" id="toc-participação" class="nav-link" data-scroll-target="#participação">Participação</a></li>
-  </ul></li>
+  <li><a href="#concluidos" id="toc-concluidos" class="nav-link" data-scroll-target="#concluidos">Projetos concluídos</a></li>
   <li><a href="#cursos" id="toc-cursos" class="nav-link" data-scroll-target="#cursos">Cursos ministrados</a></li>
   <li><a href="#eventos" id="toc-eventos" class="nav-link" data-scroll-target="#eventos">Organização de eventos</a></li>
   <li><a href="#divulgacao" id="toc-divulgacao" class="nav-link" data-scroll-target="#divulgacao">Divulgação científica</a></li>
@@ -467,34 +477,80 @@ Coordenação. Assessoria a micro e pequenas empresas de Mossoró e região com 
 </section>
 <section id="concluidos" class="level2">
 <h2 class="anchored" data-anchor-id="concluidos">Projetos concluídos</h2>
-<section id="sob-coordenação" class="level3">
-<h3 class="anchored" data-anchor-id="sob-coordenação">Sob coordenação</h3>
-<ul>
-<li><strong>Revisão ENADE 2022: Ciências Contábeis</strong> (2022). Revisão dos conteúdos do componente específico da prova para os estudantes do curso.</li>
-<li><strong>A importância do ERP na gestão do agronegócio</strong> (2022). Uso de sistemas integrados de gestão para controle de custos, rotinas fiscais e logística no setor rural.</li>
-<li><strong>PAAC: Programa de Acompanhamento do Aprendizado em Contabilidade</strong> (2014 a 2016 e 2017). Simulados periódicos on-line para o Exame de Suficiência do CFC e o ENADE, com identificação dos conteúdos de menor desempenho.</li>
-<li><strong>I Curso Preparatório para o Exame de Suficiência do CFC</strong> (2016).</li>
-<li><strong>II Fórum da Profissão Contábil</strong> (2016).</li>
-<li><strong>I Workshop para Concursos Públicos</strong> (2014).</li>
-</ul>
-</section>
-<section id="participação" class="level3">
-<h3 class="anchored" data-anchor-id="participação">Participação</h3>
-<ul>
-<li><strong>Apoio à escrita científica com Mendeley e CopySpider</strong> (2022).</li>
-<li><strong>Análise de dados com Economatica e R</strong> (2022).</li>
-<li><strong>UFERSA3: Liga de Mercado Financeiro da UFERSA</strong> (2020 a 2022).</li>
-<li><strong>Recepção aos ingressantes</strong> (2018).</li>
-<li><strong>II Curso Preparatório para o Exame de Suficiência do CFC</strong> (2017).</li>
-<li><strong>Contabilidade e a Comunidade Empresarial</strong> (2017).</li>
-<li><strong>Estudos sobre Imposto de Renda Pessoa Física 2016</strong> (2016).</li>
-<li><strong>Folha de Pagamento: Teoria e Prática</strong> (2016).</li>
-<li><strong>V Jornada Norte-rio-grandense sobre Educação Fiscal: sensibilização acadêmica</strong> (2016).</li>
-<li><strong>Auditoria das Demonstrações Contábeis da Fundação Guimarães Duque</strong> (2015).</li>
-<li><strong>Observatório Social de Cabedelo</strong> (2012), projeto da Universidade Federal da Paraíba para estimular a cidadania fiscal e o monitoramento das receitas e dos gastos públicos municipais.</li>
-<li><strong>Espaço Contábil: um novo portal para o curso de Ciências Contábeis na Internet</strong> (2011 a 2012).</li>
-</ul>
-</section>
+<div class="linha-tempo">
+<div class="lt-item">
+<p><span class="lt-ano">2022</span></p>
+<p><strong>Revisão ENADE 2022: Ciências Contábeis</strong>. Revisão dos conteúdos do componente específico da prova para os estudantes do curso. <span class="lt-papel">Coordenação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2022</span></p>
+<p><strong>A importância do ERP na gestão do agronegócio</strong>. Uso de sistemas integrados de gestão para controle de custos, rotinas fiscais e logística no setor rural. <span class="lt-papel">Coordenação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2022</span></p>
+<p><strong>Apoio à escrita científica com Mendeley e CopySpider</strong>. <span class="lt-papel">Participação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2022</span></p>
+<p><strong>Análise de dados com Economatica e R</strong>. <span class="lt-papel">Participação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2020 a 2022</span></p>
+<p><strong>UFERSA3: Liga de Mercado Financeiro da UFERSA</strong>. <span class="lt-papel">Participação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2018</span></p>
+<p><strong>Recepção aos ingressantes</strong>. <span class="lt-papel">Participação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2014 a 2017</span></p>
+<p><strong>PAAC: Programa de Acompanhamento do Aprendizado em Contabilidade</strong>. Simulados periódicos on-line para o Exame de Suficiência do CFC e o ENADE, com identificação dos conteúdos de menor desempenho. <span class="lt-papel">Coordenação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2017</span></p>
+<p><strong>II Curso Preparatório para o Exame de Suficiência do CFC</strong>. <span class="lt-papel">Participação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2017</span></p>
+<p><strong>Contabilidade e a Comunidade Empresarial</strong>. <span class="lt-papel">Participação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2016</span></p>
+<p><strong>I Curso Preparatório para o Exame de Suficiência do CFC</strong>. <span class="lt-papel">Coordenação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2016</span></p>
+<p><strong>II Fórum da Profissão Contábil</strong>. <span class="lt-papel">Coordenação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2016</span></p>
+<p><strong>Estudos sobre Imposto de Renda Pessoa Física 2016</strong>. <span class="lt-papel">Participação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2016</span></p>
+<p><strong>Folha de Pagamento: Teoria e Prática</strong>. <span class="lt-papel">Participação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2016</span></p>
+<p><strong>V Jornada Norte-rio-grandense sobre Educação Fiscal: sensibilização acadêmica</strong>. <span class="lt-papel">Participação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2015</span></p>
+<p><strong>Auditoria das Demonstrações Contábeis da Fundação Guimarães Duque</strong>. <span class="lt-papel">Participação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2014</span></p>
+<p><strong>I Workshop para Concursos Públicos</strong>. <span class="lt-papel">Coordenação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2012</span></p>
+<p><strong>Observatório Social de Cabedelo</strong>. Projeto da Universidade Federal da Paraíba para estimular a cidadania fiscal e o monitoramento das receitas e dos gastos públicos municipais. <span class="lt-papel">Participação</span></p>
+</div>
+<div class="lt-item">
+<p><span class="lt-ano">2011 a 2012</span></p>
+<p><strong>Espaço Contábil: um novo portal para o curso de Ciências Contábeis na Internet</strong>. <span class="lt-papel">Participação</span></p>
+</div>
+</div>
 </section>
 <section id="cursos" class="level2">
 <h2 class="anchored" data-anchor-id="cursos">Cursos ministrados</h2>

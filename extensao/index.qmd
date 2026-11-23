@@ -44,29 +44,115 @@ Regulariza: assessoria contábil e gerencial para micro e pequenas empresas do S
 
 ## Projetos concluídos {#concluidos}
 
-### Sob coordenação
+:::: {.linha-tempo}
+::: {.lt-item}
+[2022]{.lt-ano}
 
-- **Revisão ENADE 2022: Ciências Contábeis** (2022). Revisão dos conteúdos do componente específico da prova para os estudantes do curso.
-- **A importância do ERP na gestão do agronegócio** (2022). Uso de sistemas integrados de gestão para controle de custos, rotinas fiscais e logística no setor rural.
-- **PAAC: Programa de Acompanhamento do Aprendizado em Contabilidade** (2014 a 2016 e 2017). Simulados periódicos on-line para o Exame de Suficiência do CFC e o ENADE, com identificação dos conteúdos de menor desempenho.
-- **I Curso Preparatório para o Exame de Suficiência do CFC** (2016).
-- **II Fórum da Profissão Contábil** (2016).
-- **I Workshop para Concursos Públicos** (2014).
+**Revisão ENADE 2022: Ciências Contábeis**. Revisão dos conteúdos do componente específico da prova para os estudantes do curso. [Coordenação]{.lt-papel}
+:::
 
-### Participação
+::: {.lt-item}
+[2022]{.lt-ano}
 
-- **Apoio à escrita científica com Mendeley e CopySpider** (2022).
-- **Análise de dados com Economatica e R** (2022).
-- **UFERSA3: Liga de Mercado Financeiro da UFERSA** (2020 a 2022).
-- **Recepção aos ingressantes** (2018).
-- **II Curso Preparatório para o Exame de Suficiência do CFC** (2017).
-- **Contabilidade e a Comunidade Empresarial** (2017).
-- **Estudos sobre Imposto de Renda Pessoa Física 2016** (2016).
-- **Folha de Pagamento: Teoria e Prática** (2016).
-- **V Jornada Norte-rio-grandense sobre Educação Fiscal: sensibilização acadêmica** (2016).
-- **Auditoria das Demonstrações Contábeis da Fundação Guimarães Duque** (2015).
-- **Observatório Social de Cabedelo** (2012), projeto da Universidade Federal da Paraíba para estimular a cidadania fiscal e o monitoramento das receitas e dos gastos públicos municipais.
-- **Espaço Contábil: um novo portal para o curso de Ciências Contábeis na Internet** (2011 a 2012).
+**A importância do ERP na gestão do agronegócio**. Uso de sistemas integrados de gestão para controle de custos, rotinas fiscais e logística no setor rural. [Coordenação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2022]{.lt-ano}
+
+**Apoio à escrita científica com Mendeley e CopySpider**. [Participação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2022]{.lt-ano}
+
+**Análise de dados com Economatica e R**. [Participação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2020 a 2022]{.lt-ano}
+
+**UFERSA3: Liga de Mercado Financeiro da UFERSA**. [Participação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2018]{.lt-ano}
+
+**Recepção aos ingressantes**. [Participação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2014 a 2017]{.lt-ano}
+
+**PAAC: Programa de Acompanhamento do Aprendizado em Contabilidade**. Simulados periódicos on-line para o Exame de Suficiência do CFC e o ENADE, com identificação dos conteúdos de menor desempenho. [Coordenação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2017]{.lt-ano}
+
+**II Curso Preparatório para o Exame de Suficiência do CFC**. [Participação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2017]{.lt-ano}
+
+**Contabilidade e a Comunidade Empresarial**. [Participação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2016]{.lt-ano}
+
+**I Curso Preparatório para o Exame de Suficiência do CFC**. [Coordenação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2016]{.lt-ano}
+
+**II Fórum da Profissão Contábil**. [Coordenação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2016]{.lt-ano}
+
+**Estudos sobre Imposto de Renda Pessoa Física 2016**. [Participação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2016]{.lt-ano}
+
+**Folha de Pagamento: Teoria e Prática**. [Participação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2016]{.lt-ano}
+
+**V Jornada Norte-rio-grandense sobre Educação Fiscal: sensibilização acadêmica**. [Participação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2015]{.lt-ano}
+
+**Auditoria das Demonstrações Contábeis da Fundação Guimarães Duque**. [Participação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2014]{.lt-ano}
+
+**I Workshop para Concursos Públicos**. [Coordenação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2012]{.lt-ano}
+
+**Observatório Social de Cabedelo**. Projeto da Universidade Federal da Paraíba para estimular a cidadania fiscal e o monitoramento das receitas e dos gastos públicos municipais. [Participação]{.lt-papel}
+:::
+
+::: {.lt-item}
+[2011 a 2012]{.lt-ano}
+
+**Espaço Contábil: um novo portal para o curso de Ciências Contábeis na Internet**. [Participação]{.lt-papel}
+:::
+::::
 
 ## Cursos ministrados {#cursos}
 

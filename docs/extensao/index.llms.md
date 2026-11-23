@@ -28,29 +28,77 @@ Coordenação. Assessoria a micro e pequenas empresas de Mossoró e região com 
 
 ## Projetos concluídos
 
-### Sob coordenação
+2022
 
-- **Revisão ENADE 2022: Ciências Contábeis** (2022). Revisão dos conteúdos do componente específico da prova para os estudantes do curso.
-- **A importância do ERP na gestão do agronegócio** (2022). Uso de sistemas integrados de gestão para controle de custos, rotinas fiscais e logística no setor rural.
-- **PAAC: Programa de Acompanhamento do Aprendizado em Contabilidade** (2014 a 2016 e 2017). Simulados periódicos on-line para o Exame de Suficiência do CFC e o ENADE, com identificação dos conteúdos de menor desempenho.
-- **I Curso Preparatório para o Exame de Suficiência do CFC** (2016).
-- **II Fórum da Profissão Contábil** (2016).
-- **I Workshop para Concursos Públicos** (2014).
+**Revisão ENADE 2022: Ciências Contábeis**. Revisão dos conteúdos do componente específico da prova para os estudantes do curso. Coordenação
 
-### Participação
+2022
 
-- **Apoio à escrita científica com Mendeley e CopySpider** (2022).
-- **Análise de dados com Economatica e R** (2022).
-- **UFERSA3: Liga de Mercado Financeiro da UFERSA** (2020 a 2022).
-- **Recepção aos ingressantes** (2018).
-- **II Curso Preparatório para o Exame de Suficiência do CFC** (2017).
-- **Contabilidade e a Comunidade Empresarial** (2017).
-- **Estudos sobre Imposto de Renda Pessoa Física 2016** (2016).
-- **Folha de Pagamento: Teoria e Prática** (2016).
-- **V Jornada Norte-rio-grandense sobre Educação Fiscal: sensibilização acadêmica** (2016).
-- **Auditoria das Demonstrações Contábeis da Fundação Guimarães Duque** (2015).
-- **Observatório Social de Cabedelo** (2012), projeto da Universidade Federal da Paraíba para estimular a cidadania fiscal e o monitoramento das receitas e dos gastos públicos municipais.
-- **Espaço Contábil: um novo portal para o curso de Ciências Contábeis na Internet** (2011 a 2012).
+**A importância do ERP na gestão do agronegócio**. Uso de sistemas integrados de gestão para controle de custos, rotinas fiscais e logística no setor rural. Coordenação
+
+2022
+
+**Apoio à escrita científica com Mendeley e CopySpider**. Participação
+
+2022
+
+**Análise de dados com Economatica e R**. Participação
+
+2020 a 2022
+
+**UFERSA3: Liga de Mercado Financeiro da UFERSA**. Participação
+
+2018
+
+**Recepção aos ingressantes**. Participação
+
+2014 a 2017
+
+**PAAC: Programa de Acompanhamento do Aprendizado em Contabilidade**. Simulados periódicos on-line para o Exame de Suficiência do CFC e o ENADE, com identificação dos conteúdos de menor desempenho. Coordenação
+
+2017
+
+**II Curso Preparatório para o Exame de Suficiência do CFC**. Participação
+
+2017
+
+**Contabilidade e a Comunidade Empresarial**. Participação
+
+2016
+
+**I Curso Preparatório para o Exame de Suficiência do CFC**. Coordenação
+
+2016
+
+**II Fórum da Profissão Contábil**. Coordenação
+
+2016
+
+**Estudos sobre Imposto de Renda Pessoa Física 2016**. Participação
+
+2016
+
+**Folha de Pagamento: Teoria e Prática**. Participação
+
+2016
+
+**V Jornada Norte-rio-grandense sobre Educação Fiscal: sensibilização acadêmica**. Participação
+
+2015
+
+**Auditoria das Demonstrações Contábeis da Fundação Guimarães Duque**. Participação
+
+2014
+
+**I Workshop para Concursos Públicos**. Coordenação
+
+2012
+
+**Observatório Social de Cabedelo**. Projeto da Universidade Federal da Paraíba para estimular a cidadania fiscal e o monitoramento das receitas e dos gastos públicos municipais. Participação
+
+2011 a 2012
+
+**Espaço Contábil: um novo portal para o curso de Ciências Contábeis na Internet**. Participação
 
 ## Cursos ministrados
 

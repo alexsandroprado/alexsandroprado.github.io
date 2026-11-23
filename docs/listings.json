@@ -6,6 +6,13 @@
   {
     "listing": "/index.html",
     "items": [
+      "/blog/posts/datacaged-python/index.html",
+      "/blog/posts/datacaged-tutorial/index.html",
+      "/blog/posts/mercado-contabil-2026/index.html",
+      "/blog/posts/segmentos-b3/index.html",
+      "/blog/posts/contabdata/index.html",
+      "/blog/posts/preditiva/index.html",
+      "/blog/posts/heterocedasticidade/index.html",
       "/novidades/2026-11-27-anpcont/index.html",
       "/novidades/2026-11-15-novo-site/index.html",
       "/novidades/2026-10-13-datacaged-cran/index.html",

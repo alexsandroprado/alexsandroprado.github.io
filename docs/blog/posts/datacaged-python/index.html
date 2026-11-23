@@ -80,9 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-3e64db84d37dea41f36a9f8c79e61bb0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-9a54db543b4ac127edfcb27742dff1ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-6422df623a12f4e78606cfff81464e4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-9a54db543b4ac127edfcb27742dff1ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/bootstrap/bootstrap-d82b8d93834374020ce7dba87c1b4a0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-3e5cd96c88e643e24e976f79ec9a4bed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-d82b8d93834374020ce7dba87c1b4a0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -124,16 +124,19 @@ cookieconsent.run({
   });
 });
 </script><style>html{ scroll-behavior: smooth; }</style>
+<link rel="manifest" href="../../../manifest.webmanifest">
+<meta name="theme-color" content="#0f172a">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="apple-touch-icon" href="../../../images/apple-touch-icon.png">
-<!-- Fontes: Inter (texto e títulos), IBM Plex Mono (rótulos, datas e código) --><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Fontes hospedadas no próprio site: Inter (texto), Space Grotesk (menu e títulos),
+     IBM Plex Mono (rótulos, datas e código). Nenhuma requisição a serviços externos. --><link rel="preload" href="../../../assets/fonts/web/inter-latin-567244.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="../../../assets/fonts/web/space-grotesk-latin-ecea81.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="stylesheet" href="../../../assets/fonts/web/fonts.css">
 <!-- Google Tag Manager (carregado apenas após o consentimento de cookies) --><script type="text/plain" cookie-consent="tracking">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T9KC9QL7');</script><!-- End Google Tag Manager --><script src="../../../assets/js/menu-ativo.js" defer=""></script>
+})(window,document,'script','dataLayer','GTM-T9KC9QL7');</script><!-- End Google Tag Manager --><script src="../../../assets/js/menu-ativo.js" defer=""></script><script src="../../../assets/js/post-extras.js" defer=""></script><script src="../../../assets/js/pwa.js" defer=""></script>
 <meta property="og:title" content="R e Python no mesmo notebook: o caged.duckdb do datacaged – Alexsandro Prado">
 <meta property="og:description" content="Um notebook Quarto (.qmd) que combina R e Python sobre o mesmo banco caged.duckdb: o datacaged carrega os microdados do Novo CAGED, e as duas linguagens consultam, trocam resultados e produzem gráficos.">
 <meta property="og:image" content="https://alexsandroprado.site/blog/posts/datacaged-python/capa-og.jpg">
@@ -288,7 +291,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -301,6 +305,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -639,7 +651,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-regioes" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil.">
+<div id="fig-regioes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil." loading="lazy">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-regioes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="index_files/figure-html/fig-regioes-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de barras horizontais do saldo de empregos formais de julho a setembro de 2026: Sudeste e Nordeste com os maiores saldos, cerca de 134 mil e 127 mil vínculos, seguidos de Norte, Centro-Oeste e Sul, entre 20 mil e 37 mil." width="672">
 </div>
@@ -671,7 +683,7 @@ Figura&nbsp;1&nbsp;- Saldo de empregos formais por região, julho a setembro de 
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>panel.grid.minor <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>, panel.grid.major.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
 <span>        legend.position <span class="op">=</span> <span class="st">"top"</span><span class="op">)</span></span></code></pre></div><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-contadores" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais.">
+<div id="fig-contadores" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais." loading="lazy">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-contadores-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="index_files/figure-html/fig-contadores-3.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de barras agrupadas: os homens têm salário de admissão mediano de 4.680 reais e médio de 6.100 reais; as mulheres, mediano de 4.500 reais e médio de 5.269 reais." width="672">
 </div>

@@ -80,9 +80,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-3e64db84d37dea41f36a9f8c79e61bb0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-9a54db543b4ac127edfcb27742dff1ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark-6422df623a12f4e78606cfff81464e4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../../site_libs/bootstrap/bootstrap-9a54db543b4ac127edfcb27742dff1ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="../../../site_libs/bootstrap/bootstrap-d82b8d93834374020ce7dba87c1b4a0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark-3e5cd96c88e643e24e976f79ec9a4bed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../../site_libs/bootstrap/bootstrap-d82b8d93834374020ce7dba87c1b4a0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -124,16 +124,19 @@ cookieconsent.run({
   });
 });
 </script><style>html{ scroll-behavior: smooth; }</style>
+<link rel="manifest" href="../../../manifest.webmanifest">
+<meta name="theme-color" content="#0f172a">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="apple-touch-icon" href="../../../images/apple-touch-icon.png">
-<!-- Fontes: Inter (texto e títulos), IBM Plex Mono (rótulos, datas e código) --><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Fontes hospedadas no próprio site: Inter (texto), Space Grotesk (menu e títulos),
+     IBM Plex Mono (rótulos, datas e código). Nenhuma requisição a serviços externos. --><link rel="preload" href="../../../assets/fonts/web/inter-latin-567244.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="../../../assets/fonts/web/space-grotesk-latin-ecea81.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="stylesheet" href="../../../assets/fonts/web/fonts.css">
 <!-- Google Tag Manager (carregado apenas após o consentimento de cookies) --><script type="text/plain" cookie-consent="tracking">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-T9KC9QL7');</script><!-- End Google Tag Manager --><script src="../../../assets/js/menu-ativo.js" defer=""></script>
+})(window,document,'script','dataLayer','GTM-T9KC9QL7');</script><!-- End Google Tag Manager --><script src="../../../assets/js/menu-ativo.js" defer=""></script><script src="../../../assets/js/post-extras.js" defer=""></script><script src="../../../assets/js/pwa.js" defer=""></script>
 <meta property="og:title" content="Segmentos de listagem da B3: um painel verificado de 2010 a 2026 – Alexsandro Prado">
 <meta property="og:description" content="Uma base de dados aberta com o segmento de listagem de cada companhia aberta brasileira, ano a ano, construída a partir do Formulário Cadastral da CVM e conferida documento a documento.">
 <meta property="og:image" content="https://alexsandroprado.site/blog/posts/segmentos-b3/capa-og.jpg">
@@ -288,7 +291,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -301,6 +305,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -463,7 +475,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Conforme a <a href="#fig-participacao" class="quarto-xref">Figura&nbsp;1</a>, a participação do Novo Mercado no total de companhias com segmento informado passou de 33,4% em 2010 para 49,4% em 2025, e a dos segmentos diferenciados em conjunto, de 49,3% para 64,8%. Nota-se que o avanço ocorreu sobretudo entre 2019 e 2021, quando o número de companhias no Novo Mercado passou de 149 para 201, período que coincide com a concentração de ofertas públicas iniciais na bolsa brasileira.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-participacao" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de áreas empilhadas de 2010 a 2025: o Novo Mercado cresce de cerca de um terço para metade das companhias, o segmento Básico encolhe de cerca de metade para pouco mais de um terço, e Nível 1, Nível 2 e Bovespa Mais ocupam faixas estreitas.">
+<div id="fig-participacao" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de áreas empilhadas de 2010 a 2025: o Novo Mercado cresce de cerca de um terço para metade das companhias, o segmento Básico encolhe de cerca de metade para pouco mais de um terço, e Nível 1, Nível 2 e Bovespa Mais ocupam faixas estreitas." loading="lazy">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-participacao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="index_files/figure-html/fig-participacao-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de áreas empilhadas de 2010 a 2025: o Novo Mercado cresce de cerca de um terço para metade das companhias, o segmento Básico encolhe de cerca de metade para pouco mais de um terço, e Nível 1, Nível 2 e Bovespa Mais ocupam faixas estreitas." width="672">
 </div>

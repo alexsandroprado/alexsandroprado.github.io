@@ -49,9 +49,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-3e64db84d37dea41f36a9f8c79e61bb0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9a54db543b4ac127edfcb27742dff1ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-6422df623a12f4e78606cfff81464e4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-9a54db543b4ac127edfcb27742dff1ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d82b8d93834374020ce7dba87c1b4a0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-3e5cd96c88e643e24e976f79ec9a4bed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-d82b8d93834374020ce7dba87c1b4a0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -88,13 +88,41 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author"],
+      searchColumns: ["listing-project","listing-lang","listing-website","listing-date-format","listing-title-block-banner","listing-format","listing-engines","listing-language","listing-draft-mode","listing-freeze","listing-author","listing-reading-time","listing-citation","listing-appendix-cite-as","listing-crossref","listing-csl","listing-knitr","listing-execute","listing-comments","listing-body-classes","listing-date","listing-title","listing-categories","listing-image","listing-image-alt","listing-description","listing-open-graph","listing-twitter-card","listing-aliases","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-word-count","listing-resources","listing-draft","listing-editor","listing-code-fold","listing-code-summary"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-ultimos-posts'] = new List('listing-ultimos-posts', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-novidades-home .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-lang","listing-website","listing-date-format","listing-title-block-banner","listing-format","listing-engines","listing-language","listing-draft-mode","listing-toc","listing-citation","listing-title","listing-date","listing-categories","listing-description","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-novidades-home'] = new List('listing-novidades-home', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -127,12 +155,15 @@ cookieconsent.run({
 </script> 
   
 <style>html{ scroll-behavior: smooth; }</style>
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#0f172a">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
-<!-- Fontes: Inter (texto e títulos), IBM Plex Mono (rótulos, datas e código) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Fontes hospedadas no próprio site: Inter (texto), Space Grotesk (menu e títulos),
+     IBM Plex Mono (rótulos, datas e código). Nenhuma requisição a serviços externos. -->
+<link rel="preload" href="./assets/fonts/web/inter-latin-567244.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="./assets/fonts/web/space-grotesk-latin-ecea81.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="stylesheet" href="./assets/fonts/web/fonts.css">
 
 <!-- Google Tag Manager (carregado apenas após o consentimento de cookies) -->
 <script type="text/plain" cookie-consent="tracking">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -142,6 +173,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-T9KC9QL7');</script>
 <!-- End Google Tag Manager -->
 <script src="./assets/js/menu-ativo.js" defer=""></script>
+<script src="./assets/js/post-extras.js" defer=""></script>
+<script src="./assets/js/pwa.js" defer=""></script>
 
   <script defer="" src="./assets/katex/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -189,11 +222,13 @@ window.Quarto = {
 
 <meta property="og:title" content="Alexsandro Prado · UFERSA">
 <meta property="og:description" content="Professor Adjunto da UFERSA. Economia do trabalho, contabilidade financeira, ESG e governança corporativa.">
-<meta property="og:image" content="https://alexsandroprado.site/images/og/padrao.png">
+<meta property="og:image" content="https://alexsandroprado.site/blog/posts/datacaged-python/capa.webp">
 <meta property="og:site_name" content="Alexsandro Prado">
+<meta property="og:image:alt" content="">
 <meta name="twitter:title" content="Alexsandro Prado · UFERSA">
 <meta name="twitter:description" content="Professor Adjunto da UFERSA. Economia do trabalho, contabilidade financeira, ESG e governança corporativa.">
-<meta name="twitter:image" content="https://alexsandroprado.site/images/og/padrao.png">
+<meta name="twitter:image" content="https://alexsandroprado.site/blog/posts/datacaged-python/capa.webp">
+<meta name="twitter:image:alt" content="">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -340,7 +375,8 @@ window.Quarto = {
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -353,6 +389,14 @@ window.Quarto = {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -522,6 +566,22 @@ window.Quarto = {
 <div class="lead-academic">
 <p>Professor Adjunto do Departamento de Ciências Sociais Aplicadas e Humanas (DCSAH) da Universidade Federal Rural do Semi-Árido (UFERSA), com atuação no curso de Ciências Contábeis desde 2013 e no Programa de Pós-Graduação em Administração (PPGA/UFERSA). Doutor em Economia pela Universidade Federal da Paraíba (UFPB), coordena o Grupo de Estudos sobre Contabilidade e Mercado de Trabalho (<a href="https://gecomt.github.io/">GECOMT</a>) e integra o Conselho de Curadores da UFERSA.</p>
 </div>
+<div class="kpis-home">
+<p><a href="./publicacoes/index.html" class="kh-item"><span class="kh-valor">64</span><span class="kh-rotulo">publicações</span><span class="kh-nota">29 artigos em periódicos</span></a> <a href="./producao-tecnica/index.html" class="kh-item"><span class="kh-valor">5</span><span class="kh-rotulo">produtos técnicos</span><span class="kh-nota">software e bases de dados</span></a> <a href="./producao-tecnica/index.html#datacaged" class="kh-item"><span id="kh-downloads" class="kh-valor">&nbsp;</span><span class="kh-rotulo">downloads do datacaged</span><span class="kh-nota">no CRAN, desde set/2026</span></a> <a href="./ensino/index.html#orientacao" class="kh-item"><span class="kh-valor">54</span><span class="kh-rotulo">TCCs orientados</span><span class="kh-nota">além de dissertações no PPGA</span></a></p>
+</div>
+<script>
+// Total de downloads do datacaged, lido do CSV atualizado semanalmente
+fetch("/producao-tecnica/dados/cran_downloads.csv")
+  .then((r) => r.text())
+  .then((t) => {
+    const [cab, ...linhas] = t.trim().split("\n");
+    const col = cab.split(",");
+    const lin = linhas.map((l) => l.split(",")).find((l) => l[col.indexOf("pacote")] === "datacaged");
+    if (lin) document.getElementById("kh-downloads").textContent =
+      Number(lin[col.indexOf("total")]).toLocaleString("pt-BR");
+  })
+  .catch(() => { document.getElementById("kh-downloads").textContent = "1.000+"; });
+</script>
 <p>As pesquisas situam-se na interface entre contabilidade, finanças e economia do trabalho, com ênfase em (i) mercado de trabalho formal a partir de microdados administrativos, sobretudo o Cadastro Geral de Empregados e Desempregados (CAGED) e a Relação Anual de Informações Sociais (RAIS); (ii) sustentabilidade, ESG e governança corporativa em companhias abertas brasileiras; e (iii) remuneração de executivos, gerenciamento de resultados e mercado de capitais. Além disso, desenvolve pacotes em R que facilitam o acesso a dados públicos brasileiros para fins de pesquisa.</p>
 <section id="formação" class="level2">
 <h2 data-anchor-id="formação">Formação</h2>
@@ -585,53 +645,101 @@ XV Encontro Norte-Rio-Grandense de Ciências Contábeis, CRC/RN.
 <p><span>R</span> <span>tidyverse</span> <span>DuckDB</span> <span>SQL</span> <span>Python</span> <span>Stata</span> <span>Quarto</span> <span>Git</span></p>
 </div>
 </section>
-<section id="novidades" class="level2">
-<h2 data-anchor-id="novidades">Novidades</h2>
-<div id="listing-ultimos-posts" class="quarto-listing quarto-listing-container-table">
-<table class="quarto-listing-table table table-hover">
-<thead>
-<tr>
-<th>
-Data
-</th>
-<th>
-Título
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="RXZlbnRv" data-listing-date-sort="1795748400000" data-listing-file-modified-sort="1794747751938" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="89" data-listing-title-sort="Apresentação no XX Congresso ANPCONT" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-date">27/11/2026</span>
-</td>
-<td>
-<a href="./novidades/2026-11-27-anpcont/index.html" class="title listing-title">Apresentação no XX Congresso ANPCONT</a>
-</td>
-</tr>
-<tr data-index="1" data-categories="U2l0ZQ==" data-listing-date-sort="1794711600000" data-listing-file-modified-sort="1794752689754" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="82" data-listing-title-sort="Novo site com indicadores do mercado de trabalho" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-date">15/11/2026</span>
-</td>
-<td>
-<a href="./novidades/2026-11-15-novo-site/index.html" class="title listing-title">Novo site com indicadores do mercado de trabalho</a>
-</td>
-</tr>
-<tr data-index="2" data-categories="U29mdHdhcmU=" data-listing-date-sort="1791860400000" data-listing-file-modified-sort="1794750256998" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="63" data-listing-title-sort="datacaged 0.2.3 disponível no CRAN" data-listing-filename-sort="index.qmd" onclick="href = this.querySelector('a').getAttribute('href');
- if (href) { window.location=href ; return false; }">
-<td>
-<span class="listing-date">13/10/2026</span>
-</td>
-<td>
-<a href="./novidades/2026-10-13-datacaged-cran/index.html" class="title listing-title">datacaged 0.2.3 disponível no CRAN</a>
-</td>
-</tr>
-</tbody>
-</table>
+<section id="do-blog" class="level2">
+<h2 data-anchor-id="do-blog">Do blog</h2>
+<div id="listing-ultimos-posts" class="quarto-listing quarto-listing-container-custom">
+<div class="list blog-grade blog-grade-home">
+<article class="blog-card" data-index="0" data-categories="UiUyQ1B5dGhvbiUyQ01lcmNhZG8lMjBkZSUyMHRyYWJhbGhv" data-listing-date-sort="1794798000000" data-listing-file-modified-sort="1794866180323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1559">
+  <a class="blog-card-img" href="./blog/posts/datacaged-python/index.html" tabindex="-1" aria-hidden="true">
+    <img src="./blog/posts/datacaged-python/capa.webp" alt="" loading="lazy">
+  </a>
+  <div class="blog-card-corpo">
+    <div class="blog-card-tags"><span class="blog-tag">R</span><span class="blog-tag">Python</span><span class="blog-tag">Mercado de trabalho</span></div>
+    <h3 class="no-anchor blog-card-titulo listing-title"><a href="./blog/posts/datacaged-python/index.html">R e Python no mesmo notebook: o caged.duckdb do datacaged</a></h3>
+    <div class="blog-card-meta">
+      <span class="listing-date"><i class="bi bi-calendar3" aria-hidden="true"></i> 16 nov 2026</span>
+      <span class="listing-reading-time"><i class="bi bi-clock" aria-hidden="true"></i> 8 min</span>
+      <a class="blog-card-ler" href="./blog/posts/datacaged-python/index.html" aria-label="Ler: R e Python no mesmo notebook: o caged.duckdb do datacaged">Ler <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</article>
+<article class="blog-card" data-index="1" data-categories="UiUyQ01lcmNhZG8lMjBkZSUyMHRyYWJhbGhv" data-listing-date-sort="1794798000000" data-listing-file-modified-sort="1794861752692" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="788">
+  <a class="blog-card-img" href="./blog/posts/datacaged-tutorial/index.html" tabindex="-1" aria-hidden="true">
+    <img src="./blog/posts/datacaged-tutorial/capa.webp" alt="" loading="lazy">
+  </a>
+  <div class="blog-card-corpo">
+    <div class="blog-card-tags"><span class="blog-tag">R</span><span class="blog-tag">Mercado de trabalho</span></div>
+    <h3 class="no-anchor blog-card-titulo listing-title"><a href="./blog/posts/datacaged-tutorial/index.html">Microdados do CAGED no R com o pacote datacaged</a></h3>
+    <div class="blog-card-meta">
+      <span class="listing-date"><i class="bi bi-calendar3" aria-hidden="true"></i> 16 nov 2026</span>
+      <span class="listing-reading-time"><i class="bi bi-clock" aria-hidden="true"></i> 4 min</span>
+      <a class="blog-card-ler" href="./blog/posts/datacaged-tutorial/index.html" aria-label="Ler: Microdados do CAGED no R com o pacote datacaged">Ler <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</article>
+<article class="blog-card" data-index="2" data-categories="Q29udGFiaWxpZGFkZSUyQ01lcmNhZG8lMjBkZSUyMHRyYWJhbGhv" data-listing-date-sort="1794798000000" data-listing-file-modified-sort="1794861752700" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1303">
+  <a class="blog-card-img" href="./blog/posts/mercado-contabil-2026/index.html" tabindex="-1" aria-hidden="true">
+    <img src="./blog/posts/mercado-contabil-2026/capa.webp" alt="" loading="lazy">
+  </a>
+  <div class="blog-card-corpo">
+    <div class="blog-card-tags"><span class="blog-tag">Contabilidade</span><span class="blog-tag">Mercado de trabalho</span></div>
+    <h3 class="no-anchor blog-card-titulo listing-title"><a href="./blog/posts/mercado-contabil-2026/index.html">O mercado de trabalho contábil em 2026</a></h3>
+    <div class="blog-card-meta">
+      <span class="listing-date"><i class="bi bi-calendar3" aria-hidden="true"></i> 16 nov 2026</span>
+      <span class="listing-reading-time"><i class="bi bi-clock" aria-hidden="true"></i> 7 min</span>
+      <a class="blog-card-ler" href="./blog/posts/mercado-contabil-2026/index.html" aria-label="Ler: O mercado de trabalho contábil em 2026">Ler <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</article>
+</div>
 <div class="listing-no-matching d-none">Sem itens correspondentes</div>
 </div>
-<p><a href="./novidades/index.html" class="ver-todos">Ver todas as novidades →</a> · <a href="./blog/index.html" class="ver-todos">Blog →</a></p>
+<p><a href="./blog/index.html" class="ver-todos">Todos os posts →</a></p>
+</section>
+<section id="novidades" class="level2">
+<h2 data-anchor-id="novidades">Novidades</h2>
+<div id="listing-novidades-home" class="quarto-listing quarto-listing-container-custom">
+<div class="list nov-lista">
+<a class="nov-item" href="./novidades/2026-11-27-anpcont/index.html" data-index="0" data-categories="RXZlbnRv" data-listing-date-sort="1795748400000" data-listing-file-modified-sort="1794747751938" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="89">
+  <span class="nov-data"><span class="nov-dia">27</span><span class="nov-mes">nov 2026</span></span>
+  <span class="nov-texto">
+    <span class="nov-cat">Evento</span>
+    <span class="nov-titulo listing-title">Apresentação no XX Congresso ANPCONT</span>
+    <span class="nov-desc">Artigo sobre fatores ESG e legibilidade dos relatórios de sustentabilidade, apresentado em Natal (RN).</span>
+  </span>
+  <i class="bi bi-arrow-right nov-seta" aria-hidden="true"></i>
+</a>
+<a class="nov-item" href="./novidades/2026-11-15-novo-site/index.html" data-index="1" data-categories="U2l0ZQ==" data-listing-date-sort="1794711600000" data-listing-file-modified-sort="1794752689754" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="82">
+  <span class="nov-data"><span class="nov-dia">15</span><span class="nov-mes">nov 2026</span></span>
+  <span class="nov-texto">
+    <span class="nov-cat">Site</span>
+    <span class="nov-titulo listing-title">Novo site com indicadores do mercado de trabalho</span>
+    <span class="nov-desc">Site reformulado, com publicações filtráveis e indicadores mensais do Novo CAGED.</span>
+  </span>
+  <i class="bi bi-arrow-right nov-seta" aria-hidden="true"></i>
+</a>
+<a class="nov-item" href="./novidades/2026-10-13-datacaged-cran/index.html" data-index="2" data-categories="U29mdHdhcmU=" data-listing-date-sort="1791860400000" data-listing-file-modified-sort="1794750256998" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="63">
+  <span class="nov-data"><span class="nov-dia">13</span><span class="nov-mes">out 2026</span></span>
+  <span class="nov-texto">
+    <span class="nov-cat">Software</span>
+    <span class="nov-titulo listing-title">datacaged 0.2.3 disponível no CRAN</span>
+    <span class="nov-desc">Nova versão do pacote em R para os microdados do CAGED.</span>
+  </span>
+  <i class="bi bi-arrow-right nov-seta" aria-hidden="true"></i>
+</a>
+<a class="nov-item" href="./novidades/2026-06-30-rccc/index.html" data-index="3" data-categories="UHVibGljYSVDMyVBNyVDMyVBM28=" data-listing-date-sort="1782788400000" data-listing-file-modified-sort="1794747764123" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="47">
+  <span class="nov-data"><span class="nov-dia">30</span><span class="nov-mes">jun 2026</span></span>
+  <span class="nov-texto">
+    <span class="nov-cat">Publicação</span>
+    <span class="nov-titulo listing-title">Artigo publicado na Revista Catarinense da Ciência Contábil</span>
+    <span class="nov-desc">Estudo sobre a divulgação de transformação digital em companhias listadas na B3.</span>
+  </span>
+  <i class="bi bi-arrow-right nov-seta" aria-hidden="true"></i>
+</a>
+</div>
+<div class="listing-no-matching d-none">Sem itens correspondentes</div>
+</div>
+<p><a href="./novidades/index.html" class="ver-todos">Ver todas as novidades →</a></p>
 </section>
 <section id="contato" class="level2">
 <h2 data-anchor-id="contato">Contato</h2>

@@ -47,9 +47,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="/site_libs/quarto-html/quarto-syntax-highlighting-3e64db84d37dea41f36a9f8c79e61bb0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="/site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="/site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="/site_libs/bootstrap/bootstrap-9a54db543b4ac127edfcb27742dff1ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="/site_libs/bootstrap/bootstrap-dark-6422df623a12f4e78606cfff81464e4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="/site_libs/bootstrap/bootstrap-9a54db543b4ac127edfcb27742dff1ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="/site_libs/bootstrap/bootstrap-d82b8d93834374020ce7dba87c1b4a0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="/site_libs/bootstrap/bootstrap-dark-3e5cd96c88e643e24e976f79ec9a4bed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="/site_libs/bootstrap/bootstrap-d82b8d93834374020ce7dba87c1b4a0d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -96,12 +96,15 @@ cookieconsent.run({
 </script> 
   
 <style>html{ scroll-behavior: smooth; }</style>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#0f172a">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-<!-- Fontes: Inter (texto e títulos), IBM Plex Mono (rótulos, datas e código) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Fontes hospedadas no próprio site: Inter (texto), Space Grotesk (menu e títulos),
+     IBM Plex Mono (rótulos, datas e código). Nenhuma requisição a serviços externos. -->
+<link rel="preload" href="/assets/fonts/web/inter-latin-567244.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="/assets/fonts/web/space-grotesk-latin-ecea81.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="stylesheet" href="/assets/fonts/web/fonts.css">
 
 <!-- Google Tag Manager (carregado apenas após o consentimento de cookies) -->
 <script type="text/plain" cookie-consent="tracking">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -111,19 +114,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-T9KC9QL7');</script>
 <!-- End Google Tag Manager -->
 <script src="/assets/js/menu-ativo.js" defer=""></script>
+<script src="/assets/js/post-extras.js" defer=""></script>
+<script src="/assets/js/pwa.js" defer=""></script>
 
 
 <meta property="og:title" content="Página não encontrada – Alexsandro Prado">
-<meta property="og:description" content="Professor Adjunto da UFERSA. Economia do trabalho, contabilidade financeira, ESG e governança corporativa.">
 <meta property="og:image" content="https://alexsandroprado.site/images/og/padrao.png">
 <meta property="og:site_name" content="Alexsandro Prado">
 <meta name="twitter:title" content="Página não encontrada – Alexsandro Prado">
-<meta name="twitter:description" content="Professor Adjunto da UFERSA. Economia do trabalho, contabilidade financeira, ESG e governança corporativa.">
 <meta name="twitter:image" content="https://alexsandroprado.site/images/og/padrao.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed pagina-404 fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -266,7 +269,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -279,6 +283,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -410,13 +422,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<p>O endereço solicitado não existe ou foi removido.</p>
-<p>Retorne à <a href="/./index.html">página inicial</a> ou utilize a busca no topo da página. Em caso de dúvida, entre em contato pelo e-mail <script type="text/javascript">
-<!--
-h='&#x75;&#102;&#x65;&#114;&#x73;&#x61;&#46;&#x65;&#100;&#x75;&#46;&#98;&#114;';a='&#64;';n='&#x61;&#108;&#x65;&#120;&#x73;&#x61;&#110;&#100;&#114;&#x6f;&#46;&#112;&#114;&#x61;&#100;&#x6f;';e=n+a+h;
-document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
-// -->
-</script><noscript>alexsandro.prado at ufersa dot edu dot br</noscript>.</p>
+<div class="e404">
+  <div class="e404-codigo" aria-hidden="true">404</div>
+  <p class="e404-lead">O lançamento foi feito, mas a contrapartida não apareceu.</p>
+
+  <div class="razonete" role="img" aria-label="Razonete da conta Páginas: débito de 1 página solicitada, crédito de 0 páginas encontradas, saldo de páginas encontradas igual a menos 1">
+    <div class="rz-titulo">Conta: Páginas</div>
+    <div class="rz-colunas">
+      <div class="rz-lado">
+        <span class="rz-rot">Débito</span>
+        <span class="rz-linha"><span>Página solicitada</span><span>1</span></span>
+      </div>
+      <div class="rz-lado">
+        <span class="rz-rot">Crédito</span>
+        <span class="rz-linha"><span>Página encontrada</span><span>0</span></span>
+      </div>
+    </div>
+    <div class="rz-saldo"><span>Saldo de páginas encontradas</span><span class="rz-neg">−1</span></div>
+  </div>
+
+  <p class="e404-txt">O endereço pode ter mudado ou sido removido. Para conciliar a conta, tente um dos caminhos abaixo:</p>
+  <div class="e404-links">
+    <a href="/index.html"><i class="bi bi-house"></i> Início</a>
+    <a href="/blog/index.html"><i class="bi bi-journal-text"></i> Blog</a>
+    <a href="/publicacoes/index.html"><i class="bi bi-file-earmark-text"></i> Publicações</a>
+    <a href="/producao-tecnica/index.html"><i class="bi bi-box-seam"></i> Produção técnica</a>
+    <a href="/index.html#contato"><i class="bi bi-envelope"></i> Contato</a>
+  </div>
+  <p class="e404-nota">Ou utilize a busca no topo da página.</p>
+</div>
 
 
 

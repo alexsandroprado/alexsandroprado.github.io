@@ -4,6 +4,12 @@ Este site é pessoal e acadêmico e não coleta dados pessoais por meio de formu
 
 O site utiliza o Google Tag Manager para medir, de forma agregada, o número de visitas e as páginas mais acessadas. Esse recurso só é carregado **após o consentimento** registrado no aviso de cookies exibido na primeira visita. A escolha pode ser alterada a qualquer momento pelo link “Preferências de cookies”, no rodapé.
 
+## Fontes e recursos do site
+
+As fontes tipográficas, os ícones e os scripts que fazem o site funcionar são servidos pelo próprio domínio, sem requisições a serviços externos de fontes, como o Google Fonts. As exceções são (i) os gráficos interativos da página Produção técnica, que carregam bibliotecas de visualização da rede de distribuição jsDelivr, e (ii) o sistema de comentários do blog, descrito a seguir. Dessa forma, na maior parte das páginas, a simples visita não compartilha o endereço de IP do visitante com terceiros.
+
+O site pode ser instalado como aplicativo no celular ou no computador. Para isso, utiliza-se um *service worker*, que guarda no próprio navegador do visitante uma cópia das páginas já visitadas, de modo a permitir a leitura sem conexão. Essa cópia fica apenas no dispositivo, não contém dados pessoais e pode ser apagada a qualquer momento ao limpar os dados do site no navegador. A preferência por tema claro ou escuro também é guardada apenas no navegador.
+
 ## Comentários no blog
 
 Os comentários dos textos do blog utilizam o [giscus](https://giscus.app/), que armazena as mensagens no GitHub Discussions do repositório do site. Para comentar, é necessário entrar com uma conta do GitHub, e o tratamento desses dados segue a [política de privacidade do GitHub](https://docs.github.com/pt/site-policy/privacy-policies/github-general-privacy-statement).

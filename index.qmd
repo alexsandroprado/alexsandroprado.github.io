@@ -7,19 +7,20 @@ toc: false
 title-block-banner: false
 page-layout: full
 listing:
-  id: ultimos-posts
-  contents: "novidades/*/index.qmd"
-  sort: "date desc"
-  type: table
-  max-items: 3
-  fields: [date, title]
-  date-format: "DD/MM/YYYY"
-  sort-ui: false
-  filter-ui: false
-  table-hover: true
-  field-display-names:
-    date: "Data"
-    title: "Título"
+  - id: ultimos-posts
+    contents: "blog/posts/*/index.qmd"
+    template: posts-home.ejs
+    sort: "date desc"
+    max-items: 3
+    fields: [image, date, title, categories, reading-time]
+    date-format: "D MMM YYYY"
+  - id: novidades-home
+    contents: "novidades/*/index.qmd"
+    template: novidades-home.ejs
+    sort: "date desc"
+    max-items: 4
+    fields: [date, title, description, categories]
+    date-format: "YYYY-MM-DD"
 about:
   template: trestles
   image: images/alexsandro.png
@@ -57,6 +58,29 @@ about:
 ::: {.lead-academic}
 Professor Adjunto do Departamento de Ciências Sociais Aplicadas e Humanas (DCSAH) da Universidade Federal Rural do Semi-Árido (UFERSA), com atuação no curso de Ciências Contábeis desde 2013 e no Programa de Pós-Graduação em Administração (PPGA/UFERSA). Doutor em Economia pela Universidade Federal da Paraíba (UFPB), coordena o Grupo de Estudos sobre Contabilidade e Mercado de Trabalho ([GECOMT](https://gecomt.github.io/)) e integra o Conselho de Curadores da UFERSA.
 :::
+
+::: {.kpis-home}
+[[64]{.kh-valor}[publicações]{.kh-rotulo}[29 artigos em periódicos]{.kh-nota}](publicacoes/index.qmd){.kh-item}
+[[5]{.kh-valor}[produtos técnicos]{.kh-rotulo}[software e bases de dados]{.kh-nota}](producao-tecnica/index.qmd){.kh-item}
+[[&nbsp;]{.kh-valor #kh-downloads}[downloads do datacaged]{.kh-rotulo}[no CRAN, desde set/2026]{.kh-nota}](producao-tecnica/index.qmd#datacaged){.kh-item}
+[[54]{.kh-valor}[TCCs orientados]{.kh-rotulo}[além de dissertações no PPGA]{.kh-nota}](ensino/index.qmd#orientacao){.kh-item}
+:::
+
+```{=html}
+<script>
+// Total de downloads do datacaged, lido do CSV atualizado semanalmente
+fetch("/producao-tecnica/dados/cran_downloads.csv")
+  .then((r) => r.text())
+  .then((t) => {
+    const [cab, ...linhas] = t.trim().split("\n");
+    const col = cab.split(",");
+    const lin = linhas.map((l) => l.split(",")).find((l) => l[col.indexOf("pacote")] === "datacaged");
+    if (lin) document.getElementById("kh-downloads").textContent =
+      Number(lin[col.indexOf("total")]).toLocaleString("pt-BR");
+  })
+  .catch(() => { document.getElementById("kh-downloads").textContent = "1.000+"; });
+</script>
+```
 
 As pesquisas situam-se na interface entre contabilidade, finanças e economia do trabalho, com ênfase em (i) mercado de trabalho formal a partir de microdados administrativos, sobretudo o Cadastro Geral de Empregados e Desempregados (CAGED) e a Relação Anual de Informações Sociais (RAIS); (ii) sustentabilidade, ESG e governança corporativa em companhias abertas brasileiras; e (iii) remuneração de executivos, gerenciamento de resultados e mercado de capitais. Além disso, desenvolve pacotes em R que facilitam o acesso a dados públicos brasileiros para fins de pesquisa.
 
@@ -106,12 +130,19 @@ Melhor trabalho na área de Contabilidade Financeira [2021]{.ano}
 [R]{} [tidyverse]{} [DuckDB]{} [SQL]{} [Python]{} [Stata]{} [Quarto]{} [Git]{}
 :::
 
-## Novidades
+## Do blog
 
 ::: {#ultimos-posts}
 :::
 
-[Ver todas as novidades →](novidades/index.qmd){.ver-todos} · [Blog →](blog/index.qmd){.ver-todos}
+[Todos os posts →](blog/index.qmd){.ver-todos}
+
+## Novidades
+
+::: {#novidades-home}
+:::
+
+[Ver todas as novidades →](novidades/index.qmd){.ver-todos}
 
 ## Contato {#contato}
 

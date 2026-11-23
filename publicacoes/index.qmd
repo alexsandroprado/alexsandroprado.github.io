@@ -9,7 +9,7 @@ listing:
   sort: "date desc"
   sort-ui: [date, title]
   filter-ui: [title, author]
-  categories: unnumbered
+  categories: false
   page-size: 100
   field-display-names:
     date: "Ano"
@@ -18,7 +18,7 @@ listing:
 image: https://alexsandroprado.site/images/og/publicacoes.png
 ---
 
-Artigos em periódicos, capítulos de livros e trabalhos completos em anais de eventos, com referências conforme a ABNT NBR 6023:2018 e estrato Qualis/CAPES (quadriênio 2021-2024) dos periódicos. Os trabalhos em eventos anteriores a 2019 aparecem em seleção. Utilize a busca para filtrar por título ou autor, ou as categorias ao lado para filtrar por tipo. A produção completa encontra-se no [Currículo Lattes](http://lattes.cnpq.br/4254857944224293), no [ORCID](https://orcid.org/0000-0002-7072-3621) e no [Google Acadêmico](https://scholar.google.com.br/citations?user=vMRqbikAAAAJ&hl=pt-BR).
+Artigos em periódicos, capítulos de livros e trabalhos completos em anais de eventos, com referências conforme a ABNT NBR 6023:2018 e estrato Qualis/CAPES (quadriênio 2021-2024) dos periódicos. Os trabalhos em eventos anteriores a 2019 aparecem em seleção. Utilize a busca para filtrar por título ou autor, e os botões abaixo para filtrar por tipo e por estrato Qualis. A produção completa encontra-se no [Currículo Lattes](http://lattes.cnpq.br/4254857944224293), no [ORCID](https://orcid.org/0000-0002-7072-3621) e no [Google Acadêmico](https://scholar.google.com.br/citations?user=vMRqbikAAAAJ&hl=pt-BR).
 
 ::: {#lista-publicacoes}
 :::

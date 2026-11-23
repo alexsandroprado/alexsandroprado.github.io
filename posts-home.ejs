@@ -1,0 +1,22 @@
+```{=html}
+<div class="list blog-grade blog-grade-home">
+<% items.forEach((item, i) => { %>
+<article class="blog-card" <%= metadataAttrs(item) %>>
+  <a class="blog-card-img" href="<%- item.path %>" tabindex="-1" aria-hidden="true">
+    <% if (item.image) { %><img src="<%- item.image %>" alt="" loading="lazy"><% } %>
+  </a>
+  <div class="blog-card-corpo">
+    <% if (item.categories && item.categories.length) { %>
+    <div class="blog-card-tags"><% for (const c of item.categories) { %><span class="blog-tag"><%= c %></span><% } %></div>
+    <% } %>
+    <h3 class="no-anchor blog-card-titulo listing-title"><a href="<%- item.path %>"><%= item.title %></a></h3>
+    <div class="blog-card-meta">
+      <span class="listing-date"><i class="bi bi-calendar3" aria-hidden="true"></i> <%= item.date %></span>
+      <% if (item['reading-time']) { %><span class="listing-reading-time"><i class="bi bi-clock" aria-hidden="true"></i> <%= String(item['reading-time']).replace(/\s*min.*$/i, ' min') %></span><% } %>
+      <a class="blog-card-ler" href="<%- item.path %>" aria-label="Ler: <%= item.title %>">Ler <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</article>
+<% }) %>
+</div>
+```

@@ -1,8 +1,39 @@
 ---
 title: "Página não encontrada"
 toc: false
+page-layout: article
+search: false
+body-classes: pagina-404
 ---
 
-O endereço solicitado não existe ou foi removido.
+```{=html}
+<div class="e404">
+  <div class="e404-codigo" aria-hidden="true">404</div>
+  <p class="e404-lead">O lançamento foi feito, mas a contrapartida não apareceu.</p>
 
-Retorne à [página inicial](/index.html) ou utilize a busca no topo da página. Em caso de dúvida, entre em contato pelo e-mail [alexsandro.prado@ufersa.edu.br](mailto:alexsandro.prado@ufersa.edu.br).
+  <div class="razonete" role="img" aria-label="Razonete da conta Páginas: débito de 1 página solicitada, crédito de 0 páginas encontradas, saldo de páginas encontradas igual a menos 1">
+    <div class="rz-titulo">Conta: Páginas</div>
+    <div class="rz-colunas">
+      <div class="rz-lado">
+        <span class="rz-rot">Débito</span>
+        <span class="rz-linha"><span>Página solicitada</span><span>1</span></span>
+      </div>
+      <div class="rz-lado">
+        <span class="rz-rot">Crédito</span>
+        <span class="rz-linha"><span>Página encontrada</span><span>0</span></span>
+      </div>
+    </div>
+    <div class="rz-saldo"><span>Saldo de páginas encontradas</span><span class="rz-neg">−1</span></div>
+  </div>
+
+  <p class="e404-txt">O endereço pode ter mudado ou sido removido. Para conciliar a conta, tente um dos caminhos abaixo:</p>
+  <div class="e404-links">
+    <a href="/index.html"><i class="bi bi-house"></i> Início</a>
+    <a href="/blog/index.html"><i class="bi bi-journal-text"></i> Blog</a>
+    <a href="/publicacoes/index.html"><i class="bi bi-file-earmark-text"></i> Publicações</a>
+    <a href="/producao-tecnica/index.html"><i class="bi bi-box-seam"></i> Produção técnica</a>
+    <a href="/index.html#contato"><i class="bi bi-envelope"></i> Contato</a>
+  </div>
+  <p class="e404-nota">Ou utilize a busca no topo da página.</p>
+</div>
+```

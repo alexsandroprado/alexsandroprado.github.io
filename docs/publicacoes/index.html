@@ -50,9 +50,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-3e64db84d37dea41f36a9f8c79e61bb0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9a54db543b4ac127edfcb27742dff1ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-6422df623a12f4e78606cfff81464e4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-9a54db543b4ac127edfcb27742dff1ac.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b0835af61d9d38330b88f8ecc8177d58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-3e5cd96c88e643e24e976f79ec9a4bed.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-b0835af61d9d38330b88f8ecc8177d58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -128,12 +128,15 @@ cookieconsent.run({
 </script> 
   
 <style>html{ scroll-behavior: smooth; }</style>
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#0f172a">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
-<!-- Fontes: Inter (texto e títulos), IBM Plex Mono (rótulos, datas e código) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Fontes hospedadas no próprio site: Inter (texto), Space Grotesk (menu e títulos),
+     IBM Plex Mono (rótulos, datas e código). Nenhuma requisição a serviços externos. -->
+<link rel="preload" href="../assets/fonts/web/inter-latin-567244.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="../assets/fonts/web/space-grotesk-latin-ecea81.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="stylesheet" href="../assets/fonts/web/fonts.css">
 
 <!-- Google Tag Manager (carregado apenas após o consentimento de cookies) -->
 <script type="text/plain" cookie-consent="tracking">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -143,6 +146,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-T9KC9QL7');</script>
 <!-- End Google Tag Manager -->
 <script src="../assets/js/menu-ativo.js" defer=""></script>
+<script src="../assets/js/post-extras.js" defer=""></script>
+<script src="../assets/js/pwa.js" defer=""></script>
 
   <script defer="" src="../assets/katex/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
@@ -198,7 +203,7 @@ window.Quarto = {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -341,7 +346,8 @@ window.Quarto = {
       }
     };
     const authorPrefersDark = false;
-    const darkModeDefault = authorPrefersDark;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
@@ -354,6 +360,14 @@ window.Quarto = {
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
       window.dispatchEvent(new Event('resize'));
     };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
       toggleColorMode(true);
@@ -481,8 +495,7 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-unnumbered"><div class="category" data-category="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==">Artigo em periódico</div><div class="category" data-category="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=">Capítulo de livro</div><div class="category" data-category="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==">Trabalho em evento</div></div></div>
+    
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -491,7 +504,7 @@ window.Quarto = {
 
 
 
-<p>Artigos em periódicos, capítulos de livros e trabalhos completos em anais de eventos, com referências conforme a ABNT NBR 6023:2018 e estrato Qualis/CAPES (quadriênio 2021-2024) dos periódicos. Os trabalhos em eventos anteriores a 2019 aparecem em seleção. Utilize a busca para filtrar por título ou autor, ou as categorias ao lado para filtrar por tipo. A produção completa encontra-se no <a href="http://lattes.cnpq.br/4254857944224293">Currículo Lattes</a>, no <a href="https://orcid.org/0000-0002-7072-3621">ORCID</a> e no <a href="https://scholar.google.com.br/citations?user=vMRqbikAAAAJ&amp;hl=pt-BR">Google Acadêmico</a>.</p>
+<p>Artigos em periódicos, capítulos de livros e trabalhos completos em anais de eventos, com referências conforme a ABNT NBR 6023:2018 e estrato Qualis/CAPES (quadriênio 2021-2024) dos periódicos. Os trabalhos em eventos anteriores a 2019 aparecem em seleção. Utilize a busca para filtrar por título ou autor, e os botões abaixo para filtrar por tipo e por estrato Qualis. A produção completa encontra-se no <a href="http://lattes.cnpq.br/4254857944224293">Currículo Lattes</a>, no <a href="https://orcid.org/0000-0002-7072-3621">ORCID</a> e no <a href="https://scholar.google.com.br/citations?user=vMRqbikAAAAJ&amp;hl=pt-BR">Google Acadêmico</a>.</p>
 <div id="listing-lista-publicacoes" class="quarto-listing quarto-listing-container-custom">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
@@ -515,9 +528,152 @@ window.Quarto = {
       <input type="text" class="search form-control" placeholder="Filtro">
     </div>
 </div>
+
+<div class="pub-painel">
+  <figure class="pub-grafico figure" aria-label="Número de publicações por ano e por tipo, de 2008 a 2026">
+    <svg viewbox="0 0 760 150" role="img">
+      
+      <rect class="t-evento" x="7.2" y="114.9" width="25.6" height="5.1" rx="2"><title>2008: 1 eventos</title></rect>
+      
+      <text class="pub-g-n" x="20.0" y="110.9">1</text>
+      
+      <text class="pub-g-ano" x="20.0" y="138">2008</text>
+      
+      <text class="pub-g-ano" x="100.0" y="138">2010</text>
+      
+      <rect class="t-artigo" x="167.2" y="109.7" width="25.6" height="10.3" rx="2"><title>2012: 2 artigos</title></rect>
+      
+      <rect class="t-evento" x="167.2" y="99.4" width="25.6" height="10.3" rx="2"><title>2012: 2 eventos</title></rect>
+      
+      <text class="pub-g-n" x="180.0" y="95.4">4</text>
+      
+      <text class="pub-g-ano" x="180.0" y="138">2012</text>
+      
+      <rect class="t-artigo" x="207.2" y="109.7" width="25.6" height="10.3" rx="2"><title>2013: 2 artigos</title></rect>
+      
+      <text class="pub-g-n" x="220.0" y="105.7">2</text>
+      
+      <rect class="t-capitulo" x="247.2" y="114.9" width="25.6" height="5.1" rx="2"><title>2014: 1 capítulos</title></rect>
+      
+      <text class="pub-g-n" x="260.0" y="110.9">1</text>
+      
+      <text class="pub-g-ano" x="260.0" y="138">2014</text>
+      
+      <text class="pub-g-ano" x="340.0" y="138">2016</text>
+      
+      <rect class="t-artigo" x="367.2" y="114.9" width="25.6" height="5.1" rx="2"><title>2017: 1 artigos</title></rect>
+      
+      <rect class="t-evento" x="367.2" y="109.7" width="25.6" height="5.1" rx="2"><title>2017: 1 eventos</title></rect>
+      
+      <text class="pub-g-n" x="380.0" y="105.7">2</text>
+      
+      <text class="pub-g-ano" x="420.0" y="138">2018</text>
+      
+      <rect class="t-evento" x="447.2" y="114.9" width="25.6" height="5.1" rx="2"><title>2019: 1 eventos</title></rect>
+      
+      <text class="pub-g-n" x="460.0" y="110.9">1</text>
+      
+      <rect class="t-artigo" x="487.2" y="109.7" width="25.6" height="10.3" rx="2"><title>2020: 2 artigos</title></rect>
+      
+      <rect class="t-capitulo" x="487.2" y="94.3" width="25.6" height="15.4" rx="2"><title>2020: 3 capítulos</title></rect>
+      
+      <rect class="t-evento" x="487.2" y="89.1" width="25.6" height="5.1" rx="2"><title>2020: 1 eventos</title></rect>
+      
+      <text class="pub-g-n" x="500.0" y="85.1">6</text>
+      
+      <text class="pub-g-ano" x="500.0" y="138">2020</text>
+      
+      <rect class="t-capitulo" x="527.2" y="114.9" width="25.6" height="5.1" rx="2"><title>2021: 1 capítulos</title></rect>
+      
+      <rect class="t-evento" x="527.2" y="104.6" width="25.6" height="10.3" rx="2"><title>2021: 2 eventos</title></rect>
+      
+      <text class="pub-g-n" x="540.0" y="100.6">3</text>
+      
+      <rect class="t-artigo" x="567.2" y="114.9" width="25.6" height="5.1" rx="2"><title>2022: 1 artigos</title></rect>
+      
+      <rect class="t-capitulo" x="567.2" y="109.7" width="25.6" height="5.1" rx="2"><title>2022: 1 capítulos</title></rect>
+      
+      <rect class="t-evento" x="567.2" y="84.0" width="25.6" height="25.7" rx="2"><title>2022: 5 eventos</title></rect>
+      
+      <text class="pub-g-n" x="580.0" y="80.0">7</text>
+      
+      <text class="pub-g-ano" x="580.0" y="138">2022</text>
+      
+      <rect class="t-artigo" x="607.2" y="68.6" width="25.6" height="51.4" rx="2"><title>2023: 10 artigos</title></rect>
+      
+      <rect class="t-capitulo" x="607.2" y="58.3" width="25.6" height="10.3" rx="2"><title>2023: 2 capítulos</title></rect>
+      
+      <rect class="t-evento" x="607.2" y="12.0" width="25.6" height="46.3" rx="2"><title>2023: 9 eventos</title></rect>
+      
+      <text class="pub-g-n" x="620.0" y="8.0">21</text>
+      
+      <rect class="t-artigo" x="647.2" y="104.6" width="25.6" height="15.4" rx="2"><title>2024: 3 artigos</title></rect>
+      
+      <rect class="t-evento" x="647.2" y="99.4" width="25.6" height="5.1" rx="2"><title>2024: 1 eventos</title></rect>
+      
+      <text class="pub-g-n" x="660.0" y="95.4">4</text>
+      
+      <text class="pub-g-ano" x="660.0" y="138">2024</text>
+      
+      <rect class="t-artigo" x="687.2" y="99.4" width="25.6" height="20.6" rx="2"><title>2025: 4 artigos</title></rect>
+      
+      <rect class="t-evento" x="687.2" y="94.3" width="25.6" height="5.1" rx="2"><title>2025: 1 eventos</title></rect>
+      
+      <text class="pub-g-n" x="700.0" y="90.3">5</text>
+      
+      <rect class="t-artigo" x="727.2" y="99.4" width="25.6" height="20.6" rx="2"><title>2026: 4 artigos</title></rect>
+      
+      <rect class="t-evento" x="727.2" y="84.0" width="25.6" height="15.4" rx="2"><title>2026: 3 eventos</title></rect>
+      
+      <text class="pub-g-n" x="740.0" y="80.0">7</text>
+      
+      <text class="pub-g-ano" x="740.0" y="138">2026</text>
+      
+      <line class="pub-g-base" x1="0" x2="760" y1="120" y2="120"></line>
+    </svg>
+    <figcaption class="pub-legenda">
+      <span><i class="t-artigo"></i>Artigos (29)</span><span><i class="t-capitulo"></i>Capítulos (8)</span><span><i class="t-evento"></i>Eventos (27)</span>
+    </figcaption>
+  </figure>
+
+  <div class="pub-filtros" role="group" aria-label="Filtrar por tipo">
+    <span class="pub-filtro-rot">Tipo</span>
+    <button type="button" class="blog-chip active" data-filtro="tipo" data-valor="">Todos <span class="blog-chip-n">64</span></button>
+    
+    <button type="button" class="blog-chip" data-filtro="tipo" data-valor="Artigo em periódico">Artigos <span class="blog-chip-n">29</span></button>
+    
+    <button type="button" class="blog-chip" data-filtro="tipo" data-valor="Capítulo de livro">Capítulos <span class="blog-chip-n">8</span></button>
+    
+    <button type="button" class="blog-chip" data-filtro="tipo" data-valor="Trabalho em evento">Eventos <span class="blog-chip-n">27</span></button>
+    
+  </div>
+  <div class="pub-filtros" role="group" aria-label="Filtrar por estrato Qualis">
+    <span class="pub-filtro-rot">Qualis</span>
+    <button type="button" class="blog-chip active" data-filtro="qualis" data-valor="">Todos</button>
+    
+    <button type="button" class="blog-chip" data-filtro="qualis" data-valor="A1">A1 <span class="blog-chip-n">1</span></button>
+    
+    <button type="button" class="blog-chip" data-filtro="qualis" data-valor="A3">A3 <span class="blog-chip-n">2</span></button>
+    
+    <button type="button" class="blog-chip" data-filtro="qualis" data-valor="A4">A4 <span class="blog-chip-n">2</span></button>
+    
+    <button type="button" class="blog-chip" data-filtro="qualis" data-valor="B1">B1 <span class="blog-chip-n">4</span></button>
+    
+    <button type="button" class="blog-chip" data-filtro="qualis" data-valor="B2">B2 <span class="blog-chip-n">2</span></button>
+    
+    <button type="button" class="blog-chip" data-filtro="qualis" data-valor="B3">B3 <span class="blog-chip-n">8</span></button>
+    
+    <button type="button" class="blog-chip" data-filtro="qualis" data-valor="B4">B4 <span class="blog-chip-n">2</span></button>
+    
+    <button type="button" class="blog-chip" data-filtro="qualis" data-valor="C">C <span class="blog-chip-n">5</span></button>
+    
+  </div>
+  <p class="pub-contagem" aria-live="polite"><span id="pub-n">64</span> publicações</p>
+</div>
+
 <div class="list pub-lista">
 
-<div class="pub-item" data-index="0" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1767236400000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="" data-index="0" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1767236400000">
   <div class="pub-ano listing-date">2026</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">SILVA, A. C.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; PRADO, A. G. S.; DUARTE, C. A. A.</span>
@@ -537,7 +693,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="1" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1767236400000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="A1" data-index="1" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1767236400000">
   <div class="pub-ano listing-date">2026</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">RIBEIRO, M. J. S.; AZEVEDO, Y. G. P.; PRADO, A. G. S.; PINHEIRO, A. B.</span>
@@ -557,7 +713,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="2" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1767236400000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="A3" data-index="2" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1767236400000">
   <div class="pub-ano listing-date">2026</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">NASCIMENTO, M. N.; CIRNE, G. M. P.; PRADO, A. G. S.; AZEVEDO, Y. G. P.; FREIRE, K. P. S. O.</span>
@@ -577,7 +733,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="3" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1767236400000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="A3" data-index="3" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1767236400000">
   <div class="pub-ano listing-date">2026</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">CHAVES, R. M. M.; PRADO, A. G. S.; MORAIS, M. A. O.; LIMA, C. T. A.; LIMA, J. L. A.</span>
@@ -597,7 +753,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="4" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1767236400000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="4" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1767236400000">
   <div class="pub-ano listing-date">2026</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">PRADO, A. G. S.; MORAIS, M. A. O.; VASCONCELOS, A. C.</span>
@@ -617,7 +773,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="5" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1767236400000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="5" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1767236400000">
   <div class="pub-ano listing-date">2026</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">SANTOS, A. N.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; PRADO, A. G. S.; SOUZA NETO, M. O.</span>
@@ -637,7 +793,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="6" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1767236400000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="6" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1767236400000">
   <div class="pub-ano listing-date">2026</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">SOUZA NETO, M. O.; CAVALCANTE, M. J. S.; MIRANDA, K. F.; PRADO, A. G. S.; AZEVEDO, Y. G. P.</span>
@@ -657,7 +813,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="7" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1735700400000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B3" data-index="7" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1735700400000">
   <div class="pub-ano listing-date">2025</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">QUEIROZ, B. F.; MORAIS, M. A. O.; PRADO, A. G. S.</span>
@@ -677,7 +833,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="8" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1735700400000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B3" data-index="8" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1735700400000">
   <div class="pub-ano listing-date">2025</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">OLIVEIRA, F. I. B.; MORAIS, M. A. O.; PRADO, A. G. S.</span>
@@ -697,7 +853,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="9" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1735700400000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="A4" data-index="9" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1735700400000">
   <div class="pub-ano listing-date">2025</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">SOUSA, F. M.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; SILVA, M. C. G.; PRADO, A. G. S.</span>
@@ -717,7 +873,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="10" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1735700400000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B3" data-index="10" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1735700400000">
   <div class="pub-ano listing-date">2025</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">PRADO, A. G. S.; RIBEIRO, A. W. A.; DUARTE, L. T. G.; SOUZA NETO, M. O.</span>
@@ -737,7 +893,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="11" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1735700400000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="11" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1735700400000">
   <div class="pub-ano listing-date">2025</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">MORAIS, M. A. O.; CABRAL, A. C. A.; SANTOS, S. M.; PRADO, A. G. S.</span>
@@ -757,7 +913,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="12" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1704078000000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B3" data-index="12" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1704078000000">
   <div class="pub-ano listing-date">2024</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">MORAIS, M. A. O.; GOMES, A. M.; PRADO, A. G. S.; MOTA, R. H. G.; MIRANDA, K. F.</span>
@@ -777,7 +933,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="13" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1704078000000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B1" data-index="13" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1704078000000">
   <div class="pub-ano listing-date">2024</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">PRADO, A. G. S.; LEITE, J. R. C.; MORAIS, M. A. O.; LIMA, J. L. A.; MORAIS, L. N.; LIMA, C. T. A.; ALVES, A. G. S. D.; BATISTA JÚNIOR, A.</span>
@@ -797,7 +953,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="14" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1704078000000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="C" data-index="14" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1704078000000">
   <div class="pub-ano listing-date">2024</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">PRADO, A. G. S.; COSTA, J. N. O.; MORAIS, M. A. O.; LIMA, J. L. A.; MORAIS, L. N.; LIMA, C. T. A.; ALVES, A. G. S. D.; MOURA, R. R.</span>
@@ -817,7 +973,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="15" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1704078000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="15" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1704078000000">
   <div class="pub-ano listing-date">2024</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">BANDEIRA, L. S. M.; PEDROSA, C. K. A.; PRADO, A. G. S.; NOBRE, L. H. N.</span>
@@ -837,7 +993,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="16" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B2" data-index="16" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">PRADO, A. G. S.; SILVA, J. A.; FERREIRA, F. D. S.; GOMES, T. G. P.; TORRES, V. S.; CAMPOS, R. H. C.</span>
@@ -857,7 +1013,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="17" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="A4" data-index="17" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">LIMA, C. R. M.; SOUZA, J. M.; PRADO, A. G. S.</span>
@@ -877,7 +1033,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="18" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B2" data-index="18" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">FREITAS, E.; MOREIRA, C.; MACEDO, A.; OLIVEIRA, K.; PRADO, A. G. S.</span>
@@ -897,7 +1053,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="19" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B3" data-index="19" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">MOURA, T. L. S.; PRADO, A. G. S.; MORAIS, M. A. O.</span>
@@ -917,7 +1073,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="20" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B3" data-index="20" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">MORAIS, M. A. O.; PRADO, A. G. S.; MESQUITA, G. V.</span>
@@ -937,7 +1093,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="21" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B4" data-index="21" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">TORRES, V. S.; ARAUJO, S. M.; SILVA, F. D.; PRADO, A. G. S.; SILVA, J. A.; GOMES, T. G. P.; CAMPOS, R. H. C.</span>
@@ -957,7 +1113,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="22" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="C" data-index="22" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">MORAIS, M. A. O.; PRADO, A. G. S.; MELO, L. G. G.; SILVA FILHO, R. B.; MARTINS, J. D. M.; MOTA, R. H. G.; MOURA, R. R.; BATISTA JÚNIOR, A.</span>
@@ -977,7 +1133,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="23" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="C" data-index="23" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">SILVA, A. R.; MORAIS, M. A. O.; PRADO, A. G. S.; SOUZA, R. D. R.; MENEZES, E. R.; JESUS, S. M. S.; COSTA, Y. P. D.; REGO FILHO, F. S.</span>
@@ -997,7 +1153,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="24" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="C" data-index="24" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">MORAIS, M. A. O.; PRADO, A. G. S.; MELO, L. G. G.; SILVA FILHO, R. B.; MARTINS, J. D. M.; MOTA, R. H. G.; MOURA, R. R.; BATISTA JÚNIOR, A.</span>
@@ -1017,7 +1173,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="25" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="C" data-index="25" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">MELO, A. D.; SALES, L. B.; OLIVEIRA, A. M.; ALMEIDA, C. A. S.; LIMA, J. E. N. C.; MORAIS, M. A. O.; PRADO, A. G. S.</span>
@@ -1037,7 +1193,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="26" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Capítulo de livro" data-qualis="" data-index="26" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">PRADO, A. G. S.; MORAIS, M. A. O.; MELO, L. G. G.</span>
@@ -1057,7 +1213,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="27" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Capítulo de livro" data-qualis="" data-index="27" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">MORAIS, M. A. O.; PRADO, A. G. S.; MELO, L. G. G.; SILVA FILHO, R. B.</span>
@@ -1077,7 +1233,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="28" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="28" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">VALE, J. V. F.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; PRADO, A. G. S.</span>
@@ -1097,7 +1253,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="29" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="29" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">SILVA, D. M. B.; AZEVEDO, Y. G. P.; MIRANDA, K. F.; PRADO, A. G. S.</span>
@@ -1117,7 +1273,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="30" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="30" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">BENTO, F. J. S.; NOBRE, F. C.; PRADO, A. G. S.; NOBRE, L. H. N.; PERLIN, A. P.</span>
@@ -1137,7 +1293,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="31" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="31" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">JESUS, K. F.; XAVIER JUNIOR, A. E.; FREITAS, E. N.; PRADO, A. G. S.; MACEDO, A. F. P.</span>
@@ -1157,7 +1313,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="32" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="32" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">BASTOS, M. F. L.; PRADO, A. G. S.</span>
@@ -1177,7 +1333,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="33" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="33" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">MAIA, F. A.; MORAIS, M. A. O.; PRADO, A. G. S.; REGO, K. M. N.; SOUZA, S. V. C.</span>
@@ -1197,7 +1353,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="34" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="34" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">QUEIROZ, B. F.; MORAIS, M. A. O.; PRADO, A. G. S.</span>
@@ -1217,7 +1373,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="35" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="35" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">OLIVEIRA, F. I. B.; MORAIS, M. A. O.; PRADO, A. G. S.</span>
@@ -1237,7 +1393,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="36" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="36" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1672542000000">
   <div class="pub-ano listing-date">2023</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">COSTA, L. A. N. N.; MORAIS, M. A. O.; PRADO, A. G. S.; REGO, K. M. N.; SOUZA, S. V. C.</span>
@@ -1257,7 +1413,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="37" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1641006000000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B3" data-index="37" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1641006000000">
   <div class="pub-ano listing-date">2022</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">MORAIS, M. A. O.; GOMES, A. M.; PRADO, A. G. S.</span>
@@ -1277,7 +1433,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="38" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1641006000000">
+<div class="pub-item" data-tipo="Capítulo de livro" data-qualis="" data-index="38" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1641006000000">
   <div class="pub-ano listing-date">2022</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">SANTOS, A. L.; PRADO, A. G. S.; MOREIRA, C. S.; SOARES, J. M. M. V.; MORAIS, M. A. O.</span>
@@ -1297,7 +1453,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="39" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1641006000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="39" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1641006000000">
   <div class="pub-ano listing-date">2022</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">BEZERRA, D. M.; XAVIER JUNIOR, A. E.; MACEDO, A. F. P.; PRADO, A. G. S.; MEDEIROS, K. N.</span>
@@ -1317,7 +1473,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="40" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1641006000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="40" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1641006000000">
   <div class="pub-ano listing-date">2022</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">PRADO, A. G. S.; SILVA, J. A.; GOMES, T. G. P.; CAMPOS, R. H. C.; FERREIRA, F. D. S.; TORRES, V. S.</span>
@@ -1337,7 +1493,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="41" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1641006000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="41" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1641006000000">
   <div class="pub-ano listing-date">2022</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">SILVA, A. R.; PRADO, A. G. S.; MORAIS, M. A. O.; MELO, L. G. G.</span>
@@ -1357,7 +1513,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="42" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1641006000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="42" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1641006000000">
   <div class="pub-ano listing-date">2022</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">MORAIS, M. A. O.; MELO, L. G. G.; PRADO, A. G. S.</span>
@@ -1377,7 +1533,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="43" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1641006000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="43" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1641006000000">
   <div class="pub-ano listing-date">2022</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">MORAIS, M. A. O.; PRADO, A. G. S.; MELO, L. G. G.; SILVA FILHO, R. B.</span>
@@ -1397,7 +1553,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="44" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1609470000000">
+<div class="pub-item" data-tipo="Capítulo de livro" data-qualis="" data-index="44" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1609470000000">
   <div class="pub-ano listing-date">2021</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">ALMEIDA, F. S.; RÊGO, T. F.; PRADO, A. G. S.; MORAIS, M. A. O.</span>
@@ -1417,7 +1573,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="45" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1609470000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="45" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1609470000000">
   <div class="pub-ano listing-date">2021</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">FREITAS, E. N.; MOREIRA, C. S.; MACEDO, A. F. P.; PRADO, A. G. S.</span>
@@ -1437,7 +1593,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="46" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1609470000000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="46" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1609470000000">
   <div class="pub-ano listing-date">2021</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">SOUZA, J. M.; LIMA, C. R. M.; PRADO, A. G. S.</span>
@@ -1457,7 +1613,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="47" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1577847600000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B1" data-index="47" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1577847600000">
   <div class="pub-ano listing-date">2020</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">SANTOS, A. L.; PRADO, A. G. S.; MOREIRA, C. S.; SOARES, J. M. M. V.</span>
@@ -1477,7 +1633,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="48" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1577847600000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B3" data-index="48" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1577847600000">
   <div class="pub-ano listing-date">2020</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">LIMA, A. T. F.; MOTA, R. H. G.; PRADO, A. G. S.; FEITOSA, M. O.</span>
@@ -1497,7 +1653,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="49" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1577847600000">
+<div class="pub-item" data-tipo="Capítulo de livro" data-qualis="" data-index="49" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1577847600000">
   <div class="pub-ano listing-date">2020</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">PRADO, A. G. S.; RODRIGUES, F. L.; OLIVEIRA, K. C.; LACERDA, M. A. D.</span>
@@ -1517,7 +1673,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="50" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1577847600000">
+<div class="pub-item" data-tipo="Capítulo de livro" data-qualis="" data-index="50" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1577847600000">
   <div class="pub-ano listing-date">2020</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">OLIVEIRA, K. C.; RODRIGUES, F. L.; LACERDA, M. A. D.; PRADO, A. G. S.; MARQUES, F. R. V.</span>
@@ -1537,7 +1693,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="51" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1577847600000">
+<div class="pub-item" data-tipo="Capítulo de livro" data-qualis="" data-index="51" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1577847600000">
   <div class="pub-ano listing-date">2020</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">COSTA, L. D. C.; PRADO, A. G. S.; RÊGO, T. F.; FILGUEIRA, P. J. G.; FEITOSA, M. O.</span>
@@ -1557,7 +1713,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="52" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1577847600000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="52" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1577847600000">
   <div class="pub-ano listing-date">2020</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">FEITOSA, M. O.; MACAGNAN, C. B.; PRADO, A. G. S.; FERREIRA, J. C.</span>
@@ -1577,7 +1733,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="53" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1546311600000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="53" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1546311600000">
   <div class="pub-ano listing-date">2019</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">LIMA, A. T. F.; MOTA, R. H. G.; PRADO, A. G. S.</span>
@@ -1597,7 +1753,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="54" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1483239600000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="" data-index="54" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1483239600000">
   <div class="pub-ano listing-date">2017</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">FERREIRA, K. K. P. M.; MIRANDA, K. F.; RÊGO, T. F.; PRADO, A. G. S.</span>
@@ -1617,7 +1773,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="55" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1483239600000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="55" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1483239600000">
   <div class="pub-ano listing-date">2017</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">ALMEIDA, F. S.; RÊGO, T. F.; PRADO, A. G. S.</span>
@@ -1637,7 +1793,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="56" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1388545200000">
+<div class="pub-item" data-tipo="Capítulo de livro" data-qualis="" data-index="56" data-categories="Q2FwJUMzJUFEdHVsbyUyMGRlJTIwbGl2cm8=" data-listing-date-sort="1388545200000">
   <div class="pub-ano listing-date">2014</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">PAIVA, S. B.; BALLONI, A. J.; CUNHA, M. C. F.; PRADO, A. G. S.</span>
@@ -1657,7 +1813,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="57" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1357009200000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B1" data-index="57" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1357009200000">
   <div class="pub-ano listing-date">2013</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">BATISTA, F. F.; PRADO, A. G. S.; MACHADO, M. R.; PAULO, E.</span>
@@ -1677,7 +1833,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="58" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1357009200000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="" data-index="58" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1357009200000">
   <div class="pub-ano listing-date">2013</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">PINHEIRO, F. F. G.; PRADO, A. G. S.; SILVA, G. R. A.; WICKBOLDT, L. A.</span>
@@ -1697,7 +1853,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="59" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1325386800000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B1" data-index="59" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1325386800000">
   <div class="pub-ano listing-date">2012</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">CUNHA, M. C. F.; CAVALCANTE, P. R. N.; PRADO, A. G. S.; CUNHA E SILVA FILHO, A. C.</span>
@@ -1717,7 +1873,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="60" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1325386800000">
+<div class="pub-item" data-tipo="Artigo em periódico" data-qualis="B4" data-index="60" data-categories="QXJ0aWdvJTIwZW0lMjBwZXJpJUMzJUIzZGljbw==" data-listing-date-sort="1325386800000">
   <div class="pub-ano listing-date">2012</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">CUNHA E SILVA FILHO, A. C.; VENTURA, A. F. A.; MARTINS, V. G.; PONTES, L. F. A. G.; PRADO, A. G. S.; ECHTERNACHT, T. H. S.; ARAUJO, A. O.</span>
@@ -1737,7 +1893,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="61" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1325386800000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="61" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1325386800000">
   <div class="pub-ano listing-date">2012</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">BATISTA, F. F.; PRADO, A. G. S.; MACHADO, M. R.; SANTIAGO, J. S.</span>
@@ -1757,7 +1913,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="62" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1325386800000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="62" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1325386800000">
   <div class="pub-ano listing-date">2012</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">PRADO, A. G. S.; BATISTA, F. F.; BONOLI, E. L.</span>
@@ -1777,7 +1933,7 @@ window.Quarto = {
   </div>
 </div>
 
-<div class="pub-item" data-index="63" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1199156400000">
+<div class="pub-item" data-tipo="Trabalho em evento" data-qualis="" data-index="63" data-categories="VHJhYmFsaG8lMjBlbSUyMGV2ZW50bw==" data-listing-date-sort="1199156400000">
   <div class="pub-ano listing-date">2008</div>
   <div class="pub-ref">
     <span class="listing-author" style="display:none">CUNHA, M. C. F.; PRADO, A. G. S.; PAIVA, S. B.; QUEIROZ, D. B.; SANTOS, J. L.</span>
@@ -1800,6 +1956,32 @@ window.Quarto = {
 </div>
 
 <script>
+// Filtros por tipo e estrato Qualis (combinados com a busca da página)
+(function () {
+  const estado = {tipo: "", qualis: ""};
+  const listas = () => Object.values(window["quarto-listings"] || {}).filter(Boolean);
+  const aplica = () => {
+    for (const lista of listas()) {
+      if (!estado.tipo && !estado.qualis) lista.filter();
+      else lista.filter((it) => (!estado.tipo || it.elm.dataset.tipo === estado.tipo) &&
+                                (!estado.qualis || it.elm.dataset.qualis === estado.qualis));
+      const n = document.getElementById("pub-n");
+      if (n) n.textContent = lista.matchingItems.length;
+    }
+  };
+  document.addEventListener("click", (ev) => {
+    const b = ev.target.closest(".pub-filtros .blog-chip");
+    if (!b) return;
+    estado[b.dataset.filtro] = b.dataset.valor;
+    b.parentElement.querySelectorAll(".blog-chip").forEach((c) => c.classList.toggle("active", c === b));
+    aplica();
+  });
+  // Mantém a contagem certa também durante a busca por texto
+  window.addEventListener("load", () => listas().forEach((l) => l.on("updated", () => {
+    const n = document.getElementById("pub-n"); if (n) n.textContent = l.matchingItems.length;
+  })));
+})();
+
 // Copia a referência ABNT (texto simples) do item clicado
 document.addEventListener("click", function (ev) {
   const btn = ev.target.closest(".pub-copiar");

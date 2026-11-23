@@ -11,7 +11,13 @@ project:
     - "assets/katex/**"
     - "assets/js/**"
     - "images/og/*.png"
+    - "images/avatar.webp"
+    - "images/pwa/*.png"
+    - "manifest.webmanifest"
+    - "sw.js"
+    - "offline.html"
     - "assets/logos/*.svg"
+    - "assets/fonts/web/*"
     - "CNAME"
     - "producao-tecnica/dados/*.csv"
 
@@ -107,6 +113,8 @@ format:
     theme:
       light: [cosmo, styles.scss]
       dark: [darkly, styles-dark.scss]
+    # Segue a preferência de cor do sistema (claro ou escuro) na primeira visita
+    respect-user-color-scheme: true
     toc: true
     toc-depth: 3
     toc-title: "Nesta página"
