@@ -235,19 +235,56 @@ table, .cell-output, pre {
   color: #f1f5f9;
 }
 
+// Fonte da navegação: Space Grotesk (geométrica, com traço técnico)
+$ap-nav-font: "Space Grotesk", "Inter", "Helvetica Neue", Arial, sans-serif;
+
 .navbar-brand .navbar-title {
+  font-family: $ap-nav-font;
   font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: -0.01em;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.navbar .nav-link,
+.navbar .dropdown-item {
+  font-family: $ap-nav-font;
 }
 
 .navbar .nav-link {
-  font-size: 0.93rem;
+  font-size: 0.9rem;
   font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #aab6c8;
+  position: relative;
+  transition: color 0.15s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #ffffff;
 }
 
 .navbar .nav-link.active {
   color: #5ec4dc !important;
+}
+
+// Marcador fino sob o item ativo (só em telas largas)
+@media (min-width: 992px) {
+  .navbar .navbar-nav > .nav-item > .nav-link.active:not(.nav-destaque)::after {
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.1rem;
+    height: 2px;
+    border-radius: 2px;
+    background: #5ec4dc;
+  }
+}
+
+.navbar .dropdown-item {
+  font-size: 0.88rem;
+  font-weight: 500;
 }
 
 // ── Rodapé ───────────────────────────────────────────────────

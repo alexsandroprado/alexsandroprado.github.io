@@ -1895,7 +1895,7 @@ font-style: inherit;">)</span><span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
-<div id="fig-historico" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Gráfico de linhas da receita e do lucro líquido de 2010 a 2023: a receita cresce de 500 para 1.600 mil, e o lucro líquido acompanha em nível bem mais baixo.">
+<div id="fig-historico" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Gráfico de linhas da receita e do lucro líquido de 2010 a 2023: a receita cresce de 500 para 1.600 mil, e o lucro líquido acompanha em nível bem mais baixo." loading="lazy">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-historico-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/preditiva/index_files/figure-html/fig-historico-1.png" class="img-fluid figure-img" loading="lazy" alt="Gráfico de linhas da receita e do lucro líquido de 2010 a 2023: a receita cresce de 500 para 1.600 mil, e o lucro líquido acompanha em nível bem mais baixo." width="672">
 </div>
@@ -2017,7 +2017,7 @@ font-style: inherit;">"Receita (em milhares)"</span><span class="op" style="colo
 background-color: null;
 font-style: inherit;">)</span></span></code></pre></div></div>
 <div class="cell-output-display">
-<div id="fig-previsao" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy" alt="Previsão ARIMA da receita para 2024 a 2028: a série histórica sobe de forma contínua e a projeção mantém o crescimento, com intervalos de confiança de 80% e 95% que se alargam com o tempo.">
+<div id="fig-previsao" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Previsão ARIMA da receita para 2024 a 2028: a série histórica sobe de forma contínua e a projeção mantém o crescimento, com intervalos de confiança de 80% e 95% que se alargam com o tempo." loading="lazy">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-previsao-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="https://alexsandroprado.site/blog/posts/preditiva/index_files/figure-html/fig-previsao-1.png" class="img-fluid figure-img" loading="lazy" alt="Previsão ARIMA da receita para 2024 a 2028: a série histórica sobe de forma contínua e a projeção mantém o crescimento, com intervalos de confiança de 80% e 95% que se alargam com o tempo." width="672">
 </div>
