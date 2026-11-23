@@ -1,20 +1,19 @@
 ---
 title: "Blog"
-description: "Notas sobre econometria aplicada, contabilidade e análise de dados em R."
+description: "Notas sobre análise de dados, mercado de trabalho e contabilidade, com exemplos em R e Python."
 toc: false
 listing:
+  id: posts
   contents: "posts/*/index.qmd"
+  template: posts.ejs
   feed:
     title: "Blog de Alexsandro Prado"
   sort: "date desc"
-  type: default
-  image-placeholder: ../images/logo.png
-  categories: true
+  categories: false
   sort-ui: false
   filter-ui: false
-  fields: [image, date, title, description, categories]
-  image-height: "100px"
-  date-format: "DD/MM/YYYY"
+  fields: [image, date, title, description, categories, reading-time]
+  date-format: "D MMM YYYY"
 page-layout: full
 image: https://alexsandroprado.site/images/og/blog.png
 ---

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Notas sobre econometria aplicada, contabilidade e análise de dados em R.">
+<meta name="description" content="Notas sobre análise de dados, mercado de trabalho e contabilidade, com exemplos em R e Python.">
 
 <title>Blog – Alexsandro Prado</title>
 <style>
@@ -50,9 +50,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-3e64db84d37dea41f36a9f8c79e61bb0.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-600cc3afc6f83a59d799c596c3935ed2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-8ee68c4219b573c9b5428f3c87d34378.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark-6422df623a12f4e78606cfff81464e4b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-600cc3afc6f83a59d799c596c3935ed2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-8ee68c4219b573c9b5428f3c87d34378.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,20 +82,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-posts .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-project","listing-lang","listing-website","listing-date-format","listing-title-block-banner","listing-format","listing-engines","listing-language","listing-draft-mode","listing-freeze","listing-author","listing-reading-time","listing-citation","listing-appendix-cite-as","listing-crossref","listing-csl","listing-knitr","listing-execute","listing-comments","listing-body-classes","listing-date","listing-title","listing-categories","listing-image","listing-image-alt","listing-description","listing-open-graph","listing-twitter-card","listing-aliases","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-word-count","listing-resources","listing-draft","listing-editor","listing-code-fold","listing-code-summary"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-posts'] = new List('listing-posts', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -189,11 +189,11 @@ window.Quarto = {
 </script>
 
 <link rel="alternate" type="application/rss+xml" title="Blog de Alexsandro Prado" href="index.xml" data-external="1"><meta property="og:title" content="Blog – Alexsandro Prado">
-<meta property="og:description" content="Notas sobre econometria aplicada, contabilidade e análise de dados em R.">
+<meta property="og:description" content="Notas sobre análise de dados, mercado de trabalho e contabilidade, com exemplos em R e Python.">
 <meta property="og:image" content="https://alexsandroprado.site/images/og/blog.png">
 <meta property="og:site_name" content="Alexsandro Prado">
 <meta name="twitter:title" content="Blog – Alexsandro Prado">
-<meta name="twitter:description" content="Notas sobre econometria aplicada, contabilidade e análise de dados em R.">
+<meta name="twitter:description" content="Notas sobre análise de dados, mercado de trabalho e contabilidade, com exemplos em R e Python.">
 <meta name="twitter:image" content="https://alexsandroprado.site/images/og/blog.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -459,18 +459,18 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
+    <div class="quarto-title column-page">
       <h1 class="title">Blog</h1>
                   <div>
         <div class="description">
-          Notas sobre econometria aplicada, contabilidade e análise de dados em R.
+          Notas sobre análise de dados, mercado de trabalho e contabilidade, com exemplos em R e Python.
         </div>
       </div>
                 </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta column-page">
 
       
     
@@ -481,10 +481,9 @@ window.Quarto = {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categorias</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">Todos <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Q2klQzMlQUFuY2lhJTIwZGUlMjBkYWRvcw==">Ciência de dados <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q29udGFiaWxpZGFkZQ==">Contabilidade <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RGFkb3MlMjBhYmVydG9z">Dados abertos <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RWNvbm9tZXRyaWE=">Econometria <span class="quarto-category-count">(2)</span></div><div class="category" data-category="TWVyY2FkbyUyMGRlJTIwY2FwaXRhaXM=">Mercado de capitais <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TWVyY2FkbyUyMGRlJTIwdHJhYmFsaG8=">Mercado de trabalho <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
@@ -495,212 +494,210 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="UiUyQ1B5dGhvbiUyQ01lcmNhZG8lMjBkZSUyMHRyYWJhbGhv" data-listing-date-sort="1794798000000" data-listing-file-modified-sort="1794866180323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1559">
-<div class="thumbnail"><a href="../blog/posts/datacaged-python/index.html" class="no-external">
+<div class="quarto-listing quarto-listing-container-custom" id="listing-posts">
 
-<img loading="lazy" src="../blog/posts/datacaged-python/capa.webp" class="thumbnail-image" style="height: 100px;" alt="Blocos de código em R e em Python de um notebook Quarto e barras do saldo de empregos por região">
+<nav class="quarto-listing-category blog-filtros" aria-label="Filtrar posts por tema">
+  <button type="button" class="quarto-listing-category-title blog-chip blog-chip-todos active">Todos <span class="blog-chip-n">7</span></button>
+  
+  <button type="button" class="category blog-chip" data-category="TWVyY2FkbyUyMGRlJTIwdHJhYmFsaG8=">Mercado de trabalho <span class="blog-chip-n">3</span></button>
+  
+  <button type="button" class="category blog-chip" data-category="Ug==">R <span class="blog-chip-n">3</span></button>
+  
+  <button type="button" class="category blog-chip" data-category="Q29udGFiaWxpZGFkZQ==">Contabilidade <span class="blog-chip-n">2</span></button>
+  
+  <button type="button" class="category blog-chip" data-category="RWNvbm9tZXRyaWE=">Econometria <span class="blog-chip-n">2</span></button>
+  
+  <button type="button" class="category blog-chip" data-category="Q2klQzMlQUFuY2lhJTIwZGUlMjBkYWRvcw==">Ciência de dados <span class="blog-chip-n">1</span></button>
+  
+  <button type="button" class="category blog-chip" data-category="RGFkb3MlMjBhYmVydG9z">Dados abertos <span class="blog-chip-n">1</span></button>
+  
+  <button type="button" class="category blog-chip" data-category="TWVyY2FkbyUyMGRlJTIwY2FwaXRhaXM=">Mercado de capitais <span class="blog-chip-n">1</span></button>
+  
+  <button type="button" class="category blog-chip" data-category="UHl0aG9u">Python <span class="blog-chip-n">1</span></button>
+  
+</nav>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/datacaged-python/index.html" class="no-external">R e Python no mesmo notebook: o caged.duckdb do datacaged</a>
-</h3>
-<div class="listing-categories">
+<div class="list blog-grade">
 
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+<article class="blog-card blog-card-destaque" data-index="0" data-categories="UiUyQ1B5dGhvbiUyQ01lcmNhZG8lMjBkZSUyMHRyYWJhbGhv" data-listing-date-sort="1794798000000" data-listing-file-modified-sort="1794866180323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1559">
+  <a class="blog-card-img" href="../blog/posts/datacaged-python/index.html" tabindex="-1" aria-hidden="true">
+    
+    <img src="../blog/posts/datacaged-python/capa.webp" alt="" loading="eager">
+    
+  </a>
+  <div class="blog-card-corpo">
+    <span class="blog-selo">Mais recente</span>
+    
+    <div class="blog-card-tags">
+      <span class="blog-tag">R</span><span class="blog-tag">Python</span><span class="blog-tag">Mercado de trabalho</span>
+    </div>
+    
+    <h3 class="no-anchor blog-card-titulo listing-title"><a href="../blog/posts/datacaged-python/index.html">R e Python no mesmo notebook: o caged.duckdb do datacaged</a></h3>
+    <p class="blog-card-resumo listing-description">Um notebook Quarto (.qmd) que combina R e Python sobre o mesmo banco caged.duckdb: o datacaged carrega os microdados do Novo CAGED, e as duas linguagens consultam, trocam resultados e produzem gráficos.</p>
+    <div class="blog-card-meta">
+      <span class="listing-date"><i class="bi bi-calendar3" aria-hidden="true"></i> 16 nov 2026</span>
+      <span class="listing-reading-time"><i class="bi bi-clock" aria-hidden="true"></i> 8 min</span>
+      <a class="blog-card-ler" href="../blog/posts/datacaged-python/index.html" aria-label="Ler: R e Python no mesmo notebook: o caged.duckdb do datacaged">Ler <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</article>
 
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
+<article class="blog-card " data-index="1" data-categories="UiUyQ01lcmNhZG8lMjBkZSUyMHRyYWJhbGhv" data-listing-date-sort="1794798000000" data-listing-file-modified-sort="1794861752692" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="788">
+  <a class="blog-card-img" href="../blog/posts/datacaged-tutorial/index.html" tabindex="-1" aria-hidden="true">
+    
+    <img src="../blog/posts/datacaged-tutorial/capa.webp" alt="" loading="eager">
+    
+  </a>
+  <div class="blog-card-corpo">
+    
+    
+    <div class="blog-card-tags">
+      <span class="blog-tag">R</span><span class="blog-tag">Mercado de trabalho</span>
+    </div>
+    
+    <h3 class="no-anchor blog-card-titulo listing-title"><a href="../blog/posts/datacaged-tutorial/index.html">Microdados do CAGED no R com o pacote datacaged</a></h3>
+    <p class="blog-card-resumo listing-description">Passo a passo para baixar, organizar e consultar os microdados do Novo CAGED em R, com um banco local DuckDB e consultas em dplyr.</p>
+    <div class="blog-card-meta">
+      <span class="listing-date"><i class="bi bi-calendar3" aria-hidden="true"></i> 16 nov 2026</span>
+      <span class="listing-reading-time"><i class="bi bi-clock" aria-hidden="true"></i> 4 min</span>
+      <a class="blog-card-ler" href="../blog/posts/datacaged-tutorial/index.html" aria-label="Ler: Microdados do CAGED no R com o pacote datacaged">Ler <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</article>
 
-<div class="listing-category" onclick="window.quartoListingCategory('TWVyY2FkbyUyMGRlJTIwdHJhYmFsaG8='); return false;">Mercado de trabalho</div>
+<article class="blog-card " data-index="2" data-categories="Q29udGFiaWxpZGFkZSUyQ01lcmNhZG8lMjBkZSUyMHRyYWJhbGhv" data-listing-date-sort="1794798000000" data-listing-file-modified-sort="1794861752700" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1303">
+  <a class="blog-card-img" href="../blog/posts/mercado-contabil-2026/index.html" tabindex="-1" aria-hidden="true">
+    
+    <img src="../blog/posts/mercado-contabil-2026/capa.webp" alt="" loading="eager">
+    
+  </a>
+  <div class="blog-card-corpo">
+    
+    
+    <div class="blog-card-tags">
+      <span class="blog-tag">Contabilidade</span><span class="blog-tag">Mercado de trabalho</span>
+    </div>
+    
+    <h3 class="no-anchor blog-card-titulo listing-title"><a href="../blog/posts/mercado-contabil-2026/index.html">O mercado de trabalho contábil em 2026</a></h3>
+    <p class="blog-card-resumo listing-description">Admissões, desligamentos e salário de admissão de contadores, auditores, peritos, técnicos e auxiliares de contabilidade no Novo CAGED, de janeiro a setembro de 2026.</p>
+    <div class="blog-card-meta">
+      <span class="listing-date"><i class="bi bi-calendar3" aria-hidden="true"></i> 16 nov 2026</span>
+      <span class="listing-reading-time"><i class="bi bi-clock" aria-hidden="true"></i> 7 min</span>
+      <a class="blog-card-ler" href="../blog/posts/mercado-contabil-2026/index.html" aria-label="Ler: O mercado de trabalho contábil em 2026">Ler <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</article>
 
-</div>
-<div class="delink listing-description"><a href="../blog/posts/datacaged-python/index.html" class="no-external">
-<p>Um notebook Quarto (.qmd) que combina R e Python sobre o mesmo banco caged.duckdb: o datacaged carrega os microdados do Novo CAGED, e as duas linguagens consultam, trocam resultados e produzem gráficos.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/datacaged-python/index.html" class="no-external">
-<div class="listing-date">
-16/11/2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="UiUyQ01lcmNhZG8lMjBkZSUyMHRyYWJhbGhv" data-listing-date-sort="1794798000000" data-listing-file-modified-sort="1794861752692" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="788">
-<div class="thumbnail"><a href="../blog/posts/datacaged-tutorial/index.html" class="no-external">
+<article class="blog-card " data-index="3" data-categories="TWVyY2FkbyUyMGRlJTIwY2FwaXRhaXMlMkNEYWRvcyUyMGFiZXJ0b3M=" data-listing-date-sort="1794798000000" data-listing-file-modified-sort="1794861752706" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="927">
+  <a class="blog-card-img" href="../blog/posts/segmentos-b3/index.html" tabindex="-1" aria-hidden="true">
+    
+    <img src="../blog/posts/segmentos-b3/capa.webp" alt="" loading="lazy">
+    
+  </a>
+  <div class="blog-card-corpo">
+    
+    
+    <div class="blog-card-tags">
+      <span class="blog-tag">Mercado de capitais</span><span class="blog-tag">Dados abertos</span>
+    </div>
+    
+    <h3 class="no-anchor blog-card-titulo listing-title"><a href="../blog/posts/segmentos-b3/index.html">Segmentos de listagem da B3: um painel verificado de 2010 a 2026</a></h3>
+    <p class="blog-card-resumo listing-description">Uma base de dados aberta com o segmento de listagem de cada companhia aberta brasileira, ano a ano, construída a partir do Formulário Cadastral da CVM e conferida documento a documento.</p>
+    <div class="blog-card-meta">
+      <span class="listing-date"><i class="bi bi-calendar3" aria-hidden="true"></i> 16 nov 2026</span>
+      <span class="listing-reading-time"><i class="bi bi-clock" aria-hidden="true"></i> 5 min</span>
+      <a class="blog-card-ler" href="../blog/posts/segmentos-b3/index.html" aria-label="Ler: Segmentos de listagem da B3: um painel verificado de 2010 a 2026">Ler <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</article>
 
-<img loading="lazy" src="../blog/posts/datacaged-tutorial/capa.webp" class="thumbnail-image" style="height: 100px;" alt="Barras do saldo mensal de empregos formais e trecho de código em R com o pacote datacaged">
+<article class="blog-card " data-index="4" data-categories="Q29udGFiaWxpZGFkZSUyQ0NpJUMzJUFBbmNpYSUyMGRlJTIwZGFkb3M=" data-listing-date-sort="1719716400000" data-listing-file-modified-sort="1794857789359" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="589">
+  <a class="blog-card-img" href="../blog/posts/contabdata/index.html" tabindex="-1" aria-hidden="true">
+    
+    <img src="../blog/posts/contabdata/capa.webp" alt="" loading="lazy">
+    
+  </a>
+  <div class="blog-card-corpo">
+    
+    
+    <div class="blog-card-tags">
+      <span class="blog-tag">Contabilidade</span><span class="blog-tag">Ciência de dados</span>
+    </div>
+    
+    <h3 class="no-anchor blog-card-titulo listing-title"><a href="../blog/posts/contabdata/index.html">A importância da análise de dados na contabilidade</a></h3>
+    <p class="blog-card-resumo listing-description">Como a análise de dados transforma a prática contábil, com benefícios, desafios e exemplos para a tomada de decisão nas organizações.</p>
+    <div class="blog-card-meta">
+      <span class="listing-date"><i class="bi bi-calendar3" aria-hidden="true"></i> 30 jun 2024</span>
+      <span class="listing-reading-time"><i class="bi bi-clock" aria-hidden="true"></i> 3 min</span>
+      <a class="blog-card-ler" href="../blog/posts/contabdata/index.html" aria-label="Ler: A importância da análise de dados na contabilidade">Ler <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</article>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/datacaged-tutorial/index.html" class="no-external">Microdados do CAGED no R com o pacote datacaged</a>
-</h3>
-<div class="listing-categories">
+<article class="blog-card " data-index="5" data-categories="RWNvbm9tZXRyaWElMkNS" data-listing-date-sort="1717729200000" data-listing-file-modified-sort="1794857782433" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="874">
+  <a class="blog-card-img" href="../blog/posts/preditiva/index.html" tabindex="-1" aria-hidden="true">
+    
+    <img src="../blog/posts/preditiva/capa.webp" alt="" loading="lazy">
+    
+  </a>
+  <div class="blog-card-corpo">
+    
+    
+    <div class="blog-card-tags">
+      <span class="blog-tag">Econometria</span><span class="blog-tag">R</span>
+    </div>
+    
+    <h3 class="no-anchor blog-card-titulo listing-title"><a href="../blog/posts/preditiva/index.html">Previsão de receita</a></h3>
+    <p class="blog-card-resumo listing-description">Previsão de receita com séries temporais em R: preparação dos dados, análise exploratória e modelo preditivo com o pacote forecast.</p>
+    <div class="blog-card-meta">
+      <span class="listing-date"><i class="bi bi-calendar3" aria-hidden="true"></i> 7 jun 2024</span>
+      <span class="listing-reading-time"><i class="bi bi-clock" aria-hidden="true"></i> 5 min</span>
+      <a class="blog-card-ler" href="../blog/posts/preditiva/index.html" aria-label="Ler: Previsão de receita">Ler <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</article>
 
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWVyY2FkbyUyMGRlJTIwdHJhYmFsaG8='); return false;">Mercado de trabalho</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/datacaged-tutorial/index.html" class="no-external">
-<p>Passo a passo para baixar, organizar e consultar os microdados do Novo CAGED em R, com um banco local DuckDB e consultas em dplyr.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/datacaged-tutorial/index.html" class="no-external">
-<div class="listing-date">
-16/11/2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Q29udGFiaWxpZGFkZSUyQ01lcmNhZG8lMjBkZSUyMHRyYWJhbGhv" data-listing-date-sort="1794798000000" data-listing-file-modified-sort="1794861752700" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1303">
-<div class="thumbnail"><a href="../blog/posts/mercado-contabil-2026/index.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/mercado-contabil-2026/capa.webp" class="thumbnail-image" style="height: 100px;" alt="Linhas do salário médio de admissão de contadores e auxiliares de contabilidade entre 2020 e 2026">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/mercado-contabil-2026/index.html" class="no-external">O mercado de trabalho contábil em 2026</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29udGFiaWxpZGFkZQ=='); return false;">Contabilidade</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWVyY2FkbyUyMGRlJTIwdHJhYmFsaG8='); return false;">Mercado de trabalho</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/mercado-contabil-2026/index.html" class="no-external">
-<p>Admissões, desligamentos e salário de admissão de contadores, auditores, peritos, técnicos e auxiliares de contabilidade no Novo CAGED, de janeiro a setembro de 2026.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/mercado-contabil-2026/index.html" class="no-external">
-<div class="listing-date">
-16/11/2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="TWVyY2FkbyUyMGRlJTIwY2FwaXRhaXMlMkNEYWRvcyUyMGFiZXJ0b3M=" data-listing-date-sort="1794798000000" data-listing-file-modified-sort="1794861752706" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="927">
-<div class="thumbnail"><a href="../blog/posts/segmentos-b3/index.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/segmentos-b3/capa.webp" class="thumbnail-image" style="height: 100px;" alt="Área empilhada com a participação dos segmentos de listagem da B3 entre 2010 e 2025">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/segmentos-b3/index.html" class="no-external">Segmentos de listagem da B3: um painel verificado de 2010 a 2026</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TWVyY2FkbyUyMGRlJTIwY2FwaXRhaXM='); return false;">Mercado de capitais</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGFkb3MlMjBhYmVydG9z'); return false;">Dados abertos</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/segmentos-b3/index.html" class="no-external">
-<p>Uma base de dados aberta com o segmento de listagem de cada companhia aberta brasileira, ano a ano, construída a partir do Formulário Cadastral da CVM e conferida documento a documento.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/segmentos-b3/index.html" class="no-external">
-<div class="listing-date">
-16/11/2026
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Q29udGFiaWxpZGFkZSUyQ0NpJUMzJUFBbmNpYSUyMGRlJTIwZGFkb3M=" data-listing-date-sort="1719716400000" data-listing-file-modified-sort="1794857789359" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="589">
-<div class="thumbnail"><a href="../blog/posts/contabdata/index.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/contabdata/capa.webp" class="thumbnail-image" style="height: 100px;" alt="Demonstração do resultado ao lado de gráfico de receita e margem líquida">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/contabdata/index.html" class="no-external">A importância da análise de dados na contabilidade</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q29udGFiaWxpZGFkZQ=='); return false;">Contabilidade</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Q2klQzMlQUFuY2lhJTIwZGUlMjBkYWRvcw=='); return false;">Ciência de dados</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/contabdata/index.html" class="no-external">
-<p>Como a análise de dados transforma a prática contábil, com benefícios, desafios e exemplos para a tomada de decisão nas organizações.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/contabdata/index.html" class="no-external">
-<div class="listing-date">
-30/06/2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="RWNvbm9tZXRyaWElMkNS" data-listing-date-sort="1717729200000" data-listing-file-modified-sort="1794857782433" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="874">
-<div class="thumbnail"><a href="../blog/posts/preditiva/index.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/preditiva/capa.webp" class="thumbnail-image" style="height: 100px;" alt="Série de receita observada e previsão com intervalos de confiança">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/preditiva/index.html" class="no-external">Previsão de receita</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RWNvbm9tZXRyaWE='); return false;">Econometria</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-</div>
-<div class="delink listing-description"><a href="../blog/posts/preditiva/index.html" class="no-external">
-<p>Previsão de receita com séries temporais em R: preparação dos dados, análise exploratória e modelo preditivo com o pacote forecast.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/preditiva/index.html" class="no-external">
-<div class="listing-date">
-07/06/2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="RWNvbm9tZXRyaWE=" data-listing-date-sort="1716346800000" data-listing-file-modified-sort="1794857833788" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1409">
-<div class="thumbnail"><a href="../blog/posts/heterocedasticidade/index.html" class="no-external">
-
-<img loading="lazy" src="../blog/posts/heterocedasticidade/capa.webp" class="thumbnail-image" style="height: 100px;" alt="Resíduos em forma de funil e função de autocorrelação dos resíduos">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../blog/posts/heterocedasticidade/index.html" class="no-external">Heterocedasticidade e autocorrelação: como resolver na prática?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RWNvbm9tZXRyaWE='); return false;">Econometria</div>
+<article class="blog-card " data-index="6" data-categories="RWNvbm9tZXRyaWE=" data-listing-date-sort="1716346800000" data-listing-file-modified-sort="1794857833788" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1409">
+  <a class="blog-card-img" href="../blog/posts/heterocedasticidade/index.html" tabindex="-1" aria-hidden="true">
+    
+    <img src="../blog/posts/heterocedasticidade/capa.webp" alt="" loading="lazy">
+    
+  </a>
+  <div class="blog-card-corpo">
+    
+    
+    <div class="blog-card-tags">
+      <span class="blog-tag">Econometria</span>
+    </div>
+    
+    <h3 class="no-anchor blog-card-titulo listing-title"><a href="../blog/posts/heterocedasticidade/index.html">Heterocedasticidade e autocorrelação: como resolver na prática?</a></h3>
+    <p class="blog-card-resumo listing-description">Passo a passo em R para identificar, diagnosticar e tratar heterocedasticidade e autocorrelação em modelos de regressão.</p>
+    <div class="blog-card-meta">
+      <span class="listing-date"><i class="bi bi-calendar3" aria-hidden="true"></i> 22 mai 2024</span>
+      <span class="listing-reading-time"><i class="bi bi-clock" aria-hidden="true"></i> 8 min</span>
+      <a class="blog-card-ler" href="../blog/posts/heterocedasticidade/index.html" aria-label="Ler: Heterocedasticidade e autocorrelação: como resolver na prática?">Ler <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</article>
 
 </div>
-<div class="delink listing-description"><a href="../blog/posts/heterocedasticidade/index.html" class="no-external">
-<p>Passo a passo em R para identificar, diagnosticar e tratar heterocedasticidade e autocorrelação em modelos de regressão.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../blog/posts/heterocedasticidade/index.html" class="no-external">
-<div class="listing-date">
-22/05/2024
-</div>
-</a>
-</div>
-</div>
-</div>
+<script>
+// Mantém o chip "Todos" marcado quando nenhum tema está selecionado
+document.addEventListener("DOMContentLoaded", () => {
+  const todos = document.querySelector(".blog-chip-todos");
+  const atualiza = () => {
+    const algum = document.querySelector(".blog-filtros .category.active");
+    todos.classList.toggle("active", !algum);
+  };
+  document.querySelectorAll(".blog-filtros .blog-chip").forEach((b) =>
+    b.addEventListener("click", () => setTimeout(atualiza, 0)));
+  todos.addEventListener("click", () => {
+    document.querySelectorAll(".blog-filtros .category.active").forEach((c) => c.classList.remove("active"));
+    setTimeout(atualiza, 0);
+  });
+  setTimeout(atualiza, 50);
+});
+</script>
 <div class="listing-no-matching d-none">Sem itens correspondentes</div>
 </div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> De volta ao topo</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -1,0 +1,61 @@
+```{=html}
+<%
+  // Categorias únicas, na ordem de frequência, para a barra de filtros
+  const contagem = {};
+  for (const item of items) {
+    for (const c of (item.categories || [])) contagem[c] = (contagem[c] || 0) + 1;
+  }
+  const categorias = Object.keys(contagem).sort((a, b) => contagem[b] - contagem[a] || a.localeCompare(b, "pt-BR"));
+  const codifica = (c) => btoa(encodeURIComponent(c));
+%>
+<nav class="quarto-listing-category blog-filtros" aria-label="Filtrar posts por tema">
+  <button type="button" class="quarto-listing-category-title blog-chip blog-chip-todos active">Todos <span class="blog-chip-n"><%= items.length %></span></button>
+  <% for (const c of categorias) { %>
+  <button type="button" class="category blog-chip" data-category="<%- codifica(c) %>"><%= c %> <span class="blog-chip-n"><%= contagem[c] %></span></button>
+  <% } %>
+</nav>
+
+<div class="list blog-grade">
+<% items.forEach((item, i) => { %>
+<article class="blog-card <%= i === 0 ? 'blog-card-destaque' : '' %>" <%= metadataAttrs(item) %>>
+  <a class="blog-card-img" href="<%- item.path %>" tabindex="-1" aria-hidden="true">
+    <% if (item.image) { %>
+    <img src="<%- item.image %>" alt="" loading="<%= i < 3 ? 'eager' : 'lazy' %>">
+    <% } %>
+  </a>
+  <div class="blog-card-corpo">
+    <% if (i === 0) { %><span class="blog-selo">Mais recente</span><% } %>
+    <% if (item.categories && item.categories.length) { %>
+    <div class="blog-card-tags">
+      <% for (const c of item.categories) { %><span class="blog-tag"><%= c %></span><% } %>
+    </div>
+    <% } %>
+    <h3 class="no-anchor blog-card-titulo listing-title"><a href="<%- item.path %>"><%= item.title %></a></h3>
+    <% if (item.description) { %><p class="blog-card-resumo listing-description"><%= item.description %></p><% } %>
+    <div class="blog-card-meta">
+      <span class="listing-date"><i class="bi bi-calendar3" aria-hidden="true"></i> <%= item.date %></span>
+      <% if (item['reading-time']) { %><span class="listing-reading-time"><i class="bi bi-clock" aria-hidden="true"></i> <%= String(item['reading-time']).replace(/\s*min.*$/i, ' min') %></span><% } %>
+      <a class="blog-card-ler" href="<%- item.path %>" aria-label="Ler: <%= item.title %>">Ler <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</article>
+<% }) %>
+</div>
+<script>
+// Mantém o chip "Todos" marcado quando nenhum tema está selecionado
+document.addEventListener("DOMContentLoaded", () => {
+  const todos = document.querySelector(".blog-chip-todos");
+  const atualiza = () => {
+    const algum = document.querySelector(".blog-filtros .category.active");
+    todos.classList.toggle("active", !algum);
+  };
+  document.querySelectorAll(".blog-filtros .blog-chip").forEach((b) =>
+    b.addEventListener("click", () => setTimeout(atualiza, 0)));
+  todos.addEventListener("click", () => {
+    document.querySelectorAll(".blog-filtros .category.active").forEach((c) => c.classList.remove("active"));
+    setTimeout(atualiza, 0);
+  });
+  setTimeout(atualiza, 50);
+});
+</script>
+```
