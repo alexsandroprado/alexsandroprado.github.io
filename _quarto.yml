@@ -11,6 +11,7 @@ project:
     - "assets/katex/**"
     - "assets/js/**"
     - "images/og/*.png"
+    - "assets/logos/*.svg"
     - "CNAME"
     - "producao-tecnica/dados/*.csv"
 
@@ -80,8 +81,21 @@ website:
         aria-label: RSS do blog
 
   page-footer:
-    left: "© 2026 Alexsandro Prado · Universidade Federal Rural do Semi-Árido (UFERSA) · [Privacidade](/privacidade.html)"
-    right: "Conteúdo sob licença [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt-br) · Feito com [Quarto](https://quarto.org)"
+    left: "<span class=\"marca-rodape\">Alexsandro Prado</span><br>Professor Adjunto · Ciências Contábeis da UFERSA"
+    center: "[Blog](/blog/index.qmd) · [Ensino](/ensino/index.qmd) · [Pesquisa](/pesquisa/index.qmd) · [Produção técnica](/producao-tecnica/index.qmd) · [Extensão](/extensao/index.qmd) · [Parcerias](/parcerias/index.qmd) · [Privacidade](/privacidade.qmd)<br><span class=\"rodape-nota\"><span class=\"nw\">Licença <a href=\"https://creativecommons.org/licenses/by/4.0/deed.pt-br\" class=\"licenca-cc\" title=\"Creative Commons Atribuição 4.0 (CC BY 4.0)\" aria-label=\"Licença Creative Commons Atribuição 4.0 (CC BY 4.0)\"><img src=\"/assets/logos/cc-cc.svg\" alt=\"\" class=\"cc-icone\" width=\"14\" height=\"14\" style=\"height:1.1em;width:1.1em;vertical-align:-0.22em\"><img src=\"/assets/logos/cc-by.svg\" alt=\"\" class=\"cc-icone\" width=\"14\" height=\"14\" style=\"height:1.1em;width:1.1em;vertical-align:-0.22em\"></a></span> · <span class=\"feito-com\">Feito com <a href=\"https://www.r-project.org/\" title=\"R\"><img src=\"/assets/logos/r.svg\" alt=\"R\" class=\"logo-r\" width=\"20\" height=\"16\" style=\"height:1.2em;width:auto;vertical-align:-0.3em\"></a> e <a href=\"https://quarto.org/\" title=\"Quarto\"><img src=\"/assets/logos/quarto.svg\" alt=\"Quarto\" class=\"logo-quarto\" width=\"56\" height=\"12\" style=\"height:.92em;width:auto;vertical-align:-0.22em\"></a></span></span>"
+    right:
+      - icon: github
+        href: https://github.com/alexsandroprado
+        aria-label: GitHub de Alexsandro Prado
+      - icon: linkedin
+        href: https://www.linkedin.com/in/alexsandroprado/
+        aria-label: LinkedIn de Alexsandro Prado
+      - icon: youtube
+        href: https://www.youtube.com/@profalexsandroprado
+        aria-label: Canal de Alexsandro Prado no YouTube
+      - icon: envelope
+        href: /index.qmd#contato
+        aria-label: Contato
 
 date-format: "DD/MM/YYYY"
 
