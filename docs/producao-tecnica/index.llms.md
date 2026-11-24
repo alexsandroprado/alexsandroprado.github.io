@@ -43,6 +43,18 @@ Software/AplicativoRegistro no INPI
 
 Programa de computador com registro concedido pelo Instituto Nacional da Propriedade Industrial (INPI).
 
+[![Tela inicial do Painel do Mercado de Trabalho do GECOMT, com taxa de desocupação, pessoas ocupadas e saldo de empregos formais](../images/painel-gecomt.webp)](https://gecomt.github.io/dashboard/)
+
+atualizaçãosemanalfontesPNAD Contínua · Novo CAGED · RAISfeito comQuarto · R
+
+Software/AplicativoAbrangência nacional
+
+### Painel do Mercado de Trabalho
+
+Painel interativo do grupo GECOMT com indicadores do mercado de trabalho brasileiro e dos profissionais contábeis, organizado em quatro seções: (i) visão geral, com taxa de desocupação, pessoas ocupadas e saldo de empregos formais; (ii) PNAD Contínua, com indicadores, posição na ocupação, grupamentos de atividade e rendimentos; (iii) Novo CAGED, com movimentações por unidade da federação e setor; e (iv) profissionais contábeis, com dados do Novo CAGED e da RAIS. Os dados são atualizados automaticamente toda semana a partir do pacote `datacaged` e da API do SIDRA/IBGE.
+
+[ Acessar o painel](https://gecomt.github.io/dashboard/) [ Repositório](https://github.com/gecomt/gecomt.github.io/tree/main/dashboard)
+
 ## Bases de dados técnico-científicas
 
 dadosCC BY 4.0códigoMITcobertura2010 a 2026

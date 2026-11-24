@@ -87,6 +87,25 @@ pak::pak("gecomt/datarais")
 Programa de computador com registro concedido pelo Instituto Nacional da Propriedade Industrial (INPI).
 :::
 
+::: {.pt-card .pt-card-largo .pt-card-painel #painel-gecomt}
+```{=html}
+<a class="pt-print" href="https://gecomt.github.io/dashboard/" target="_blank" rel="noopener"><img src="../images/painel-gecomt.webp" alt="Tela inicial do Painel do Mercado de Trabalho do GECOMT, com taxa de desocupação, pessoas ocupadas e saldo de empregos formais" width="1040" height="585" loading="lazy"></a>
+<div class="pt-cab">
+  <span class="pt-hex pt-hex-icone" aria-hidden="true"><i class="bi bi-bar-chart-line"></i></span>
+  <div class="pt-cab-txt">
+    <div class="pt-selos"><span class="pt-selo selo-cran"><span>atualização</span><span>semanal</span></span><span class="pt-selo"><span>fontes</span><span>PNAD Contínua · Novo CAGED · RAIS</span></span><span class="pt-selo"><span>feito com</span><span>Quarto · R</span></span></div>
+    <div class="pt-tipos"><span class="tipo-capes">Software/Aplicativo</span><span class="tipo-capes tipo-neutro">Abrangência nacional</span></div>
+  </div>
+</div>
+```
+
+### Painel do Mercado de Trabalho
+
+Painel interativo do grupo GECOMT com indicadores do mercado de trabalho brasileiro e dos profissionais contábeis, organizado em quatro seções: (i) visão geral, com taxa de desocupação, pessoas ocupadas e saldo de empregos formais; (ii) PNAD Contínua, com indicadores, posição na ocupação, grupamentos de atividade e rendimentos; (iii) Novo CAGED, com movimentações por unidade da federação e setor; e (iv) profissionais contábeis, com dados do Novo CAGED e da RAIS. Os dados são atualizados automaticamente toda semana a partir do pacote `datacaged` e da API do SIDRA/IBGE.
+
+[<i class="bi bi-bar-chart-line"></i> Acessar o painel](https://gecomt.github.io/dashboard/){.pt-btn} [<i class="bi bi-github"></i> Repositório](https://github.com/gecomt/gecomt.github.io/tree/main/dashboard){.pt-btn}
+:::
+
 ::::
 
 ## Bases de dados técnico-científicas

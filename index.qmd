@@ -61,7 +61,7 @@ Professor Adjunto do Departamento de Ciências Sociais Aplicadas e Humanas (DCSA
 
 ::: {.kpis-home}
 [[64]{.kh-valor}[publicações]{.kh-rotulo}[29 artigos em periódicos]{.kh-nota}](publicacoes/index.qmd){.kh-item}
-[[5]{.kh-valor}[produtos técnicos]{.kh-rotulo}[software e bases de dados]{.kh-nota}](producao-tecnica/index.qmd){.kh-item}
+[[6]{.kh-valor}[produtos técnicos]{.kh-rotulo}[software, painel e bases de dados]{.kh-nota}](producao-tecnica/index.qmd){.kh-item}
 [[&nbsp;]{.kh-valor #kh-downloads}[downloads do datacaged]{.kh-rotulo}[no CRAN, desde set/2026]{.kh-nota}](producao-tecnica/index.qmd#datacaged){.kh-item}
 [[54]{.kh-valor}[TCCs orientados]{.kh-rotulo}[além de dissertações no PPGA]{.kh-nota}](ensino/index.qmd#orientacao){.kh-item}
 :::

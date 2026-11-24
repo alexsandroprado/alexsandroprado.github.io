@@ -39,4 +39,4 @@ Bases construídas no âmbito das pesquisas e disponibilizadas publicamente, con
 - **Segmentos de listagem da B3 por companhia (2010 a 2026):** painel anual, verificado documento a documento, do segmento de listagem de cada companhia aberta brasileira.
 - **Microdados do CAGED e da RAIS:** espelhos públicos dos arquivos do Ministério do Trabalho e Emprego, organizados para acesso programático a partir do R.
 
-Os [indicadores mensais do emprego formal](../producao-tecnica/index.qmd#indicadores), calculados com essas bases para Brasil, Nordeste, Rio Grande do Norte e Mossoró, incluindo as ocupações contábeis, estão na página de Produção técnica.
+Os [indicadores mensais do emprego formal](../producao-tecnica/index.qmd#indicadores), calculados com essas bases para Brasil, Nordeste, Rio Grande do Norte e Mossoró, incluindo as ocupações contábeis, estão na página de Produção técnica. Ademais, o grupo mantém o [Painel do Mercado de Trabalho](../producao-tecnica/index.qmd#painel-gecomt), com dados da PNAD Contínua, do Novo CAGED e da RAIS atualizados semanalmente.
