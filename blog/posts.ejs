@@ -13,6 +13,7 @@
   <% for (const c of categorias) { %>
   <button type="button" class="category blog-chip" data-category="<%- codifica(c) %>"><%= c %> <span class="blog-chip-n"><%= contagem[c] %></span></button>
   <% } %>
+  <a class="blog-rss" href="index.xml" title="Assinar o blog por RSS"><i class="bi bi-rss"></i> Assinar</a>
 </nav>
 
 <div class="list blog-grade">

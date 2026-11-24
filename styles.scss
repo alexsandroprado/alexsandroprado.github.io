@@ -1994,3 +1994,138 @@ main.content > #title-block-header {
   img { display: block; width: 100%; height: auto; max-height: 340px; object-fit: cover; object-position: top; transition: transform 0.3s; }
   &:hover img { transform: scale(1.015); }
 }
+
+// ── Navegação moderna: menus com descrição, barra translúcida, busca e CTA ──
+#quarto-header {
+  transition: box-shadow 0.2s ease;
+
+  .navbar { transition: padding 0.2s ease, background-color 0.2s ease; }
+
+  &.cab-rolado {
+    box-shadow: 0 10px 30px -18px rgba(2, 6, 23, 0.8);
+
+    .navbar {
+      background-color: rgba(15, 23, 42, 0.86) !important;
+      -webkit-backdrop-filter: saturate(160%) blur(12px);
+      backdrop-filter: saturate(160%) blur(12px);
+    }
+
+    @media (min-width: 992px) {
+      .navbar { padding-top: 0.2rem; padding-bottom: 0.2rem; }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar .navbar-nav .dropdown-menu {
+    min-width: 370px;
+    padding: 0.45rem;
+    margin-top: 0.4rem !important;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 14px;
+    box-shadow: 0 22px 45px -20px rgba(2, 6, 23, 0.55);
+  }
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 10px;
+  white-space: normal;
+
+  > .bi {
+    flex: 0 0 auto;
+    width: 2rem;
+    height: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--ap-accent) !important;
+    background: var(--ap-accent-soft);
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .dropdown-text { display: flex; flex-direction: column; gap: 0.1rem; line-height: 1.25; }
+  .dd-desc { font-family: "Inter", sans-serif; font-size: 0.74rem; font-weight: 400; opacity: 0.7; }
+
+  &.dd-externo .dropdown-text > :first-child::after,
+  &.dd-externo .dropdown-text::before { content: none; }
+
+  &:hover > .bi, &:focus > .bi { background: var(--ap-accent); color: #fff !important; }
+}
+
+.navbar .dropdown-menu .dropdown-item.dd-externo .dropdown-text {
+  &::after {
+    content: "\2197";
+    position: absolute;
+    right: 0.8rem;
+    top: 0.6rem;
+    font-size: 0.75rem;
+    opacity: 0.55;
+  }
+}
+.navbar .dropdown-menu .dropdown-item.dd-externo { position: relative; padding-right: 1.8rem; }
+
+@media (max-width: 991.98px) {
+  .navbar .dropdown-menu { background: transparent; border: 0; box-shadow: none; padding: 0 0 0.3rem 0.4rem; }
+  .navbar .dropdown-menu .dropdown-item { color: #cbd5e1; }
+  .navbar .dropdown-menu .dropdown-item:hover { background: rgba(94, 196, 220, 0.1); color: #fff; }
+  .navbar .dropdown-menu .dd-desc { display: none; }
+  .navbar .dropdown-menu .dropdown-item > .bi { width: 1.6rem; height: 1.6rem; font-size: 0.85rem; }
+}
+
+// Parcerias como botão preenchido (ação principal)
+@media (min-width: 992px) {
+  .navbar .navbar-nav .nav-link.nav-destaque {
+    background: #5ec4dc;
+    border-color: #5ec4dc;
+    color: #0f172a !important;
+    font-weight: 600;
+    margin-left: 0.6rem;
+    transition: background 0.15s, transform 0.15s;
+
+    &::after { content: "\2192"; margin-left: 0.35rem; position: static !important; background: none !important; height: auto !important; }
+    &:hover { background: #8fdaeb; transform: translateY(-1px); }
+    &.active { color: #0f172a !important; box-shadow: 0 0 0 3px rgba(94, 196, 220, 0.3); }
+  }
+
+  // Busca como botão com atalho visível
+  .navbar #quarto-search,
+  .navbar #quarto-search .aa-Autocomplete { width: auto !important; }
+  .navbar #quarto-search { margin-left: 0.4rem; }
+
+  .navbar #quarto-search .aa-DetachedSearchButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    width: auto;
+    padding: 0.28rem 0.45rem 0.28rem 0.7rem;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    transition: border-color 0.15s, background 0.15s;
+
+    &:hover { border-color: #5ec4dc; background: rgba(94, 196, 220, 0.08); }
+
+    &::after {
+      content: "Buscar  /";
+      white-space: pre;
+      font-family: var(--ap-mono);
+      font-size: 0.72rem;
+      color: #aab6c8;
+    }
+  }
+}
+
+.blog-rss {
+  margin-left: auto;
+  align-self: center;
+  font-size: 0.8rem;
+  color: var(--ap-muted);
+  text-decoration: none;
+  &:hover { color: var(--ap-accent); }
+}

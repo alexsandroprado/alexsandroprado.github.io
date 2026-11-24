@@ -16,6 +16,8 @@ Mercado de capitais 1
 
 Python 1
 
+[ Assinar](index.xml "Assinar o blog por RSS")
+
 [![](../blog/posts/datacaged-python/capa.webp)](../blog/posts/datacaged-python/index.llms.md)
 
 Mais recente

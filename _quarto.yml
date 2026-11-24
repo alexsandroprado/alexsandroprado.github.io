@@ -55,36 +55,33 @@ website:
     left:
       - href: blog/index.qmd
         text: Blog
-      - text: Ensino
-        menu:
-          - href: ensino/index.qmd
-            text: Disciplinas
-          - href: ensino/index.qmd#orientacao
-            text: Orientação
-          - href: ensino/index.qmd#materiais
-            text: Materiais
       - text: Pesquisa
         menu:
           - href: pesquisa/index.qmd
             text: Linhas e projetos
+            icon: lightbulb
           - href: publicacoes/index.qmd
             text: Publicações
+            icon: journal-text
+          - href: https://gecomt.github.io/dashboard/
+            text: Painel do Mercado de Trabalho
+            icon: bar-chart-line
       - href: producao-tecnica/index.qmd
         text: Produção técnica
-      - href: extensao/index.qmd
-        text: Extensão
+      - text: Ensino
+        menu:
+          - href: ensino/index.qmd
+            text: Disciplinas e materiais
+            icon: easel
+          - href: ensino/index.qmd#orientacao
+            text: Orientação
+            icon: people
+          - href: extensao/index.qmd
+            text: Extensão
+            icon: globe2
+    right:
       - href: parcerias/index.qmd
         text: Parcerias
-    right:
-      - icon: github
-        href: https://github.com/alexsandroprado
-        aria-label: GitHub
-      - icon: linkedin
-        href: https://www.linkedin.com/in/alexsandroprado/
-        aria-label: LinkedIn
-      - icon: rss
-        href: blog/index.xml
-        aria-label: RSS do blog
 
   page-footer:
     left: "<span class=\"marca-rodape\">Alexsandro Prado</span><br>Professor Adjunto · Ciências Contábeis da UFERSA"
